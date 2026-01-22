@@ -1,0 +1,66 @@
+{
+  "OFC": {
+    "code": "OFC",
+    "name": "Ontario Fire Code",
+    "url": "https://www.ontario.ca/laws/regulation/070213",
+    "checked": "2026-01-21T21:02:17.178406",
+    "status": "page_loads",
+    "note": "e-Laws requires JavaScript - manual check recommended"
+  },
+  "OBC": {
+    "code": "OBC",
+    "name": "Ontario Building Code",
+    "url": "https://www.ontario.ca/laws/regulation/120332",
+    "checked": "2026-01-21T21:02:18.006743",
+    "status": "page_loads",
+    "note": "e-Laws requires JavaScript - manual check recommended"
+  },
+  "NBC": {
+    "code": "NBC",
+    "name": "National Building Code",
+    "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-canada-2025",
+    "checked": "2026-01-21T21:02:18.808687",
+    "status": "first_check",
+    "hash": "4cb05998c34b02c2"
+  },
+  "NFC": {
+    "code": "NFC",
+    "name": "National Fire Code",
+    "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-fire-code-canada-2025",
+    "checked": "2026-01-21T21:02:20.402354",
+    "status": "first_check",
+    "hash": "a54510703b8b9d22"
+  },
+  "NPC": {
+    "code": "NPC",
+    "name": "National Plumbing Code",
+    "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-plumbing-code-canada-2025",
+    "checked": "2026-01-21T21:02:23.023613",
+    "status": "first_check",
+    "hash": "321a3e1d80349e70"
+  },
+  "NECB": {
+    "code": "NECB",
+    "name": "National Energy Code",
+    "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-energy-code-canada-buildings-2025",
+    "checked": "2026-01-21T21:02:23.524053",
+    "status": "first_check",
+    "hash": "f06a44e8f73bea02"
+  },
+  "BCBC": {
+    "code": "BCBC",
+    "name": "BC Building Code",
+    "url": "https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/bc-codes/2024-bc-codes",
+    "checked": "2026-01-21T21:02:25.009405",
+    "status": "first_check",
+    "hash": "0259d57ba4073be4"
+  },
+  "ABC": {
+    "code": "ABC",
+    "name": "Alberta Building Code",
+    "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-2023-alberta-edition",
+    "checked": "2026-01-21T21:02:27.662428",
+    "status": "first_check",
+    "hash": "810528d5baa320a9"
+  }
+}
