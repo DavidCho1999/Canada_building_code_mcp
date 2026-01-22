@@ -132,22 +132,20 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Scroll indicator - Mouse */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.7 }}
         transition={{ delay: 1.5, duration: 0.5 }}
         className="absolute bottom-6 left-1/2 -translate-x-1/2"
       >
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="text-slate-400"
-        >
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M12 5v14M5 12l7 7 7-7" />
-          </svg>
-        </motion.div>
+        <div className="w-6 h-10 border-2 border-slate-400 rounded-full flex justify-center pt-2">
+          <motion.div
+            animate={{ y: [0, 8, 0], opacity: [1, 0.3, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+            className="w-1.5 h-2.5 bg-slate-400 rounded-full"
+          />
+        </div>
       </motion.div>
     </section>
   );
