@@ -332,6 +332,136 @@ def parse_ugnecb(json_path: str) -> List[Dict]:
     return sections, data
 
 
+def parse_iugp9(json_path: str) -> List[Dict]:
+    """
+    Parse IUGP9 (Illustrated User's Guide - Part 9).
+    Structure: Section 9.x.x with subsections and examples.
+    """
+    with open(json_path, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+    texts = data.get('texts', [])
+    sections = []
+    seen_ids = {}
+
+    current_section_idx = -1
+    section_contents = []
+
+    # Pattern for Section headers like 9.1.1, 9.3.2.5, etc.
+    section_pattern = re.compile(r'^(?:Section\s+)?(\d+\.\d+(?:\.\d+)*\.?)(?:\s+(.+))?$')
+    # Pattern for Example
+    example_pattern = re.compile(r'^Example\s*(\d+)', re.IGNORECASE)
+
+    for item in texts:
+        label = item.get('label', '')
+        text = item.get('text', '').strip()
+        prov = item.get('prov', [{}])[0]
+        page = prov.get('page_no', 0)
+        bbox = prov.get('bbox', None)
+
+        # Skip early pages (TOC, intro before Part 9 content)
+        if page < 26:
+            continue
+
+        if label == 'section_header':
+            # Skip common non-content headers
+            skip_patterns = [
+                'Table of Contents', 'CANADIAN COMMISSION', 'NRCC-CONST',
+                'Illustrated User', 'Housing and Small Buildings',
+                'Division B', 'Standards Referenced', 'Notes to Table',
+                'Notable Changes', 'Introduction'
+            ]
+            if any(p in text for p in skip_patterns):
+                continue
+
+            # Check for Section pattern
+            section_match = section_pattern.match(text)
+            example_match = example_pattern.match(text)
+
+            if section_match:
+                section_num = section_match.group(1).rstrip('.')
+                title_part = section_match.group(2) or ""
+
+                section_id = f"Section-{section_num}"
+                title = f"Section {section_num}"
+                if title_part:
+                    title += f": {title_part}"
+
+                # Determine level based on depth
+                depth = section_num.count('.')
+                if depth == 1:
+                    level = "section"
+                elif depth == 2:
+                    level = "subsection"
+                else:
+                    level = "article"
+
+                # Find parent
+                parts = section_num.split('.')
+                parent_id = None
+                if len(parts) > 2:
+                    parent_num = '.'.join(parts[:-1])
+                    parent_id = f"Section-{parent_num}"
+
+            elif example_match:
+                example_num = example_match.group(1)
+                section_id = f"Example-{example_num}"
+                title = text
+                level = "example"
+                parent_id = None
+
+            else:
+                # General topic header
+                slug = slugify(text)
+                if not slug or len(slug) < 3:
+                    continue
+                section_id = f"Topic-{slug}"
+                title = text
+                level = "topic"
+                parent_id = None
+
+            # Handle duplicates - keep later occurrence with more content
+            if section_id in seen_ids:
+                existing_idx = seen_ids[section_id]
+                existing_page = sections[existing_idx]['page']
+                if page > existing_page:
+                    sections[existing_idx].update({
+                        "title": title,
+                        "page": page,
+                        "bbox": bbox,
+                    })
+                continue
+
+            section = {
+                "id": section_id,
+                "title": title,
+                "page": page,
+                "level": level,
+                "bbox": bbox,
+            }
+            if parent_id:
+                section["parent_id"] = parent_id
+
+            seen_ids[section_id] = len(sections)
+            sections.append(section)
+            current_section_idx = len(sections) - 1
+            section_contents.append("")
+
+        # Collect content for keywords
+        elif label in ('text', 'list_item', 'paragraph') and current_section_idx >= 0:
+            if current_section_idx < len(section_contents):
+                section_contents[current_section_idx] += " " + text
+
+    # Add keywords
+    for i, section in enumerate(sections):
+        if i < len(section_contents):
+            section['keywords'] = extract_keywords(section_contents[i])
+        else:
+            section['keywords'] = []
+
+    return sections, data
+
+
 def generate_map(json_path: str, guide_type: str, code_name: str = None, code_version: str = None) -> Dict:
     """Generate map JSON from Docling JSON output."""
     json_path = Path(json_path)
@@ -353,6 +483,8 @@ def generate_map(json_path: str, guide_type: str, code_name: str = None, code_ve
         sections, raw_data = parse_ugp4(str(json_path))
     elif guide_type == 'ugnecb':
         sections, raw_data = parse_ugnecb(str(json_path))
+    elif guide_type == 'iugp9':
+        sections, raw_data = parse_iugp9(str(json_path))
     else:
         raise ValueError(f"Unknown guide type: {guide_type}")
 
@@ -386,8 +518,8 @@ def main():
     parser.add_argument(
         "--type", "-t",
         required=True,
-        choices=['ugp4', 'ugnecb'],
-        help="Guide type: ugp4 (Structural Commentaries) or ugnecb (Energy Guide)"
+        choices=['ugp4', 'ugnecb', 'iugp9'],
+        help="Guide type: ugp4 (Structural Commentaries), ugnecb (Energy Guide), or iugp9 (Part 9 User's Guide)"
     )
     parser.add_argument(
         "--output", "-o",

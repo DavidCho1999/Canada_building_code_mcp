@@ -1,7 +1,7 @@
 {
   "code": "NFC",
   "version": "2025",
-  "generated": "2026-01-21T19:18:41.952297",
+  "generated": "2026-01-22T15:54:13.513883",
   "source_pdf": {
     "filename": "NFC2025p1.pdf"
   },
@@ -296,10 +296,9 @@
       },
       "keywords": [
         "referenced",
-        "referencing",
         "code",
-        "general",
-        "mean"
+        "mean",
+        "referencing"
       ],
       "division": "A"
     },
@@ -1216,13 +1215,13 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "documents",
         "referenced",
-        "forming",
         "code",
         "they",
-        "documents",
+        "editions",
         "designated",
-        "editions"
+        "forming"
       ],
       "division": "B"
     },
@@ -1240,21 +1239,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "organizations",
-        "referenced",
-        "accuracy",
         "code",
+        "accuracy",
         "information",
-        "effort",
-        "ensure",
-        "responsible",
-        "content",
-        "presented",
-        "every",
+        "referenced",
         "while",
+        "every",
+        "effort",
         "made",
+        "ensure",
         "nrc",
-        "timeliness"
+        "responsible",
+        "timeliness",
+        "reliability",
+        "content",
+        "presented"
       ],
       "division": "B"
     },
@@ -1504,18 +1503,16 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "installations",
-        "systems",
-        "fire",
-        "safety",
-        "buildings",
-        "general",
-        "integrated",
         "system",
-        "nbc",
-        "communication",
         "voice",
-        "alarm"
+        "communication",
+        "systems",
+        "integrated",
+        "general",
+        "fire",
+        "alarm",
+        "buildings",
+        "nbc"
       ],
       "division": "B"
     },
@@ -1804,10 +1801,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "general"
-      ]
+      "division": "B"
     },
     {
       "id": "B-2.2.1",
@@ -2585,21 +2579,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "used",
-        "food",
-        "equipment",
-        "carried",
         "flame",
-        "assembly",
-        "having",
+        "meals",
+        "drinks",
         "serving",
-        "warm",
-        "occupancies",
-        "outside",
-        "refuelling",
-        "open",
+        "having",
         "located",
-        "drinks"
+        "assembly",
+        "occupancies",
+        "refuelling",
+        "equipment",
+        "used",
+        "warm",
+        "food",
+        "carried",
+        "outside"
       ],
       "division": "B"
     },
@@ -3138,21 +3132,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air-conditioning",
-        "materials",
-        "chimneys",
         "systems",
-        "ventilating",
-        "clearance",
-        "heating",
-        "operated",
         "within",
-        "appliances",
-        "combustible",
+        "chimneys",
         "flue",
-        "located",
+        "pipes",
+        "appliances",
+        "heating",
+        "ventilating",
+        "air-conditioning",
+        "operated",
         "dwelling",
-        "pipes"
+        "combustible",
+        "materials",
+        "located",
+        "clearance"
       ],
       "division": "B"
     },
@@ -3522,21 +3516,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "occupant",
+        "floor",
+        "area",
+        "load",
+        "posted",
         "conspicuous",
-        "loads",
-        "egress",
+        "locations",
+        "near",
+        "principal",
         "entrances",
         "signs",
-        "floor",
-        "exceeding",
         "assembly",
-        "means",
-        "locations",
-        "posted",
-        "load",
-        "principal",
         "occupancies",
-        "near"
+        "loads",
+        "exceeding"
       ],
       "division": "B"
     },
@@ -3867,21 +3861,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "care",
-        "carry",
-        "duty",
-        "treatment",
-        "sufficient",
-        "general",
-        "occupancies",
         "supervisory",
-        "number",
-        "outlined",
         "staff",
-        "home-type",
+        "duty",
+        "care",
+        "occupancies",
+        "carry",
         "emergency",
+        "procedures",
+        "outlined",
         "building",
-        "procedures"
+        "fire",
+        "sufficient",
+        "number",
+        "home-type",
+        "treatment"
       ],
       "division": "B"
     },
@@ -4138,21 +4132,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "controlling",
-        "liquids",
-        "adjoining",
-        "egress",
-        "plan",
-        "means",
-        "department",
-        "areas",
-        "openings",
-        "safety",
+        "fire",
         "valves",
+        "controlling",
+        "department",
+        "processes",
+        "liquids",
+        "areas",
+        "adjoining",
+        "properties",
+        "means",
+        "egress",
         "air",
         "intakes",
-        "allow",
-        "fire"
+        "openings",
+        "allow"
       ],
       "division": "B"
     },
@@ -4457,10 +4451,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "materials"
-      ]
+      "division": "B"
     },
     {
       "id": "B-2.9.2",
@@ -5002,10 +4993,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "general"
-      ]
+      "division": "B"
     },
     {
       "id": "B-2.12.1",
@@ -5541,21 +5529,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "used",
         "inspection",
-        "corrosive",
-        "equipment",
-        "wet",
-        "control",
-        "hazard",
+        "greater",
         "mechanical",
-        "undue",
+        "equipment",
         "farm",
         "buildings",
-        "environments",
-        "building",
+        "constitute",
+        "undue",
         "fire",
-        "hazards"
+        "hazard",
+        "building",
+        "used",
+        "wet",
+        "corrosive",
+        "environments"
       ],
       "division": "B"
     },
@@ -5717,21 +5705,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "f01-os1",
-        "os1",
-        "code",
         "f01",
-        "f12-os1",
-        "f82-op1",
-        "statements",
+        "f02-os1",
+        "os1",
+        "f01-os1",
         "f02-op1",
-        "existing",
-        "objectives",
-        "f02",
-        "nbc",
-        "buildings",
+        "f12-os1",
+        "fire",
         "building",
-        "f82-os1"
+        "f82-os1",
+        "f02",
+        "f82-op1",
+        "buildings",
+        "code",
+        "existing",
+        "nbc"
       ],
       "division": "B"
     },
@@ -6037,21 +6025,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "liquids",
-        "determined",
+        "dangerous",
+        "goods",
+        "classified",
         "stored",
+        "liquids",
         "products",
         "substances",
+        "flammable",
         "ambient",
-        "hazardous",
-        "dangerous",
-        "areas",
-        "sor",
-        "regulations",
-        "classified",
         "temperature",
-        "goods",
-        "flammable"
+        "areas",
+        "determined",
+        "sor",
+        "hazardous",
+        "regulations"
       ],
       "division": "B"
     },
@@ -6594,15 +6582,14 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "smoking",
-        "high",
-        "indoor",
         "signs",
-        "general",
         "minimum",
-        "storage",
-        "letters",
         "dimension",
+        "letters",
+        "high",
+        "smoking",
+        "indoor",
+        "storage",
         "area"
       ],
       "division": "B"
@@ -7023,20 +7010,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "products",
-        "indoor",
-        "accommodate",
-        "one",
-        "approximately",
-        "storage",
         "sprinkler",
+        "storage",
+        "packaged",
+        "system",
+        "aerosol",
+        "products",
+        "accommodate",
         "limits",
-        "aerosols",
+        "conformance",
+        "one",
         "pallet",
         "load",
-        "packaged",
-        "conformance",
-        "system",
+        "aerosols",
+        "approximately",
         "designed"
       ],
       "division": "B"
@@ -7336,13 +7323,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "dangerous",
-        "indoor",
-        "storage",
-        "goods"
-      ]
+      "division": "B"
     },
     {
       "id": "B-3.2.7",
@@ -7422,21 +7403,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "products",
-        "stored",
-        "indoor",
-        "being",
-        "rooms",
-        "storage",
-        "buildings",
-        "goods",
-        "capable",
         "gases",
-        "cool",
+        "vapours",
+        "rooms",
         "parts",
+        "buildings",
         "used",
+        "storage",
         "dangerous",
-        "vapours"
+        "goods",
+        "dry",
+        "cool",
+        "products",
+        "being",
+        "stored",
+        "capable"
       ],
       "division": "B"
     },
@@ -7518,21 +7499,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "products",
-        "stored",
-        "good",
-        "indoor",
-        "tdg",
-        "sheet",
-        "controlled",
-        "a-table",
-        "safety",
-        "data",
-        "storage",
+        "dangerous",
         "goods",
         "class",
+        "products",
+        "tdg",
+        "whmis",
+        "controlled",
+        "fire",
+        "stored",
+        "safety",
+        "data",
+        "sheet",
         "materials",
-        "dangerous"
+        "a-table",
+        "good"
       ],
       "division": "B"
     },
@@ -7550,20 +7531,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "stored",
-        "deterioration",
-        "indoor",
-        "racks",
-        "contact",
-        "components",
-        "due",
-        "storage",
-        "corrosion",
-        "goods",
-        "piping",
-        "shelving",
+        "measures",
+        "taken",
         "prevent",
         "minimize",
+        "corrosion",
+        "deterioration",
+        "shelving",
+        "racks",
+        "piping",
+        "system",
+        "components",
+        "due",
+        "contact",
+        "stored",
         "dangerous"
       ],
       "division": "B"
@@ -7922,19 +7903,15 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "substances",
-        "indoor",
-        "a-3",
         "clear",
-        "dangerous",
-        "maintained",
-        "gases",
-        "compressed",
-        "storage",
-        "goods",
         "space",
+        "maintained",
         "oxidizing",
-        "identified"
+        "substances",
+        "identified",
+        "dangerous",
+        "goods",
+        "a-3"
       ],
       "division": "B"
     },
@@ -8222,21 +8199,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "lumber",
         "products",
-        "containers",
-        "stored",
-        "wood",
-        "requirements",
-        "forest",
         "a-3",
-        "parking",
-        "timber",
+        "forest",
         "dangerous",
-        "general",
+        "goods",
+        "wood",
         "vehicles",
+        "containers",
+        "requirements",
+        "stored",
+        "building",
         "classified",
-        "goods"
+        "parking",
+        "lumber",
+        "timber"
       ],
       "division": "B"
     },
@@ -8614,21 +8591,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "prescribed",
-        "dirt",
-        "stored",
-        "times",
+        "reduce",
         "clear",
+        "space",
+        "individual",
+        "storage",
         "areas",
+        "prescribed",
         "noncombustible",
         "fire",
         "separation",
+        "dirt",
         "berm",
-        "individual",
-        "storage",
-        "general",
-        "reduce",
-        "height"
+        "times",
+        "height",
+        "stored"
       ],
       "division": "B"
     },
@@ -8986,21 +8963,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "stored",
-        "contents",
-        "goods",
-        "containers",
-        "storage",
-        "stated",
-        "segregation",
-        "used",
-        "their",
-        "requirements",
         "dangerous",
+        "goods",
+        "intermodal",
         "shipping",
+        "containers",
+        "used",
+        "transportation",
+        "well",
+        "their",
+        "contents",
+        "stored",
         "conformance",
-        "outdoor",
-        "well"
+        "segregation",
+        "requirements",
+        "stated"
       ],
       "division": "B"
     },
@@ -9137,20 +9114,20 @@
       },
       "keywords": [
         "products",
+        "storage",
+        "class",
         "materials",
         "a-3",
-        "dangerous",
         "fire",
         "access",
+        "goods",
+        "dangerous",
         "reactive",
+        "flammable",
         "areas",
-        "group",
-        "objectives",
-        "plastics",
-        "statements",
         "combustible",
-        "storage",
-        "goods"
+        "group",
+        "plastics"
       ],
       "division": "B"
     },
@@ -9324,10 +9301,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "classification"
-      ]
+      "division": "B"
     },
     {
       "id": "B-4.1.2",
@@ -9642,14 +9616,11 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "conforming",
         "smoking",
-        "prevention",
-        "protection",
+        "areas",
         "designated",
         "safe",
-        "areas",
-        "fire"
+        "conforming"
       ],
       "division": "B"
     },
@@ -9999,21 +9970,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ventilation",
-        "outlets",
-        "inlets",
-        "being",
-        "one",
-        "removed",
-        "vapours",
-        "near",
-        "vapour",
         "air",
-        "wall",
-        "room",
+        "ventilation",
+        "flammable",
+        "one",
         "located",
+        "near",
+        "wall",
+        "vapours",
         "system",
-        "flammable"
+        "inlets",
+        "outlets",
+        "room",
+        "vapour",
+        "being",
+        "removed"
       ],
       "division": "B"
     },
@@ -10980,21 +10951,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "rating",
-        "personal",
-        "room",
-        "home-type",
-        "storage",
-        "detention",
-        "class",
-        "exceed",
-        "educational",
         "liquids",
+        "storage",
+        "class",
+        "room",
+        "flammable",
+        "combustible",
+        "outside",
+        "cabinet",
         "single",
-        "care",
-        "services",
-        "min",
-        "treatment"
+        "exceed",
+        "fire",
+        "compartment",
+        "fire-resistance",
+        "rating",
+        "min"
       ],
       "division": "B"
     },
@@ -11481,20 +11452,20 @@
       },
       "keywords": [
         "quantities",
-        "liquids",
-        "use",
-        "tanks",
-        "areas",
-        "one",
-        "a-4",
-        "separation",
-        "installed",
-        "container",
-        "conformance",
-        "combustible",
         "storage",
-        "incidental",
-        "larger"
+        "flammable",
+        "liquids",
+        "separation",
+        "a-4",
+        "larger",
+        "tanks",
+        "installed",
+        "conformance",
+        "areas",
+        "combustible",
+        "transferred",
+        "one",
+        "container"
       ],
       "division": "B"
     },
@@ -11803,21 +11774,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "away",
-        "materials",
-        "contains",
-        "indicate",
-        "labelled",
-        "cabinet",
         "cabinets",
-        "kept",
         "container",
         "storage",
+        "labelled",
+        "conspicuous",
         "lettering",
+        "indicate",
+        "cabinet",
+        "contains",
+        "flammable",
+        "materials",
         "open",
         "flames",
-        "flammable",
-        "conspicuous"
+        "kept",
+        "away"
       ],
       "division": "B"
     },
@@ -12222,21 +12193,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "steel",
-        "standard",
-        "atmospheric",
         "tanks",
-        "ulc-s603",
-        "built",
-        "construction",
-        "underground",
         "storage",
-        "corrosion",
-        "liquids",
-        "used",
-        "use",
         "pressure",
-        "design"
+        "liquids",
+        "flammable",
+        "combustible",
+        "conformance",
+        "used",
+        "standard",
+        "underground",
+        "atmospheric",
+        "ulc-s603",
+        "steel",
+        "corrosion",
+        "built"
       ],
       "division": "B"
     },
@@ -12748,15 +12719,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "normal",
-        "venting",
-        "storage",
-        "emergency",
-        "aboveground",
-        "tanks"
-      ]
+      "division": "B"
     },
     {
       "id": "B-4.3.4",
@@ -13159,21 +13122,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "largest",
         "capacity",
         "secondary",
-        "volumetric",
-        "tanks",
         "containment",
-        "level",
-        "impermeability",
         "storage",
-        "aboveground",
-        "space",
         "tank",
+        "space",
+        "volumetric",
+        "located",
         "used",
+        "tanks",
+        "largest",
+        "membrane",
         "providing",
-        "membrane"
+        "level",
+        "impermeability"
       ],
       "division": "B"
     },
@@ -13481,21 +13444,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "above",
-        "there",
-        "mass",
-        "tanks",
         "ground",
-        "level",
-        "underground",
-        "installed",
-        "below",
-        "storage",
-        "portion",
         "tank",
         "adjacent",
-        "installation",
-        "cover"
+        "level",
+        "storage",
+        "below",
+        "underground",
+        "installed",
+        "mass",
+        "there",
+        "cover",
+        "portion",
+        "above",
+        "damage",
+        "repaired"
       ],
       "division": "B"
     },
@@ -14562,21 +14525,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "through",
-        "tanks",
-        "openings",
-        "level",
-        "valves",
         "storage",
-        "buildings",
-        "measuring",
-        "tank",
-        "flow",
-        "close",
-        "filling",
+        "tanks",
+        "liquid",
         "connections",
-        "vents",
-        "liquid"
+        "openings",
+        "measuring",
+        "level",
+        "through",
+        "flow",
+        "valves",
+        "located",
+        "close",
+        "practicable",
+        "tank",
+        "filling"
       ],
       "division": "B"
     },
@@ -14992,21 +14955,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "standard",
-        "tanks",
-        "underground",
-        "stabilization",
-        "leak",
-        "storage",
+        "test",
+        "pressure",
         "piping",
+        "system",
+        "decline",
+        "tanks",
+        "flammable",
+        "combustible",
+        "leak",
+        "detection",
+        "stabilization",
         "tank",
         "testing",
-        "test",
-        "detection",
-        "sumps",
-        "pressure",
-        "systems",
-        "combustible"
+        "standard",
+        "underground"
       ],
       "division": "B"
     },
@@ -15163,10 +15126,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "scope"
-      ]
+      "division": "B"
     },
     {
       "id": "B-4.5.1",
@@ -15562,21 +15522,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "gaskets",
         "high",
-        "special",
-        "applications",
-        "resistant",
-        "material",
-        "connections",
+        "temperature",
         "pressure",
-        "systems",
-        "joints",
-        "grade",
-        "liquid",
-        "flanged",
         "service",
-        "temperature"
+        "special",
+        "purpose",
+        "applications",
+        "grade",
+        "b-7",
+        "gaskets",
+        "flanged",
+        "connections",
+        "material",
+        "resistant",
+        "liquid"
       ],
       "division": "B"
     },
@@ -15974,21 +15934,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "liquids",
-        "steel",
-        "along",
-        "above",
-        "close",
-        "beams",
-        "walls",
-        "floor",
-        "installed",
-        "referred",
+        "piping",
         "overhead",
+        "liquids",
+        "beams",
+        "referred",
+        "steel",
+        "flammable",
         "combustible",
+        "installed",
+        "close",
         "ceiling",
-        "arrangement",
-        "flammable"
+        "along",
+        "walls",
+        "above",
+        "floor"
       ],
       "division": "B"
     },
@@ -16393,21 +16353,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "systems",
+        "tested",
+        "sections",
+        "piping",
+        "fittings",
+        "controls",
+        "ensure",
+        "thermal",
+        "electrical",
+        "conduction",
+        "heating",
         "conforming",
         "used",
-        "low-voltage",
-        "ensure",
-        "tested",
-        "systems",
-        "sections",
-        "heating",
-        "fittings",
-        "conduction",
-        "electrical",
         "passing",
-        "controls",
-        "piping",
-        "thermal"
+        "low-voltage"
       ],
       "division": "B"
     },
@@ -16769,21 +16729,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "shut-off",
-        "protection",
-        "indicating",
-        "fire",
         "valves",
-        "emergency",
-        "operation",
-        "piping",
-        "used",
         "signs",
+        "indicating",
+        "location",
+        "used",
+        "operation",
+        "fire",
+        "protection",
         "equipment",
-        "locations",
+        "manual",
+        "emergency",
+        "shut-off",
         "posted",
-        "systems",
-        "operating"
+        "conspicuous",
+        "locations"
       ],
       "division": "B"
     },
@@ -17086,21 +17046,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "expansion",
-        "fuel-dispensing",
-        "station",
-        "made",
-        "provisions",
+        "piping",
         "design",
-        "changes",
-        "fittings",
-        "valves",
-        "contraction",
-        "handling",
-        "temperature",
-        "storage",
         "system",
-        "vibration"
+        "provisions",
+        "made",
+        "expansion",
+        "contraction",
+        "vibration",
+        "settling",
+        "temperature",
+        "changes",
+        "valves",
+        "fittings",
+        "fuel-dispensing",
+        "station"
       ],
       "division": "B"
     },
@@ -17522,20 +17482,20 @@
       },
       "keywords": [
         "nozzle",
-        "used",
-        "marine",
+        "valve",
+        "hose",
+        "device",
         "hold-open",
+        "used",
+        "buildings",
+        "ahose",
+        "marine",
         "fuel-dispensing",
         "station",
+        "type",
         "without",
-        "systems",
-        "remote",
-        "pumping",
-        "device",
-        "hose",
         "conformance",
-        "attended",
-        "buildings"
+        "attended"
       ],
       "division": "B"
     },
@@ -17866,21 +17826,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "outlets",
-        "supervision",
-        "stations",
+        "card",
         "dispensers",
         "key-activated",
-        "public",
+        "fire",
         "department",
-        "fuel-dispensing",
-        "posted",
-        "clearly",
-        "sentences",
+        "open",
+        "public",
         "self-service",
-        "dispensing",
-        "card",
-        "open"
+        "outlets",
+        "fuel-dispensing",
+        "stations",
+        "sentences",
+        "clearly",
+        "instructions",
+        "posted"
       ],
       "division": "B"
     },
@@ -18154,10 +18114,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "storage"
-      ]
+      "division": "B"
     },
     {
       "id": "B-4.7.2",
@@ -18625,21 +18582,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "liquids",
-        "top",
-        "facilities",
-        "through",
-        "cars",
-        "bottom",
-        "loading",
-        "unloading",
+        "tank",
         "vehicles",
-        "terminate",
-        "pipe",
-        "within",
+        "cars",
         "filled",
+        "class",
+        "liquids",
+        "through",
+        "top",
         "fill",
-        "class"
+        "pipe",
+        "terminate",
+        "within",
+        "bottom"
       ],
       "division": "B"
     },
@@ -19216,16 +19171,14 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "protection",
         "insulating",
-        "entering",
-        "wharf",
         "joints",
-        "upon",
-        "rails",
         "placed",
-        "fire",
-        "pier"
+        "rails",
+        "entering",
+        "upon",
+        "pier",
+        "wharf"
       ],
       "division": "B"
     },
@@ -19684,21 +19637,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "prior",
+        "cargo",
+        "hose",
         "operations",
-        "marine",
-        "unauthorized",
+        "prior",
+        "transfer",
         "connections",
+        "leakage",
         "tanks",
+        "marine",
+        "vessels",
         "person",
         "responsible",
-        "transfer",
-        "leakage",
         "directing",
-        "hose",
         "ascertain",
-        "cargo",
-        "vessels"
+        "unauthorized"
       ],
       "division": "B"
     },
@@ -20625,10 +20578,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "scope"
-      ]
+      "division": "B"
     },
     {
       "id": "B-4.11.1",
@@ -21174,21 +21124,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "storage",
         "liquids",
+        "f43-os1",
+        "tanks",
+        "f01",
         "f01-os1",
-        "used",
+        "plants",
+        "flammable",
+        "provisions",
         "equipment",
         "nfc",
         "code",
-        "f01",
-        "tanks",
-        "statements",
-        "f43-os1",
-        "provisions",
         "f43",
-        "plants",
         "a-4",
-        "objectives"
+        "used"
       ],
       "division": "B"
     },
@@ -21595,11 +21545,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "flash",
-        "point"
-      ]
+      "division": "B"
     },
     {
       "id": "B-5.1.4",
@@ -21986,21 +21932,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "piping",
         "hot",
-        "containing",
-        "prevention",
-        "fires",
-        "protected",
-        "carried",
-        "dangerous",
         "work",
-        "against",
+        "carried",
         "near",
-        "barrier",
-        "classified",
+        "containing",
+        "dangerous",
         "goods",
+        "classified",
         "flammable",
-        "piping"
+        "gases",
+        "protected",
+        "thermal",
+        "barrier",
+        "against"
       ],
       "division": "B"
     },
@@ -22364,11 +22310,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "woodworking",
-        "operations"
-      ]
+      "division": "B"
     },
     {
       "id": "B-5.3.2",
@@ -22865,21 +22807,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fumigation",
-        "insecticidal",
-        "ventilated",
-        "undergoing",
-        "safe",
-        "premise",
-        "enter",
-        "unauthorized",
-        "fogging",
         "person",
         "premises",
+        "unauthorized",
+        "premise",
+        "undergoing",
+        "fumigation",
+        "thermal",
+        "insecticidal",
+        "fogging",
         "until",
-        "warning",
+        "ventilated",
         "entrance",
-        "thermal"
+        "enter",
+        "safe",
+        "warning"
       ],
       "division": "B"
     },
@@ -23442,21 +23384,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "prevention",
-        "protection",
-        "unauthorized",
-        "materials",
-        "prevent",
-        "dangerous",
-        "fire",
-        "access",
-        "measures",
-        "clearly",
-        "taken",
+        "laboratory",
         "conformance",
-        "combustible",
+        "dangerous",
         "goods",
-        "designated"
+        "materials",
+        "combustible",
+        "measures",
+        "taken",
+        "prevent",
+        "access",
+        "unauthorized",
+        "persons",
+        "clearly",
+        "designated",
+        "area"
       ],
       "division": "B"
     },
@@ -23935,21 +23877,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "enclosure",
-        "duct",
-        "accumulation",
         "prevent",
-        "use",
-        "dangerous",
-        "deposits",
-        "highly",
-        "a-5",
-        "exhaust",
-        "perchloric",
-        "unstable",
+        "power-ventilated",
+        "enclosure",
         "well",
-        "goods",
-        "system"
+        "exhaust",
+        "duct",
+        "system",
+        "washed",
+        "use",
+        "accumulation",
+        "highly",
+        "unstable",
+        "deposits",
+        "a-5",
+        "perchloric"
       ],
       "division": "B"
     },
@@ -24235,21 +24177,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "notified",
-        "whose",
-        "affected",
-        "action",
-        "equipment",
-        "code",
-        "mentioned",
-        "general",
-        "connections",
-        "csa",
-        "company",
-        "installation",
-        "taken",
         "service",
-        "electrical"
+        "csa",
+        "code",
+        "necessary",
+        "electrical",
+        "equipment",
+        "installation",
+        "company",
+        "whose",
+        "connections",
+        "affected",
+        "notified",
+        "action",
+        "mentioned",
+        "taken"
       ],
       "division": "B"
     },
@@ -24635,16 +24577,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "services",
-        "requirements",
-        "business",
-        "residential",
-        "personal",
-        "occupancies",
-        "additional"
-      ]
+      "division": "B"
     },
     {
       "id": "B-5.6.3",
@@ -24970,21 +24903,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "mass",
+        "system",
+        "air",
         "standpipe",
-        "tested",
-        "gauge",
-        "supervisory",
-        "construction",
-        "buildings",
-        "kpa",
-        "test",
-        "connection",
-        "requirements",
-        "timber",
-        "department",
+        "fire",
         "pressure",
-        "encapsulated"
+        "kpa",
+        "department",
+        "connection",
+        "dry",
+        "supervisory",
+        "tested",
+        "excess",
+        "maintained",
+        "test",
+        "gauge"
       ],
       "division": "B"
     },
@@ -25113,21 +25046,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "hot",
-        "inspection",
-        "requirements",
-        "visual",
-        "code",
         "areas",
-        "petroleum",
-        "statements",
-        "work",
+        "requirements",
+        "hot",
         "a-5",
-        "objectives",
         "combustible",
+        "inspection",
+        "work",
         "api",
+        "visual",
         "safe",
-        "functional"
+        "petroleum",
+        "code",
+        "objectives",
+        "functional",
+        "statements"
       ],
       "division": "B"
     },
@@ -25891,10 +25824,7 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "general"
-      ]
+      "division": "B"
     },
     {
       "id": "B-6.6.1",
@@ -26050,21 +25980,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "intended",
-        "protection",
-        "code",
-        "ensure",
-        "department",
-        "systems",
-        "statements",
-        "notification",
-        "objectives",
-        "installation",
-        "a-6",
-        "sprinkler",
-        "emergency",
+        "fire",
         "system",
-        "building"
+        "systems",
+        "a-6",
+        "department",
+        "code",
+        "protection",
+        "building",
+        "alarm",
+        "installation",
+        "ensure",
+        "sprinkler",
+        "intended",
+        "notification",
+        "emergency"
       ],
       "division": "B"
     },
@@ -27093,16 +27023,15 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pressurized",
-        "ensure",
         "alteration",
-        "storeys",
-        "core",
-        "air",
-        "movement",
-        "outdoors",
         "building",
-        "measure"
+        "ensure",
+        "movement",
+        "air",
+        "pressurized",
+        "core",
+        "outdoors",
+        "storeys"
       ],
       "division": "B"
     },
@@ -27308,21 +27237,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "intended",
-        "occasion",
-        "a-1",
         "equipment",
-        "code",
-        "purposes",
         "tested",
-        "statements",
-        "solutions",
         "objectives",
-        "attributed",
+        "functional",
+        "statements",
         "a-7",
-        "acceptable",
+        "intended",
         "test",
-        "functional"
+        "occasion",
+        "purposes",
+        "code",
+        "attributed",
+        "acceptable",
+        "solutions",
+        "a-1"
       ],
       "division": "B"
     },
@@ -27666,21 +27595,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "authority",
-        "order",
-        "alternative",
-        "jurisdiction",
+        "fire",
+        "safety",
+        "enforcement",
         "code",
+        "authority",
+        "premises",
         "nfc",
-        "having",
+        "inspector",
+        "order",
         "acceptance",
         "person",
-        "solutions",
-        "safety",
-        "premises",
+        "having",
         "relevant",
         "powers",
-        "enforcement"
+        "jurisdiction"
       ],
       "division": "C"
     },
@@ -27715,6 +27644,1600 @@
         "dangerous"
       ],
       "division": "C"
+    },
+    {
+      "id": "Table-A-1.4.1.2",
+      "title": "Table A-1.4.1.2. (1) TDGR, WHMIS and NFC Class Descriptors for Dangerous Goods",
+      "page": 33,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.81637573242188,
+        "t": 367.515380859375,
+        "r": 564.21630859375,
+        "b": 44.17083740234375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "gases",
+        "flammable",
+        "substances",
+        "oxidizing",
+        "liquids",
+        "solids",
+        "materials",
+        "toxic",
+        "explosives",
+        "pyrophoric",
+        "organic",
+        "peroxides",
+        "tdgr",
+        "whmis",
+        "class",
+        "pressure",
+        "aerosols",
+        "non-flammable",
+        "non-toxic",
+        "water-reactive"
+      ],
+      "division": "A"
+    },
+    {
+      "id": "Table-1.3.1.2",
+      "title": "Table 1.3.1.2",
+      "page": 56,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.002140045166016,
+        "t": 394.3495178222656,
+        "r": 540.2105712890625,
+        "b": 44.02960205078125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "api",
+        "tanks",
+        "storage",
+        "a-4",
+        "std",
+        "spec",
+        "welded",
+        "specification",
+        "production",
+        "liquids",
+        "petroleum",
+        "document",
+        "design",
+        "low-pressure",
+        "tank",
+        "welding",
+        "safe",
+        "a-5",
+        "entry",
+        "issuing"
+      ],
+      "division": "B",
+      "page_end": 66
+    },
+    {
+      "id": "Table-2.15.1.1",
+      "title": "Table 2.15.1.1",
+      "page": 95,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.55470275878906,
+        "t": 537.0391387939453,
+        "r": 308.14776611328125,
+        "b": 65.0140380859375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f02",
+        "f81-os1",
+        "f81-op1",
+        "fire",
+        "sprinkler",
+        "systems",
+        "os3",
+        "f03-os1",
+        "f10-os1",
+        "f06",
+        "hazardous",
+        "activities",
+        "alarm",
+        "standpipe",
+        "f02-op1",
+        "f02-os1",
+        "smoke",
+        "alarms",
+        "f11-os1",
+        "protection"
+      ],
+      "division": "B",
+      "page_end": 100
+    },
+    {
+      "id": "Table-3.2.3.2",
+      "title": "Table 3.2.3.2. Size Limits for Individual Storage Areas",
+      "page": 114,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.12860870361328,
+        "t": 277.9156494140625,
+        "r": 540.2174072265625,
+        "b": 168.23553466796875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "buildings",
+        "sprinklered",
+        "class",
+        "commodities",
+        "group",
+        "plastics",
+        "area",
+        "height",
+        "storage",
+        "product",
+        "classification",
+        "iii",
+        "closed",
+        "containers",
+        "distilled",
+        "beverage",
+        "alcohol"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.5.4",
+      "title": "Table 3.2.5.4. Maximum Amount of Packaged Level 2 and 3 Aerosol Products, kg (1)",
+      "page": 115,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.94720458984375,
+        "t": 99.305908203125,
+        "r": 564.1997680664062,
+        "b": 44.209228515625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "type",
+        "dedicated",
+        "area",
+        "buildings",
+        "sprinklered",
+        "none",
+        "product",
+        "classification",
+        "levels",
+        "limit"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.7.1",
+      "title": "Table 3.2.7.1",
+      "page": 118,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.535057067871094,
+        "t": 388.5866394042969,
+        "r": 540.3057861328125,
+        "b": 60.53753662109375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "gases",
+        "flammable",
+        "substances",
+        "class",
+        "column",
+        "oxidizing",
+        "organic",
+        "peroxides",
+        "tdg",
+        "explosives",
+        "non-flammable",
+        "non-toxic",
+        "toxic",
+        "liquids",
+        "solids",
+        "water-reactive",
+        "packing",
+        "group",
+        "nfc",
+        "whmis"
+      ],
+      "division": "B",
+      "page_end": 119
+    },
+    {
+      "id": "Table-3.2.7.5",
+      "title": "Table 3.2.7.5. Storage Height Limits for Dangerous Goods, m",
+      "page": 120,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.119564056396484,
+        "t": 242.19525146484375,
+        "r": 540.0328979492188,
+        "b": 186.20684814453125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "packing",
+        "group",
+        "storage",
+        "unprotected",
+        "protected",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.7.6",
+      "title": "Table 3.2.7.6",
+      "page": 122,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 89.15950775146484,
+        "t": 717.672607421875,
+        "r": 450.2616882324219,
+        "b": 43.48638916015625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "gases",
+        "flammable",
+        "materials",
+        "class",
+        "toxic",
+        "corrosives",
+        "substances",
+        "nfc",
+        "reactive",
+        "base",
+        "acid",
+        "infectious",
+        "organic",
+        "peroxides",
+        "oxidizers",
+        "pyrophoric",
+        "solids",
+        "liquids",
+        "non-toxic",
+        "aerosols"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.3.3.2",
+      "title": "Table 3.3.3.2. Size and Clearances for Individual Storage Areas (ISA) Forming Part of Sentence 3.3.3.2.(1)",
+      "page": 130,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.945945739746094,
+        "t": 378.71209716796875,
+        "r": 540.2037963867188,
+        "b": 293.3777160644531,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "max",
+        "height",
+        "storage",
+        "product",
+        "classification",
+        "base",
+        "area",
+        "min",
+        "clear",
+        "space",
+        "around",
+        "isa",
+        "class",
+        "iii",
+        "commodities",
+        "group",
+        "plastics",
+        "lumber",
+        "timber",
+        "manufactured"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.4.1.1",
+      "title": "Table 3.4.1.1",
+      "page": 133,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.9462661743164,
+        "t": 696.938850402832,
+        "r": 308.4032897949219,
+        "b": 63.57452392578125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f01",
+        "f20",
+        "f43",
+        "f80",
+        "f81-os1",
+        "f81-os3",
+        "f81",
+        "industrial",
+        "trucks",
+        "f01-os1",
+        "packages",
+        "containers",
+        "f81-oh5",
+        "storage",
+        "arrangement",
+        "conditions",
+        "f43-os1",
+        "f43-os3",
+        "f43-op1",
+        "f43-oh5"
+      ],
+      "division": "B",
+      "page_end": 137
+    },
+    {
+      "id": "Table-A-3.2.7.1",
+      "title": "Table A-3.2.7.1. (3)(b)",
+      "page": 144,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.90226364135742,
+        "t": 677.5548095703125,
+        "r": 539.94140625,
+        "b": 530.6569213867188,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "d1a",
+        "class",
+        "d1b",
+        "controlled",
+        "product",
+        "having",
+        "precedence",
+        "whmis",
+        "combinations",
+        "d2a",
+        "d2b"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-A-3.2.8.2",
+      "title": "Table A-3.2.8.2. (2) Specific Volume of Common Gases Forming Part of Note A-3.2.8.2.(2)",
+      "page": 147,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.82841491699219,
+        "t": 379.358154296875,
+        "r": 564.2734375,
+        "b": 134.61260986328125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "acetylene",
+        "methyl",
+        "gas",
+        "specific",
+        "volume",
+        "ammonia",
+        "anhydrous",
+        "arsine",
+        "butane",
+        "carbon",
+        "dioxide",
+        "chlorine",
+        "ethylene",
+        "oxide",
+        "fluorine",
+        "hydrogen",
+        "methane",
+        "chloride",
+        "nitrogen",
+        "oxygen"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.2.7.5",
+      "title": "Table 4.2.7.5. -A Forming Part of Sentences 4.2.7.5.(1) and (4), 4.2.8.4.(3) and 4.2.9.1.(3)",
+      "page": 165,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.72021484375,
+        "t": 551.2140045166016,
+        "r": 564.2607421875,
+        "b": 276.224609375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "storage",
+        "first",
+        "storey",
+        "maximum",
+        "class",
+        "quantity",
+        "per",
+        "storeys",
+        "above",
+        "basement",
+        "protected",
+        "unprotected",
+        "isa",
+        "height",
+        "fire",
+        "compartment",
+        "liquid",
+        "level",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.2.7.5.(1)",
+      "title": "Table Forming Part of Sentences 4.2.7.5.(1)",
+      "page": 166,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.74413299560547,
+        "t": 677.4888916015625,
+        "r": 540.2645874023438,
+        "b": 476.67926025390625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "first",
+        "storey",
+        "class",
+        "storeys",
+        "above",
+        "basement",
+        "storage",
+        "maximum",
+        "per",
+        "liquid",
+        "level",
+        "height",
+        "quantity",
+        "isa",
+        "fire",
+        "compartment",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.2.9.1",
+      "title": "Table 4.2.9.1. Rooms for Container Storage and Dispensing",
+      "page": 168,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.847164154052734,
+        "t": 85.22515869140625,
+        "r": 540.1294555664062,
+        "b": 44.24249267578125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "maximum",
+        "quantity",
+        "minimum",
+        "fire",
+        "separation",
+        "around",
+        "room",
+        "density"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.2.11.1",
+      "title": "Table 4.2.11.1. Outdoor Container Storage",
+      "page": 170,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.818199157714844,
+        "t": 355.95892333984375,
+        "r": 540.2115478515625,
+        "b": 266.82147216796875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "class",
+        "minimum",
+        "distance",
+        "property",
+        "liquid",
+        "maximum",
+        "total",
+        "quantity",
+        "per",
+        "pile",
+        "piles",
+        "line",
+        "building",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.1",
+      "title": "Table 4.3.2.1. Location of Aboveground Storage Tanks",
+      "page": 174,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.88446044921875,
+        "t": 677.4202880859375,
+        "r": 540.0987548828125,
+        "b": 579.9346618652344,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "property",
+        "maximum",
+        "tank",
+        "capacity",
+        "minimum",
+        "distance",
+        "line",
+        "building"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.13.4",
+      "title": "Table 4.3.13.4",
+      "page": 184,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.784385681152344,
+        "t": 677.4598999023438,
+        "r": 540.1093139648438,
+        "b": 554.2552795410156,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "storage",
+        "first",
+        "storey",
+        "class",
+        "maximum",
+        "quantity",
+        "per",
+        "room",
+        "one",
+        "tanks",
+        "storeys",
+        "above",
+        "basement",
+        "liquid",
+        "level",
+        "protected",
+        "unprotected",
+        "classes",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.4.1.2",
+      "title": "Table 4.4.1.2. -A",
+      "page": 187,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.8851318359375,
+        "t": 214.0052490234375,
+        "r": 564.3424072265625,
+        "b": 44.09295654296875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "test",
+        "leak",
+        "detection",
+        "precision",
+        "containment",
+        "monitoring",
+        "single-walled",
+        "inventory",
+        "reconciliation",
+        "secondary",
+        "type",
+        "commissioning",
+        "in-service",
+        "suspected",
+        "continuous",
+        "every",
+        "years",
+        "none",
+        "periodic",
+        "wells"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.4.1.2.(1)",
+      "title": "Table Forming Part of Sentence 4.4.1.2.(1)",
+      "page": 188,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.9505615234375,
+        "t": 563.7600250244141,
+        "r": 540.0624389648438,
+        "b": 453.14208984375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "containment",
+        "inspection",
+        "test",
+        "monitoring",
+        "tank",
+        "visual",
+        "secondary",
+        "type",
+        "commissioning",
+        "in-service",
+        "leak",
+        "suspected",
+        "open",
+        "during",
+        "liquid",
+        "media",
+        "inventory",
+        "reconciliation",
+        "api",
+        "std"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.13.1.1",
+      "title": "Table 4.13.1.1. Acceptable Solutions in Part 4",
+      "page": 222,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.909996032714844,
+        "t": 375.1580810546875,
+        "r": 284.1747741699219,
+        "b": 44.0787353515625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f01-os1",
+        "fire",
+        "determination",
+        "flash",
+        "point",
+        "hazardous",
+        "locations",
+        "additional",
+        "protection",
+        "equipment",
+        "f02",
+        "ignition",
+        "sources",
+        "portion",
+        "code",
+        "text",
+        "smoking",
+        "removal",
+        "combustibles",
+        "functional"
+      ],
+      "division": "B",
+      "page_end": 245
+    },
+    {
+      "id": "Table-A-4.1.2.2",
+      "title": "Table A-4.1.2.2. Classification of Mixtures of a Water-Miscible Liquid and Water",
+      "page": 248,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.79179000854492,
+        "t": 460.2480773925781,
+        "r": 540.0293579101562,
+        "b": 259.13372802734375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "classification",
+        "class",
+        "volume",
+        "concentration",
+        "water-miscible",
+        "liquid",
+        "methanol",
+        "ethanol",
+        "propanol",
+        "acetone",
+        "acetic",
+        "acid"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.7.1.1",
+      "title": "Table 5.7.1.1. Acceptable Solutions in Part 5",
+      "page": 282,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.609737396240234,
+        "t": 463.5091857910156,
+        "r": 284.10198974609375,
+        "b": 44.0140380859375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f01-os1",
+        "equipment",
+        "f82-os1",
+        "explosives",
+        "f01",
+        "f02-os1",
+        "display",
+        "fireworks",
+        "hazardous",
+        "locations",
+        "general",
+        "ventilation",
+        "application",
+        "training",
+        "maintenance",
+        "inspection",
+        "use",
+        "compressed",
+        "gas",
+        "functional"
+      ],
+      "division": "B",
+      "page_end": 287
+    },
+    {
+      "id": "Table-6.9.1.1",
+      "title": "Table 6.9.1.1. Acceptable Solutions in Part 6",
+      "page": 299,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.45451354980469,
+        "t": 666.8154983520508,
+        "r": 308.2606201171875,
+        "b": 79.869140625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "os1",
+        "f82-os1",
+        "maintenance",
+        "inspection",
+        "testing",
+        "os3",
+        "f82-op1",
+        "protection",
+        "systems",
+        "f11",
+        "f82-os3",
+        "f82-op3",
+        "notification",
+        "during",
+        "shutdown",
+        "central",
+        "stations",
+        "their",
+        "fire",
+        "signalling"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-7.4.1.1",
+      "title": "Table 7.4.1.1",
+      "page": 313,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.75284576416016,
+        "t": 177.6943359375,
+        "r": 308.0035705566406,
+        "b": 43.9937744140625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "fire",
+        "emergency",
+        "systems",
+        "os1",
+        "testing",
+        "f82-op1",
+        "f82-os1",
+        "maintenance",
+        "functional",
+        "statements",
+        "objectives",
+        "f12-op1",
+        "f12-os1"
+      ],
+      "division": "B",
+      "page_end": 314
+    }
+  ],
+  "tables": [
+    {
+      "id": "Table-A-1.4.1.2",
+      "title": "Table A-1.4.1.2. (1) TDGR, WHMIS and NFC Class Descriptors for Dangerous Goods",
+      "page": 33,
+      "table_info": {
+        "rows": 20,
+        "cols": 4
+      },
+      "markdown": "| TDGR | TDGR | WHMIS | NFC |\n|---|---|---|---|\n| Class | Descriptor |   |   |\n| 1 | Explosives | Explosives | Explosives |\n| 2 | Gases | Gases under pressure | Compressed gases |\n| 2.1 | Flammable gases | Flammable gases; Flammable aerosols | Flammable gases; Flammable aerosols |\n| 2.2 | Non-flammable, non-toxic gases | Gases under pressure | Non-flammable, non-toxic gases |\n| 2.2 (5.1) | - | Oxidizing gases | Oxidizing gases |\n| 2.3 | Toxic gases | - | Toxic gases |\n| 3 | Flammable liquids | Flammable liquids | Flammable liquids |\n| 4.1 | Flammable solids | Flammable solids | Flammable solids |\n| 4.2 | Substances liable to spontaneous combustion | Pyrophoric liquids; Pyrophoric solids | Pyrophoric materials |\n| 4.3 | Water-reactive substances | Substances and mixtures which, in contact with ... | Water-reactive substances |\n| 5.1 | Oxidizing substances | Oxidizing liquids; Oxidizing solids | Oxidizers |\n| 5.2 | Organic peroxides | Organic peroxides | Organic peroxides |\n| 6.1 | Toxic substances | (1) | Toxic substances |\n| 6.2 | Infectious substances | (1) | Infectious materials |\n| 7 | Radioactive materials | Not covered by WHMIS | Radioactive materials |\n| 8 | Corrosives | (2) | Corrosives |\n| 9 | Miscellaneous products, substances, or organisms | (2) | Miscellaneous dangerous goods |\n| - | - | Previously Class F | Dangerously reactive materials |",
+      "keywords": [
+        "gases",
+        "flammable",
+        "substances",
+        "oxidizing",
+        "liquids",
+        "solids",
+        "materials",
+        "toxic",
+        "explosives",
+        "pyrophoric",
+        "organic",
+        "peroxides",
+        "tdgr",
+        "whmis",
+        "class",
+        "pressure",
+        "aerosols",
+        "non-flammable",
+        "non-toxic",
+        "water-reactive"
+      ],
+      "division": "A"
+    },
+    {
+      "id": "Table-1.3.1.2",
+      "title": "Table 1.3.1.2",
+      "page": 56,
+      "table_info": {
+        "rows": 15,
+        "cols": 4
+      },
+      "markdown": "| Issuing Agency | Document Number (2) | Title of Document | Code Reference |\n|---|---|---|---|\n| ACGIH | 28th Edition | Industrial Ventilation: A Manual of Recommended... | A-3.2.7.3.(1)(b) |\n| API | SPEC 5L (2012) | Line Pipe | 4.5.2.1.(4) |\n| API | SPEC 12B (2008) | Specification for Bolted Tanks for Storage of P... | 4.3.1.2.(1) A-4.3.1.2.(2)(b) |\n| API | SPEC 12D (2008) | Specification for Field Welded Tanks for Storag... | 4.3.1.2.(1) A-4.3.1.2.(2)(b) |\n| API | SPEC 12F (2008) | Specification for Shop Welded Tanks for Storage... | 4.3.1.2.(1) A-4.3.1.2.(2)(b) |\n| API | STD 620 (2013) | Design and Construction of Large, Welded, Low-P... | 4.3.1.3.(1) |\n| API | STD 650 (2013) | Welded Tanks for Oil Storage | 4.3.1.2.(1) |\n| API | STD 653 (2009) | Tank Inspection, Repair, Alteration, and Recons... | 4.3.1.10.(2) Table 4.4.1.2.-B |\n| API | STD 1104 (2013) | Welding of Pipelines and Related Facilities | 4.5.5.2.(1) A-4.5.10.7.(6) |\n| API | RP 1604 (1996) | Closure of Underground Petroleum Storage Tanks | A-4.3.16.1.(1) |\n| API | STD 2000 (2009) | Venting Atmospheric and Low-Pressure Storage Tanks | 4.3.1.2.(2) 4.3.4.1.(1) A-4.3.13.8.(1) |\n| API | RP 2003 (2008) | Protection Against Ignitions Arising Out of Sta... | A-4.7.4.5. |\n| API | RP 2009 (2002) | Safe Welding, Cutting and Hot Work Practices in... | A-5.2.3.4.(1)(b) |\n| API | STD 2015 (2001) | Requirements for Safe Entry and Cleaning of Pet... | A-5.2.3.4.(1)(b) |",
+      "keywords": [
+        "api",
+        "tanks",
+        "storage",
+        "a-4",
+        "std",
+        "spec",
+        "welded",
+        "specification",
+        "production",
+        "liquids",
+        "petroleum",
+        "document",
+        "design",
+        "low-pressure",
+        "tank",
+        "welding",
+        "safe",
+        "a-5",
+        "entry",
+        "issuing"
+      ],
+      "division": "B",
+      "page_end": 66
+    },
+    {
+      "id": "Table-2.15.1.1",
+      "title": "Table 2.15.1.1",
+      "page": 95,
+      "table_info": {
+        "rows": 32,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 2.1.2.2. Hazardous Activities | 2.1.2.2. Hazardous Activities |\n| (1) | [F01,F30,F31,F43,F32,F81-OS3.1,OS3.2,OS3.3,OS3.4] |\n| (1) | [F01-OP1.2] |\n| (1) | [F01-OS1.1] |\n| (2) | [F02,F03-OS1.2] [F10-OS1.5] |\n| (3) | [F02,F03-OS1.2] [F10-OS1.5] |\n| (4) | [F02,F03-OS1.2] [F10-OS1.5] |\n| 2.1.3.1. Fire Alarm, Standpipe and Sprinkler Sy... | 2.1.3.1. Fire Alarm, Standpipe and Sprinkler Sy... |\n| (2) | [F02-OP1.2] |\n| (2) | [F02-OS1.2] |\n| 2.1.3.3. Smoke Alarms | 2.1.3.3. Smoke Alarms |\n| (1) | [F81,F11-OS1.5] |\n| (2) | [F11-OS1.5] |\n| (3) | [F11,F81-OS1.5] |\n| 2.1.3.4. Protection of Combustible Sprinkler Pi... | 2.1.3.4. Protection of Combustible Sprinkler Pi... |\n| (1) | [F06,F82-OS1.2] |\n| (1) | [F06,F82-OP1.2] |\n| (1) | [F06,F82-OP3.1] |\n| 2.1.3.5. Special Fire Suppression Systems | 2.1.3.5. Special Fire Suppression Systems |\n| (2) | [F02,F81-OS1.1] |\n| (2) | [F02,F81-OP1.1] |\n| (3) | [F02,F81-OS1.2] [F81-OS1.4] |\n|   | [F02,F81-OP1.2] [F81-OP1.4] |\n| (4) | [F02,F81-OS1.2] |\n| (4) | [F02,F81-OP1.2] |\n| (5) | [F02,F81-OS1.1] |\n| (5) | [F02,F81-OP1.2] |\n| (6) | [F02-OP1.2] |\n| (6) | [F02-OS1.2] |\n| (7) | [F82,F12-OP1.2] |\n| (7) | [F82,F12-OS1.2] |",
+      "keywords": [
+        "f02",
+        "f81-os1",
+        "f81-op1",
+        "fire",
+        "sprinkler",
+        "systems",
+        "os3",
+        "f03-os1",
+        "f10-os1",
+        "f06",
+        "hazardous",
+        "activities",
+        "alarm",
+        "standpipe",
+        "f02-op1",
+        "f02-os1",
+        "smoke",
+        "alarms",
+        "f11-os1",
+        "protection"
+      ],
+      "division": "B",
+      "page_end": 100
+    },
+    {
+      "id": "Table-3.2.3.2",
+      "title": "Table 3.2.3.2. Size Limits for Individual Storage Areas",
+      "page": 114,
+      "table_info": {
+        "rows": 8,
+        "cols": 5
+      },
+      "markdown": "| Product | Buildings That Are Not Sprinklered | Buildings That Are Not Sprinklered | Sprinklered Buildings | Sprinklered Buildings |\n|---|---|---|---|---|\n| Classification | Area, m 2 | Height of Storage, m | Area, m 2 | Height of Storage, m |\n| Class I commodities | 500 | 6.5 | 1 500 | 9.0 |\n| Class II commodities | 500 | 6.5 | 1 500 | 9.0 |\n| Class III commodities, Group C plastics | 250 | 4.5 | 1 000 | 9.0 |\n| Closed containers of distilled beverage alcohol | 250 | 4.5 | 1 000 | 9.0 |\n| Class IV commodities, Group B plastics | 250 | 3.6 | 1 000 | 9.0 |\n| Group A plastics | 250 | 1.5 | 500 | 6.1 |",
+      "keywords": [
+        "buildings",
+        "sprinklered",
+        "class",
+        "commodities",
+        "group",
+        "plastics",
+        "area",
+        "height",
+        "storage",
+        "product",
+        "classification",
+        "iii",
+        "closed",
+        "containers",
+        "distilled",
+        "beverage",
+        "alcohol"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.5.4",
+      "title": "Table 3.2.5.4. Maximum Amount of Packaged Level 2 and 3 Aerosol Products, kg (1)",
+      "page": 115,
+      "table_info": {
+        "rows": 4,
+        "cols": 7
+      },
+      "markdown": "|   | Type of Dedicated Area Required | Type of Dedicated Area Required | Type of Dedicated Area Required | Type of Dedicated Area Required | Type of Dedicated Area Required | Type of Dedicated Area Required |\n|---|---|---|---|---|---|---|\n| Product Classification | Buildings That Are Not Sprinklered | Buildings That Are Not Sprinklered | Buildings That Are Not Sprinklered | Sprinklered Buildings | Sprinklered Buildings | Sprinklered Buildings |\n|   | None | A (2) | B (3) | None | A (2) | B (3) |\n| Levels 2 and 3 | 1 000 | 5 000 | 10 000 | 10 000 | 50 000 | No Limit |",
+      "keywords": [
+        "type",
+        "dedicated",
+        "area",
+        "buildings",
+        "sprinklered",
+        "none",
+        "product",
+        "classification",
+        "levels",
+        "limit"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.7.1",
+      "title": "Table 3.2.7.1",
+      "page": 118,
+      "table_info": {
+        "rows": 19,
+        "cols": 5
+      },
+      "markdown": "|   | Column A | Column A | Column B | Column C |\n|---|---|---|---|---|\n| NFC Class | TDG Class (1) | TDG Class (1) | WHMIS Class (2) | Maximum Exempt Amount of Stored Product |\n| Explosives | 1 | Explosives | - | See Article 3.1.1.3. |\n| Compressed Gases |   | Gases | A |   |\n|   |   | Division 1 (3) flammable gases | B1 | 25 kg (4) |\n| flammable gases/aerosols |   |   | B5 | See Subsection 3.2.5. |\n| non-flammable, non-toxic gases | 2 | Division 2 non-flammable, non-toxic gases | A | 150 kg |\n| oxidizing gases |   | Division 2 with subsidiary Class 5.1 | A+C | 75 kg (4) |\n|   |   | Division 3 (5) toxic gases | A+D1 |   |\n| toxic gases |   |   | A+D2 | 0 |\n|   |   |   | A+E |   |\n| Flammable Liquids | 3 | Flammable Liquids | B2 | See Part 4 |\n|   |   |   | B3 |   |\n| Flammable Solids |   | Division 1 flammable solids | B4 | 100 kg (6) |\n| Pyrophoric Materials | 4 | Division 2 substances liable to spontaneous com... | - | 50 kg |\n| Water-Reactive Substances |   | Division 3 water-reactive substances | B6 |   |\n| Oxidizing Substances (7) |   | Oxidizing Substances and Organic Peroxides | - |   |\n| oxidizers | 5 | Division 1 oxidizing substances (8) Packing Gro... | - | 250 kg or 250 L |\n| organic peroxides |   | Division 2 organic peroxides | C (9) | 100 kg or 100 L |",
+      "keywords": [
+        "gases",
+        "flammable",
+        "substances",
+        "class",
+        "column",
+        "oxidizing",
+        "organic",
+        "peroxides",
+        "tdg",
+        "explosives",
+        "non-flammable",
+        "non-toxic",
+        "toxic",
+        "liquids",
+        "solids",
+        "water-reactive",
+        "packing",
+        "group",
+        "nfc",
+        "whmis"
+      ],
+      "division": "B",
+      "page_end": 119
+    },
+    {
+      "id": "Table-3.2.7.5",
+      "title": "Table 3.2.7.5. Storage Height Limits for Dangerous Goods, m",
+      "page": 120,
+      "table_info": {
+        "rows": 4,
+        "cols": 3
+      },
+      "markdown": "| Packing Group (1) | Unprotected Storage | Protected Storage |\n|---|---|---|\n| Packing Group I | 1.8 | 2.4 |\n| Packing Group II | 2.4 | 4 |\n| Packing Group III | 4.5 | 6 |",
+      "keywords": [
+        "packing",
+        "group",
+        "storage",
+        "unprotected",
+        "protected",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.7.6",
+      "title": "Table 3.2.7.6",
+      "page": 122,
+      "table_info": {
+        "rows": 17,
+        "cols": 18
+      },
+      "markdown": "| Danger- ously Reactive Materials | - | F | F | P | X | X | X | X | X | X | X | X | X | X | X | X | X |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Corrosives | 8 | E Base (6) | X | 1m | P | 1m | 1m | 1m | X | 1m | 1m | 1m | 1m | 1m |   | P | X |\n| Corrosives | 8 | Acid (5) | X | P | 1m | 1m | X | X | X |   | 1m | 1m | 1m | 1m X |   | P | X |\n| Toxic Sub- stances/ Infectious Materials | 6 | D | D | X | 1m | 1m | P | X | 1m | DS | DS | DS | DS | DS | 1m | P | X |\n| Organic Peroxides | 5.2 | C | C | X | X | 1m | X | P | X | X | X | X | X | X | X | P | X |\n| Oxidizers | 5.1 | - | - | X | X | 1m | 1m | X | P | X | X | X | X | 1m | P | P | X |\n| Water-re- active Substances | 4.3 | B6 | B6 | X | X | X | DS | X | X | P | DS | DS | 1m | DS | X | P | DS |\n| Pyrophoric Materials | 4.2 | - | - | X | 1m | 1m | DS | X | X | DS | P | 1m | 1m | 1m | X | P | 1m |\n| Flammable Solids | 4.1 | B4 | B4 | X | 1m | 1m | DS | X | X | DS | 1m | P | P | 1m | X | P | P |\n| Flammable Liquids | 3 | B2, B3 | B2, B3 | X | 1m | 1m | DS | X | X | 1m | 1m | P | P | X | X | P | P |\n| Toxic Gases | 2.3 | A+D, A+E | A+D, A+E | X | 1m | 1m | DS | X | 1m | DS | 1m | 1m | X | P | 1m | P | X |\n| Oxidixing Gases | 2.2(5.1) | A+C | A+C | X | X | 1m | 1m | X | P | X | X | X | X | 1m | P | P | X |\n| Non- flammable, Non-toxic Gases | 2.2 | A | A | X | P | P | P | P | P | P | P | P | P | P | P | P | P |\n| Flammable Gases/ Aerosols | 2.1 | B1, B5 | B1, B5 | X | X | X | X | X | X | DS | 1m | P | P | X | X | P | P |\n|   |   | WHMIS Class (4) | F | Acid (5) | E Base (6) |   | D | C | - | B6 | - | B4 | B2, B3 | A+D, A+E | A+C | A | B1, B5 |\n|   | TDG Class (3) | TDG Class (3) | - |   | 8 |   | 6 | 5.2 | 5.1 | 4.3 | 4.2 | 4.1 | 3 | 2.3 | 2.2(5.1) | 2.2 | 2.1 |\n| NFC Class | NFC Class | NFC Class | Dangerously Reactive Materials | Corrosives |   | Substances/ Infectious | Toxic Materials | Organic Peroxides | Oxidizers | Water-reactive Substances | Pyrophoric Materials | Flammable Solid\n...(truncated)",
+      "keywords": [
+        "gases",
+        "flammable",
+        "materials",
+        "class",
+        "toxic",
+        "corrosives",
+        "substances",
+        "nfc",
+        "reactive",
+        "base",
+        "acid",
+        "infectious",
+        "organic",
+        "peroxides",
+        "oxidizers",
+        "pyrophoric",
+        "solids",
+        "liquids",
+        "non-toxic",
+        "aerosols"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.3.3.2",
+      "title": "Table 3.3.3.2. Size and Clearances for Individual Storage Areas (ISA) Forming Part of Sentence 3.3.3.2.(1)",
+      "page": 130,
+      "table_info": {
+        "rows": 4,
+        "cols": 4
+      },
+      "markdown": "| Product Classification (1) | Max. Base Area, m 2 | Max. Height of Storage, m | Min. Clear Space Around Each ISA , m |\n|---|---|---|---|\n| Class III and IV commodities, Group A, B and C ... | 1 000 1 000 | ≤ 3 > 3 but ≤ 6 | 6 twice the height of storage |\n| Wood chips, hogged material | 15 000 | 18 | 9 |\n| Rubber tires, combustible pallets | 1 000 | 3 | 15 |",
+      "keywords": [
+        "max",
+        "height",
+        "storage",
+        "product",
+        "classification",
+        "base",
+        "area",
+        "min",
+        "clear",
+        "space",
+        "around",
+        "isa",
+        "class",
+        "iii",
+        "commodities",
+        "group",
+        "plastics",
+        "lumber",
+        "timber",
+        "manufactured"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.4.1.1",
+      "title": "Table 3.4.1.1",
+      "page": 133,
+      "table_info": {
+        "rows": 43,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 3.1.2.3. Packages and Containers | 3.1.2.3. Packages and Containers |\n| (1) | [F20,F43,F80,F81-OH5] |\n| (1) | [F20,F43,F80,F81-OS3.4] |\n| (1) | [F20,F43,F80,F81,F01-OS1.1] |\n| (2) | [F20,F43,F80,F81-OH5] |\n| (2) | [F20,F43,F80,F81-OS3.4] |\n| (2) | [F20,F43,F80,F81,F01-OS1.1] |\n| 3.1.2.4. Storage Arrangement and Conditions | 3.1.2.4. Storage Arrangement and Conditions |\n| (1) | [F01,F43-OS1.1] |\n|   | [F43-OS3.4] |\n|   | [F10,F30-OS3.7] |\n|   | [F01,F43-OP1.1] |\n|   | [F43-OH5] |\n| (2) | (b) [F01,F43-OS1.1] |\n| (2) | (a) [F43-OS3.4] |\n| (2) | (b) [F01,F43-OP1.1] |\n| (2) | (a) [F43-OH5] |\n| 3.1.2.5. Compressed Gases | 3.1.2.5. Compressed Gases |\n| (1) | [F81-OS3.4] |\n| (1) | [F81-OS1.1] |\n| (2) | [F81-OS3.4] |\n| (2) | [F81-OS1.1] |\n| (3) | [F81,F22-OS3.4] |\n| (3) | [F22,F81-OS1.1] |\n| (4) | [F05-OS1.5] |\n| 3.1.2.6. Reactive Materials | 3.1.2.6. Reactive Materials |\n| (2) | [F22,F51,F81-OS1.1] |\n| (3) | [F01,F52-OS1.1] |\n| (4) | [F01-OS1.1] |\n| 3.1.3.1. Industrial Trucks | 3.1.3.1. Industrial Trucks |\n| (1) | [F01,F81,F82-OS1.1] |\n| (2) | [F01,F81-OS1.1] |\n| (3) | [F01,F81-OS1.1] |\n| 3.1.3.2. Fuel-Fired Industrial Trucks | 3.1.3.2. Fuel-Fired Industrial Trucks |\n| (1) | (a) [F03-OS1.2] |\n| (1) | (a) [F03-OP1.2] |\n| (1) | (b) [F03-OS1.2] |\n| (1) | (b) [F03-OP1.2] |\n| (1) | (c) [F01,F02-OS1.1] |\n| (1) | (c) [F01,F02-OP1.1] |\n| (2) | [F01,F44-OS1.1] |\n| (2) | [F01,F44-OP1.1] |",
+      "keywords": [
+        "f01",
+        "f20",
+        "f43",
+        "f80",
+        "f81-os1",
+        "f81-os3",
+        "f81",
+        "industrial",
+        "trucks",
+        "f01-os1",
+        "packages",
+        "containers",
+        "f81-oh5",
+        "storage",
+        "arrangement",
+        "conditions",
+        "f43-os1",
+        "f43-os3",
+        "f43-op1",
+        "f43-oh5"
+      ],
+      "division": "B",
+      "page_end": 137
+    },
+    {
+      "id": "Table-A-3.2.7.1",
+      "title": "Table A-3.2.7.1. (3)(b)",
+      "page": 144,
+      "table_info": {
+        "rows": 10,
+        "cols": 7
+      },
+      "markdown": "| WHMIS Class Combinations | B6 | C | D1A | D1B | D2A or D2B | E |\n|---|---|---|---|---|---|---|\n| WHMIS Class Combinations | Class of Controlled Product Having Precedence | Class of Controlled Product Having Precedence | Class of Controlled Product Having Precedence | Class of Controlled Product Having Precedence | Class of Controlled Product Having Precedence | Class of Controlled Product Having Precedence |\n| B2 | B6 | B2 | B2 | B2 | B2 | B2 |\n| B3 | B6 | B3 | D1A | D1B | B3 | E |\n| B4 | B6 | B4 | D1A | D1B | B4 | E |\n| B6 | - | B6 | D1A | B6 | B6 | B6 |\n| C | B6 | - | D1A | C | C | C |\n| D1A | D1A | D1A | - | D1A | D1A | D1A |\n| D1B | B6 | C | D1A | - | D1B | D1B |\n| D2A or D2B | B6 | C | D1A | D1B | - | E |",
+      "keywords": [
+        "d1a",
+        "class",
+        "d1b",
+        "controlled",
+        "product",
+        "having",
+        "precedence",
+        "whmis",
+        "combinations",
+        "d2a",
+        "d2b"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-A-3.2.8.2",
+      "title": "Table A-3.2.8.2. (2) Specific Volume of Common Gases Forming Part of Note A-3.2.8.2.(2)",
+      "page": 147,
+      "table_info": {
+        "rows": 18,
+        "cols": 2
+      },
+      "markdown": "| Gas | Specific Volume, m 3 /kg |\n|---|---|\n| Acetylene | 0.9 |\n| Ammonia, anhydrous | 1.4 |\n| Arsine | 0.3 |\n| Butane | 0.4 |\n| Carbon dioxide | 0.5 |\n| Chlorine | 0.3 |\n| Ethylene oxide | 0.5 |\n| Fluorine | 0.6 |\n| Hydrogen | 12.0 |\n| Methane | 1.5 |\n| Methyl acetylene | 0.6 |\n| Methyl chloride | 0.5 |\n| Nitrogen | 0.9 |\n| Oxygen | 0.8 |\n| Phosphine | 0.7 |\n| Propane | 0.5 |\n| Propylene | 0.6 |",
+      "keywords": [
+        "acetylene",
+        "methyl",
+        "gas",
+        "specific",
+        "volume",
+        "ammonia",
+        "anhydrous",
+        "arsine",
+        "butane",
+        "carbon",
+        "dioxide",
+        "chlorine",
+        "ethylene",
+        "oxide",
+        "fluorine",
+        "hydrogen",
+        "methane",
+        "chloride",
+        "nitrogen",
+        "oxygen"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.2.7.5",
+      "title": "Table 4.2.7.5. -A Forming Part of Sentences 4.2.7.5.(1) and (4), 4.2.8.4.(3) and 4.2.9.1.(3)",
+      "page": 165,
+      "table_info": {
+        "rows": 6,
+        "cols": 8
+      },
+      "markdown": "|   |   | Protected Storage (1) | Protected Storage (1) | Protected Storage (1) | Unprotected Storage | Unprotected Storage | Unprotected Storage |\n|---|---|---|---|---|---|---|---|\n| Class of Liquid | Storage Level | Maximum Quantity per ISA , L | Maximum Storage Height, m | Maximum Quantity per Fire Compartment , L | Maximum Quantity per ISA , L | Maximum Storage Height, m | Maximum Quantity per Fire Compartment , L |\n| Class I A | First storey Storeys above the first storey Bas... | 10 000 7 500 Not permitted | 1.5 1.5 Not permitted | 50 000 30 000 Not permitted | 2 500 2 500 Not permitted | 1.5 1.5 Not permitted | 2 500 2 500 Not permitted |\n| Class I B or I C | First storey Storeys above the first storey Bas... | 20 000 10 000 Not permitted | 2.0 2.0 Not permitted | 60 000 50 000 Not permitted | 10 000 10 000 Not permitted | 1.5 1.5 Not permitted | 10 000 10 000 Not permitted |\n| Class II | First storey and storeys above the first storey... | 40 000 25 000 | 3.0 1.5 | 100 000 25 000 | 15 000 Not permitted | 3.0 Not permitted | 30 000 Not permitted |\n| Class III A | First storey and storeys above the first storey... | 60 000 40 000 | 6.0 3.0 | 200 000 100 000 | 50 000 Not permitted | 4.5 Not permitted | 100 000 Not permitted |",
+      "keywords": [
+        "storage",
+        "first",
+        "storey",
+        "maximum",
+        "class",
+        "quantity",
+        "per",
+        "storeys",
+        "above",
+        "basement",
+        "protected",
+        "unprotected",
+        "isa",
+        "height",
+        "fire",
+        "compartment",
+        "liquid",
+        "level",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.2.7.5.(1)",
+      "title": "Table Forming Part of Sentences 4.2.7.5.(1)",
+      "page": 166,
+      "table_info": {
+        "rows": 5,
+        "cols": 4
+      },
+      "markdown": "| Class of Liquid | Storage Level | Maximum Storage Height, m | Maximum Quantity per ISA and per Fire Compartme... |\n|---|---|---|---|\n| Class I A | First storey Storeys above first storey Basement | 7.5 4.5 Not permitted | 30 000 17 000 Not permitted |\n| Class I B or I C | First storey Storeys above first storey Basement | 7.5 4.5 Not permitted | 60 000 35 000 Not permitted |\n| Class II | First storey Storeys above first storey Basement | 7.5 7.5 4.5 | 100 000 100 000 35 000 |\n| Class III A | First storey Storeys above first storey Basement | 12.0 6.0 6.0 | 200 000 200 000 100 000 |",
+      "keywords": [
+        "first",
+        "storey",
+        "class",
+        "storeys",
+        "above",
+        "basement",
+        "storage",
+        "maximum",
+        "per",
+        "liquid",
+        "level",
+        "height",
+        "quantity",
+        "isa",
+        "fire",
+        "compartment",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.2.9.1",
+      "title": "Table 4.2.9.1. Rooms for Container Storage and Dispensing",
+      "page": 168,
+      "table_info": {
+        "rows": 3,
+        "cols": 3
+      },
+      "markdown": "| Maximum Quantity, L | Minimum Fire Separation Around Room, h | Maximum Density, L/m 2 |\n|---|---|---|\n| 10 000 | 2 | 200 |\n| 1 500 | 1 | 100 |",
+      "keywords": [
+        "maximum",
+        "quantity",
+        "minimum",
+        "fire",
+        "separation",
+        "around",
+        "room",
+        "density"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.2.11.1",
+      "title": "Table 4.2.11.1. Outdoor Container Storage",
+      "page": 170,
+      "table_info": {
+        "rows": 5,
+        "cols": 4
+      },
+      "markdown": "| Class of Liquid | Maximum Total Quantity per Pile, L | Minimum Distance between Piles, m | Minimum Distance to a Property Line or to a Bui... |\n|---|---|---|---|\n| Class I A | 5 000 | 1.5 | 6 |\n| Class I B or I C | 15 000 | 1.5 | 6 |\n| Class II | 35 000 | 1.5 | 6 |\n| Class III A | 85 000 | 1.5 | 6 |",
+      "keywords": [
+        "class",
+        "minimum",
+        "distance",
+        "property",
+        "liquid",
+        "maximum",
+        "total",
+        "quantity",
+        "per",
+        "pile",
+        "piles",
+        "line",
+        "building",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.1",
+      "title": "Table 4.3.2.1. Location of Aboveground Storage Tanks",
+      "page": 174,
+      "table_info": {
+        "rows": 6,
+        "cols": 2
+      },
+      "markdown": "| Maximum Tank Capacity, L | Minimum Distance to a Property Line or to a Bui... |\n|---|---|\n| 250 000 | 3 |\n| 500 000 | 4.5 |\n| 2 500 000 | 9 |\n| 5 000 000 | 12 |\n| > 5 000 000 | 15 |",
+      "keywords": [
+        "property",
+        "maximum",
+        "tank",
+        "capacity",
+        "minimum",
+        "distance",
+        "line",
+        "building"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.13.4",
+      "title": "Table 4.3.13.4",
+      "page": 184,
+      "table_info": {
+        "rows": 4,
+        "cols": 4
+      },
+      "markdown": "| Class of Liquid | Storage Level | Maximum Quantity per Storage Room (1) , L One o... | Maximum Quantity per Storage Room (1) , L One o... |\n|---|---|---|---|\n|   |   | Protected Storage (2) | Unprotected Storage |\n| Class I | First storey Storeys above the first storey Bas... | 40 000 7 500 Not permitted | 25 000 Not permitted Not permitted |\n| Classes II and III A | First storey Storeys above the first storey Bas... | 200 000 20 000 20 000 | 100 000 Not permitted Not permitted |",
+      "keywords": [
+        "storage",
+        "first",
+        "storey",
+        "class",
+        "maximum",
+        "quantity",
+        "per",
+        "room",
+        "one",
+        "tanks",
+        "storeys",
+        "above",
+        "basement",
+        "liquid",
+        "level",
+        "protected",
+        "unprotected",
+        "classes",
+        "iii"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.4.1.2",
+      "title": "Table 4.4.1.2. -A",
+      "page": 187,
+      "table_info": {
+        "rows": 7,
+        "cols": 5
+      },
+      "markdown": "| Type of Containment | Commissioning Test | In-Service Monitoring | In-Service Monitoring | Leak Suspected |\n|---|---|---|---|---|\n| Type of Containment | Commissioning Test | Continuous | Periodic | Leak Suspected |\n| Single-walled (1) | Not applicable (2) | Inventory Reconciliation | Precision Leak Detection Test every 2 years | Precision Leak Detection Test |\n| Single-walled (1) | Not applicable (2) | Inventory Reconciliation and Monitoring Wells | Precision Leak Detection Test every 5 years | Precision Leak Detection Test |\n| Single-walled (1) | Not applicable (2) | Statistical Inventory Reconciliation (SIR) Auto... | None required | Precision Leak Detection Test |\n| Single-walled (1) | Not applicable (2) | Continuous In-Tank Leak Detection |   | Precision Leak Detection Test |\n| Double-walled (3) | Precision Leak Detection Test or Secondary Cont... | Secondary Containment Monitoring | None required | Precision Leak Detection Test or Secondary Cont... |",
+      "keywords": [
+        "test",
+        "leak",
+        "detection",
+        "precision",
+        "containment",
+        "monitoring",
+        "single-walled",
+        "inventory",
+        "reconciliation",
+        "secondary",
+        "type",
+        "commissioning",
+        "in-service",
+        "suspected",
+        "continuous",
+        "every",
+        "years",
+        "none",
+        "periodic",
+        "wells"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.4.1.2.(1)",
+      "title": "Table Forming Part of Sentence 4.4.1.2.(1)",
+      "page": 188,
+      "table_info": {
+        "rows": 5,
+        "cols": 5
+      },
+      "markdown": "| Type of Containment (1) | Commissioning Test | In-Service Monitoring | In-Service Monitoring | Leak Suspected |\n|---|---|---|---|---|\n| Type of Containment (1) | Commissioning Test | Continuous | Periodic | Leak Suspected |\n| Contained open (2) vertical tank | Visual inspection (3) during Liquid Media Test | Inventory Reconciliation and Secondary Containm... | API STD 653 or Tank floor inspection every 10 y... | API STD 653 or Tank floor inspection |\n| Contained open (2) horizontal tank | Visual inspection (3) during Liquid Media Test | Inventory Reconciliation and Secondary Containm... | None required | Visual inspection (3) |\n| Double-walled (4) | Visual inspection (3) | Secondary Containment Monitoring | None required | Secondary Containment Test |",
+      "keywords": [
+        "containment",
+        "inspection",
+        "test",
+        "monitoring",
+        "tank",
+        "visual",
+        "secondary",
+        "type",
+        "commissioning",
+        "in-service",
+        "leak",
+        "suspected",
+        "open",
+        "during",
+        "liquid",
+        "media",
+        "inventory",
+        "reconciliation",
+        "api",
+        "std"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.13.1.1",
+      "title": "Table 4.13.1.1. Acceptable Solutions in Part 4",
+      "page": 222,
+      "table_info": {
+        "rows": 19,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 4.1.3.1. Determination of Flash Point | 4.1.3.1. Determination of Flash Point |\n| (1) | [F01-OS1.1] |\n| (2) | [F01-OS1.1] |\n| (3) | [F01-OS1.1] |\n| (4) | [F01-OS1.1] |\n| 4.1.4.1. Hazardous Locations | 4.1.4.1. Hazardous Locations |\n| (1) | [F01-OS1.1] |\n| (2) | [F01-OS1.1] |\n| 4.1.5.1. Additional Fire Protection Equipment | 4.1.5.1. Additional Fire Protection Equipment |\n| (1) | [F02,F03-OS1.2] |\n| (1) | [F02,F03-OP1.2] |\n| 4.1.5.2. Ignition Sources | 4.1.5.2. Ignition Sources |\n| (1) | [F01-OS1.1] Applies to portion of Code text: '…... |\n| (1) | [F01-OS1.1] Applies to portion of Code text: 'U... |\n| 4.1.5.3. Smoking | 4.1.5.3. Smoking |\n| (1) | [F01-OS1.1] |\n| 4.1.5.4. Removal of Combustibles | 4.1.5.4. Removal of Combustibles |\n| (1) | [F01-OS1.1] |",
+      "keywords": [
+        "f01-os1",
+        "fire",
+        "determination",
+        "flash",
+        "point",
+        "hazardous",
+        "locations",
+        "additional",
+        "protection",
+        "equipment",
+        "f02",
+        "ignition",
+        "sources",
+        "portion",
+        "code",
+        "text",
+        "smoking",
+        "removal",
+        "combustibles",
+        "functional"
+      ],
+      "division": "B",
+      "page_end": 245
+    },
+    {
+      "id": "Table-A-4.1.2.2",
+      "title": "Table A-4.1.2.2. Classification of Mixtures of a Water-Miscible Liquid and Water",
+      "page": 248,
+      "table_info": {
+        "rows": 16,
+        "cols": 4
+      },
+      "markdown": "| Volume Concentration of the Water-Miscible Liqu... | Classification | Classification | Classification |\n|---|---|---|---|\n| Volume Concentration of the Water-Miscible Liqu... | Class IB | Class IC | Class II |\n| Methanol |   |   |   |\n| ≥ 90 |   | - | - |\n| ≥ 30 and < 90 | - |   | - |\n| ≥ 20 and < 30 | - | - |   |\n| Ethanol |   |   |   |\n| ≥ 90 |   | - | - |\n| ≥ 30 and < 90 | - |   | - |\n| ≥ 20 and < 30 | - | - |   |\n| 2-Propanol |   |   |   |\n| ≥ 20 | - |   | - |\n| Acetone |   |   |   |\n| ≥ 5 |   | - | - |\n| Acetic acid |   |   |   |\n| ≥ 8 |   | - | - |",
+      "keywords": [
+        "classification",
+        "class",
+        "volume",
+        "concentration",
+        "water-miscible",
+        "liquid",
+        "methanol",
+        "ethanol",
+        "propanol",
+        "acetone",
+        "acetic",
+        "acid"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.7.1.1",
+      "title": "Table 5.7.1.1. Acceptable Solutions in Part 5",
+      "page": 282,
+      "table_info": {
+        "rows": 27,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 5.1.1.2. Explosives | 5.1.1.2. Explosives |\n| (1) | [F01,F02-OS1.1] |\n| 5.1.1.3. Display Fireworks | 5.1.1.3. Display Fireworks |\n| (1) | [F01,F02-OS1.1] |\n| 5.1.2.1. Hazardous Locations | 5.1.2.1. Hazardous Locations |\n| (1) | [F01-OS1.1] |\n| 5.1.2.2. General | 5.1.2.2. General |\n| (1) | [F01-OS1.1] |\n| 5.1.3.1. Ventilation | 5.1.3.1. Ventilation |\n| (1) | [F01-OS1.1] |\n| 5.2.1.1. Application | 5.2.1.1. Application |\n| (2) | [F01-OS1.1] Applies to portion of Code text: '…... |\n| 5.2.1.2. Training | 5.2.1.2. Training |\n| (1) | [F81-OS1.1] |\n| 5.2.2.1. Maintenance | 5.2.2.1. Maintenance |\n| (1) | [F82-OS1.1] |\n| 5.2.2.2. Inspection | 5.2.2.2. Inspection |\n| (1) | [F82-OS1.1] |\n| (2) | [F82-OS1.1] |\n| 5.2.2.3. Equipment Not in Use | 5.2.2.3. Equipment Not in Use |\n| (1) | [F43,F01-OS1.1] |\n| (2) | [F01-OS1.1] |\n| 5.2.2.4. Compressed Gas Equipment | 5.2.2.4. Compressed Gas Equipment |\n| (1) | [F81,F01-OS1.1] |\n| (2) | [F01-OS1.1] |\n| (3) | [F01-OS1.1] |",
+      "keywords": [
+        "f01-os1",
+        "equipment",
+        "f82-os1",
+        "explosives",
+        "f01",
+        "f02-os1",
+        "display",
+        "fireworks",
+        "hazardous",
+        "locations",
+        "general",
+        "ventilation",
+        "application",
+        "training",
+        "maintenance",
+        "inspection",
+        "use",
+        "compressed",
+        "gas",
+        "functional"
+      ],
+      "division": "B",
+      "page_end": 287
+    },
+    {
+      "id": "Table-6.9.1.1",
+      "title": "Table 6.9.1.1. Acceptable Solutions in Part 6",
+      "page": 299,
+      "table_info": {
+        "rows": 39,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 6.1.1.2. Maintenance | 6.1.1.2. Maintenance |\n| (1) | [F82-OP1.2] |\n| (1) | [F82-OP3.1] |\n| (1) | [F82-OS1.2,OS1.5] |\n| 6.1.1.3. Notification | 6.1.1.3. Notification |\n| (1) | [F11,F13-OP1.2] |\n| (1) | [F11,F13-OP3.1] |\n| (1) | [F11,F13-OS1.2,OS1.5] |\n| 6.1.1.4. Protection during Shutdown | 6.1.1.4. Protection during Shutdown |\n| (1) | [F02-OP1.2] |\n| (1) | [F02-OP3.1] |\n| (1) | [F02-OS1.2,OS1.5] |\n| 6.2.1.1. Inspection, Testing and Maintenance | 6.2.1.1. Inspection, Testing and Maintenance |\n| (1) | [F82-OS3.1,OS3.2,OS3.3,OS3.4] |\n| (1) | [F82-OP1.2] |\n| (1) | [F82-OS1.2] |\n| 6.3.1.1. Maintenance | 6.3.1.1. Maintenance |\n| (1) | [F02,F12-OS1.5,OS1.2] |\n| 6.3.1.2. Inspection and Testing | 6.3.1.2. Inspection and Testing |\n| (1) | [F82-OS1.5,OS1.2] |\n| (2) | [F82-OS1.5,OS1.2] |\n| 6.3.1.3. Central Stations and Their Fire Protec... | 6.3.1.3. Central Stations and Their Fire Protec... |\n| (1) | [F82-OS1.2,OS1.5] |\n| 6.3.1.4. Voice Communication Systems | 6.3.1.4. Voice Communication Systems |\n| (2) | [F82-OS1.2,OS1.5] |\n| (3) | [F82-OS1.2,OS1.5] |\n| (4) | [F82-OS1.2,OS1.5] |\n| 6.4.1.1. Inspection, Testing and Maintenance | 6.4.1.1. Inspection, Testing and Maintenance |\n| (1) | [F82-OS1.2] |\n| (1) | [F82-OP1.2] |\n| (1) | [F82-OS3.1,OS3.2,OS3.3,OS3.4] |\n| 6.5.1.1. Inspection, Testing and Maintenance | 6.5.1.1. Inspection, Testing and Maintenance |\n| (1) | [F82-OP1.2] |\n| (1) | [F82-OP3.1] |\n| (1) | [F82-OS3.1,OS3.7] |\n| (1) | [F82-OS1.2,OS1.5] |\n| (2) | [F82-OS1.2,OS1.5] |\n| (2) | [F82-OP1.2] |",
+      "keywords": [
+        "os1",
+        "f82-os1",
+        "maintenance",
+        "inspection",
+        "testing",
+        "os3",
+        "f82-op1",
+        "protection",
+        "systems",
+        "f11",
+        "f82-os3",
+        "f82-op3",
+        "notification",
+        "during",
+        "shutdown",
+        "central",
+        "stations",
+        "their",
+        "fire",
+        "signalling"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-7.4.1.1",
+      "title": "Table 7.4.1.1",
+      "page": 313,
+      "table_info": {
+        "rows": 9,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 7.1.1.2. Testing Fire Emergency Systems | 7.1.1.2. Testing Fire Emergency Systems |\n| (2) | [F82-OP1.2] |\n|   | [F82-OS1.2,OS1.5] |\n| (3) | [F82-OP1.2] |\n|   | [F82-OS1.2,OS1.5] |\n| 7.1.1.4. Maintenance of Fire Emergency Systems | 7.1.1.4. Maintenance of Fire Emergency Systems |\n| (2) | [F12-OP1.2] |\n|   | [F12-OS1.2,OS1.5] |",
+      "keywords": [
+        "fire",
+        "emergency",
+        "systems",
+        "os1",
+        "testing",
+        "f82-op1",
+        "f82-os1",
+        "maintenance",
+        "functional",
+        "statements",
+        "objectives",
+        "f12-op1",
+        "f12-os1"
+      ],
+      "division": "B",
+      "page_end": 314
     }
   ]
 }

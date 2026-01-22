@@ -70,6 +70,18 @@ MCP_TOOLS = [
             },
             "required": ["section_id"]
         }
+    },
+    {
+        "name": "set_pdf_path",
+        "description": "[LOCAL ONLY] Connect your PDF for text extraction. NOT available in hosted API - use local MCP instead.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "code": {"type": "string", "description": "Code name"},
+                "path": {"type": "string", "description": "Path to PDF file"}
+            },
+            "required": ["code", "path"]
+        }
     }
 ]
 
@@ -166,6 +178,14 @@ def handle_mcp_request(method: str, params: Dict = None, req_id: Any = None) -> 
                     arguments.get("section_id", ""),
                     arguments.get("code")
                 )
+            elif tool_name == "set_pdf_path":
+                # Not available in hosted mode
+                result = {
+                    "error": "set_pdf_path is not available in hosted API mode",
+                    "reason": "Hosted servers cannot access your local PDF files",
+                    "solution": "Run the MCP server locally to use BYOD (Bring Your Own Document) mode",
+                    "local_setup": "pip install building-code-mcp && building-code-mcp"
+                }
             else:
                 return {
                     "jsonrpc": "2.0",

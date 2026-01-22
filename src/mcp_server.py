@@ -24,6 +24,36 @@ try:
 except ImportError:
     PYMUPDF_AVAILABLE = False
 
+# For fuzzy search (typo tolerance)
+try:
+    from rapidfuzz import fuzz, process
+    FUZZY_AVAILABLE = True
+except ImportError:
+    FUZZY_AVAILABLE = False
+
+# Building code synonyms for better search
+SYNONYMS = {
+    "restroom": ["washroom", "water closet", "toilet", "lavatory", "bathroom"],
+    "washroom": ["restroom", "water closet", "toilet", "lavatory", "bathroom"],
+    "stairs": ["stairway", "staircase", "stair"],
+    "stairway": ["stairs", "staircase", "stair"],
+    "exit": ["egress", "means of egress"],
+    "egress": ["exit", "means of egress"],
+    "fire": ["fire resistance", "fire separation", "fire-resistance"],
+    "garage": ["parking garage", "parking structure", "carport"],
+    "window": ["glazing", "fenestration"],
+    "door": ["doorway", "entrance"],
+    "wall": ["partition", "barrier"],
+    "ceiling": ["soffit"],
+    "floor": ["storey", "story"],
+    "storey": ["floor", "story"],
+    "handicap": ["accessible", "accessibility", "barrier-free"],
+    "accessible": ["handicap", "accessibility", "barrier-free"],
+    "ramp": ["slope", "incline"],
+    "handrail": ["guardrail", "railing", "guard"],
+    "guardrail": ["handrail", "railing", "guard"],
+}
+
 
 # PDF Download Links (all free)
 PDF_DOWNLOAD_LINKS = {
@@ -209,8 +239,33 @@ class BuildingCodeMCP:
             "total_web": len(web_references)
         }
 
+    def _expand_query_with_synonyms(self, query_terms: set) -> set:
+        """Expand query terms with synonyms."""
+        expanded = set(query_terms)
+        for term in query_terms:
+            if term in SYNONYMS:
+                expanded.update(SYNONYMS[term])
+        return expanded
+
+    def _fuzzy_match_score(self, query_term: str, target_terms: set, threshold: int = 80) -> float:
+        """Calculate fuzzy match score for a query term against target terms."""
+        if not FUZZY_AVAILABLE or not target_terms:
+            return 0.0
+
+        # Find best fuzzy match
+        best_score = 0
+        for target in target_terms:
+            ratio = fuzz.ratio(query_term, target)
+            if ratio > best_score:
+                best_score = ratio
+
+        # Return normalized score if above threshold
+        if best_score >= threshold:
+            return best_score / 100.0
+        return 0.0
+
     def search_code(self, query: str, code: Optional[str] = None) -> Dict:
-        """Search for sections matching query."""
+        """Search for sections matching query with fuzzy matching and synonym support."""
         # Input validation
         if not query or not isinstance(query, str):
             return {"error": "Query is required", "query": "", "results": [], "total": 0}
@@ -236,6 +291,8 @@ class BuildingCodeMCP:
             return {"error": "Query cannot be empty", "query": query, "results": [], "total": 0}
 
         query_terms = set(query_lower.split())
+        # Expand with synonyms
+        expanded_terms = self._expand_query_with_synonyms(query_terms)
 
         maps_to_search = {code: self.maps[code]} if code and code in self.maps else self.maps
 
@@ -250,33 +307,77 @@ class BuildingCodeMCP:
 
                 # Score calculation
                 score = 0.0
+                match_type = None
 
                 # 1. Section ID exact/partial match (highest priority)
                 if query_lower in section_id.lower():
                     score = 2.0 if section_id.lower().endswith(query_lower) else 1.5
+                    match_type = "exact_id"
 
-                # 2. Keyword/title word matches
-                elif query_terms:
-                    matches = query_terms & all_terms
+                # 2. Exact keyword/title word matches (including synonyms)
+                elif expanded_terms:
+                    matches = expanded_terms & all_terms
                     if matches:
-                        score = len(matches) / len(query_terms)
+                        # Boost if original terms matched (not just synonyms)
+                        original_matches = query_terms & all_terms
+                        if original_matches:
+                            score = len(original_matches) / len(query_terms)
+                            match_type = "exact"
+                        else:
+                            # Synonym match - slightly lower score
+                            score = (len(matches) / len(expanded_terms)) * 0.9
+                            match_type = "synonym"
+
+                # 3. Fuzzy matching (typo tolerance) - only if no exact match
+                if score == 0 and FUZZY_AVAILABLE:
+                    fuzzy_scores = []
+                    for term in query_terms:
+                        fscore = self._fuzzy_match_score(term, all_terms)
+                        if fscore > 0:
+                            fuzzy_scores.append(fscore)
+
+                    if fuzzy_scores:
+                        score = (sum(fuzzy_scores) / len(query_terms)) * 0.8  # Fuzzy gets lower weight
+                        match_type = "fuzzy"
 
                 if score > 0:
+                    # Boost tables slightly to ensure they appear in results
+                    if section.get("type") == "table":
+                        score += 0.01
+
                     result_item = {
                         "code": code_name,
                         "id": section_id,
                         "title": title,
                         "page": section.get("page"),
-                        "score": score,
+                        "score": round(score, 3),
                         "document_type": doc_type
                     }
+                    # Include type and level for tables
+                    if section.get("type"):
+                        result_item["type"] = section.get("type")
+                    if section.get("level"):
+                        result_item["level"] = section.get("level")
+                    # Include page_end for multi-page tables
+                    if section.get("page_end"):
+                        result_item["page_end"] = section.get("page_end")
+                    if match_type:
+                        result_item["match_type"] = match_type
                     # Add warning for guides
                     if doc_type == "guide":
                         result_item["note"] = "Interpretation guide - NOT legally binding"
                     results.append(result_item)
 
         results.sort(key=lambda x: x["score"], reverse=True)
-        return {"query": query, "results": results[:20], "total": len(results)}
+
+        response = {"query": query, "results": results[:20], "total": len(results)}
+        # Add search enhancement info
+        if FUZZY_AVAILABLE:
+            response["search_features"] = ["synonyms", "fuzzy_matching"]
+        else:
+            response["search_features"] = ["synonyms"]
+
+        return response
 
     def get_section(self, section_id: str, code: str) -> Optional[Dict]:
         """Get a specific section by ID."""
@@ -599,6 +700,107 @@ class BuildingCodeMCP:
             "disclaimer": DISCLAIMER
         }
 
+    def get_table(self, table_id: str, code: Optional[str] = None) -> Dict:
+        """
+        Get a specific table by ID with markdown content.
+
+        Args:
+            table_id: Table ID (e.g., "Table-4.1.5.3", "4.1.5.3")
+            code: Optional code name (e.g., "NBC")
+
+        Returns:
+            Table data with markdown content
+        """
+        if not table_id:
+            return {"error": "Table ID is required"}
+
+        # Normalize table ID
+        if not table_id.startswith("Table-"):
+            table_id = f"Table-{table_id}"
+
+        # Search in specified code or all codes
+        codes_to_search = [code] if code and code in self.maps else list(self.maps.keys())
+
+        for code_name in codes_to_search:
+            data = self.maps.get(code_name, {})
+            tables = data.get("tables", [])
+
+            for table in tables:
+                if table.get("id") == table_id:
+                    version = data.get("version", "unknown")
+                    return {
+                        "id": table_id,
+                        "code": code_name,
+                        "version": version,
+                        "title": table.get("title", ""),
+                        "page": table.get("page"),
+                        "table_info": table.get("table_info", {}),
+                        "markdown": table.get("markdown", ""),
+                        "keywords": table.get("keywords", []),
+                        "citation": f"{code_name} {version}, {table.get('title', table_id)}",
+                        "disclaimer": DISCLAIMER
+                    }
+
+        return {
+            "error": f"Table {table_id} not found",
+            "suggestion": "Use search_code to find tables, e.g., search_code('Table 4.1.5.3', 'NBC')",
+            "note": "Table IDs follow pattern: Table-X.X.X.X or Table-X.X.X.X-A"
+        }
+
+    def get_page(self, code: str, page: int) -> Dict:
+        """
+        Get full text content of a specific page.
+
+        Args:
+            code: Code name (e.g., "NBC")
+            page: Page number
+
+        Returns:
+            Page text content
+        """
+        if not code or code not in self.maps:
+            return {"error": f"Code not found: {code}"}
+
+        if not PYMUPDF_AVAILABLE:
+            return {
+                "error": "PDF text extraction not available",
+                "suggestion": "Install PyMuPDF: pip install pymupdf"
+            }
+
+        pdf_path = self.pdf_paths.get(code)
+        if not pdf_path:
+            return {
+                "error": f"PDF not connected for {code}",
+                "suggestion": f"Use set_pdf_path('{code}', '/path/to/pdf') first"
+            }
+
+        try:
+            doc = fitz.open(pdf_path)
+            if page <= 0 or page > len(doc):
+                return {
+                    "error": f"Invalid page number: {page}",
+                    "total_pages": len(doc)
+                }
+
+            page_obj = doc[page - 1]
+            text = page_obj.get_text()
+            doc.close()
+
+            # Limit text length
+            max_chars = 3000
+            truncated = len(text) > max_chars
+
+            return {
+                "code": code,
+                "page": page,
+                "text": text[:max_chars],
+                "truncated": truncated,
+                "char_count": len(text),
+                "disclaimer": DISCLAIMER
+            }
+        except Exception as e:
+            return {"error": f"Failed to read page: {str(e)}"}
+
     def _extract_text(self, code: str, section: Dict) -> Optional[str]:
         """Extract text from PDF."""
         if not PYMUPDF_AVAILABLE:
@@ -822,6 +1024,58 @@ async def list_tools() -> List[Tool]:
                 openWorldHint=False
             )
         ),
+        Tool(
+            name="get_table",
+            description="Get a specific table from the building code with full markdown content. Use this for tables like 'Table 4.1.5.3' (live loads), 'Table 9.10.14.4' (spatial separation), etc.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "table_id": {
+                        "type": "string",
+                        "description": "Table ID (e.g., '4.1.5.3', 'Table-4.1.5.3', '9.10.14.4-A')"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Optional: Code name (e.g., 'NBC', 'OBC'). If omitted, searches all codes."
+                    }
+                },
+                "required": ["table_id"],
+                "additionalProperties": False
+            },
+            annotations=ToolAnnotations(
+                title="Get Table Content",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
+        ),
+        Tool(
+            name="get_page",
+            description="Get full text content of a specific page. Requires PDF to be connected via set_pdf_path. Use this when you need to see all content on a page, not just a specific section.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Code name (e.g., 'NBC', 'OBC')"
+                    },
+                    "page": {
+                        "type": "integer",
+                        "description": "Page number to retrieve"
+                    }
+                },
+                "required": ["code", "page"],
+                "additionalProperties": False
+            },
+            annotations=ToolAnnotations(
+                title="Get Page Content",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
+        ),
     ]
 
 
@@ -843,6 +1097,10 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
         result = mcp.verify_section(arguments.get("id", ""), arguments.get("code", ""))
     elif name == "get_applicable_code":
         result = mcp.get_applicable_code(arguments.get("location", ""))
+    elif name == "get_table":
+        result = mcp.get_table(arguments.get("table_id", ""), arguments.get("code"))
+    elif name == "get_page":
+        result = mcp.get_page(arguments.get("code", ""), arguments.get("page", 0))
     else:
         result = {"error": f"Unknown tool: {name}"}
 

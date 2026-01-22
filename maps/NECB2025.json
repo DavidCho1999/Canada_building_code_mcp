@@ -1,7 +1,7 @@
 {
   "code": "NECB",
   "version": "2025",
-  "generated": "2026-01-21T19:18:47.195645",
+  "generated": "2026-01-22T15:54:14.880517",
   "source_pdf": {
     "filename": "NECB2025p1.pdf"
   },
@@ -823,21 +823,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "referenced",
-        "another",
-        "conflict",
-        "case",
         "code",
+        "national",
         "model",
+        "referenced",
+        "provisions",
+        "references",
+        "another",
+        "objectives",
+        "functional",
         "statements",
         "found",
-        "provisions",
-        "govern",
-        "objectives",
-        "references",
+        "case",
+        "conflict",
         "document",
-        "national",
-        "documents"
+        "govern"
       ],
       "division": "A"
     },
@@ -1134,21 +1134,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "consumption",
-        "functions",
-        "through",
-        "code",
-        "a-3",
         "limit",
-        "demand",
-        "statements",
-        "functional",
-        "building",
+        "energy",
+        "code",
         "unnecessary",
         "national",
-        "energy",
+        "building",
         "amount",
-        "uncontrolled"
+        "uncontrolled",
+        "through",
+        "demand",
+        "consumption",
+        "functional",
+        "statements",
+        "functions",
+        "a-3"
       ],
       "division": "A"
     },
@@ -1381,21 +1381,18 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "cooling",
-        "use",
-        "iso",
-        "heating",
-        "performance",
-        "words",
-        "definitions",
-        "space",
-        "hydronics",
-        "buildings",
-        "phrases",
-        "calculation",
         "energy",
+        "hydronics",
+        "institute",
         "manuals",
-        "institute"
+        "iso",
+        "performance",
+        "buildings",
+        "calculation",
+        "use",
+        "space",
+        "heating",
+        "cooling"
       ],
       "division": "B"
     },
@@ -1558,13 +1555,13 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "documents",
         "referenced",
-        "a-1",
         "code",
         "they",
-        "documents",
+        "editions",
         "designated",
-        "editions"
+        "a-1"
       ],
       "division": "B"
     },
@@ -1582,21 +1579,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "organizations",
-        "referenced",
         "accuracy",
-        "code",
         "information",
-        "effort",
-        "ensure",
-        "responsible",
-        "content",
-        "presented",
-        "every",
+        "referenced",
+        "code",
         "while",
+        "every",
+        "effort",
         "made",
+        "ensure",
         "nrc",
-        "timeliness"
+        "responsible",
+        "timeliness",
+        "reliability",
+        "content",
+        "presented"
       ],
       "division": "B"
     },
@@ -1933,21 +1930,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "assemblies",
-        "envelope",
-        "determined",
-        "standard",
-        "doors",
         "fenestration",
-        "transmittance",
-        "astm",
-        "performance",
-        "temperature",
-        "general",
+        "thermal",
         "building",
+        "assemblies",
+        "transmittance",
+        "doors",
+        "standard",
+        "astm",
         "test",
-        "using",
-        "method"
+        "method",
+        "performance",
+        "envelope",
+        "temperature",
+        "determined",
+        "using"
       ],
       "division": "B"
     },
@@ -2394,21 +2391,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "greater",
-        "cooling",
-        "their",
-        "insulated",
         "heating",
-        "pipes",
+        "their",
+        "shown",
+        "heating-degree-day",
+        "category",
+        "floors-on-ground",
+        "insulated",
+        "insulation",
+        "greater",
         "embedded",
-        "leakage",
         "ducts",
         "cables",
-        "air",
-        "category",
-        "placed",
-        "shown",
-        "floors-on-ground"
+        "cooling",
+        "pipes",
+        "placed"
       ],
       "division": "B"
     },
@@ -2677,21 +2674,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "envelope",
-        "acceptable",
         "path",
-        "requirements",
-        "code",
         "a-3",
-        "achieved",
-        "statements",
-        "performance",
-        "functional",
-        "attributed",
-        "purpose",
         "building",
+        "requirements",
+        "performance",
+        "code",
+        "objective",
+        "functional",
+        "statements",
         "paths",
-        "objective"
+        "achieved",
+        "envelope",
+        "purpose",
+        "attributed",
+        "acceptable"
       ],
       "division": "B"
     },
@@ -3032,21 +3029,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "scope",
-        "lighting",
-        "ballast",
-        "csa-c654",
-        "efficacy",
+        "lamp",
+        "power",
         "fluorescent",
-        "installed",
+        "interior",
+        "lighting",
+        "building",
         "ballasts",
         "within",
-        "building",
-        "power",
-        "interior",
-        "electronic",
+        "installed",
         "method",
-        "lamp"
+        "electronic",
+        "scope",
+        "csa-c654",
+        "ballast",
+        "efficacy"
       ],
       "division": "B"
     },
@@ -3128,20 +3125,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "space",
+        "lighting",
+        "type",
         "determined",
-        "enclosed",
-        "automatic",
-        "implemented",
-        "control",
         "controls",
         "requirements",
-        "lighting",
-        "interior",
-        "marked",
-        "allowance",
         "power",
-        "type",
-        "space",
+        "automatic",
+        "enclosed",
+        "interior",
+        "allowance",
+        "marked",
+        "implemented",
+        "control",
         "using"
       ],
       "division": "B"
@@ -3159,12 +3156,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "interior",
-        "controls",
-        "lighting"
-      ]
+      "division": "B"
     },
     {
       "id": "B-4.2.2",
@@ -3387,21 +3379,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "connected",
         "lighting",
-        "applications",
-        "illuminated",
-        "allowances",
-        "sentences",
         "exterior",
+        "zone",
         "allowance",
-        "individual",
-        "site",
         "power",
+        "applications",
         "building",
         "basic",
+        "site",
+        "connected",
+        "allowances",
+        "sentences",
+        "illuminated",
         "greater",
-        "zone"
+        "individual"
       ],
       "division": "B"
     },
@@ -3728,21 +3720,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "control",
-        "days",
-        "during",
-        "adjusted",
-        "installed",
-        "annual",
         "operational",
-        "equation",
-        "space",
-        "using",
-        "base",
-        "energy",
+        "time",
+        "annual",
         "determined",
+        "using",
+        "days",
+        "adjusted",
+        "space",
+        "during",
+        "daytime",
+        "building",
+        "equation",
+        "base",
         "factor",
-        "lighting"
+        "control"
       ],
       "division": "B"
     },
@@ -4204,21 +4196,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "path",
-        "requirements",
+        "building",
         "lighting",
-        "use",
-        "areas",
-        "statements",
-        "a-4",
-        "allowance",
+        "power",
+        "requirements",
+        "interior",
+        "area",
         "space",
+        "areas",
+        "path",
+        "method",
+        "a-4",
         "type",
         "prescriptive",
-        "building",
-        "power",
-        "interior",
-        "area"
+        "allowance",
+        "use"
       ],
       "division": "B"
     },
@@ -4585,12 +4577,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "air",
-        "distribution",
-        "systems"
-      ]
+      "division": "B"
     },
     {
       "id": "B-5.2.2",
@@ -4748,21 +4735,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "protection",
         "duct",
-        "prevent",
-        "surface",
+        "insulation",
         "cold-air",
         "supply",
-        "systems",
-        "point",
-        "vapour",
         "ducts",
+        "vapour",
         "barrier",
-        "below",
-        "air",
+        "protection",
+        "prevent",
+        "condensation",
+        "surface",
         "temperature",
-        "distribution"
+        "below",
+        "dew",
+        "point"
       ],
       "division": "B"
     },
@@ -5019,21 +5006,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ventilation",
-        "control",
-        "make-up",
+        "day",
+        "category",
         "equipped",
-        "sensors",
-        "outlet",
         "demand",
-        "controls",
+        "control",
+        "ventilation",
         "system",
+        "necessary",
+        "sensors",
+        "controls",
         "capable",
-        "dampers",
-        "intake",
+        "reducing",
         "design",
         "exhaust",
-        "air"
+        "make-up"
       ],
       "division": "B"
     },
@@ -5533,21 +5520,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "dead",
-        "drafts",
         "away",
-        "heat-producing",
-        "sources",
-        "pockets",
-        "exposure",
-        "direct",
         "a-5",
         "heat",
-        "equipped",
+        "supplementary",
+        "direct",
+        "exposure",
+        "sunlight",
+        "heat-producing",
+        "sources",
+        "drafts",
+        "dead",
+        "pockets",
         "air",
-        "temperature",
-        "controls",
-        "sunlight"
+        "pumps",
+        "equipped"
       ],
       "division": "B"
     },
@@ -5751,21 +5738,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ventilation",
-        "airflow",
-        "fan",
-        "supply",
-        "systems",
-        "rate",
-        "design",
-        "a-5",
-        "exhaust",
-        "air",
-        "outdoor",
+        "energy",
         "recovery",
-        "dry",
+        "air",
         "system",
-        "energy"
+        "design",
+        "airflow",
+        "supply",
+        "dry",
+        "fan",
+        "systems",
+        "exhaust",
+        "rate",
+        "ventilation",
+        "outdoor",
+        "a-5"
       ],
       "division": "B"
     },
@@ -5879,21 +5866,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "shut-off",
-        "used",
-        "ventilator",
-        "requirements",
-        "ventilators",
         "heat-recovery",
-        "equivalent",
-        "systems",
-        "setback",
-        "performance",
-        "heat",
-        "meet",
-        "recovery",
         "system",
-        "controls"
+        "heat",
+        "energy",
+        "recovery",
+        "stated",
+        "ventilator",
+        "used",
+        "meet",
+        "requirements",
+        "performance",
+        "equivalent",
+        "ventilators",
+        "systems",
+        "multi-unit"
       ],
       "division": "B"
     },
@@ -6086,21 +6073,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "appear",
-        "forming",
-        "coefficient",
-        "equipment",
-        "meanings",
-        "column",
-        "mode",
-        "heating",
         "performance",
         "btu",
-        "energy",
         "efficiency",
+        "ratio",
+        "symbols",
         "abbreviations",
+        "appear",
+        "column",
+        "meanings",
         "energy-efficiency",
-        "symbols"
+        "energy",
+        "coefficient",
+        "heating",
+        "mode",
+        "forming"
       ],
       "division": "B"
     },
@@ -6118,21 +6105,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "requirements",
-        "equipment",
-        "rating",
-        "fan",
-        "r-448a",
-        "rejection",
-        "performance",
         "heat",
-        "gas-fired",
         "efficiency",
-        "temperature",
-        "fluid",
+        "test",
+        "performance",
+        "equipment",
+        "rejection",
         "radiant",
+        "temperature",
+        "requirements",
+        "fluid",
+        "r-448a",
+        "fan",
+        "rating",
         "constant",
-        "test"
+        "gas-fired"
       ],
       "division": "B"
     },
@@ -6302,21 +6289,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "acceptable",
-        "path",
-        "requirements",
-        "code",
-        "achieved",
-        "statements",
-        "paths",
         "a-5",
+        "code",
+        "requirements",
+        "path",
+        "objective",
         "functional",
-        "attributed",
-        "purpose",
-        "hvac",
-        "building",
+        "statements",
         "exempted",
-        "objective"
+        "building",
+        "paths",
+        "hvac",
+        "achieved",
+        "purpose",
+        "attributed",
+        "acceptable"
       ],
       "division": "B"
     },
@@ -6779,21 +6766,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heating",
+        "water",
+        "efficiency",
         "service",
-        "within",
+        "performance",
         "temperature",
-        "storage",
-        "difference",
-        "energy",
-        "vessels",
+        "heaters",
         "heater",
         "comply",
-        "equipment",
-        "water",
-        "performance",
+        "outdoor",
         "air",
-        "heaters"
+        "within",
+        "difference",
+        "thermal",
+        "energy",
+        "rated"
       ],
       "division": "B"
     },
@@ -6986,21 +6973,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "traps",
-        "water",
+        "insulation",
         "systems",
-        "non-circulating",
-        "heating",
-        "sentences",
         "heat",
-        "first",
+        "piping",
+        "traps",
         "outlet",
-        "service",
         "storage",
+        "heating",
+        "first",
+        "sentences",
         "thickness",
+        "service",
+        "water",
         "thicknesses",
-        "controls",
-        "piping"
+        "non-circulating"
       ],
       "division": "B"
     },
@@ -7318,12 +7305,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "pressure",
-        "booster",
-        "systems"
-      ]
+      "division": "B"
     },
     {
       "id": "B-6.2.8",
@@ -7722,11 +7704,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "voltage",
-        "drop"
-      ]
+      "division": "B"
     },
     {
       "id": "B-7.2.2",
@@ -8111,10 +8089,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "compliance"
-      ]
+      "division": "B"
     },
     {
       "id": "B-8.4.1",
@@ -8344,21 +8319,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "weather",
-        "climate",
-        "climatic",
-        "calculations",
-        "a-8",
-        "model",
-        "values",
-        "compliance",
-        "performed",
         "data",
-        "measured",
-        "site",
-        "available",
+        "climatic",
         "building",
-        "energy"
+        "site",
+        "weather",
+        "energy",
+        "model",
+        "calculations",
+        "performed",
+        "using",
+        "measured",
+        "climate",
+        "available",
+        "a-8",
+        "values"
       ],
       "division": "B"
     },
@@ -8552,21 +8527,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "envelope",
+        "air",
+        "energy",
+        "temperature",
         "calculations",
-        "return",
-        "systems",
         "rise",
+        "due",
+        "building",
+        "fan",
+        "systems",
         "supply",
+        "heat",
+        "return",
         "leakage",
         "rate",
-        "due",
-        "heat",
-        "compliance",
-        "air",
-        "temperature",
-        "fan",
-        "building"
+        "envelope"
       ],
       "division": "B"
     },
@@ -8727,21 +8702,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "loads",
-        "fenestration",
-        "model",
+        "air",
+        "leakage",
         "rate",
-        "annual",
-        "consumption",
+        "pressure",
+        "differential",
         "energy",
-        "solar",
-        "normalized",
+        "building",
+        "loads",
         "used",
         "proposed",
-        "differential",
-        "pressure",
-        "leakage",
-        "air"
+        "a-8",
+        "solar",
+        "model",
+        "fenestration",
+        "normalized"
       ],
       "division": "B"
     },
@@ -9105,21 +9080,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "identical",
-        "semi-heated",
-        "determined",
-        "used",
-        "proposed",
-        "reference",
-        "fenestration",
-        "being",
-        "modeled",
-        "heating",
-        "actual",
-        "absorptance",
-        "a-8",
         "building",
-        "solar"
+        "proposed",
+        "modeled",
+        "solar",
+        "absorptance",
+        "used",
+        "thermal",
+        "identical",
+        "fenestration",
+        "semi-heated",
+        "heating",
+        "a-8",
+        "being",
+        "determined",
+        "actual"
       ],
       "division": "B"
     },
@@ -9263,21 +9238,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "single",
-        "reference",
-        "blocks",
-        "block",
-        "proposed",
-        "systems",
-        "serving",
-        "storeys",
-        "modeled",
-        "air",
-        "outside",
-        "type",
-        "system",
         "building",
-        "hvac"
+        "thermal",
+        "system",
+        "proposed",
+        "blocks",
+        "systems",
+        "hvac",
+        "single",
+        "serving",
+        "outside",
+        "air",
+        "storeys",
+        "type",
+        "block",
+        "modeled"
       ],
       "division": "B"
     },
@@ -9777,21 +9752,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "determined",
-        "cooling",
         "capacity",
-        "ratio",
-        "coil",
-        "part-load",
-        "condenser",
+        "electric",
         "conditions",
-        "performance",
-        "characteristics",
+        "rated",
+        "coil",
+        "cooling",
+        "adjustment",
+        "calculated",
+        "using",
         "equation",
         "temperature",
-        "adjustment",
-        "rated",
-        "electric"
+        "ratio",
+        "determined",
+        "condenser",
+        "part-load"
       ],
       "division": "B"
     },
@@ -9984,21 +9959,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "existing",
+        "building",
+        "addition",
+        "parts",
+        "energy",
+        "characteristics",
+        "components",
+        "year",
         "weather",
+        "code",
+        "a-8",
         "used",
         "calculations",
-        "objective",
-        "code",
-        "year",
-        "components",
-        "statements",
-        "existing",
-        "functional",
-        "characteristics",
-        "a-8",
         "considered",
-        "thermal",
-        "building"
+        "thermal"
       ],
       "division": "B"
     },
@@ -10496,10 +10471,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "compliance"
-      ]
+      "division": "B"
     },
     {
       "id": "B-11.4.1",
@@ -10594,21 +10566,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "factors",
-        "canada",
-        "values",
+        "ghg",
         "emissions",
+        "factors",
+        "energy",
+        "canada",
         "district",
-        "annual",
-        "operational",
-        "net",
+        "plant",
+        "determined",
+        "qualified",
+        "person",
         "a-11",
         "zero",
-        "energy",
-        "qualified",
-        "determined",
-        "proposed",
-        "person"
+        "net",
+        "values",
+        "environment"
       ],
       "division": "B"
     },
@@ -10720,21 +10692,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "environmental",
-        "requirements",
-        "equipment",
-        "output",
-        "information",
-        "water",
-        "statements",
-        "person",
-        "iso",
         "heating",
+        "energy",
+        "equipment",
+        "water",
         "gas",
         "a-11",
-        "kwh",
+        "person",
+        "iso",
         "purpose",
-        "energy"
+        "kwh",
+        "qualified",
+        "requirements",
+        "environmental",
+        "information",
+        "output"
       ],
       "division": "B"
     },
@@ -10995,21 +10967,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-13",
+        "glazing",
+        "existing",
+        "area",
+        "need",
+        "alteration",
+        "wall",
+        "cavities",
+        "minimum",
+        "structural",
+        "building",
+        "fdwr",
         "maximum",
         "comply",
-        "glazing",
-        "general",
-        "structural",
-        "fdwr",
-        "alteration",
-        "minimum",
-        "existing",
         "replacement",
-        "cavities",
-        "wall",
-        "need",
-        "building"
+        "a-13"
       ],
       "division": "B"
     },
@@ -11229,10 +11201,7 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B",
-      "keywords": [
-        "general"
-      ]
+      "division": "B"
     },
     {
       "id": "B-13.6.1",
@@ -11470,21 +11439,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-13",
-        "requirements",
-        "glazing",
-        "systems",
-        "statements",
         "alteration",
-        "criterion",
-        "subsystems",
-        "existing",
-        "provisions",
-        "functional",
         "system",
+        "a-13",
+        "hvac",
+        "requirements",
+        "extent",
+        "existing",
+        "systems",
         "building",
-        "objective",
-        "hvac"
+        "glazing",
+        "subsystems",
+        "criterion",
+        "functional",
+        "statements",
+        "provisions"
       ],
       "division": "B"
     },
@@ -11866,21 +11835,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "above-ground",
-        "envelope",
-        "roofs",
-        "roof",
+        "area",
+        "building",
+        "total",
         "gross",
+        "envelope",
         "fenestration",
         "walls",
-        "door",
-        "information",
+        "above-ground",
         "contact",
-        "floors",
         "ground",
-        "proposed",
-        "work",
-        "wall"
+        "roofs",
+        "floors",
+        "wall",
+        "door",
+        "roof"
       ],
       "division": "C"
     },
@@ -12393,6 +12362,3524 @@
         "selection"
       ],
       "division": "C"
+    },
+    {
+      "id": "Table-1.3.1.2",
+      "title": "Table 1.3.1.2. Documents Referenced in the National Energy Code of Canada for Buildings 2025 (1) Forming Part of Se",
+      "page": 53,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.45002746582031,
+        "t": 678.1787643432617,
+        "r": 564.48095703125,
+        "b": 51.3048095703125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "ansi",
+        "ahri",
+        "ashrae",
+        "rating",
+        "performance",
+        "csa",
+        "heaters",
+        "heat",
+        "a-5",
+        "pump",
+        "air-conditioning",
+        "equipment",
+        "gas",
+        "amca",
+        "testing",
+        "gas-fired",
+        "method",
+        "unitary",
+        "air",
+        "energy"
+      ],
+      "division": "B",
+      "page_end": 58
+    },
+    {
+      "id": "Table-3.2.2.2",
+      "title": "Table 3.2.2.2. Forming Part of Sentences 3.2.2.2.(1) and (2)",
+      "page": 73,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.84471893310547,
+        "t": 626.2184295654297,
+        "r": 564.2139892578125,
+        "b": 528.0834350585938,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "degree-days",
+        "building",
+        "heating",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "above-ground",
+        "opaque",
+        "assembly",
+        "walls",
+        "roofs",
+        "floors"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.2.3",
+      "title": "Table 3.2.2.3. Overall Thermal Transmittance of Fenestration Forming Part of Sentences 3.2.2.3.(2) and (3)",
+      "page": 74,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.91302490234375,
+        "t": 677.6343994140625,
+        "r": 539.9844970703125,
+        "b": 583.5789184570312,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "component",
+        "vertical",
+        "fenestration",
+        "skylights"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.2.4",
+      "title": "Table 3.2.2.4. Overall Thermal Transmittance of Doors",
+      "page": 74,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.120548248291016,
+        "t": 235.74102783203125,
+        "r": 540.066650390625,
+        "b": 166.84381103515625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "component",
+        "doors"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.3.1",
+      "title": "Table 3.2.3.1. Overall Thermal Transmittance of Building Assemblies in Contact with the Ground",
+      "page": 75,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.8310546875,
+        "t": 576.6521606445312,
+        "r": 564.0778198242188,
+        "b": 477.5105285644531,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "assembly",
+        "contact",
+        "ground",
+        "walls",
+        "roofs",
+        "floors",
+        "full",
+        "area"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.5.1.1",
+      "title": "Table 3.5.1.1. Acceptable Solutions in Part 3",
+      "page": 79,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.8882064819336,
+        "t": 468.14227294921875,
+        "r": 308.1669921875,
+        "b": 43.65826416015625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f92-oe1",
+        "thermal",
+        "characteristics",
+        "building",
+        "assemblies",
+        "insulation",
+        "calculation",
+        "overall",
+        "transmittance",
+        "protection",
+        "materials",
+        "continuity",
+        "spaces",
+        "heated",
+        "different",
+        "temperatures",
+        "allowable",
+        "fenestration",
+        "door",
+        "area"
+      ],
+      "division": "B",
+      "page_end": 80
+    },
+    {
+      "id": "Table-A-3.2.1.4",
+      "title": "Table A-3.2.1.4. (1) Maximum Allowable FDWR for Various HDD",
+      "page": 85,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.7220230102539,
+        "t": 231.21923828125,
+        "r": 564.3213500976562,
+        "b": 44.14935302734375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "hdd",
+        "maximum",
+        "fdwr"
+      ],
+      "division": "B",
+      "page_end": 86
+    },
+    {
+      "id": "Table-4.2.1.5",
+      "title": "Table 4.2.1.5. Forming Part of Sentences 4.2.1.5.(1), (4) and (5)",
+      "page": 93,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.70838165283203,
+        "t": 147.89544677734375,
+        "r": 564.2372436523438,
+        "b": 44.1593017578125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "type",
+        "lighting",
+        "power",
+        "density",
+        "automotive",
+        "facility",
+        "convention",
+        "centre",
+        "courthouse",
+        "dining",
+        "bar",
+        "lounge",
+        "leisure",
+        "cafeteria",
+        "fast",
+        "food"
+      ],
+      "division": "B",
+      "page_end": 94
+    },
+    {
+      "id": "Table-4.2.1.6",
+      "title": "Table 4.2.1.6. Lighting Power Density Using the Space-by-Space Method and Minimum Lighting Control Requirements For",
+      "page": 95,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 114.34720611572266,
+        "t": 719.8558731079102,
+        "r": 566.093505859375,
+        "b": 46.097900390625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "automatic",
+        "height",
+        "room",
+        "partial",
+        "daylight",
+        "responsive",
+        "controls",
+        "lighting",
+        "type",
+        "restricted",
+        "manual",
+        "area",
+        "theatre",
+        "penitentiary",
+        "scheduled",
+        "shut-off",
+        "full",
+        "control",
+        "toplighting",
+        "sidelighting"
+      ],
+      "division": "B",
+      "page_end": 100
+    },
+    {
+      "id": "Table-4.2.3.1",
+      "title": "Table 4.2.3.1. -A Lighting Zones Used to Determine Exterior Lighting Allowances Forming Part of Sentence 4.2.3.1.(1",
+      "page": 106,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.83138656616211,
+        "t": 223.53692626953125,
+        "r": 540.1395874023438,
+        "b": 120.62176513671875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "areas",
+        "undeveloped",
+        "within",
+        "national",
+        "provincial",
+        "territorial",
+        "parks",
+        "rural",
+        "residential",
+        "districts",
+        "lighting",
+        "zone",
+        "description",
+        "forest",
+        "land",
+        "developed",
+        "predominantly",
+        "consisting",
+        "zoning",
+        "neighbourhood"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.2.3.1.(4)",
+      "title": "Table Forming Part of Sentences 4.2.3.1.(4)",
+      "page": 108,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.799705505371094,
+        "t": 472.5892028808594,
+        "r": 540.0125732421875,
+        "b": 139.043701171875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "allowances",
+        "zone",
+        "areas",
+        "power",
+        "according",
+        "sales",
+        "exterior",
+        "mofopening",
+        "parking",
+        "walkways",
+        "wide",
+        "pedestrian",
+        "entrances",
+        "exits",
+        "canopies",
+        "open",
+        "vehicle",
+        "lots",
+        "allowance"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.6",
+      "title": "Table 4.3.2.6. -A",
+      "page": 113,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 113.83536529541016,
+        "t": 720.7019653320312,
+        "r": 428.86846923828125,
+        "b": 46.39642333984375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "time",
+        "operation",
+        "end",
+        "day",
+        "start",
+        "opera",
+        "tion"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.3.2.6.(2)",
+      "title": "Table Forming Part of Sentences 4.3.2.6.(2)",
+      "page": 114,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 89.35611724853516,
+        "t": 720.4691390991211,
+        "r": 405.1690673828125,
+        "b": 46.2642822265625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "time",
+        "end",
+        "operation",
+        "night",
+        "opera",
+        "tion",
+        "start"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.7",
+      "title": "Table 4.3.2.7. -A Daylight System Control Factor, C DL,ctrl,i",
+      "page": 115,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.7517318725586,
+        "t": 376.5875549316406,
+        "r": 564.1825561523438,
+        "b": 321.4319763183594,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "daylight",
+        "system",
+        "control",
+        "ctrl",
+        "automatic",
+        "manual",
+        "none"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.8",
+      "title": "Table 4.3.2.8. Raw Daylight Supply Factors for Rough Opening in Primary Sidelighted Area, C DL,sup,raw,i Forming Pa",
+      "page": 116,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.789161682128906,
+        "t": 188.6317138671875,
+        "r": 540.0556030273438,
+        "b": 86.81451416015625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "orientation",
+        "fenestration",
+        "providing",
+        "sidelighting",
+        "sup",
+        "raw",
+        "design",
+        "illuminance",
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.9",
+      "title": "Table 4.3.2.9. -A Daylight Supply Factors for Toplighting, C DL,sup,i Forming Part of Sentence 4.3.2.9.(1)",
+      "page": 117,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.7857666015625,
+        "t": 172.68231201171875,
+        "r": 564.2015380859375,
+        "b": 76.814208984375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "classification",
+        "daylighting",
+        "supply",
+        "sup",
+        "design",
+        "illuminance",
+        "low",
+        "medium",
+        "good"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.10",
+      "title": "Table 4.3.2.10. -A Forming Part of Sentences 4.3.2.10.(1) and (2) and 4.3.3.10.(1)",
+      "page": 119,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.60668182373047,
+        "t": 677.1490631103516,
+        "r": 564.3868408203125,
+        "b": 55.22296142578125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "room",
+        "space",
+        "area",
+        "types",
+        "dining",
+        "common",
+        "theatre",
+        "penitentiary",
+        "factors",
+        "height",
+        "performing",
+        "arts",
+        "classroom",
+        "designed",
+        "ansi",
+        "ies",
+        "rp-28",
+        "used",
+        "primarily",
+        "residents"
+      ],
+      "division": "B",
+      "page_end": 121
+    },
+    {
+      "id": "Table-4.5.1.1",
+      "title": "Table 4.5.1.1. Acceptable Solutions in Part 4",
+      "page": 125,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.49246978759766,
+        "t": 666.1987228393555,
+        "r": 308.28546142578125,
+        "b": 56.47381591796875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f94-oe1",
+        "lighting",
+        "interior",
+        "power",
+        "installed",
+        "calculation",
+        "allowance",
+        "using",
+        "method",
+        "controls",
+        "exit",
+        "signs",
+        "fluorescent",
+        "lamp",
+        "ballasts",
+        "f94",
+        "f98-oe1",
+        "limits",
+        "determination",
+        "building"
+      ],
+      "division": "B",
+      "page_end": 126
+    },
+    {
+      "id": "Table-5.2.2.3",
+      "title": "Table 5.2.2.3. Sealing of Ducts",
+      "page": 140,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.63768768310547,
+        "t": 339.87554931640625,
+        "r": 540.08740234375,
+        "b": 288.22650146484375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "class",
+        "static",
+        "pressure",
+        "seal"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.2.4",
+      "title": "Table 5.2.2.4. Leakage Classes, CL",
+      "page": 141,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.91407775878906,
+        "t": 677.6239624023438,
+        "r": 564.19775390625,
+        "b": 603.6087646484375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "maximum",
+        "operating",
+        "static",
+        "pressure",
+        "per",
+        "shape",
+        "duct",
+        "rectangular",
+        "round"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.2.5",
+      "title": "Table 5.2.2.5. Insulation of Ducts Forming Part of Sentences 5.2.2.5.(1) and (2)",
+      "page": 141,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.74745178222656,
+        "t": 426.5381774902344,
+        "r": 564.2086791992188,
+        "b": 352.172607421875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "minimum",
+        "thermal",
+        "temperature",
+        "difference",
+        "resis",
+        "tance",
+        "ducts",
+        "plenums",
+        "resistance",
+        "run-outs"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.3.4",
+      "title": "Table 5.2.3.4. Demand Control Ventilation Threshold for Commercial Kitchen Ventilation Systems Forming Part of Sent",
+      "page": 144,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.961212158203125,
+        "t": 616.2888641357422,
+        "r": 539.9862060546875,
+        "b": 546.9644775390625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "design",
+        "exhaust",
+        "fan",
+        "airflow",
+        "rate"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.5.3",
+      "title": "Table 5.2.5.3. Minimum Thickness of Piping Insulation",
+      "page": 146,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.82403564453125,
+        "t": 677.9028015136719,
+        "r": 540.0579833984375,
+        "b": 516.0022583007812,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "insulation",
+        "water",
+        "nominal",
+        "pipe",
+        "diameter",
+        "inches",
+        "minimum",
+        "thickness",
+        "piping",
+        "heating",
+        "steam",
+        "condensate",
+        "temperature",
+        "range",
+        "conductivity",
+        "design",
+        "operating",
+        "thermal",
+        "cooling",
+        "systems"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-5.2.6.3.(1)",
+      "title": "Table Forming Part of Sentence 5.2.6.3.(1)",
+      "page": 147,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.92048645019531,
+        "t": 610.9886779785156,
+        "r": 564.2015991210938,
+        "b": 526.9380493164062,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "pump",
+        "heat",
+        "type",
+        "hydronic",
+        "system",
+        "maximum",
+        "combined",
+        "pumping",
+        "power",
+        "demand",
+        "motors",
+        "motorpower",
+        "thermalpeak",
+        "heating",
+        "rejection",
+        "cooling",
+        "water-source"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.10.1",
+      "title": "Table 5.2.10.1. -A",
+      "page": 149,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 71.22660827636719,
+        "t": 273.001953125,
+        "r": 564.260009765625,
+        "b": 75.44964599609375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "design",
+        "airflow",
+        "percentage",
+        "outdoor",
+        "air",
+        "conditions",
+        "supply",
+        "fan",
+        "rate",
+        "threshold",
+        "values",
+        "min",
+        "degree-days",
+        "zone",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zones"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.10.4",
+      "title": "Table 5.2.10.4",
+      "page": 151,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.829833984375,
+        "t": 189.9599609375,
+        "r": 564.150634765625,
+        "b": 125.61871337890625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "temperature",
+        "january",
+        "design",
+        "building",
+        "location",
+        "outside",
+        "air",
+        "test",
+        "station",
+        "sensible-heat-recovery",
+        "efficiency"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.12.1",
+      "title": "Table 5.2.12.1. -A",
+      "page": 154,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 39.94998550415039,
+        "t": 677.4825286865234,
+        "r": 540.360107421875,
+        "b": 68.85791015625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "conditioners",
+        "heat",
+        "pumps",
+        "split-system",
+        "heating",
+        "single-package",
+        "standard",
+        "cooling",
+        "large",
+        "electrical",
+        "phases",
+        "mode",
+        "eer",
+        "ieer",
+        "csa-c746",
+        "single-phase",
+        "subpart",
+        "seer2",
+        "hspf2"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.12.2",
+      "title": "Table 5.2.12.2. Heat Rejection Equipment Performance Requirements",
+      "page": 167,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.77423858642578,
+        "t": 677.4425964355469,
+        "r": 564.2989501953125,
+        "b": 160.745849609375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "cti",
+        "capacities",
+        "entering",
+        "water",
+        "bulb",
+        "temperature",
+        "fluid",
+        "fan",
+        "wet",
+        "indirect-contact",
+        "evaporative",
+        "cooling",
+        "towers",
+        "coolers",
+        "leaving",
+        "propeller",
+        "axial",
+        "condensers",
+        "condensing",
+        "gas"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.5.1.1",
+      "title": "Table 5.5.1.1. Acceptable Solutions in Part 5",
+      "page": 169,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.33601379394531,
+        "t": 666.8445129394531,
+        "r": 308.3878173828125,
+        "b": 55.28155517578125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f95-oe1",
+        "f95",
+        "air",
+        "f99-oe1",
+        "duct",
+        "cooling",
+        "outdoor",
+        "f97-oe1",
+        "systems",
+        "f91",
+        "insulation",
+        "f92",
+        "f93",
+        "use",
+        "economizer",
+        "system",
+        "fan",
+        "f93-oe1",
+        "balancing",
+        "sealing"
+      ],
+      "division": "B",
+      "page_end": 170
+    },
+    {
+      "id": "Table-A-5.2.2.3",
+      "title": "Table A-5.2.2.3. (1) SMACNA Duct Sealing Classification",
+      "page": 172,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.704551696777344,
+        "t": 255.9854736328125,
+        "r": 540.1334838867188,
+        "b": 200.5308837890625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "sealing",
+        "transverse",
+        "joints",
+        "class",
+        "longitudinal",
+        "seams",
+        "static",
+        "pressure",
+        "seal",
+        "description",
+        "duct",
+        "wall",
+        "penetrations"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-A-5.2.2.8",
+      "title": "Table A-5.2.2.8. (2)",
+      "page": 174,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.0047492980957,
+        "t": 688.4995574951172,
+        "r": 540.008544921875,
+        "b": 544.9578552246094,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "exceeds",
+        "outdoor",
+        "temperature",
+        "enthalpy",
+        "economizer",
+        "dry",
+        "bulb",
+        "setpoint",
+        "hlso",
+        "conditions",
+        "turns",
+        "differential",
+        "return",
+        "type",
+        "control",
+        "equation",
+        "description",
+        "fixed",
+        "set-point"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-5.2.12.4.(1)",
+      "title": "Service Water Heating Equipment Performance Requirements (Forming Part of Sentences 5.2.12.4.(1))",
+      "page": 184,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 88.5165023803711,
+        "t": 719.9585952758789,
+        "r": 470.9547424316406,
+        "b": 48.22314453125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "uef",
+        "storage-type",
+        "gas-fired",
+        "fhr",
+        "csa-p",
+        "inlet",
+        "instantaneous",
+        "doe10cfr",
+        "subpart",
+        "performance",
+        "bottom",
+        "top",
+        "min",
+        "water",
+        "heaters",
+        "csa-c191",
+        "csa",
+        "input",
+        "service",
+        "others"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-6.2.2.1",
+      "title": "Table 6.2.2.1",
+      "page": 185,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 93.7105941772461,
+        "t": 720.1107940673828,
+        "r": 412.4476623535156,
+        "b": 46.3958740234375,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "oil-fired",
+        "storage-type",
+        "uef",
+        "fhr",
+        "standard",
+        "csa",
+        "back-up",
+        "csa-p",
+        "doe10cfr",
+        "subpart",
+        "instantaneous",
+        "gas-fired",
+        "performance",
+        "sef",
+        "values",
+        "input",
+        "others",
+        "electric",
+        "cop",
+        "rating"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-6.2.3.1",
+      "title": "Table 6.2.3.1. Minimum Thickness of Piping Insulation for Service Water Heating Systems",
+      "page": 188,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.97403335571289,
+        "t": 514.2309875488281,
+        "r": 539.9567260742188,
+        "b": 340.1388244628906,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "conditioned",
+        "unconditioned",
+        "outside",
+        "conductivity",
+        "insulation",
+        "thermal",
+        "nominal",
+        "pipe",
+        "diameter",
+        "runouts",
+        "minimum",
+        "thickness",
+        "range",
+        "mean",
+        "rating",
+        "temperature"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-6.5.1.1",
+      "title": "Table 6.5.1.1",
+      "page": 191,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.0608139038086,
+        "t": 666.8525085449219,
+        "r": 308.31988525390625,
+        "b": 54.6041259765625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f96-oe1",
+        "equipment",
+        "f96",
+        "service",
+        "water",
+        "f99-oe1",
+        "heating",
+        "f95",
+        "f93",
+        "insulation",
+        "f98",
+        "space-heating",
+        "f92",
+        "f93-oe1",
+        "temperature",
+        "controls",
+        "regulations",
+        "f98-oe1",
+        "efficiency",
+        "solar"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-7.5.1.1",
+      "title": "Table 7.5.1.1",
+      "page": 201,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.14962005615234,
+        "t": 666.4436264038086,
+        "r": 307.9024658203125,
+        "b": 487.2960205078125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f99-oe1",
+        "monitoring",
+        "f97-oe1",
+        "feeders",
+        "branch",
+        "circuits",
+        "transformer",
+        "selection",
+        "f97",
+        "efficiency",
+        "functional",
+        "statements",
+        "objectives",
+        "f98-oe1",
+        "f98"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.3.5",
+      "title": "Table 8.4.3.5",
+      "page": 215,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.73555755615234,
+        "t": 677.2010498046875,
+        "r": 564.2634887695312,
+        "b": 632.3760681152344,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "cooling",
+        "capacity",
+        "btu",
+        "type",
+        "cop",
+        "iplv",
+        "scroll",
+        "screw"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.4.1",
+      "title": "Table 8.4.4.1. Energy Use Intensities for Building Archetypes",
+      "page": 216,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.90587615966797,
+        "t": 447.8789367675781,
+        "r": 540.1310424804688,
+        "b": 373.9642028808594,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "multi-unit",
+        "residential",
+        "storeys",
+        "height",
+        "archetype",
+        "energy",
+        "use",
+        "intensity",
+        "kwh",
+        "per",
+        "year",
+        "school",
+        "k-12",
+        "office"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.4.2",
+      "title": "Table 8.4.4.2. Modeling Inputs for the Proposed Building Forming Part of Sentence 8.4.4.2.(1)",
+      "page": 217,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.88785552978516,
+        "t": 677.5766754150391,
+        "r": 564.0894775390625,
+        "b": 597.9762878417969,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "occupant",
+        "building",
+        "peak",
+        "load",
+        "archetype",
+        "density",
+        "receptacle",
+        "service",
+        "water",
+        "heating",
+        "operating",
+        "schedule",
+        "a-8",
+        "school",
+        "k-12",
+        "multi-unit",
+        "residential",
+        "office"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.7",
+      "title": "Table 8.4.5.7. -A",
+      "page": 220,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.00128173828125,
+        "t": 260.02874755859375,
+        "r": 540.2431640625,
+        "b": 44.05963134765625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "room",
+        "area",
+        "system",
+        "space",
+        "building",
+        "centre",
+        "swimming",
+        "pool",
+        "storeys",
+        "sizes",
+        "theatre",
+        "control",
+        "library",
+        "type",
+        "proposed",
+        "assembly",
+        "exhibit",
+        "conference",
+        "meeting",
+        "multi-purpose"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.12",
+      "title": "Table 8.4.5.12",
+      "page": 225,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 71.08678436279297,
+        "t": 498.6003112792969,
+        "r": 564.057373046875,
+        "b": 442.9872131347656,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "systems",
+        "hvac",
+        "type",
+        "system",
+        "cooling",
+        "outside",
+        "air",
+        "types",
+        "heat",
+        "pump"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.13",
+      "title": "Table 8.4.5.13. Heat Pump System Description",
+      "page": 226,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 47.23529052734375,
+        "t": 462.2005310058594,
+        "r": 539.979736328125,
+        "b": 406.9537048339844,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "system",
+        "type",
+        "rooftop",
+        "fuel-fired",
+        "electric",
+        "resistance",
+        "number",
+        "fan",
+        "control",
+        "terminal",
+        "auxiliary",
+        "heating",
+        "systems",
+        "packaged",
+        "unitary",
+        "heat",
+        "pump",
+        "constant",
+        "volume",
+        "unit"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.14",
+      "title": "Table 8.4.5.14",
+      "page": 227,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.89168548583984,
+        "t": 677.6698226928711,
+        "r": 564.2310180664062,
+        "b": 581.3718719482422,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "pump",
+        "type",
+        "coefficients",
+        "riding",
+        "curve",
+        "variable",
+        "speed",
+        "drive"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.17",
+      "title": "Table 8.4.5.17. Coefficients Used in Calculating Fan Power versus Flow Rate Forming Part of Sentence 8.4.5.17.(2)",
+      "page": 228,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.979942321777344,
+        "t": 627.3389587402344,
+        "r": 540.0787963867188,
+        "b": 544.6669769287109,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "coefficients",
+        "fan",
+        "airfoil",
+        "backward",
+        "inclined",
+        "inlet",
+        "vanes",
+        "type",
+        "riding",
+        "curve",
+        "forward",
+        "curved",
+        "variable",
+        "speed",
+        "drive"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.2",
+      "title": "Table 8.4.6.2. Coefficients Used in the Calculation of FHeatPLC for Condensing, Non-Condensing and Modulating Boile",
+      "page": 230,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.88548278808594,
+        "t": 117.90264892578125,
+        "r": 540.1420288085938,
+        "b": 44.17138671875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "fheatplc",
+        "type",
+        "boiler",
+        "non-condensing",
+        "condensing",
+        "modulating"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.3",
+      "title": "Table 8.4.6.3. Forming Part of Sentence 8.4.6.3.(2)",
+      "page": 231,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.98551940917969,
+        "t": 399.4190979003906,
+        "r": 563.9939575195312,
+        "b": 325.8438720703125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "fheatplc",
+        "type",
+        "furnace",
+        "atmospheric",
+        "condensing",
+        "modulating"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.5",
+      "title": "Table 8.4.6.5. -A Capacity Coefficients Used in the Calculation of CAP_FT EC",
+      "page": 233,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.74980163574219,
+        "t": 307.5569763183594,
+        "r": 564.1990356445312,
+        "b": 159.125732421875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "cap",
+        "type",
+        "electric",
+        "chiller",
+        "scroll",
+        "reciprocating",
+        "screw",
+        "centrifugal",
+        "air-cooled",
+        "water-cooled"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.8",
+      "title": "Table 8.4.6.8. -A",
+      "page": 238,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.94844436645508,
+        "t": 553.0063018798828,
+        "r": 540.0850219726562,
+        "b": 458.7545166015625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "cap",
+        "steam-driven",
+        "type",
+        "absorption",
+        "chiller",
+        "single-effect",
+        "double-effect",
+        "direct-fired"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.5.1.1",
+      "title": "Table 8.5.1.1",
+      "page": 241,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.71475219726562,
+        "t": 531.7758483886719,
+        "r": 308.1558532714844,
+        "b": 43.98699951171875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f99-oe1",
+        "general",
+        "treatment",
+        "application",
+        "f94",
+        "f95",
+        "f96",
+        "determination",
+        "additions",
+        "process",
+        "loads",
+        "calculation",
+        "methods",
+        "climatic",
+        "data",
+        "thermal",
+        "mass",
+        "space",
+        "temperature",
+        "functional"
+      ],
+      "division": "B",
+      "page_end": 244
+    },
+    {
+      "id": "Table-A-8.4.3.2",
+      "title": "Table A-8.4.3.2. (2)-A Modeling Guidance for Loads, Operating Schedules and Illuminance Levels by Building Type",
+      "page": 258,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.978702545166016,
+        "t": 626.6476135253906,
+        "r": 540.2023315429688,
+        "b": 65.3258056640625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "occupant",
+        "facility",
+        "load",
+        "centre",
+        "station",
+        "theatre",
+        "office",
+        "type",
+        "density",
+        "peak",
+        "receptacle",
+        "service",
+        "water",
+        "heating",
+        "operating",
+        "schedule",
+        "a-8",
+        "illuminance",
+        "levels"
+      ],
+      "division": "B",
+      "page_end": 262
+    },
+    {
+      "id": "Table-1",
+      "title": "Table 1. -1 Nominal R-Values of Wall Components in Figure 1-1",
+      "page": 264,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 58.5643310546875,
+        "t": 429.15869140625,
+        "r": 528.101318359375,
+        "b": 296.71148681640625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "sheathing",
+        "component",
+        "surface",
+        "air",
+        "film",
+        "insulation",
+        "thickness",
+        "nominal",
+        "r-value",
+        "outside",
+        "siding",
+        "aluminum",
+        "steel",
+        "paper",
+        "cellular",
+        "glass",
+        "board",
+        "mineral",
+        "fibre",
+        "rsi"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-2",
+      "title": "Table 2. -1 Nominal R-Values of Wall Components in Figure 2-1",
+      "page": 265,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 82.68029022216797,
+        "t": 688.2989501953125,
+        "r": 552.0829467773438,
+        "b": 555.4354248046875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "sheathing",
+        "component",
+        "surface",
+        "air",
+        "film",
+        "insulation",
+        "thickness",
+        "nominal",
+        "r-value",
+        "outside",
+        "siding",
+        "aluminum",
+        "steel",
+        "paper",
+        "polystyrene",
+        "smooth",
+        "skin",
+        "mineral",
+        "fibre",
+        "rsi"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-10.1.2.1",
+      "title": "Table 10.1.2.1. Energy Performance Tiers",
+      "page": 274,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.781192779541016,
+        "t": 677.4558258056641,
+        "r": 540.0889282226562,
+        "b": 604.787841796875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "energy",
+        "percent",
+        "performance",
+        "tier",
+        "building",
+        "target",
+        "improvement"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-11.4.1.1",
+      "title": "Table 11.4.1.1",
+      "page": 280,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.81345748901367,
+        "t": 415.9521179199219,
+        "r": 540.2407836914062,
+        "b": 313.273681640625,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "ghg",
+        "emissions",
+        "percent",
+        "performance",
+        "level",
+        "operational",
+        "target",
+        "improvement"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-11.4.2.1",
+      "title": "Table 11.4.2.1. -A GHG Emissions Factors for Electricity and Utility Gas by Province or Territory",
+      "page": 281,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.92237854003906,
+        "t": 479.38848876953125,
+        "r": 563.757080078125,
+        "b": 259.29754638671875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "ghg",
+        "emissions",
+        "factor",
+        "kwh",
+        "territory",
+        "province",
+        "electricity",
+        "utility",
+        "gas",
+        "british",
+        "columbia",
+        "alberta",
+        "saskatchewan",
+        "manitoba",
+        "ontario",
+        "bec",
+        "new",
+        "brunswick",
+        "nova",
+        "scotia"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-11.5.1.1",
+      "title": "Table 11.5.1.1. Acceptable Solutions in Part 11",
+      "page": 284,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.308528900146484,
+        "t": 666.7791061401367,
+        "r": 284.0758056640625,
+        "b": 354.74920654296875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "f101-oe2",
+        "general",
+        "application",
+        "functional",
+        "statements",
+        "objectives"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-A-11.4.2.1",
+      "title": "Table A-11.4.2.1. Unit Conversions for Energy Sources",
+      "page": 285,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.6875,
+        "t": 494.0157165527344,
+        "r": 564.04345703125,
+        "b": 405.38201904296875,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "energy",
+        "unit",
+        "oil",
+        "fuel",
+        "source",
+        "per",
+        "kwh",
+        "diesel",
+        "natural",
+        "gas",
+        "heating",
+        "light",
+        "heavy",
+        "propane"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-13.11.1.1",
+      "title": "Table 13.11.1.1",
+      "page": 296,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 46.44172668457031,
+        "t": 666.5770111083984,
+        "r": 283.9536437988281,
+        "b": 561.8138275146484,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "requirements",
+        "f94-oe1",
+        "functional",
+        "statements",
+        "objectives",
+        "f96-oe1",
+        "f92",
+        "f93-oe1"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-C-1",
+      "title": "Table C-1. Design Data for Selected Locations in Canada",
+      "page": 299,
+      "level": "table",
+      "type": "table",
+      "bbox": {
+        "l": 70.54574584960938,
+        "t": 481.4194641113281,
+        "r": 565.7989501953125,
+        "b": 51.03009033203125,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "design",
+        "temperature",
+        "bella",
+        "creek",
+        "degree",
+        "days",
+        "hourly",
+        "wind",
+        "january",
+        "july",
+        "pressures",
+        "kpa",
+        "historical",
+        "future",
+        "below",
+        "dry",
+        "wet",
+        "river",
+        "lake",
+        "province"
+      ],
+      "division": "B",
+      "page_end": 316
+    }
+  ],
+  "tables": [
+    {
+      "id": "Table-1.3.1.2",
+      "title": "Table 1.3.1.2. Documents Referenced in the National Energy Code of Canada for Buildings 2025 (1) Forming Part of Se",
+      "page": 53,
+      "table_info": {
+        "rows": 29,
+        "cols": 4
+      },
+      "markdown": "| Issuing Agency | Document Number (2) | Title of Document | Code Reference |\n|---|---|---|---|\n| AAMA | 501.5-07 | Test Method for Thermal Cycling of Exterior Walls | 3.2.4.3.(3) |\n| AHRI | ANSI/AHRI 210/240-2008 | Performance Rating of Unitary Air-Conditioning ... | Table 5.2.12.1.-C |\n| AHRI | AHRI 310/380-2014/CSA C744-14 | Packaged Terminal Air-Conditioners and Heat Pumps | Table 5.2.12.1.-G |\n| AHRI | ANSI/AHRI 340/360-2007 | Performance Rating of Commercial and Industrial... | Table 5.2.12.1.-A Table 5.2.12.1.-C |\n| AHRI | ANSI/AHRI 366 (SI/2009) | Performance Rating of Commercial and Industrial... | Table 5.2.12.1.-D |\n| AHRI | ANSI/AHRI 460-2005 | Performance Rating of Remote Mechanical-Draft A... | Table 5.2.12.2. |\n| AHRI | ANSI/AHRI 551/591 (SI/2018) | Performance Rating of Water-chilling and Heat P... | Table 5.2.12.1.-L Table 5.2.12.1.-M |\n| AHRI | ANSI/AHRI 921 (SI/2015) | Performance Rating of DX-Dedicated Outdoor Air ... | Table 5.2.12.1.-J |\n| AHRI | 1061 (SI/2013) | Performance Rating of Air-to-Air Exchangers for... | 5.2.10.1.(5) A-5.2.10.1.(4) |\n| AHRI | 1160 (I-P/2014) | Performance Rating of Heat Pump Pool Heaters (w... | Table 6.2.2.1. |\n| AHRI | 1230-2014 | Performance Rating of Variable Refrigerant Flow... | Table 5.2.12.1.-I |\n| AHRI | CAN/ANSI/AHRI 1330-2015 | Performance Rating for Radiant Output of Gas Fi... | Table 5.2.12.1.-P |\n| AHRI | 1361 (SI/2017) | Performance Rating of Computer and Data Process... | Table 5.2.12.1.-H |\n| AMCA | ANSI/AMCA 500-D-12 | Methods of Testing Dampers for Rating | 5.2.4.2.(2) |\n| AMCA | ANSI/AMCA 500-L-12 | Methods of Testing Louvers for Rating | 5.2.4.2.(2) |\n| ANSI/CSA | CSA/ANSI Z21.10.3:19/CSA 4.3:19 | Gas-fired water heaters, volume III, storage wa... | Table 6.2.2.1. |\n| ANSI/CSA | CSA/ANSI Z21.47:21/CSA 2.3:21 | Gas-fired central furnaces | Table 5.2.12.1.-O |\n| ANSI/CSA | CSA/ANSI Z21.56:19/CSA 4.7:19 | Gas-fired pool heaters | Table 6.2.2.1. |\n| ANSI/CSA | ANSI Z83.8-2016/CSA 2.6-2016 | Gas unit \n...(truncated)",
+      "keywords": [
+        "ansi",
+        "ahri",
+        "ashrae",
+        "rating",
+        "performance",
+        "csa",
+        "heaters",
+        "heat",
+        "a-5",
+        "pump",
+        "air-conditioning",
+        "equipment",
+        "gas",
+        "amca",
+        "testing",
+        "gas-fired",
+        "method",
+        "unitary",
+        "air",
+        "energy"
+      ],
+      "division": "B",
+      "page_end": 58
+    },
+    {
+      "id": "Table-3.2.2.2",
+      "title": "Table 3.2.2.2. Forming Part of Sentences 3.2.2.2.(1) and (2)",
+      "page": 73,
+      "table_info": {
+        "rows": 6,
+        "cols": 7
+      },
+      "markdown": "|   | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... |\n|---|---|---|---|---|---|---|\n| Above-ground Opaque Building Assembly | Zone 4: (2) < 3000 | Zone 5: (2) 3000 to 3999 | Zone 6: (2) 4000 to 4999 | Zone 7A: (2) 5000 to 5999 | Zone 7B: (2) 6000 to 6999 | Zone 8: (2) ≥ 7000 |\n|   | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) |\n| Walls | 0.290 | 0.265 | 0.240 | 0.215 | 0.190 | 0.165 |\n| Roofs | 0.164 | 0.156 | 0.138 | 0.121 | 0.117 | 0.110 |\n| Floors | 0.193 | 0.175 | 0.156 | 0.138 | 0.121 | 0.117 |",
+      "keywords": [
+        "degree-days",
+        "building",
+        "heating",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "above-ground",
+        "opaque",
+        "assembly",
+        "walls",
+        "roofs",
+        "floors"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.2.3",
+      "title": "Table 3.2.2.3. Overall Thermal Transmittance of Fenestration Forming Part of Sentences 3.2.2.3.(2) and (3)",
+      "page": 74,
+      "table_info": {
+        "rows": 5,
+        "cols": 7
+      },
+      "markdown": "|   | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... |\n|---|---|---|---|---|---|---|\n| Component | Zone 4: (2) < 3000 | Zone 5: (2) 3000 to 3999 | Zone 6: (2) 4000 to 4999 | Zone 7A: (2) 5000 to 5999 | Zone 7B: (2) 6000 to 6999 | Zone 8: (2) ≥ 7000 |\n|   | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) |\n| Vertical fenestration | 1.90 | 1.90 | 1.73 | 1.73 | 1.44 | 1.44 |\n| Skylights | 2.69 | 2.69 | 2.41 | 2.41 | 2.01 | 2.01 |",
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "component",
+        "vertical",
+        "fenestration",
+        "skylights"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.2.4",
+      "title": "Table 3.2.2.4. Overall Thermal Transmittance of Doors",
+      "page": 74,
+      "table_info": {
+        "rows": 4,
+        "cols": 7
+      },
+      "markdown": "|   | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... |\n|---|---|---|---|---|---|---|\n| Component | Zone 4: (2) < 3000 | Zone 5: (2) 3000 to 3999 | Zone 6: (2) 4000 to 4999 | Zone 7A: (2) 5000 to 5999 | Zone 7B: (2) 6000 to 6999 | Zone 8: (2) ≥ 7000 |\n|   | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) |\n| All doors | 2.12 | 1.90 | 1.90 | 1.90 | 1.90 | 1.44 |",
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "component",
+        "doors"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.2.3.1",
+      "title": "Table 3.2.3.1. Overall Thermal Transmittance of Building Assemblies in Contact with the Ground",
+      "page": 75,
+      "table_info": {
+        "rows": 6,
+        "cols": 7
+      },
+      "markdown": "|   | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... |\n|---|---|---|---|---|---|---|\n| Assembly in Contact with the Ground | Zone 4: (2) < 3000 | Zone 5: (2) 3000 to 3999 | Zone 6: (2) 4000 to 4999 | Zone 7A: (2) 5000 to 5999 | Zone 7B: (2) 6000 to 6999 | Zone 8: (2) ≥ 7000 |\n|   | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) | Maximum Overall Thermal Transmittance , W/(m 2 ×K) |\n| Walls | 0.568 | 0.379 | 0.284 | 0.284 | 0.284 | 0.210 |\n| Roofs | 0.568 | 0.379 | 0.284 | 0.284 | 0.284 | 0.210 |\n| Floors | 0.757 for 1.2 m | 0.757 for 1.2 m | 0.757 for 1.2 m | 0.757 for 1.2 m | 0.757 for 1.2 m | 0.379 for full area |",
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "maximum",
+        "overall",
+        "thermal",
+        "transmittance",
+        "assembly",
+        "contact",
+        "ground",
+        "walls",
+        "roofs",
+        "floors",
+        "full",
+        "area"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-3.5.1.1",
+      "title": "Table 3.5.1.1. Acceptable Solutions in Part 3",
+      "page": 79,
+      "table_info": {
+        "rows": 28,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 3.1.1.5. Thermal Characteristics of Building As... | 3.1.1.5. Thermal Characteristics of Building As... |\n| (1) | [F92-OE1.1] |\n| (2) | [F92-OE1.1] |\n| (3) | [F92-OE1.1] |\n| (4) | [F92-OE1.1] |\n| (5) | [F92-OE1.1] |\n| (6) | [F92-OE1.1] |\n| 3.1.1.7. Calculation of Overall Thermal Transmi... | 3.1.1.7. Calculation of Overall Thermal Transmi... |\n| (1) | [F92-OE1.1] |\n| (4) | [F92-OE1.1] |\n| 3.2.1.1. Protection of Insulation Materials | 3.2.1.1. Protection of Insulation Materials |\n| (1) | [F92-OE1.1] |\n| (2) | [F92-OE1.1] |\n| 3.2.1.2. Continuity of Insulation | 3.2.1.2. Continuity of Insulation |\n| (1) | [F92-OE1.1] |\n| (2) | [F92-OE1.1] |\n| 3.2.1.3. Spaces Heated to Different Temperatures | 3.2.1.3. Spaces Heated to Different Temperatures |\n| (1) | [F92-OE1.1] |\n| 3.2.1.4. Allowable Fenestration and Door Area | 3.2.1.4. Allowable Fenestration and Door Area |\n| (1) | [F92,F99-OE1.1] |\n| (2) | [F92,F99-OE1.1] |\n| 3.2.2.1. Vestibules | 3.2.2.1. Vestibules |\n| (1) | [F90-OE1.1] |\n| (2) | [F90-OE1.1] |\n| 3.2.2.2. Thermal Characteristics of Above-groun... | 3.2.2.2. Thermal Characteristics of Above-groun... |\n| (1) | [F92-OE1.1] |\n| (2) | [F92-OE1.1] |",
+      "keywords": [
+        "f92-oe1",
+        "thermal",
+        "characteristics",
+        "building",
+        "assemblies",
+        "insulation",
+        "calculation",
+        "overall",
+        "transmittance",
+        "protection",
+        "materials",
+        "continuity",
+        "spaces",
+        "heated",
+        "different",
+        "temperatures",
+        "allowable",
+        "fenestration",
+        "door",
+        "area"
+      ],
+      "division": "B",
+      "page_end": 80
+    },
+    {
+      "id": "Table-A-3.2.1.4",
+      "title": "Table A-3.2.1.4. (1) Maximum Allowable FDWR for Various HDD",
+      "page": 85,
+      "table_info": {
+        "rows": 13,
+        "cols": 2
+      },
+      "markdown": "| HDD | Maximum FDWR |\n|---|---|\n| < 4000 | 0.40 |\n| 4000 | 0.40 |\n| 4250 | 0.38 |\n| 4500 | 0.37 |\n| 4750 | 0.35 |\n| 5000 | 0.33 |\n| 5250 | 0.32 |\n| 5500 | 0.30 |\n| 5750 | 0.28 |\n| 6000 | 0.27 |\n| 6250 | 0.25 |\n| 6500 | 0.23 |",
+      "keywords": [
+        "hdd",
+        "maximum",
+        "fdwr"
+      ],
+      "division": "B",
+      "page_end": 86
+    },
+    {
+      "id": "Table-4.2.1.5",
+      "title": "Table 4.2.1.5. Forming Part of Sentences 4.2.1.5.(1), (4) and (5)",
+      "page": 93,
+      "table_info": {
+        "rows": 7,
+        "cols": 2
+      },
+      "markdown": "| Building Type | Lighting Power Density, W/m 2 |\n|---|---|\n| Automotive facility | 8.1 |\n| Convention centre | 6.9 |\n| Courthouse | 8.5 |\n| Dining |   |\n| bar lounge/leisure | 8.6 |\n| cafeteria/fast food | 8.2 |",
+      "keywords": [
+        "building",
+        "type",
+        "lighting",
+        "power",
+        "density",
+        "automotive",
+        "facility",
+        "convention",
+        "centre",
+        "courthouse",
+        "dining",
+        "bar",
+        "lounge",
+        "leisure",
+        "cafeteria",
+        "fast",
+        "food"
+      ],
+      "division": "B",
+      "page_end": 94
+    },
+    {
+      "id": "Table-4.2.1.6",
+      "title": "Table 4.2.1.6. Lighting Power Density Using the Space-by-Space Method and Minimum Lighting Control Requirements For",
+      "page": 95,
+      "table_info": {
+        "rows": 11,
+        "cols": 17
+      },
+      "markdown": "| Scheduled Shut-off [see 4.2.2.1.(20)] | B B |   |   | B | B | B | B | B | B | B | B | B | B - | - | B | - |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Automatic Full OFF (5) [see 4.2.2.1.(18)] | B | B | B | B | B | B | B | B | B | B | B | B | X | X | B | X |\n| Automatic Partial OFF [see 4.2.2.1.(16)] | - - |   | - | - | - | - | - | - | - | - - |   | - | - | - | - | - |\n| Control (1) for (3) Automatic Daylight Responsi... | X X |   | X | X | X | X | X | X | X | X X | X | X | X |   | X | X |\n| of Lighting Automatic Daylight Responsive Contr... | X | X | X | X | X | X | X | X | X | X X | X |   | X X |   | X | X |\n| Type Bi-Level [see 4.2.2.1.(9)] | - | X | X | X | X | X | - | X | X | - - | X |   | X X |   | X | X |\n| Restricted to Partial Automatic ON (2) [see 4.2... | A | A | A | A | A | A | A | A | A | A A | A | A | A |   | A | A |\n| Restricted to Manual ON [see 4.2.2.1.(6)] | A | A | A | A | A | A | A | A | A | A A | A | A | A |   | A | A |\n| Manual [see 4.2.2.1.(3)] | X X |   | X | X | X | X | X | X | X | X X | X | X | X |   | X | X |\n| Lighting Power Density, W/m 2 | 4.2 | 5.2 | 6.5 | 6.5 | 2.5 | 2.9 | 7.2 | 12.5 | 7.8 | 3.5 2.5 | 6.5 | 9.5 | 7.6 |   | 10.1 | 10.5 |\n| Space Type | < 6 m in height ≥ 6 m and ≤ 12 m in | height | > 12 m in height | Audience seating area - permanent | for auditorium for gymnasium | for motion picture theatre | for penitentiary | for performing arts theatre | for religious building | for sports arena | other Banking activity area and offices | Classroom/Lecture hall/T raining room | for penitentiary | other | Computer/Server room | Conference/Meeting/ Multi-purpose room |",
+      "keywords": [
+        "automatic",
+        "height",
+        "room",
+        "partial",
+        "daylight",
+        "responsive",
+        "controls",
+        "lighting",
+        "type",
+        "restricted",
+        "manual",
+        "area",
+        "theatre",
+        "penitentiary",
+        "scheduled",
+        "shut-off",
+        "full",
+        "control",
+        "toplighting",
+        "sidelighting"
+      ],
+      "division": "B",
+      "page_end": 100
+    },
+    {
+      "id": "Table-4.2.3.1",
+      "title": "Table 4.2.3.1. -A Lighting Zones Used to Determine Exterior Lighting Allowances Forming Part of Sentence 4.2.3.1.(1",
+      "page": 106,
+      "table_info": {
+        "rows": 6,
+        "cols": 2
+      },
+      "markdown": "| Lighting Zone | Description |\n|---|---|\n| 0 | Undeveloped areas within national, provincial o... |\n| 1 | Developed areas within national, provincial or ... |\n| 2 | Areas predominantly consisting of residential z... |\n| 3 | All other areas |\n| 4 | High-activity commercial districts |",
+      "keywords": [
+        "areas",
+        "undeveloped",
+        "within",
+        "national",
+        "provincial",
+        "territorial",
+        "parks",
+        "rural",
+        "residential",
+        "districts",
+        "lighting",
+        "zone",
+        "description",
+        "forest",
+        "land",
+        "developed",
+        "predominantly",
+        "consisting",
+        "zoning",
+        "neighbourhood"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.2.3.1.(4)",
+      "title": "Table Forming Part of Sentences 4.2.3.1.(4)",
+      "page": 108,
+      "table_info": {
+        "rows": 20,
+        "cols": 6
+      },
+      "markdown": "| Exterior Application | Lighting Power Allowances According to Lighting... | Lighting Power Allowances According to Lighting... | Lighting Power Allowances According to Lighting... | Lighting Power Allowances According to Lighting... | Lighting Power Allowances According to Lighting... |\n|---|---|---|---|---|---|\n|   | Zone 0 | Zone 1 | Zone 2 | Zone 3 | Zone 4 |\n| Uncovered Parking Areas |   |   |   |   |   |\n| Parking areas and drives | No allowances | 0.32 W/m 2 | 0.43 W/m 2 | 0.65 W/m 2 | 0.86 W/m 2 |\n| Building Grounds |   |   |   |   |   |\n| Walkways less than 3 m wide |   | 1.6 W/m | 1.6 W/m | 2.0 W/m | 2.3 W/m |\n| Walkways 3 m wide or greater, plaza areas, spec... |   | 1.1 W/m 2 | 1.1 W/m 2 | 1.2 W/m 2 | 1.5 W/m 2 |\n| Dining areas | No allowances | 7.0 W/m 2 | 7.0 W/m 2 | 8.1 W/m 2 | 10.2 W/m 2 |\n| Stairways |   | 6.5 W/m 2 | 7.5 W/m 2 | 7.5 W/m 2 | 7.5 W/m 2 |\n| Pedestrian tunnels |   | 1.3 W/m 2 | 1.3 W/m 2 | 1.5 W/m 2 | 2.3 W/m 2 |\n| Landscape lighting |   | 0.32 W/m 2 | 0.43 W/m 2 | 0.43 W/m 2 | 0.43 W/m 2 |\n| Exterior Entrances and Exterior Exits |   |   |   |   |   |\n| Pedestrian and vehicular entrances and exits | No allowances | 46 W/mofopening | 46 W/mofopening | 69 W/mofopening | 69 W/mof opening |\n| Entry canopies |   | 2.1 W/m 2 | 2.7 W/m 2 | 4.3 W/m 2 | 4.3 W/m 2 |\n| Loading docks | No allowances | 3.8 W/m 2 | 3.8 W/m 2 | 3.8 W/m 2 | 3.8 W/m 2 |\n| Sales Canopies |   |   |   |   |   |\n| Free-standing and attached | No allowances | 4.3 W/m 2 | 4.3 W/m 2 | 6.5 W/m 2 | 7.5 W/m 2 |\n| Outdoor Sales |   |   |   |   |   |\n| Open areas (including vehicle sales lots) |   | 2.1 W/m 2 | 2.1 W/m 2 | 3.8 W/m 2 | 5.4 W/m 2 |\n| Street frontage for vehicle sales lots in addit... | No allowances | No allowance | 23 W/m | 23 W/m | 69 W/m |",
+      "keywords": [
+        "lighting",
+        "allowances",
+        "zone",
+        "areas",
+        "power",
+        "according",
+        "sales",
+        "exterior",
+        "mofopening",
+        "parking",
+        "walkways",
+        "wide",
+        "pedestrian",
+        "entrances",
+        "exits",
+        "canopies",
+        "open",
+        "vehicle",
+        "lots",
+        "allowance"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.6",
+      "title": "Table 4.3.2.6. -A",
+      "page": 113,
+      "table_info": {
+        "rows": 27,
+        "cols": 25
+      },
+      "markdown": "| Operation End Time 3 a.m. 4 a.m. 6 a.m. 7 a.m. ... |   | 3,014 | 3,014 | 3,014 | 3,014 3,014 | 3,014 | 2,979 | 2,860 | 2,652 | 2,402 2,152 | 1,902 | 1,652 |   | 1,402 | 1,152 902 | 652 |   | 434 | 271 136 | 35 | 0 | 0 | 0 | 0 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n|   |   | 3,014 | 3,014 | 3,014 | 3,014 | 3,014 3,014 | 2,979 | 2,860 | 2,652 2,402 | 2,152 | 1,902 | 1,652 | 1,402 | 1,152 | 902 | 652 | 434 | 271 | 136 | 35 | 0 | 0 | - | - |\n| p.m. | 3,014 | 3,014 | 3,014 | 3,014 | 3,014 | 3,014 | 2,979 | 2,860 | 2,652 | 2,402 | 2,152 1,902 | 1,652 | 1,402 | 1,152 | 902 | 652 |   | 434 271 | 136 | 35 | 0 | - | - | - |\n|   | 3,014 | 3,014 | 3,014 | 3,014 | 3,014 | 3,014 | 2,979 | 2,860 | 2,652 | 2,402 | 2,152 | 1,902 1,652 | 1,402 | 1,152 | 902 | 652 | 434 | 271 | 136 | 35 - |   | - | - | - |\n| p.m. | 2,979 |   | 2,979 | 2,979 2,979 | 2,979 | 2,979 | 2,944 | 2,825 | 2,617 | 2,367 | 2,117 | 1,867 1,617 | 1,367 | 1,117 | 867 | 617 | 400 | 237 | 101 | - | - | - | - | - |\n| p.m. | 2,879 |   | 2,879 | 2,879 2,879 | 2,879 | 2,879 | 2,843 | 2,724 | 2,516 | 2,266 | 2,016 | 1,516 | 1,266 | 1,016 | 766 | 516 | 299 | 136 | - | - | - | - | - | - |\n|   |   | 2,743 2,743 | 2,743 | 2,743 | 2,743 |   | 2,708 | 2,588 | 2,380 |   |   | 1,630 1,766 | 1,380 | 1,130 880 | 630 |   | 163 | - | - | - |   | - |   |   |\n| p.m. |   | 2,580 2,580 |   |   |   | 2,580 2,743 | 2,545 | 2,425 |   | 2,130 | 1,880 | 1,217 | 967 | 717 | 467 380 | 217 | - | - | - - | - - |   |   | - - | - |\n|   |   | 2,363 | 2,363 | 2,580 2,363 2,580 | 2,363 | 2,363 2,580 | 2,327 | 2,208 | 2,000 2,217 | 1,750 1,967 | 1,500 1,717 | 1,250 1,467 | 750 | 500 | 250 | - | - | - | - - |   | - |   | - - | - - |\n|   |   |   |   | 2,363 2,113 |   |   |   |   |   |   |   | 750 1,000 | 500 | 250 | - | - | - |   |   |   |   | - |   |   |\n|   |   | 2,113 | 2,113 | 2,113 | 2,113 | 2,113 | 2,077 | 1,958 | 1,750 | 1,500 | 1,250 | 1,000 |   |   |   |   |   | - | - - | - |   |\n...(truncated)",
+      "keywords": [
+        "time",
+        "operation",
+        "end",
+        "day",
+        "start",
+        "opera",
+        "tion"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-4.3.2.6.(2)",
+      "title": "Table Forming Part of Sentences 4.3.2.6.(2)",
+      "page": 114,
+      "table_info": {
+        "rows": 26,
+        "cols": 25
+      },
+      "markdown": "| 12 a.m. | 2,986 | 2,736 | 2,486 | 2,236 | 1,986 | 1,736 | 1,521 | 1,390 | 1,348 | 1,348 | 1,348 1,348 |   | 1,348 | 1,348 | 1,348 1,348 | 1,348 |   | 1,316 | 1,229 | 1,114 965 | 750 | 500 | 250 | 250 |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| 8 p.m. 9 p.m. 10 p.m. 11 p.m. | 2,736 | 2,486 | 2,236 | 1,986 | 1,736 | 1,486 | 1,271 | 1,140 | 1,098 | 1,098 1,098 | 1,098 | 1,098 | 1,098 | 1,098 | 1,098 | 1,098 | 1,066 | 979 | 864 | 715 | 500 | 250 | - | - |\n|   | 2,486 | 2,236 | 1,986 | 1,736 | 1,486 | 1,236 | 1,021 | 890 | 848 | 848 | 848 848 | 848 | 848 | 848 | 848 | 848 |   | 816 729 | 614 | 465 | 250 | - | - | - |\n|   | 2,236 | 1,986 1,736 |   | 1,486 | 1,236 | 986 | 771 | 640 | 598 | 598 | 598 | 598 | 598 598 | 598 | 598 | 598 |   | 566 479 | 364 | 215 | - | - | - | - |\n|   | 2,021 | 1,771 | 1,521 | 1,271 | 1,021 | 771 | 556 | 425 | 383 | 383 | 383 | 383 383 | 383 | 383 | 383 | 383 | 350 | 263 | 149 | - | - | - | - | - |\n| 7 p.m. | 1,871 | 1,621 | 1,371 | 1,121 | 871 | 621 | 407 | 276 | 234 | 234 | 234 | 234 234 | 234 | 234 | 234 | 234 |   | 114 | - | - | - | - | 201 | - |\n| 6 p.m. | 1,757 | 1,507 | 1,257 | 1,007 | 757 | 507 | 292 | 162 | 120 | 120 | 120 | 120 | 120 | 120 120 | 120 | 120 |   | - | - | - | - | - | 87 | - |\n| 5 p.m. | 1,670 | 1,420 | 1,170 | 920 | 670 | 420 | 205 | 75 | 33 | 33 | 33 | 33 33 | 33 | 33 | 33 33 |   | - | - | - | - | - | - | - | - |\n| 4 p.m. | 1,637 | 1,387 | 1,137 | 887 | 637 | 387 | 173 | 42 | 0 | 0 | 0 | 0 | 0 | 0 0 | 0 | - |   | - | - | - | - | - | - | - |\n| 3 p.m. | 1,637 | 1,387 | 1,137 | 887 | 637 | 387 | 173 | 42 | 0 | 0 | 0 | 0 0 | 0 | 0 | - |   | - - | - | - | - | - | - | - | - |\n| 2 p.m. | 1,637 | 1,387 | 1,137 | 887 | 637 | 387 | 173 | 42 | 0 | 0 | 0 | 0 0 |   | 0 | - - | - | - | - | - | - | - - |   | - | - |\n| End Time 1 p.m. | in h/a 1,637 | 1,387 | 1,137 | 887 | 637 | 387 | 173 | 42 | 0 | 0 | 0 | 0 | 0 - | - | - | - | - | - | - | - - |   | - | - | - |\n| Operatio\n...(truncated)",
+      "keywords": [
+        "time",
+        "end",
+        "operation",
+        "night",
+        "opera",
+        "tion",
+        "start"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.7",
+      "title": "Table 4.3.2.7. -A Daylight System Control Factor, C DL,ctrl,i",
+      "page": 115,
+      "table_info": {
+        "rows": 4,
+        "cols": 2
+      },
+      "markdown": "| Daylight System Control | C DL,ctrl,i (1) |\n|---|---|\n| Automatic | 0.86 |\n| Manual | 0.5 |\n| None | 1 |",
+      "keywords": [
+        "daylight",
+        "system",
+        "control",
+        "ctrl",
+        "automatic",
+        "manual",
+        "none"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.8",
+      "title": "Table 4.3.2.8. Raw Daylight Supply Factors for Rough Opening in Primary Sidelighted Area, C DL,sup,raw,i Forming Pa",
+      "page": 116,
+      "table_info": {
+        "rows": 7,
+        "cols": 5
+      },
+      "markdown": "|   | Orientation of Fenestration Providing Sidelight... | Orientation of Fenestration Providing Sidelight... | Orientation of Fenestration Providing Sidelight... | Orientation of Fenestration Providing Sidelight... |\n|---|---|---|---|---|\n| Design Illuminance, in lx (1) | North | East | South | West |\n|   | C DL,sup,raw,i (3) | C DL,sup,raw,i (3) | C DL,sup,raw,i (3) | C DL,sup,raw,i (3) |\n| 300 | 0.72 | 0.72 | 0.74 | 0.73 |\n| 500 | 0.59 | 0.62 | 0.66 | 0.64 |\n| 750 | 0.50 | 0.55 | 0.60 | 0.57 |\n| 1000 | 0.44 | 0.49 | 0.55 | 0.52 |",
+      "keywords": [
+        "orientation",
+        "fenestration",
+        "providing",
+        "sidelighting",
+        "sup",
+        "raw",
+        "design",
+        "illuminance",
+        "north",
+        "east",
+        "south",
+        "west"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.9",
+      "title": "Table 4.3.2.9. -A Daylight Supply Factors for Toplighting, C DL,sup,i Forming Part of Sentence 4.3.2.9.(1)",
+      "page": 117,
+      "table_info": {
+        "rows": 7,
+        "cols": 4
+      },
+      "markdown": "|   | Classification of the Daylighting Supply | Classification of the Daylighting Supply | Classification of the Daylighting Supply |\n|---|---|---|---|\n| Design Illuminance, in lx | Low (2% ≤ D i < 4%) (1) | Medium (4% ≤ D i < 7%) (1) | Good (D i ≥ 7%) (1) |\n|   | C DL,sup,i | C DL,sup,i | C DL,sup,i |\n| 300 | 0.81 | 0.86 | 0.88 |\n| 500 | 0.75 | 0.82 | 0.85 |\n| 750 | 0.67 | 0.77 | 0.82 |\n| 1 000 | 0.59 | 0.73 | 0.79 |",
+      "keywords": [
+        "classification",
+        "daylighting",
+        "supply",
+        "sup",
+        "design",
+        "illuminance",
+        "low",
+        "medium",
+        "good"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-4.3.2.10",
+      "title": "Table 4.3.2.10. -A Forming Part of Sentences 4.3.2.10.(1) and (2) and 4.3.3.10.(1)",
+      "page": 119,
+      "table_info": {
+        "rows": 45,
+        "cols": 3
+      },
+      "markdown": "| Common Space Types | Common Space Types | Common Space Types |\n|---|---|---|\n|   | Factors | Factors |\n| Space Types | Relative Absence of Occupants, C A,i | Personal Control, C pers,ctrl,i |\n| Atrium |   |   |\n| ≤ to 12 m in height | 0 | 0 |\n| > 12 m in height | 0 | 0 |\n| Audience seating area - permanent |   |   |\n| for auditorium | 0.3 | 0 |\n| for convention centre | 0.2 | 0 |\n| for gymnasium | 0 | 0 |\n| for motion picture theatre | 0 | 0 |\n| for penitentiary | 0 | 0 |\n| for performing arts theatre | 0 | 0 |\n| for religious building | 0.3 | 0 |\n| for sports arena | 0 | 0 |\n| other | 0 | 0 |\n| Banking activity area and offices | 0 | 0 |\n| Classroom/Lecture hall/T raining room |   |   |\n| for penitentiary | 0.5 | 0 |\n| other | 0.5 | 0 |\n| Computer/Server room | 0.7 | 0 |\n| Conference/Meeting/Multi-purpose room | 0.5 | 0 |\n| Confinement cell | 0 | 0 |\n| Copy/Print room | 0.2 | 0 |\n| Corridor/Transition area |   |   |\n| for hospital | 0 | 0 |\n| for manufacturing facility | 0 | 0 |\n| for space designed to ANSI/IES RP-28 (used prim... | 0 | 0 |\n| other | 0 | 0 |\n| Courtroom | 0.2 | 0 |\n| Dining area |   |   |\n| for bar lounge/leisure dining | 0 | 0 |\n| for cafeteria or fast-food dining | 0 | 0 |\n| for family dining | 0 | 0 |\n| for penitentiary | 0 | 0 |\n| for space designed to ANSI/IES RP-28 (used prim... | 0 | 0 |\n| other | 0 | 0 |\n| Dressing/Fitting room for performing arts theatre | 0.4 | 0 |\n| Electrical/Mechanical room | 0.9 | 0 |\n| Emergency vehicle garage | 0.5 | 0 |\n| Food preparation area | 0 | 0 |\n| Guest room | 0 | 0 |\n| Laboratory |   |   |\n| for classroom | 0.4 | 0.1 |\n| other | 0 | 0 |",
+      "keywords": [
+        "room",
+        "space",
+        "area",
+        "types",
+        "dining",
+        "common",
+        "theatre",
+        "penitentiary",
+        "factors",
+        "height",
+        "performing",
+        "arts",
+        "classroom",
+        "designed",
+        "ansi",
+        "ies",
+        "rp-28",
+        "used",
+        "primarily",
+        "residents"
+      ],
+      "division": "B",
+      "page_end": 121
+    },
+    {
+      "id": "Table-4.5.1.1",
+      "title": "Table 4.5.1.1. Acceptable Solutions in Part 4",
+      "page": 125,
+      "table_info": {
+        "rows": 40,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 4.2.1.1. Exit Signs | 4.2.1.1. Exit Signs |\n| (1) | [F94-OE1.1] |\n| 4.2.1.2. Fluorescent Lamp Ballasts | 4.2.1.2. Fluorescent Lamp Ballasts |\n| (1) | [F94,F98-OE1.1] |\n| (2) | [F94,F98-OE1.1] |\n| 4.2.1.3. Limits to Installed Interior Lighting ... | 4.2.1.3. Limits to Installed Interior Lighting ... |\n| (1) | [F94-OE1.1] |\n| (3) | [F94-OE1.1] |\n| 4.2.1.4. Determination of the Installed Interio... | 4.2.1.4. Determination of the Installed Interio... |\n| (1) | [F94-OE1.1] |\n| (2) | [F94-OE1.1] |\n| (3) | [F94-OE1.1] |\n| 4.2.1.5. Calculation of Interior Lighting Power... | 4.2.1.5. Calculation of Interior Lighting Power... |\n| (1) | [F94-OE1.1] |\n| (2) | [F94-OE1.1] |\n| (3) | [F94-OE1.1] |\n| (4) | [F94-OE1.1] |\n| (5) | [F94-OE1.1] |\n| 4.2.1.6. Calculation of Interior Lighting Power... | 4.2.1.6. Calculation of Interior Lighting Power... |\n| (1) | [F94-OE1.1] |\n| 4.2.2.1. Interior Lighting Controls | 4.2.2.1. Interior Lighting Controls |\n| (1) | [F94-OE1.1] |\n| (2) | [F94-OE1.1] |\n| (3) | [F94-OE1.1] |\n| (4) | [F94-OE1.1] |\n| (6) | [F94-OE1.1] |\n| (8) | [F94-OE1.1] |\n| (9) | [F94-OE1.1] |\n| (10) | [F94-OE1.1] |\n| (11) | [F94-OE1.1] |\n| (13) | [F94-OE1.1] |\n| (14) | [F94-OE1.1] |\n| (16) | [F94-OE1.1] |\n| (18) | [F94-OE1.1] |\n| (20) | [F94-OE1.1] |\n| (21) | [F94-OE1.1] |\n| (22) | [F94-OE1.1] |\n| 4.2.2.2. Lighting Controls in Storage Garages | 4.2.2.2. Lighting Controls in Storage Garages |\n| (1) | [F94-OE1.1] |",
+      "keywords": [
+        "f94-oe1",
+        "lighting",
+        "interior",
+        "power",
+        "installed",
+        "calculation",
+        "allowance",
+        "using",
+        "method",
+        "controls",
+        "exit",
+        "signs",
+        "fluorescent",
+        "lamp",
+        "ballasts",
+        "f94",
+        "f98-oe1",
+        "limits",
+        "determination",
+        "building"
+      ],
+      "division": "B",
+      "page_end": 126
+    },
+    {
+      "id": "Table-5.2.2.3",
+      "title": "Table 5.2.2.3. Sealing of Ducts",
+      "page": 140,
+      "table_info": {
+        "rows": 4,
+        "cols": 2
+      },
+      "markdown": "| Static Pressure Class, Pa (1) | Seal Class (1) |\n|---|---|\n| ≤ 500 | C |\n| > 500 and < 1000 | B |\n| ≥ 1000 | A |",
+      "keywords": [
+        "class",
+        "static",
+        "pressure",
+        "seal"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.2.4",
+      "title": "Table 5.2.2.4. Leakage Classes, CL",
+      "page": 141,
+      "table_info": {
+        "rows": 5,
+        "cols": 4
+      },
+      "markdown": "|   | Maximum Operating Static Pressure, Pa | Maximum Operating Static Pressure, Pa | Maximum Operating Static Pressure, Pa |\n|---|---|---|---|\n| Shape of Duct | < 500 | 500-1000 | > 1000 |\n|   | C L , L/s per m 2 | C L , L/s per m 2 | C L , L/s per m 2 |\n| Rectangular | 0.81 | 0.41 | 0.20 |\n| Round | 0.41 | 0.20 | 0.10 |",
+      "keywords": [
+        "maximum",
+        "operating",
+        "static",
+        "pressure",
+        "per",
+        "shape",
+        "duct",
+        "rectangular",
+        "round"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.2.5",
+      "title": "Table 5.2.2.5. Insulation of Ducts Forming Part of Sentences 5.2.2.5.(1) and (2)",
+      "page": 141,
+      "table_info": {
+        "rows": 4,
+        "cols": 3
+      },
+      "markdown": "| Temperature Difference, (1) °C | Minimum Thermal Resis- tance of Ducts and Plenu... | Minimum Thermal Resistance of Run-outs, (2) m 2... |\n|---|---|---|\n| < 5 | 0 | 0 |\n| 5 to 22 | 0.58 | 0.58 |\n| > 22 | 0.88 | 0.58 |",
+      "keywords": [
+        "minimum",
+        "thermal",
+        "temperature",
+        "difference",
+        "resis",
+        "tance",
+        "ducts",
+        "plenums",
+        "resistance",
+        "run-outs"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.3.4",
+      "title": "Table 5.2.3.4. Demand Control Ventilation Threshold for Commercial Kitchen Ventilation Systems Forming Part of Sent",
+      "page": 144,
+      "table_info": {
+        "rows": 4,
+        "cols": 6
+      },
+      "markdown": "| Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... | Heating Degree-Days of Building Location, (1) i... |\n|---|---|---|---|---|---|\n| Zone 4: (2) < 3000 | Zone 5: (2) 3000 to 3999 | Zone 6: (2) 4000 to 4999 | Zone 7A: (2) 5000 to 5999 | Zone 7B: (2) 6000 to 6999 | Zone 8: (2) ≥ 7000 |\n| Design Exhaust Fan Airflow Rate, L/s | Design Exhaust Fan Airflow Rate, L/s | Design Exhaust Fan Airflow Rate, L/s | Design Exhaust Fan Airflow Rate, L/s | Design Exhaust Fan Airflow Rate, L/s | Design Exhaust Fan Airflow Rate, L/s |\n| ≥ 2360 | ≥ 2360 | ≥ 1880 | ≥ 1410 | ≥ 1410 | ≥ 1410 |",
+      "keywords": [
+        "degree-days",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zone",
+        "design",
+        "exhaust",
+        "fan",
+        "airflow",
+        "rate"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.5.3",
+      "title": "Table 5.2.5.3. Minimum Thickness of Piping Insulation",
+      "page": 146,
+      "table_info": {
+        "rows": 10,
+        "cols": 9
+      },
+      "markdown": "|   | Design Operating Temperature Range, °C | Thermal Conductivity of Insulation | Thermal Conductivity of Insulation | Nominal Pipe Diameter, mm (inches) | Nominal Pipe Diameter, mm (inches) | Nominal Pipe Diameter, mm (inches) | Nominal Pipe Diameter, mm (inches) | Nominal Pipe Diameter, mm (inches) |\n|---|---|---|---|---|---|---|---|---|\n|   | Design Operating Temperature Range, °C | Conductivity Range, W/m×°C | Mean Rating Temperature, | Runouts (1) ≤ 51 (2) | ≤ 25.4 (1) | 32 to 51 (1¼ to 2) | 64 to 102 (2½ to 4) | ≥ 127 (5) |\n|   |   |   | °C | Minimum Thickness of Piping Insulation, mm | Minimum Thickness of Piping Insulation, mm | Minimum Thickness of Piping Insulation, mm | Minimum Thickness of Piping Insulation, mm | Minimum Thickness of Piping Insulation, mm |\n| Heating (Steam, Condensate Water) | > 177 | 0.046-0.049 | 121 | 38.1 | 114 | 127 | 127 | 127 |\n| Heating (Steam, Condensate Water) | 122-177 | 0.042-0.045 | 93 | 38.1 | 76.2 | 101.6 | 114 | 114 |\n| Heating (Steam, Condensate Water) | 94-121 | 0.039-0.043 | 65 | 38.1 | 63.5 | 63.5 | 76.2 | 76.2 |\n| Heating (Steam, Condensate Water) | 61-93 | 0.036-0.042 | 52 | 25.4 | 38.1 | 50.8 | 50.8 | 50.8 |\n| Heating (Steam, Condensate Water) | 41-60 | 0.035-0.040 | 38 | 25.4 | 25.4 | 38.1 | 38.1 | 38.1 |\n| Cooling Systems (Chilled Water, Brine and Refri... | 4-16 | 0.030-0.039 | 24 | 25.4 | 25.4 | 25.4 | 25.4 | 25.4 |\n| Cooling Systems (Chilled Water, Brine and Refri... | < 4 | 0.030-0.039 | 24 | 25.4 | 25.4 | 38.1 | 38.1 | 38.1 |",
+      "keywords": [
+        "insulation",
+        "water",
+        "nominal",
+        "pipe",
+        "diameter",
+        "inches",
+        "minimum",
+        "thickness",
+        "piping",
+        "heating",
+        "steam",
+        "condensate",
+        "temperature",
+        "range",
+        "conductivity",
+        "design",
+        "operating",
+        "thermal",
+        "cooling",
+        "systems"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-5.2.6.3.(1)",
+      "title": "Table Forming Part of Sentence 5.2.6.3.(1)",
+      "page": 147,
+      "table_info": {
+        "rows": 5,
+        "cols": 2
+      },
+      "markdown": "| Type of Hydronic System | Maximum Combined Pumping Power Demand of Pump M... |\n|---|---|\n| Heating | 4.5 |\n| Heat rejection | 12 |\n| Cooling | 14 |\n| Water-source heat pump | 22 |",
+      "keywords": [
+        "pump",
+        "heat",
+        "type",
+        "hydronic",
+        "system",
+        "maximum",
+        "combined",
+        "pumping",
+        "power",
+        "demand",
+        "motors",
+        "motorpower",
+        "thermalpeak",
+        "heating",
+        "rejection",
+        "cooling",
+        "water-source"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.10.1",
+      "title": "Table 5.2.10.1. -A",
+      "page": 149,
+      "table_info": {
+        "rows": 8,
+        "cols": 9
+      },
+      "markdown": "| Heating Degree-Days of Building Location, (2) i... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... | Percentage of Outdoor Air at Design Airflow Con... |\n|---|---|---|---|---|---|---|---|---|\n| Heating Degree-Days of Building Location, (2) i... | ≥ 10% and < 20% | ≥ 20% and < 30% | ≥ 30% and < 40% | ≥ 40% and < 50% | ≥ 50% and < 60% | ≥ 60% and < 70% | ≥ 70% and < 80% | ≥ 80% |\n| Heating Degree-Days of Building Location, (2) i... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... | Design Supply Fan Airflow Rate Threshold Values... |\n| Zone 4: (4) < 3000 | NR | NR | NR | NR | NR | NR | NR | NR |\n| Zone 5: (4) 3000 to 3999 | ≥ 12 270 (25 999) | ≥ 7 550 (15 998) | ≥ 2 600 (5 509) | ≥ 2 120 (4 492) | ≥ 1 650 (3 496) | ≥ 940 (1 992) | ≥ 470 (996) | R |\n| Zone 6: (4) 4000 to 4999 | ≥ 12 270 (25 999) | ≥ 7 550 (15 998) | ≥ 2 600 (5 509) | ≥ 2 120 (4 492) | ≥ 1 650 (3 496) | ≥ 940 (1 992) | ≥ 470 (996) | R |\n| Zones 7A and 7B: (4) 5000 to 6999 | ≥ 2 120 (4 492) | ≥ 1 890 (4 005) | ≥ 1 180 (2 500) | ≥ 470 (996) | R | R | R | R |\n| Zone 8: (4) ≥ 7000 | ≥ 2 120 (4 492) | ≥ 1 890 (4 005) | ≥ 1 180 (2 500) | ≥ 470 (996) | R | R | R | R |",
+      "keywords": [
+        "design",
+        "airflow",
+        "percentage",
+        "outdoor",
+        "air",
+        "conditions",
+        "supply",
+        "fan",
+        "rate",
+        "threshold",
+        "values",
+        "min",
+        "degree-days",
+        "zone",
+        "heating",
+        "building",
+        "location",
+        "celsius",
+        "zones"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.10.4",
+      "title": "Table 5.2.10.4",
+      "page": 151,
+      "table_info": {
+        "rows": 4,
+        "cols": 3
+      },
+      "markdown": "| 2.5% January Design Temperature at Building Loc... | Outside Air Test Temperature at Station 1, (1) °C | Sensible-Heat-Recovery Efficiency, % |\n|---|---|---|\n| ≥ -10 | 0 | 65 |\n| < -10 and > -30 | -25 | 55 |\n| ≤ -30 | -40 | 45 |",
+      "keywords": [
+        "temperature",
+        "january",
+        "design",
+        "building",
+        "location",
+        "outside",
+        "air",
+        "test",
+        "station",
+        "sensible-heat-recovery",
+        "efficiency"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.12.1",
+      "title": "Table 5.2.12.1. -A",
+      "page": 154,
+      "table_info": {
+        "rows": 19,
+        "cols": 5
+      },
+      "markdown": "| Type of Equipment | Cooling or Heating Capacity, kW | Performance Testing Standard | Rating Conditions | Minimum Performance (2) |\n|---|---|---|---|---|\n| Single-phase air conditioners and heat pumps, s... | < 19 | 430, Subpart B, Appendix M1 | See standard | SEER2 = 12.4 / HSPF2 V = 5.4 (3)(4) |\n| Single-phase air conditioners and heat pumps, s... | < 19 | 430, Subpart B, Appendix M1 | See standard | SEER2 = 14.3 / HSPF2 V = 6.3 (3)(4) |\n| Single-phase air conditioners and heat pumps, s... | < 19 | 430, Subpart B, Appendix M1 | See standard | SEER2 = 12.4 / HSPF2 V = 5.4 (3)(4) |\n| Single-phase air conditioners and heat pumps, s... | < 19 | 430, Subpart B, Appendix M1 | See standard | SEER2 = 14.3 / HSPF2 V = 6.6 (3)(4) |\n| Single-phase air conditioners and heat pumps, s... | < 19 | 430, Subpart B, Appendix M1 | See standard | SEER2 = 12.4 / HSPF2 V = 5.0 (3)(4) |\n| Air conditioners and heat pumps, single-package... | < 19 | CSA C656 | See standard | SEER = 13 / HSPF V = 6.4 (4) |\n| Air conditioners and heat pumps, single-package... | < 19 | CSA C656 | See standard | SEER = 15 / HSPF V = 7.4 (4) |\n| Air conditioners and heat pumps, split-system, ... | < 19 | CSA C656 | See standard | SEER = 13 / HSPF V = 6.4 (4) |\n| Air conditioners and heat pumps, split-system, ... | < 19 | CSA C656 | See standard | SEER = 15 / HSPF V = 7.8 (4) |\n| Air conditioners and heat pumps, split-system, ... | < 19 | CSA C656 | See standard | SEER = 13 / HSPF V = 5.9 (4) |\n| Large air conditioners and heat pumps, split-sy... |   | CAN/CSA-C746 | Electric resistance heating section or no heati... | EER = 11.2 IEER = 12.9 |\n| Large air conditioners and heat pumps, split-sy... | ≥ 19 and < 40 | CAN/CSA-C746 | Other types of heating sections | EER = 11.0 IEER = 12.7 |\n| Large air conditioners and heat pumps, split-sy... | ≥ 40 and < 70 | CAN/CSA-C746 | Electric resistance heating section or no heati... | EER = 11.0 IEER = 12.4 |\n| Large air conditioners and heat pumps, split-sy... | ≥ 40 and \n...(truncated)",
+      "keywords": [
+        "air",
+        "conditioners",
+        "heat",
+        "pumps",
+        "split-system",
+        "heating",
+        "single-package",
+        "standard",
+        "cooling",
+        "large",
+        "electrical",
+        "phases",
+        "mode",
+        "eer",
+        "ieer",
+        "csa-c746",
+        "single-phase",
+        "subpart",
+        "seer2",
+        "hspf2"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.2.12.2",
+      "title": "Table 5.2.12.2. Heat Rejection Equipment Performance Requirements",
+      "page": 167,
+      "table_info": {
+        "rows": 13,
+        "cols": 5
+      },
+      "markdown": "| Type of Equipment | Heat Rejection Capacity | Performance Testing Standard | Rating Conditions | Performance Requirements (1) , electrical kW / ... |\n|---|---|---|---|---|\n| Cooling towers and fluid coolers | Cooling towers and fluid coolers | Cooling towers and fluid coolers | Cooling towers and fluid coolers | Cooling towers and fluid coolers |\n| centrifugal fan, direct-contact | All capacities | CTI ATC-105 (3) and CTI STD-201RS (3) | 35°C entering water 29.4°C leaving water 23.9°C... | ≤ 0.026 |\n| propeller or axial fan, direct-contact | All capacities | CTI ATC-105 (3) and CTI STD-201RS (3) | 35°C entering water 29.4°C leaving water 23.9°C... | ≤ 0.013 |\n| centrifugal fan, indirect-contact evaporative | All capacities | CTI ATC-105S and CTI STD-201RS | 38.9°C entering water 32.2°C leaving water 23.9... | ≤ 0.061 |\n| propeller or axial fan, indirect-contact evapor... | All capacities | CTI ATC-105S and CTI STD-201RS | 38.9°C entering water 32.2°C leaving water 23.9... | ≤ 0.026 |\n| propeller or axial fan, dry | All capacities | CTI ATC-105DS | 46.1°C entering water 40.6°C leaving water 35°C... | ≤ 0.113 |\n| Condensers | Condensers | Condensers | Condensers | Condensers |\n| centrifugal fan, indirect-contact evaporative | All capacities | CTI ATC-106 | R-717 test fluid: (4) 35.7°C condensing tempera... | ≤ 0.023 |\n| centrifugal fan, indirect-contact evaporative | All capacities | CTI ATC-106 | R-448A test fluid: (4) 40.6°C condensing temper... | ≤ 0.019 |\n| propeller or axial fan, indirect-contact evapor... | All capacities | CTI ATC-106 | R-717 test fluid: (4) 35.7°C condensing tempera... | ≤ 0.019 |\n| propeller or axial fan, indirect-contact evapor... | All capacities | CTI ATC-106 | R-448A test fluid: (4) 40.6°C condensing temper... | ≤ 0.016 |\n| air-cooled | All capacities | ANSI/AHRI 460 | 51.7°C condensing temperature 87.8°C entering g... | ≤ 0.015 |",
+      "keywords": [
+        "cti",
+        "capacities",
+        "entering",
+        "water",
+        "bulb",
+        "temperature",
+        "fluid",
+        "fan",
+        "wet",
+        "indirect-contact",
+        "evaporative",
+        "cooling",
+        "towers",
+        "coolers",
+        "leaving",
+        "propeller",
+        "axial",
+        "condensers",
+        "condensing",
+        "gas"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-5.5.1.1",
+      "title": "Table 5.5.1.1. Acceptable Solutions in Part 5",
+      "page": 169,
+      "table_info": {
+        "rows": 40,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 5.2.2.2. Provision for Balancing | 5.2.2.2. Provision for Balancing |\n| (1) | [F95,F99-OE1.1] |\n| 5.2.2.3. Duct Sealing | 5.2.2.3. Duct Sealing |\n| (1) | [F91,F99-OE1.1] |\n| (2) | [F91,F99-OE1.1] |\n| (5) | [F91,F99-OE1.1] |\n| 5.2.2.4. Leakage Testing of Ducts | 5.2.2.4. Leakage Testing of Ducts |\n| (1) | [F91,F99-OE1.1] |\n| (2) | [F91,F99-OE1.1] |\n| 5.2.2.5. Duct and Plenum Insulation | 5.2.2.5. Duct and Plenum Insulation |\n| (1) | [F92,F93-OE1.1] |\n| (2) | [F93,F95-OE1.1] |\n| (6) | [F93-OE1.1] |\n| (8) | [F92,F93-OE1.1] |\n| (9) | [F93,F95,F99-OE1.1] |\n| 5.2.2.6. Protection of Duct Insulation | 5.2.2.6. Protection of Duct Insulation |\n| (1) | [F92,F93,F95-OE1.1] |\n| (2) | [F92,F93,F95-OE1.1] |\n| 5.2.2.7. Cooling with Outdoor Air | 5.2.2.7. Cooling with Outdoor Air |\n| (1) | [F95-OE1.1] |\n| 5.2.2.8. Cooling by Direct Use of Outdoor Air (... | 5.2.2.8. Cooling by Direct Use of Outdoor Air (... |\n| (1) | [F95-OE1.1] |\n| (2) | [F95-OE1.1] |\n| (3) | [F95-OE1.1] |\n| (4) | [F95-OE1.1] |\n| (5) | [F95-OE1.1] |\n| 5.2.2.9. Cooling by Indirect Use of Outdoor Air... | 5.2.2.9. Cooling by Indirect Use of Outdoor Air... |\n| (1) | [F95-OE1.1] |\n| (2) | [F95-OE1.1] |\n| 5.2.3.1. Application | 5.2.3.1. Application |\n| (2) | [F95,F97-OE1.1] |\n| 5.2.3.2. Constant-Volume Fan Systems | 5.2.3.2. Constant-Volume Fan Systems |\n| (1) | [F95,F97-OE1.1] |\n| 5.2.3.3. Variable-Air-Volume Fan Systems | 5.2.3.3. Variable-Air-Volume Fan Systems |\n| (1) | [F95,F97-OE1.1] |\n| (2) | [F95,F97-OE1.1] |\n| (3) | [F95,F97-OE1.1] |\n| 5.2.3.4. Demand Control Ventilation Systems | 5.2.3.4. Demand Control Ventilation Systems |\n| (1) | [F95,F97-OE1.1] |",
+      "keywords": [
+        "f95-oe1",
+        "f95",
+        "air",
+        "f99-oe1",
+        "duct",
+        "cooling",
+        "outdoor",
+        "f97-oe1",
+        "systems",
+        "f91",
+        "insulation",
+        "f92",
+        "f93",
+        "use",
+        "economizer",
+        "system",
+        "fan",
+        "f93-oe1",
+        "balancing",
+        "sealing"
+      ],
+      "division": "B",
+      "page_end": 170
+    },
+    {
+      "id": "Table-A-5.2.2.3",
+      "title": "Table A-5.2.2.3. (1) SMACNA Duct Sealing Classification",
+      "page": 172,
+      "table_info": {
+        "rows": 4,
+        "cols": 3
+      },
+      "markdown": "| Static Pressure Class | Seal Class | Description |\n|---|---|---|\n| ≤ 2 | C | Sealing required at transverse joints |\n| > 2 and < 4 | B | Sealing required at all transverse joints and l... |\n| ≥ 4 | A | Sealing required at all transverse joints, long... |",
+      "keywords": [
+        "sealing",
+        "transverse",
+        "joints",
+        "class",
+        "longitudinal",
+        "seams",
+        "static",
+        "pressure",
+        "seal",
+        "description",
+        "duct",
+        "wall",
+        "penetrations"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-A-5.2.2.8",
+      "title": "Table A-5.2.2.8. (2)",
+      "page": 174,
+      "table_info": {
+        "rows": 7,
+        "cols": 3
+      },
+      "markdown": "| Type of HLSO Control | Conditions at which Air Economizer Turns Off | Conditions at which Air Economizer Turns Off |\n|---|---|---|\n|   | Equation (2) | Description |\n| Fixed dry bulb (3) | T OA > T setpoint , where 21°C ≤ T setpoint ≤ 24°C | Outdoor air temperature exceeds HLSO set-point ... |\n| Differential dry bulb | T OA > T RA | Outdoor air temperature exceeds return air temp... |\n| Electronic enthalpy (4) | (T OA ,RH OA ) > A | Outdoor air temperature/RH exceeds the 'A' setp... |\n| Differential enthalpy | h OA > h RA | Outdoor air enthalpy exceeds return air enthalpy |\n| Dew-point and dry-bulb temperatures | DP oa > 13°C or T oa > 24°C | Outdoor air dry bulb exceeds 24°C or outside de... |",
+      "keywords": [
+        "air",
+        "exceeds",
+        "outdoor",
+        "temperature",
+        "enthalpy",
+        "economizer",
+        "dry",
+        "bulb",
+        "setpoint",
+        "hlso",
+        "conditions",
+        "turns",
+        "differential",
+        "return",
+        "type",
+        "control",
+        "equation",
+        "description",
+        "fixed",
+        "set-point"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-FP-5.2.12.4.(1)",
+      "title": "Service Water Heating Equipment Performance Requirements (Forming Part of Sentences 5.2.12.4.(1))",
+      "page": 184,
+      "table_info": {
+        "rows": 8,
+        "cols": 18
+      },
+      "markdown": "| Performance Requirement (2)(3) | SL ≤ 40 + (0.2 V r ) | SL ≤ 35 + (0.2 V r ) | SL ≤ (0.472 V r ) - 33.5 SL ≤ (0.472 V r ) - 38.5 | SL ≤ 0.3 + 102.2/V r | UEF ≥ 2.23 | (6) | UEF ≥ 0.3456 - (0.00053 V s ) | UEF ≥ 0.5982 - (0.00050 V s ) | UEF ≥ 0.6483 - (0.00045 V s ) UEF ≥ 0.6920 - (0... | UEF ≥ 0.6470 - (0.00016 V s ) | UEF ≥ 0.7689 - (0.00013 V s ) UEF ≥ 0.7897 - (0... |   | UEF ≥ 0.8072 - (0.00008 V s ) UEF ≥ 0.8107 - (0... | E t ≥ 90% SL ≤ 0.84 [(1.25 Q) + (16.57 √V r )] | UEF ≥ 0.86 | UEF ≥ 0.87 | E t ≥ 94% |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Rating Conditions (1) | Bottom inlet | Top inlet Bottom inlet Top inlet | ΔT = 44.4°C |   | - | - | FHR < 68 | 68 ≤ FHR < 193 193 ≤ FHR < 284 | FHR ≥ 284 | FHR < 68 | 68 ≤ FHR < 193 193 ≤ FHR < 284 | FHR ≥ 284 | All values of FHR | ΔT = 50°C | < 6.4 L/min | ≥ 6.4 L/min | - |\n| Performance Testing Standard Water | Heaters CAN/CSA-C191 | Heaters CAN/CSA-C191 | CSA/ANSI Z21.10.3/CSA 4.3 (5) or DOE10CFR,Part ... | CAN/CSA-C745 | - |   |   | CAN/CSA-P .3 | CAN/CSA-P .3 | CAN/CSA-P .3 | CAN/CSA-P .3 | CAN/CSA-P .3 | DOE10CFR,Part 431, Subpart G, Appendix A |   | CAN/CSA-P .3 |   | DOE10CFR,Part 431, Subpart G, Appendix C |\n| Input/V s , W/L Service | - | - | - | - |   | - Service Water |   | - | - | - | - | - | - |   | ≥ 310 | ≥ 310 | ≥ 310 |\n| Volume of Tank (V s ), L Electric-Powered | - | - | - | - |   | - |   | ≥ 76 and < 208 208 and < 380 | ≥ 76 and < 208 208 and < 380 | ≥ 76 and < 208 208 and < 380 | ≥ | - |   | - | - | - | - |\n| Rated Storage Capacity (V r ), L | ≥ 50 and ≤ 270 | > 270 and ≤ 454 | - | - | - |   |   | - | - | - | - | ≤ 454 | - |   | ≤ 7.6 |   | - |\n| Input Power | ≤ 12 kW | ≤ 12 kW | > 12 kW | ≤ 24 A and ≤ 250 V | - |   |   | ≤ 22 kW | ≤ 22 kW | ≤ 22 kW | ≤ 22 kW | > 22 kW and ≤ 30.5 kW | All others |   | < 59 kW |   | All others |\n| Type of Equipment | Storage-type (4) | Storage-type (4) | Storage-type (4) | Storage-type, heat pump | Instantaneous |   |   | Gas-f\n...(truncated)",
+      "keywords": [
+        "uef",
+        "storage-type",
+        "gas-fired",
+        "fhr",
+        "csa-p",
+        "inlet",
+        "instantaneous",
+        "doe10cfr",
+        "subpart",
+        "performance",
+        "bottom",
+        "top",
+        "min",
+        "water",
+        "heaters",
+        "csa-c191",
+        "csa",
+        "input",
+        "service",
+        "others"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-6.2.2.1",
+      "title": "Table 6.2.2.1",
+      "page": 185,
+      "table_info": {
+        "rows": 8,
+        "cols": 15
+      },
+      "markdown": "| Performance Requirement (2)(3) | EF ≥ 0.68 - (0.0005 V r ) | UEF ≥ 0.2509 - (0.00032 V s ) | UEF ≥ 0.5330 - (0.00042 V s ) | UEF ≥ 0.6078 - (0.00042 V s ) UEF ≥ 0.6815 - (0... | UEF ≥ 0.6740 - (0.00035 V s ) | E t ≥ 80% SL ≤ (1.25 Q) + (16.57 √V r ) | EF ≥ 0.59 - (0.0005 V r ) | E t ≥ 80% | E t ≥ 78% SL ≤ (1.25 Q) + (16.57 √V r ) | SEF ≥ 1.4 | SEF ≥ 0.9 | E t ≥ 82% | E t ≥ 78% | 4.0 COP |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| Rating Conditions (1) | - | FHR < 68 68 ≤ FHR < 193 | 193 ≤ FHR < 284 | FHR ≥ 284 | All values of FHR | - | - | - | ΔT = 50°C | See standard |   | See standard | See standard | Outdoor air 10°C db / 6.8°C wb 26.7°C entering ... |\n| Performance Testing Standard | CAN/CSA-B211 | CAN/CSA-P .3 | CAN/CSA-P .3 | CAN/CSA-P .3 | DOE10CFR,Part 431, | Subpart G, Appendix A DOE10CFR,Part 430, | Subpart B, Appendix E | DOE10CFR,Part 431, Subpart G, Appendix A | ΔT = 50°C | ICC 900/SRCC 300 | Pool Heaters | CSA/ANSI Z21.56/CSA 4.7 or CSA P.6 | CSA B140.12 | AHRI 1160 (I-P) |\n| Input/V s , W/L | - | - | - | < 310 | - | - |   | ≥ 310 | ΔT = 50°C | - |   | - | - | - |\n| Volume of Tank (V s ), L | - | - | - | - | - | - | < 37.8 | ≥ 37.8 | ΔT = 50°C | - |   | - | - | - |\n| Rated Storage Capacity (V r ), L | > 76 | > 76 | > 76 | ≤ 454 | - |   | - | - | ΔT = 50°C | - |   | - | - | - |\n| Input Power | ≤ 30.5 kW | ≤ 30.5 kW | ≤ 30.5 kW | > 30.5 kW and ≤ 41 kW | All others |   | ≤ 61.5 kW | All others | ΔT = 50°C | All capacities |   | < 117.2 kW | - | All values |\n| Type of Equipment | Oil-fired, storage-type (4) | Oil-fired, storage-type (4) | Oil-fired, storage-type (4) | Oil-fired, storage-type (4) | Oil-fired, storage-type (4) | Oil-fired, storage-type (4) | Oil-fired, instantaneous (4) | Oil-fired, instantaneous (4) | Oil-fired, instantaneous (4) | With electric back-up With gas-fired back-up (7) | With electric back-up With gas-fired back-up (7) | Gas-fired (7) | Oil-fired | Heat pump |",
+      "keywords": [
+        "oil-fired",
+        "storage-type",
+        "uef",
+        "fhr",
+        "standard",
+        "csa",
+        "back-up",
+        "csa-p",
+        "doe10cfr",
+        "subpart",
+        "instantaneous",
+        "gas-fired",
+        "performance",
+        "sef",
+        "values",
+        "input",
+        "others",
+        "electric",
+        "cop",
+        "rating"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-6.2.3.1",
+      "title": "Table 6.2.3.1. Minimum Thickness of Piping Insulation for Service Water Heating Systems",
+      "page": 188,
+      "table_info": {
+        "rows": 12,
+        "cols": 5
+      },
+      "markdown": "|   | Thermal Conductivity of Insulation | Thermal Conductivity of Insulation | Nominal Pipe Diameter, mm (in.) | Minimum Thickness of |\n|---|---|---|---|---|\n|   | Conductivity Range, W/m×°C | Mean Rating Temperature, °C | Nominal Pipe Diameter, mm (in.) | Insulation, |\n| Conditioned |   |   | Runouts (1) ≤ 51 (2) | 25.4 |\n| Conditioned |   |   | ≤ 25.4 (1) | 25.4 |\n| Conditioned | 0.035-0.040 | 38 | 32 to 51 (1¼ to 2) | 25.4 |\n| Conditioned |   |   | 64 to 102 (2½ to 4) | 38.1 |\n| Conditioned |   |   | ≥ 127 (5) | 38.1 |\n| Unconditioned or outside | 0.046-0.049 | 38 | Runouts (1) ≤ 51 (2) | 38.1 |\n| Unconditioned or outside | 0.046-0.049 | 38 | ≤ 25.4 (1) | 63.5 |\n| Unconditioned or outside | 0.046-0.049 | 38 | 32 to 51 (1¼ to 2) |   |\n| Unconditioned or outside | 0.046-0.049 | 38 | 64 to 102 (2½ to 4) | 76.2 |\n| Unconditioned or outside | 0.046-0.049 | 38 | ≥ 127 (5) | 88.9 |",
+      "keywords": [
+        "conditioned",
+        "unconditioned",
+        "outside",
+        "conductivity",
+        "insulation",
+        "thermal",
+        "nominal",
+        "pipe",
+        "diameter",
+        "runouts",
+        "minimum",
+        "thickness",
+        "range",
+        "mean",
+        "rating",
+        "temperature"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-6.5.1.1",
+      "title": "Table 6.5.1.1",
+      "page": 191,
+      "table_info": {
+        "rows": 40,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 6.2.1.1. Regulations | 6.2.1.1. Regulations |\n| (1) | [F96,F98-OE1.1] |\n| 6.2.2.1. Equipment Efficiency | 6.2.2.1. Equipment Efficiency |\n| (1) | [F96,F98-OE1.1] |\n| 6.2.2.2. Equipment Insulation | 6.2.2.2. Equipment Insulation |\n| (1) | [F93,F96-OE1.1] |\n| (2) | [F93,F96-OE1.1] |\n| 6.2.2.3. Solar Thermal Service Water Heating Eq... | 6.2.2.3. Solar Thermal Service Water Heating Eq... |\n| (1) | [F96,F98,F99-OE1.1] |\n| 6.2.2.4. Combination Service Water Heating and ... | 6.2.2.4. Combination Service Water Heating and ... |\n| (1) | [F95,F96,F98,F99-OE1.1] |\n| (2) | [F95,F96,F98,F99-OE1.1] |\n| 6.2.2.5. Space-Heating Equipment Used for Indir... | 6.2.2.5. Space-Heating Equipment Used for Indir... |\n| (1) | [F95,F96,F98,F99-OE1.1] |\n| 6.2.3.1. Insulation | 6.2.3.1. Insulation |\n| (1) | [F92,F93-OE1.1] |\n| (2) | [F92,F93-OE1.1] |\n| (4) | [F92,F93-OE1.1] |\n| (5) | [F92,F93-OE1.1] |\n| (6) | [F93,F96-OE1.1] |\n| (7) | [F93,F96-OE1.1] |\n| (8) | [F93,F95,F99-OE1.1] |\n| 6.2.4.1. Temperature Controls | 6.2.4.1. Temperature Controls |\n| (1) | [F96-OE1.1] |\n| 6.2.4.2. Shutdown | 6.2.4.2. Shutdown |\n| (1) | [F96-OE1.1] |\n| 6.2.4.3. Maintaining Temperature of Hot Service... | 6.2.4.3. Maintaining Temperature of Hot Service... |\n| (1) | [F96-OE1.1] |\n| 6.2.5.1. Remote or Booster Heaters | 6.2.5.1. Remote or Booster Heaters |\n| (1) | [F96-OE1.1] |\n| 6.2.6.1. Showers | 6.2.6.1. Showers |\n| (1) | [F96-OE1.1] |\n| (2) | [F96-OE1.1] |\n| 6.2.6.2. Lavatories | 6.2.6.2. Lavatories |\n| (1) | [F96-OE1.1] |\n| (2) | [F96-OE1.1] |\n| 6.2.7.1. Controls | 6.2.7.1. Controls |\n| (1) | [F95,F96,F99-OE1.1] |\n| (2) | [F95,F96,F99-OE1.1] |",
+      "keywords": [
+        "f96-oe1",
+        "equipment",
+        "f96",
+        "service",
+        "water",
+        "f99-oe1",
+        "heating",
+        "f95",
+        "f93",
+        "insulation",
+        "f98",
+        "space-heating",
+        "f92",
+        "f93-oe1",
+        "temperature",
+        "controls",
+        "regulations",
+        "f98-oe1",
+        "efficiency",
+        "solar"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-7.5.1.1",
+      "title": "Table 7.5.1.1",
+      "page": 201,
+      "table_info": {
+        "rows": 12,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 7.2.1.1. Monitoring | 7.2.1.1. Monitoring |\n| (1) | [F97-OE1.1] |\n| (2) | [F97-OE1.1] |\n| 7.2.2.1. Feeders | 7.2.2.1. Feeders |\n| (1) | [F99-OE1.1] |\n| 7.2.2.2. Branch Circuits | 7.2.2.2. Branch Circuits |\n| (1) | [F99-OE1.1] |\n| 7.2.3.1. Transformer Selection | 7.2.3.1. Transformer Selection |\n| (1) | [F97,F98-OE1.1] |\n| 7.2.4.1. Efficiency | 7.2.4.1. Efficiency |\n| (1) | [F97,F98,F99-OE1.1] |",
+      "keywords": [
+        "f99-oe1",
+        "monitoring",
+        "f97-oe1",
+        "feeders",
+        "branch",
+        "circuits",
+        "transformer",
+        "selection",
+        "f97",
+        "efficiency",
+        "functional",
+        "statements",
+        "objectives",
+        "f98-oe1",
+        "f98"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.3.5",
+      "title": "Table 8.4.3.5",
+      "page": 215,
+      "table_info": {
+        "rows": 3,
+        "cols": 4
+      },
+      "markdown": "| Cooling Capacity, kW (Btu/h) | Type | COP | IPLV |\n|---|---|---|---|\n| < 528 (1 800 000) | Scroll | 2.802 | 3.664 |\n| ≥ 528 (1 800 000) | Screw | 2.802 | 3.737 |",
+      "keywords": [
+        "cooling",
+        "capacity",
+        "btu",
+        "type",
+        "cop",
+        "iplv",
+        "scroll",
+        "screw"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.4.1",
+      "title": "Table 8.4.4.1. Energy Use Intensities for Building Archetypes",
+      "page": 216,
+      "table_info": {
+        "rows": 5,
+        "cols": 2
+      },
+      "markdown": "| Building Archetype (1) | Energy Use Intensity, (2)(3) kWh/m² per year |\n|---|---|\n| School (K-12) | 125 |\n| Multi-unit residential building , not more than... | 225 |\n| Multi-unit residential building , more than 6 s... | 175 |\n| Office | 175 |",
+      "keywords": [
+        "building",
+        "multi-unit",
+        "residential",
+        "storeys",
+        "height",
+        "archetype",
+        "energy",
+        "use",
+        "intensity",
+        "kwh",
+        "per",
+        "year",
+        "school",
+        "k-12",
+        "office"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.4.2",
+      "title": "Table 8.4.4.2. Modeling Inputs for the Proposed Building Forming Part of Sentence 8.4.4.2.(1)",
+      "page": 217,
+      "table_info": {
+        "rows": 4,
+        "cols": 5
+      },
+      "markdown": "| Building Archetype | Occupant Density, m 2 /occupant | Peak Receptacle Load, (1) W/m² | Peak Service Water Heating Load, L/h/occupant | Operating Schedule in Note A-8.4.3.2.(1)(b) |\n|---|---|---|---|---|\n| School (K-12) | 8 | 5 | 1.2 | D |\n| Multi-unit residential building | 25 | 5 | 9.8 | G |\n| Office | 25 | 7.5 | 1.8 | A |",
+      "keywords": [
+        "occupant",
+        "building",
+        "peak",
+        "load",
+        "archetype",
+        "density",
+        "receptacle",
+        "service",
+        "water",
+        "heating",
+        "operating",
+        "schedule",
+        "a-8",
+        "school",
+        "k-12",
+        "multi-unit",
+        "residential",
+        "office"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.7",
+      "title": "Table 8.4.5.7. -A",
+      "page": 220,
+      "table_info": {
+        "rows": 9,
+        "cols": 3
+      },
+      "markdown": "| Building or Space Type of the Proposed Building | Size of Building or Space (1)(2) | Type of HVAC System Required (3) |\n|---|---|---|\n| Assembly Area: exhibit space, conference/meetin... | Maximum 4 storeys | System 3 |\n| Assembly Area: exhibit space, conference/meetin... | More than 4 storeys | System 6 |\n| Automotive Area: repair garage or storage garag... | All sizes | System 4 |\n| Data Processing Area: control room, data centre | All sizes | Where the proposed building or space has a cool... |\n| General Area: office, banking, healthcare clini... | Maximum 2 storeys | System 3 |\n| General Area: office, banking, healthcare clini... | More than 2 storeys | System 6 |\n| Historical Collections Area: archival library, ... | All sizes | System 2 |\n| Hospital Area: operating theatre, emergency roo... | All sizes | System 3 |",
+      "keywords": [
+        "room",
+        "area",
+        "system",
+        "space",
+        "building",
+        "centre",
+        "swimming",
+        "pool",
+        "storeys",
+        "sizes",
+        "theatre",
+        "control",
+        "library",
+        "type",
+        "proposed",
+        "assembly",
+        "exhibit",
+        "conference",
+        "meeting",
+        "multi-purpose"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.12",
+      "title": "Table 8.4.5.12",
+      "page": 225,
+      "table_info": {
+        "rows": 4,
+        "cols": 2
+      },
+      "markdown": "| Type of System | Applicable Article for Cooling with Outside Air |\n|---|---|\n| HVAC systems 1, 3, 4 and 6 (1) | 5.2.2.8. |\n| HVAC systems 2 and 5 (1) | 5.2.2.9. |\n| All types of heat pump systems (2) | 5.2.2.8. |",
+      "keywords": [
+        "systems",
+        "hvac",
+        "type",
+        "system",
+        "cooling",
+        "outside",
+        "air",
+        "types",
+        "heat",
+        "pump"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.13",
+      "title": "Table 8.4.5.13. Heat Pump System Description",
+      "page": 226,
+      "table_info": {
+        "rows": 3,
+        "cols": 4
+      },
+      "markdown": "| System Number (1) | Type of System | Fan Control | Type of Terminal or Auxiliary Heating |\n|---|---|---|---|\n| Systems 1 and 3 to 6 | Packaged unitary rooftop heat pump | Constant volume | Rooftop unit: fuel-fired or electric resistance... |\n| System 2 | See Table 8.4.5.7.-B | See Table 8.4.5.7.-B | See Table 8.4.5.7.-B |",
+      "keywords": [
+        "system",
+        "type",
+        "rooftop",
+        "fuel-fired",
+        "electric",
+        "resistance",
+        "number",
+        "fan",
+        "control",
+        "terminal",
+        "auxiliary",
+        "heating",
+        "systems",
+        "packaged",
+        "unitary",
+        "heat",
+        "pump",
+        "constant",
+        "volume",
+        "unit"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.14",
+      "title": "Table 8.4.5.14",
+      "page": 227,
+      "table_info": {
+        "rows": 7,
+        "cols": 3
+      },
+      "markdown": "|   | Type of Pump | Type of Pump |\n|---|---|---|\n| Coefficients | Pump Riding its Curve | Pump with Variable Speed Drive |\n| A | 0.227143 | 0.00153028 |\n| B | 1.178929 | 0.00520806 |\n| C | -0.41071 | 1.0086242 |\n| D | 0.47 | 0.20 |\n| E | 0.68 | 0.04 |",
+      "keywords": [
+        "pump",
+        "type",
+        "coefficients",
+        "riding",
+        "curve",
+        "variable",
+        "speed",
+        "drive"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.5.17",
+      "title": "Table 8.4.5.17. Coefficients Used in Calculating Fan Power versus Flow Rate Forming Part of Sentence 8.4.5.17.(2)",
+      "page": 228,
+      "table_info": {
+        "rows": 6,
+        "cols": 6
+      },
+      "markdown": "|   | Coefficients | Coefficients | Coefficients | Coefficients | Coefficients |\n|---|---|---|---|---|---|\n| Type of Fan | A | B | C | D | E |\n| Airfoil or backward inclined riding fan curve | 0.227143 | 1.178929 | -0.41071 | 0.47 | 0.68 |\n| Airfoil or backward inclined with inlet vanes | 0.584345 | -0.57917 | 0.970238 | 0.35 | 0.50 |\n| Forward curved with inlet vanes | 0.339619 | -0.84814 | 1.495671 | 0.25 | 0.22 |\n| Variable speed drive | 0.00153028 | 0.00520806 | 1.0086242 | 0.20 | 0.04 |",
+      "keywords": [
+        "coefficients",
+        "fan",
+        "airfoil",
+        "backward",
+        "inclined",
+        "inlet",
+        "vanes",
+        "type",
+        "riding",
+        "curve",
+        "forward",
+        "curved",
+        "variable",
+        "speed",
+        "drive"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.2",
+      "title": "Table 8.4.6.2. Coefficients Used in the Calculation of FHeatPLC for Condensing, Non-Condensing and Modulating Boile",
+      "page": 230,
+      "table_info": {
+        "rows": 5,
+        "cols": 7
+      },
+      "markdown": "| Type of Boiler | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC |\n|---|---|---|---|---|---|---|\n| Type of Boiler | a | b | c | d | e | f |\n| Non-condensing | 0.082597 | 0.996764 | -0.079361 | 0 | 0 | 0 |\n| Condensing | -0.09438953 | 0.90322417 | 0.01546033 | 0.00159778 | -0.00000645 | 0.00111432 |\n| Modulating | 0.01798667 | 0.96742420 | 0.01545455 | 0 | 0 | 0 |",
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "fheatplc",
+        "type",
+        "boiler",
+        "non-condensing",
+        "condensing",
+        "modulating"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.3",
+      "title": "Table 8.4.6.3. Forming Part of Sentence 8.4.6.3.(2)",
+      "page": 231,
+      "table_info": {
+        "rows": 5,
+        "cols": 4
+      },
+      "markdown": "| Type of Furnace | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC | Coefficients for Calculation of FHeatPLC |\n|---|---|---|---|\n| Type of Furnace | a | b | c |\n| Atmospheric | 0.0186100 | 1.0942090 | -0.1128190 |\n| Condensing | 0.00533 | 0.904 | 0.09066 |\n| Modulating | 0.01798667 | 0.96742420 | 0.01545455 |",
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "fheatplc",
+        "type",
+        "furnace",
+        "atmospheric",
+        "condensing",
+        "modulating"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.5",
+      "title": "Table 8.4.6.5. -A Capacity Coefficients Used in the Calculation of CAP_FT EC",
+      "page": 233,
+      "table_info": {
+        "rows": 10,
+        "cols": 8
+      },
+      "markdown": "|   |   | Coefficients for Calculation of CAP_FT EC | Coefficients for Calculation of CAP_FT EC | Coefficients for Calculation of CAP_FT EC | Coefficients for Calculation of CAP_FT EC | Coefficients for Calculation of CAP_FT EC | Coefficients for Calculation of CAP_FT EC |\n|---|---|---|---|---|---|---|---|\n| Type of Electric Chiller | Type of Electric Chiller | a | b | c | d | e | f |\n| Air-cooled | Scroll | 0.40070684 | 0.01861548 | 0.00007199 | 0.00177296 | -0.00002014 | -0.00008273 |\n|   | Reciprocating | 0.57617295 | 0.02063133 | 0.00007769 | -0.00351183 | 0.00000312 | -0.00007865 |\n|   | Screw | -0.09464899 | 0.0383407 | -0.00009205 | 0.00378007 | -0.00001375 | -0.00015464 |\n|   | Centrifugal | - | - | - | - | - | - |\n| Water-cooled | Scroll | 0.36131454 | 0.01855477 | 0.00003011 | 0.00093592 | -0.00001518 | -0.00005481 |\n|   | Reciprocating | 0.58531422 | 0.01539593 | 0.00007296 | -0.00212462 | -0.00000715 | -0.00004597 |\n|   | Screw | 0.332669598 | 0.00729116 | -0.00049938 | 0.01598983 | -0.00028254 | 0.00052346 |\n|   | Centrifugal | -0.29861975 | 0.02996076 | -0.00080125 | 0.01736268 | -0.00032606 | 0.00063139 |",
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "cap",
+        "type",
+        "electric",
+        "chiller",
+        "scroll",
+        "reciprocating",
+        "screw",
+        "centrifugal",
+        "air-cooled",
+        "water-cooled"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.4.6.8",
+      "title": "Table 8.4.6.8. -A",
+      "page": 238,
+      "table_info": {
+        "rows": 5,
+        "cols": 7
+      },
+      "markdown": "| Type of Absorption | Coefficients for Calculation of CAP_FT AC | Coefficients for Calculation of CAP_FT AC | Coefficients for Calculation of CAP_FT AC | Coefficients for Calculation of CAP_FT AC | Coefficients for Calculation of CAP_FT AC | Coefficients for Calculation of CAP_FT AC |\n|---|---|---|---|---|---|---|\n| Chiller | a | b | c | d | e | f |\n| Steam-driven, single-effect | 0.723412 | 0.079006 | 0.000897 | -0.025285 | -0.000048 | 0.000276 |\n| Steam-driven, double-effect | -0.816039 | -0.038707 | 0.00045 | 0.071491 | -0.000636 | 0.000312 |\n| Direct-fired | 1 | 0 | 0 | 0 | 0 | 0 |",
+      "keywords": [
+        "coefficients",
+        "calculation",
+        "cap",
+        "steam-driven",
+        "type",
+        "absorption",
+        "chiller",
+        "single-effect",
+        "double-effect",
+        "direct-fired"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-8.5.1.1",
+      "title": "Table 8.5.1.1",
+      "page": 241,
+      "table_info": {
+        "rows": 33,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 8.1.1.2. Application | 8.1.1.2. Application |\n| (1) | [F99-OE1.1] |\n| (3) | [F99-OE1.1] |\n| (4) | [F99-OE1.1] |\n| 8.4.1.1. General | 8.4.1.1. General |\n| (1) | [F99-OE1.1] |\n| (2) | [F92,F93,F94,F95,F96,F97,F98,F99,F100-OE1.1] |\n| 8.4.1.2. Determination of Compliance | 8.4.1.2. Determination of Compliance |\n| (2) | [F94,F95,F96,F97-OE1.1] |\n| (3) | [F99-OE1.1] |\n| (4) | [F99-OE1.1] |\n| (5) | [F99-OE1.1] |\n| 8.4.1.4. Treatment of Additions | 8.4.1.4. Treatment of Additions |\n| (1) | [F99-OE1.1] |\n| (2) | [F99-OE1.1] |\n| (3) | [F99-OE1.1] |\n| 8.4.1.5. Treatment of Process Loads | 8.4.1.5. Treatment of Process Loads |\n| (2) | [F99-OE1.1] |\n| 8.4.2.1. General | 8.4.2.1. General |\n| (1) | [F99-OE1.1] |\n| 8.4.2.2. Calculation Methods | 8.4.2.2. Calculation Methods |\n| (1) | [F99-OE1.1] |\n| (2) | [F99-OE1.1] |\n| (3) | [F99-OE1.1] |\n| (4) | [F99-OE1.1] |\n| 8.4.2.3. Climatic Data | 8.4.2.3. Climatic Data |\n| (1) | [F99-OE1.1] |\n| (2) | [F99-OE1.1] |\n| 8.4.2.4. Thermal Mass | 8.4.2.4. Thermal Mass |\n| (1) | [F99-OE1.1] |\n| 8.4.2.5. Space Temperature | 8.4.2.5. Space Temperature |\n| (1) | [F99-OE1.1] |",
+      "keywords": [
+        "f99-oe1",
+        "general",
+        "treatment",
+        "application",
+        "f94",
+        "f95",
+        "f96",
+        "determination",
+        "additions",
+        "process",
+        "loads",
+        "calculation",
+        "methods",
+        "climatic",
+        "data",
+        "thermal",
+        "mass",
+        "space",
+        "temperature",
+        "functional"
+      ],
+      "division": "B",
+      "page_end": 244
+    },
+    {
+      "id": "Table-A-8.4.3.2",
+      "title": "Table A-8.4.3.2. (2)-A Modeling Guidance for Loads, Operating Schedules and Illuminance Levels by Building Type",
+      "page": 258,
+      "table_info": {
+        "rows": 34,
+        "cols": 6
+      },
+      "markdown": "| Building Type | Occupant Density, m 2 /occupant | Peak Receptacle Load, W/m 2 | Service Water Heating Load, W/occupant | Operating Schedule from A-8.4.3.2.(1)(b) | Illuminance Levels, lx (1) |\n|---|---|---|---|---|---|\n| Automotive facility | 20 | 5 | 90 | E | 400 |\n| Convention centre | 8 | 2.5 | 30 | C | 300 |\n| Courthouse | 15 | 5 | 60 | A | 400 |\n| Dining |   |   |   |   |   |\n| bar lounge/leisure cafeteria/fast food | 10 10 | 1 1 | 115 115 | B B | 125 300 |\n| family | 10 | 1 | 115 | B | 300 |\n| Dormitory | 30 | 2.5 | 500 | G | 100 |\n| Exercise centre | 10 | 1 | 90 | B | 350 |\n| Fire station | 25 | 2.5 | 400 | F | 400 |\n| Gymnasium | 10 | 1 | 90 | B | 500 |\n| Healthcare clinic | 20 | 7.5 | 90 | A | 600 |\n| Hospital | 20 | 7.5 | 90 | H | 350 |\n| Hotel/Motel | 25 | 2.5 | 500 | F | 150 |\n| Library | 20 | 2.5 | 90 | C | 500 |\n| Long-term care dwelling units | 25 | 1.5 | 500 | J | 400 |\n| other | 25 | 1.5 | 500 | B | 400 450 |\n| Manufacturing facility | 30 | 10 | 90 | A |   |\n| Motion picture theatre | 8 | 1 | 30 | C | 150 |\n| Multi-unit residential building | 25 | 5 | 500 | G | 125 |\n| Museum | 20 | 2.5 | 60 | C | 100 |\n| Office | 25 | 7.5 | 90 | A | 400 |\n| Penitentiary | 30 | 2.5 | 400 | H | 250 |\n| Performing arts theatre | 8 | 1 | 30 | C | 250 |\n| Police station | 25 | 7.5 | 90 | H | 400 |\n| Post office | 25 | 7.5 | 90 | A | 400 |\n| Religious building | 5 | 1 | 15 | I | 250 |\n| Retail area | 30 | 2.5 | 40 | C | 450 |\n| School/university | 8 | 5 | 60 | D | 400 |\n| Sports arena | 10 | 1 | 90 | B | 400 |\n| Storage garage Town hall | 1000 25 | 0 7.5 | 0 90 | K D | 75 400 |\n| Transportation facility | 15 | 1 | 65 | H |   |\n|   |   |   |   |   | 225 |\n| Workshop | 30 | 10 | 90 | A | 500 |",
+      "keywords": [
+        "building",
+        "occupant",
+        "facility",
+        "load",
+        "centre",
+        "station",
+        "theatre",
+        "office",
+        "type",
+        "density",
+        "peak",
+        "receptacle",
+        "service",
+        "water",
+        "heating",
+        "operating",
+        "schedule",
+        "a-8",
+        "illuminance",
+        "levels"
+      ],
+      "division": "B",
+      "page_end": 262
+    },
+    {
+      "id": "Table-1",
+      "title": "Table 1. -1 Nominal R-Values of Wall Components in Figure 1-1",
+      "page": 264,
+      "table_info": {
+        "rows": 9,
+        "cols": 3
+      },
+      "markdown": "| Component | Component Thickness, in mm | Nominal R-Value |\n|---|---|---|\n| Outside surface air film | - | 0.030 |\n| Siding - aluminum or steel with sheathing | 10 | 0.107 |\n| Sheathing paper | 4 | 0.02 |\n| Insulation - cellular glass board | 38 | 0.753 |\n| Insulation - mineral fibre, RSI 2.11 (1) | 89 | 2.110 |\n| Polyethylene vapour barrier | 2 | 0 |\n| Gypsum sheathing | 13 | 0.081 |\n| Inside surface air film | - | 0.120 |",
+      "keywords": [
+        "sheathing",
+        "component",
+        "surface",
+        "air",
+        "film",
+        "insulation",
+        "thickness",
+        "nominal",
+        "r-value",
+        "outside",
+        "siding",
+        "aluminum",
+        "steel",
+        "paper",
+        "cellular",
+        "glass",
+        "board",
+        "mineral",
+        "fibre",
+        "rsi"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-2",
+      "title": "Table 2. -1 Nominal R-Values of Wall Components in Figure 2-1",
+      "page": 265,
+      "table_info": {
+        "rows": 9,
+        "cols": 3
+      },
+      "markdown": "| Component | Component Thickness, in mm | Nominal R-Value |\n|---|---|---|\n| Outside surface air film | - | 0.030 |\n| Siding - aluminum or steel with sheathing | 10 | 0.107 |\n| Sheathing paper | 4 | 0.02 |\n| Insulation - polystyrene, smooth skin | 38 | 1.317 |\n| Insulation - mineral fibre, RSI 2.11 (1) | 89 | 2.110 |\n| Polyethylene vapour barrier | 2 | 0 |\n| Gypsum sheathing | 13 | 0.081 |\n| Inside surface air film | - | 0.120 |",
+      "keywords": [
+        "sheathing",
+        "component",
+        "surface",
+        "air",
+        "film",
+        "insulation",
+        "thickness",
+        "nominal",
+        "r-value",
+        "outside",
+        "siding",
+        "aluminum",
+        "steel",
+        "paper",
+        "polystyrene",
+        "smooth",
+        "skin",
+        "mineral",
+        "fibre",
+        "rsi"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-10.1.2.1",
+      "title": "Table 10.1.2.1. Energy Performance Tiers",
+      "page": 274,
+      "table_info": {
+        "rows": 5,
+        "cols": 3
+      },
+      "markdown": "| Energy Performance Tier | Percent Building Energy Target (1) | Percent Improvement (1) |\n|---|---|---|\n| 1 | ≤ 100% | ≥ 0% |\n| 2 | ≤ 75% | ≥ 25% |\n| 3 | ≤ 50% | ≥ 50% |\n| 4 | ≤ 40% | ≥ 60% |",
+      "keywords": [
+        "energy",
+        "percent",
+        "performance",
+        "tier",
+        "building",
+        "target",
+        "improvement"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-11.4.1.1",
+      "title": "Table 11.4.1.1",
+      "page": 280,
+      "table_info": {
+        "rows": 7,
+        "cols": 3
+      },
+      "markdown": "| GHG Emissions Performance Level | Percent Operational GHG Emissions Target (1) | Percent Improvement (1) |\n|---|---|---|\n| A | ≤ 10% | ≥ 90% |\n| B | ≤ 25% | ≥ 75% |\n| C | ≤ 50% | ≥ 50% |\n| D | ≤ 75% | ≥ 25% |\n| E | ≤ 90% | ≥ 10% |\n| F | ≤ 100% | ≥ 0% |",
+      "keywords": [
+        "ghg",
+        "emissions",
+        "percent",
+        "performance",
+        "level",
+        "operational",
+        "target",
+        "improvement"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-11.4.2.1",
+      "title": "Table 11.4.2.1. -A GHG Emissions Factors for Electricity and Utility Gas by Province or Territory",
+      "page": 281,
+      "table_info": {
+        "rows": 15,
+        "cols": 3
+      },
+      "markdown": "| Territory | GHG Emissions Factor, g CO 2 e/kWh | GHG Emissions Factor, g CO 2 e/kWh |\n|---|---|---|\n| Province or | Electricity (1) | Utility Gas (2) |\n| British Columbia | 1.32 | 190 |\n| Alberta | 181.86 | 189 |\n| Saskatchewan | 146.60 | 185 |\n| Manitoba | 0.00 | 185 |\n| Ontario | 57.90 | 185 |\n| Québec | 0.38 | 186 |\n| New Brunswick | 77.88 | 185 |\n| Nova Scotia | 161.64 | 190 |\n| Prince Edward Island | 77.88 | 185 |\n| Newfoundland and Labrador | 11.08 | 185 |\n| Yukon | 25.00 | 190 |\n| Northwest Territories | 6.82 | 185 |\n| Nunavut | 465.16 | 190 |",
+      "keywords": [
+        "ghg",
+        "emissions",
+        "factor",
+        "kwh",
+        "territory",
+        "province",
+        "electricity",
+        "utility",
+        "gas",
+        "british",
+        "columbia",
+        "alberta",
+        "saskatchewan",
+        "manitoba",
+        "ontario",
+        "bec",
+        "new",
+        "brunswick",
+        "nova",
+        "scotia"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-11.5.1.1",
+      "title": "Table 11.5.1.1. Acceptable Solutions in Part 11",
+      "page": 284,
+      "table_info": {
+        "rows": 21,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 11.1.1.2. Application | 11.1.1.2. Application |\n| (2) | [F101-OE2.1] |\n| (3) | [F101-OE2.1] |\n| 11.4.1.1. Compliance | 11.4.1.1. Compliance |\n| (1) | [F101-OE2.1] |\n| (2) | [F101-OE2.1] |\n| (5) | [F101-OE2.1] |\n| 11.4.2.1. General | 11.4.2.1. General |\n| (1) | [F101-OE2.1] |\n| (2) | [F101-OE2.1] |\n| (3) | [F101-OE2.1] |\n| (4) | [F101-OE2.1] |\n| (5) | [F101-OE2.1] |\n| 11.4.3.1. General | 11.4.3.1. General |\n| (1) | [F101-OE2.1] |\n| 11.4.4.1. General | 11.4.4.1. General |\n| (1) | [F101-OE2.1] |\n| (2) | [F101-OE2.1] |\n| (3) | [F101-OE2.1] |\n| (4) | [F101-OE2.1] |",
+      "keywords": [
+        "f101-oe2",
+        "general",
+        "application",
+        "functional",
+        "statements",
+        "objectives"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-A-11.4.2.1",
+      "title": "Table A-11.4.2.1. Unit Conversions for Energy Sources",
+      "page": 285,
+      "table_info": {
+        "rows": 6,
+        "cols": 3
+      },
+      "markdown": "| Energy Source | Unit | Energy per Unit, (1) kWh |\n|---|---|---|\n| Diesel | L | 10.74 |\n| Natural gas | m 3 | 10.36 |\n| Oil, heating or light fuel | L | 10.20 |\n| Oil, heavy fuel | L | 11.59 |\n| Propane | L | 7.09 |",
+      "keywords": [
+        "energy",
+        "unit",
+        "oil",
+        "fuel",
+        "source",
+        "per",
+        "kwh",
+        "diesel",
+        "natural",
+        "gas",
+        "heating",
+        "light",
+        "heavy",
+        "propane"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-13.11.1.1",
+      "title": "Table 13.11.1.1",
+      "page": 296,
+      "table_info": {
+        "rows": 7,
+        "cols": 2
+      },
+      "markdown": "| Provision | Functional Statements and Objectives (1) |\n|---|---|\n| 13.4.2.1. Requirements | 13.4.2.1. Requirements |\n| (2) | [F94-OE1.1] |\n| (3) | [F94-OE1.1] |\n| 13.6.2.1. Requirements | 13.6.2.1. Requirements |\n| (5) | [F96-OE1.1] |\n| (6) | [F92,F93-OE1.1] |",
+      "keywords": [
+        "requirements",
+        "f94-oe1",
+        "functional",
+        "statements",
+        "objectives",
+        "f96-oe1",
+        "f92",
+        "f93-oe1"
+      ],
+      "division": "B"
+    },
+    {
+      "id": "Table-C-1",
+      "title": "Table C-1. Design Data for Selected Locations in Canada",
+      "page": 299,
+      "table_info": {
+        "rows": 29,
+        "cols": 12
+      },
+      "markdown": "|   |   | Design Temperature | Design Temperature | Design Temperature | Design Temperature | Design Temperature | Design Temperature | Degree- Days | Degree- | Hourly Wind | Hourly Wind |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n| Province and Location | Elev.,m | January | January | July | July | 2.5% | 2.5% |   | Days | Pressures, kPa (1) | Pressures, kPa (1) |\n|   |   | 2.5% °C | 1% °C | Historical (2) | Historical (2) | Future | Future | Below | Below 15°C | 1/10 |   |\n|   |   |   |   | Dry °C | Wet °C | Dry °C | Wet °C | 18°C |   |   | 1/50 |\n| British Columbia |   |   |   |   |   |   |   |   |   |   |   |\n| 100 Mile House | 1040 | -30 | -32 | 29 | 17 | 34 | 21 | 5030 | 4040 | 0.30 | 0.39 |\n| Abbotsford | 70 | -8 | -10 | 29 | 20 | 35 | 25 | 2860 | 2000 | 0.36 | 0.48 |\n| Agassiz | 15 | -9 | -11 | 31 | 21 | 37 | 26 | 2750 | 1900 | 0.39 | 0.52 |\n| Alberni | 12 | -5 | -8 | 31 | 19 | 37 | 24 | 3100 | 2220 | 0.26 | 0.35 |\n| Ashcroft | 305 | -24 | -27 | 34 | 20 | 39 | 24 | 3700 | 2790 | 0.32 | 0.42 |\n| Bamfield | 20 | -2 | -4 | 23 | 17 | 28 | 21 | 3080 | 2060 | 0.42 | 0.55 |\n| Beatton River | 840 | -37 | -39 | 26 | 18 | 31 | 22 | 6300 | 5230 | 0.25 | 0.33 |\n| Bella Bella | 25 | -5 | -7 | 23 | 18 | 28 | 22 | 3180 | 2150 | 0.44 | 0.55 |\n| Bella Coola | 40 | -14 | -18 | 27 | 19 | 33 | 24 | 3560 | 2660 | 0.32 | 0.43 |\n| Burns Lake | 755 | -31 | -34 | 26 | 17 | 32 | 22 | 5450 | 4430 | 0.32 | 0.43 |\n| Cache Creek | 455 | -24 | -27 | 34 | 20 | 39 | 24 | 3700 | 2790 | 0.32 | 0.43 |\n| Campbell River | 20 | -5 | -7 | 26 | 18 | 32 | 23 | 3000 | 2130 | 0.45 | 0.53 |\n| Carmi | 845 | -24 | -26 | 31 | 19 | 36 | 23 | 4750 | 3770 | 0.30 | 0.40 |\n| Castlegar | 430 | -18 | -20 | 32 | 20 | 37 | 24 | 3580 | 2680 | 0.27 | 0.36 |\n| Chetwynd | 605 | -35 | -38 | 27 | 18 | 33 | 22 | 5500 | 4480 | 0.33 | 0.44 |\n| Chilliwack | 10 | -9 | -11 | 30 | 20 | 36 | 25 | 2780 | 1920 | 0.39 | 0.52 |\n| Comox | 15 | -7 | -9 | 27 | 18 | 33 | 23 | 2930 | 2220 | 0.45 | 0.53 |\n| Courtenay | 10 | -7 | \n...(truncated)",
+      "keywords": [
+        "design",
+        "temperature",
+        "bella",
+        "creek",
+        "degree",
+        "days",
+        "hourly",
+        "wind",
+        "january",
+        "july",
+        "pressures",
+        "kpa",
+        "historical",
+        "future",
+        "below",
+        "dry",
+        "wet",
+        "river",
+        "lake",
+        "province"
+      ],
+      "division": "B",
+      "page_end": 316
     }
   ]
 }

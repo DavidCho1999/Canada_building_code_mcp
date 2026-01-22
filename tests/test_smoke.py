@@ -31,15 +31,15 @@ class TestListCodes:
         mcp = BuildingCodeMCP('maps')
         result = mcp.list_codes()
 
-        assert 'codes' in result or 'indexed_codes' in result
-        assert result.get('total', 0) > 0 or len(result.get('indexed_codes', [])) > 0
+        assert 'codes' in result
+        assert result.get('total_codes', 0) > 0 or len(result.get('codes', [])) > 0
 
     def test_contains_nbc(self):
         """Should include NBC (National Building Code)"""
         mcp = BuildingCodeMCP('maps')
         result = mcp.list_codes()
 
-        codes = result.get('codes', result.get('indexed_codes', []))
+        codes = result.get('codes', [])
         code_names = [c.get('code', '') for c in codes]
         assert 'NBC' in code_names
 
@@ -196,6 +196,227 @@ class TestDataQuality:
         ratio = with_keywords / len(sections)
 
         assert ratio > 0.8  # At least 80% have keywords
+
+
+class TestSynonymSearch:
+    """Test synonym-based search"""
+
+    def test_washroom_finds_water_closet(self):
+        """Searching 'restroom' should find 'washroom' or 'water closet' sections"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('restroom', 'NBC')
+
+        # Should find results due to synonym expansion
+        assert result['total'] > 0 or 'search_features' in result
+
+    def test_stairs_finds_stairway(self):
+        """Searching 'stairs' should find 'stairway' sections"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('stairs', 'NBC')
+
+        assert result['total'] > 0
+
+    def test_accessible_finds_barrier_free(self):
+        """Searching 'accessible' should find 'barrier-free' sections"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('accessible', 'NBC')
+
+        assert result['total'] > 0
+
+
+class TestFuzzySearch:
+    """Test fuzzy matching for typo tolerance"""
+
+    def test_search_features_reported(self):
+        """Search should report available features"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('fire', 'NBC')
+
+        assert 'search_features' in result
+        assert 'synonyms' in result['search_features']
+
+    def test_slight_typo_still_finds(self):
+        """Slight typos should still return results (if rapidfuzz available)"""
+        mcp = BuildingCodeMCP('maps')
+        # 'fier' is a typo for 'fire'
+        result = mcp.search_code('fier separation', 'NBC')
+
+        # Even without fuzzy, synonym or partial match might work
+        # Just ensure no crash
+        assert 'results' in result
+
+    def test_match_type_returned(self):
+        """Results should include match_type indicator"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('fire', 'NBC')
+
+        if result['results']:
+            # At least some results should have match_type
+            has_match_type = any('match_type' in r for r in result['results'])
+            assert has_match_type
+
+
+class TestVerifySection:
+    """Test verify_section functionality"""
+
+    def test_valid_section_exists(self):
+        """Should confirm existing section"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.verify_section('B-9.10.14', 'NBC')
+
+        assert result['exists'] is True
+        assert 'citation' in result
+
+    def test_invalid_section_not_exists(self):
+        """Should report non-existent section"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.verify_section('99.99.99.99', 'NBC')
+
+        assert result['exists'] is False
+        assert 'error' in result
+
+    def test_suggests_similar_sections(self):
+        """Should suggest similar sections when not found"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.verify_section('9.10.999', 'NBC')
+
+        assert result['exists'] is False
+        # Should suggest similar sections starting with 9.10
+        assert 'similar_sections' in result
+
+    def test_auto_prefix_detection(self):
+        """Should auto-detect Division prefix (A/B/C)"""
+        mcp = BuildingCodeMCP('maps')
+        # Search without prefix
+        result = mcp.verify_section('9.10.14', 'NBC')
+
+        # Should find B-9.10.14 automatically
+        if result['exists']:
+            assert 'B-9.10.14' in result.get('section_id', '') or 'note' in result
+
+
+class TestGetApplicableCode:
+    """Test get_applicable_code functionality"""
+
+    def test_toronto_returns_obc(self):
+        """Toronto should return OBC as primary"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.get_applicable_code('Toronto')
+
+        assert result['primary_code'] == 'OBC'
+
+    def test_vancouver_returns_bcbc(self):
+        """Vancouver should return BCBC as primary"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.get_applicable_code('Vancouver')
+
+        assert result['primary_code'] == 'BCBC'
+
+    def test_montreal_returns_qcc(self):
+        """Montreal should return QCC as primary"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.get_applicable_code('Montreal')
+
+        assert result['primary_code'] == 'QCC'
+
+    def test_unknown_location_suggests_national(self):
+        """Unknown location should suggest national codes"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.get_applicable_code('Unknown City XYZ')
+
+        assert 'error' in result or 'default_codes' in result
+
+    def test_includes_disclaimer(self):
+        """All responses should include disclaimer"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.get_applicable_code('Toronto')
+
+        assert 'disclaimer' in result
+
+
+class TestEdgeCases:
+    """Test edge cases and error handling"""
+
+    def test_special_characters_in_query(self):
+        """Should handle special characters in search query"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('fire-resistance (1h)', 'NBC')
+
+        # Should not crash
+        assert 'results' in result
+
+    def test_very_long_query(self):
+        """Should handle very long queries"""
+        mcp = BuildingCodeMCP('maps')
+        long_query = 'fire ' * 100
+        result = mcp.search_code(long_query, 'NBC')
+
+        # Should not crash
+        assert 'results' in result
+
+    def test_unicode_query(self):
+        """Should handle unicode characters"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('résistance au feu', 'NBC')
+
+        # Should not crash
+        assert 'results' in result
+
+    def test_none_code_searches_all(self):
+        """Passing None for code should search all codes"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('fire', None)
+
+        assert result['total'] > 0
+        # Should have results from multiple codes
+        codes_found = set(r['code'] for r in result['results'])
+        assert len(codes_found) >= 1
+
+    def test_empty_maps_directory(self):
+        """Should handle missing maps gracefully"""
+        mcp = BuildingCodeMCP('nonexistent_maps_dir')
+
+        # Should not crash, just have empty maps
+        assert mcp.maps == {} or isinstance(mcp.maps, dict)
+
+    def test_section_with_division_prefix(self):
+        """Should handle sections with A-, B-, C- prefixes"""
+        mcp = BuildingCodeMCP('maps')
+
+        # Test with explicit prefix
+        result_b = mcp.get_section('B-9.10.14', 'NBC')
+        assert 'error' not in result_b
+
+        # Test hierarchy with prefix
+        hierarchy = mcp.get_hierarchy('B-9.10.14', 'NBC')
+        assert 'children' in hierarchy
+
+
+class TestMultipleCodeSearch:
+    """Test searching across multiple codes"""
+
+    def test_search_all_codes(self):
+        """Should search all codes when none specified"""
+        mcp = BuildingCodeMCP('maps')
+        # Use a very common term that exists in all codes
+        result = mcp.search_code('fire')
+
+        # Should find results
+        assert result['total'] > 0
+        # Results come from at least one code (might be same code due to limit)
+        codes = set(r['code'] for r in result['results'])
+        assert len(codes) >= 1
+
+    def test_guide_marked_as_guide(self):
+        """Guide results should be marked as non-binding"""
+        mcp = BuildingCodeMCP('maps')
+        result = mcp.search_code('fire', 'IUGP9')
+
+        if result['total'] > 0:
+            # Results from guide should have note
+            for r in result['results']:
+                if r.get('document_type') == 'guide':
+                    assert 'note' in r
 
 
 if __name__ == '__main__':

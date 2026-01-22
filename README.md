@@ -5,6 +5,29 @@
 
 A Model Context Protocol (MCP) server that enables Claude to search and navigate Canadian building codes.
 
+## How It Works
+
+This MCP server operates in **two modes**:
+
+| Mode | Use Case | PDF Required | Text Extraction |
+|------|----------|--------------|-----------------|
+| **Map-Only** | Hosted API, Quick lookup | No | Page numbers & coordinates only |
+| **BYOD** | Local MCP with full text | Yes (your own) | Full section text |
+
+### Map-Only Mode (Default)
+- Returns page numbers, section IDs, and coordinates
+- Works everywhere (local, Vercel, Render, etc.)
+- **No PDF needed** - just the indexed maps
+
+### BYOD Mode (Bring Your Own Document)
+- Connect YOUR legally obtained PDF using `set_pdf_path`
+- Get full text extraction from sections
+- **Local MCP only** - not available in hosted API
+
+> **Note**: The hosted API at `canada-aec-code-mcp.onrender.com` runs in Map-Only mode. For full text extraction, run the MCP server locally and connect your own PDFs.
+
+---
+
 ## Quick Setup
 
 ### Option A: Smithery (One-click install)
@@ -103,6 +126,8 @@ GET /codes              - List all codes
 GET /search/{query}     - Search sections
 GET /section/{id}       - Get section details
 ```
+
+> **Hosted API Limitation**: The hosted API runs in Map-Only mode. `set_pdf_path` is not available - use local MCP for full text extraction.
 
 ## License
 
