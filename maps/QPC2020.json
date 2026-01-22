@@ -592,20 +592,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vent",
-        "water",
-        "means",
-        "pipe",
         "a-1",
-        "system",
-        "stack",
-        "treatment",
-        "air",
-        "drainage",
         "connected",
+        "means",
+        "water",
+        "drainage",
         "end",
-        "trap",
+        "symbols",
         "lower",
+        "vent",
+        "air",
+        "pipe",
+        "stack",
+        "system",
+        "treatment",
         "a-2"
       ],
       "division": "A"
@@ -1010,21 +1010,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "minimize",
-        "risk",
-        "water",
-        "code",
-        "limit",
-        "functional",
-        "statements",
-        "national",
-        "group",
-        "fire",
-        "facilities",
         "provide",
-        "plumbing",
+        "facilities",
         "functions",
-        "a-3"
+        "code",
+        "a-3",
+        "minimize",
+        "limit",
+        "water",
+        "statements",
+        "group",
+        "plumbing",
+        "risk",
+        "national",
+        "fire",
+        "functional"
       ],
       "division": "A"
     },
@@ -1286,21 +1286,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "code",
         "referenced",
-        "documents",
-        "editions",
         "accuracy",
+        "code",
         "information",
         "they",
-        "designated",
-        "while",
-        "every",
         "effort",
-        "made",
+        "documents",
         "ensure",
+        "responsible",
+        "every",
+        "while",
+        "designated",
+        "made",
         "nrc",
-        "responsible"
+        "editions"
       ],
       "division": "B"
     },
@@ -1333,21 +1333,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "provisions",
-        "objectives",
-        "functional",
-        "statements",
-        "attributed",
-        "serve",
-        "code",
-        "them",
-        "ansi",
-        "american",
-        "www",
-        "org",
+        "organizations",
         "arcsa",
+        "code",
+        "statements",
+        "serve",
+        "provisions",
+        "american",
+        "objectives",
+        "www",
+        "attributed",
         "modifiers",
-        "pointers"
+        "pointers",
+        "org",
+        "ansi",
+        "them"
       ],
       "division": "B"
     },
@@ -1618,7 +1618,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "structural",
+        "movement"
+      ]
     },
     {
       "id": "B-2.1.4",
@@ -2065,21 +2069,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "trap",
-        "interceptors",
-        "grease",
-        "designed",
-        "a-2",
-        "separators",
-        "sink",
-        "cleanout",
-        "plug",
-        "installed",
-        "they",
-        "csa",
-        "b481",
         "amalgam",
-        "floor-mounted"
+        "b481",
+        "they",
+        "traps",
+        "separators",
+        "csa",
+        "designed",
+        "floor-mounted",
+        "cleanout",
+        "interceptors",
+        "installed",
+        "sink",
+        "grease",
+        "plug",
+        "a-2"
       ],
       "division": "B"
     },
@@ -2406,21 +2410,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "crosslinked",
-        "polyethylene",
-        "systems",
-        "pipe",
-        "manufacturer-approved",
-        "fittings",
-        "used",
         "hot",
-        "cold",
+        "used",
+        "manufacturer-approved",
+        "crosslinked",
         "potable",
         "water",
+        "systems",
+        "cold",
         "csa",
-        "b137",
         "pex",
-        "tubing"
+        "tubing",
+        "fittings",
+        "non-metallic",
+        "b137",
+        "pipe"
       ],
       "division": "B"
     },
@@ -2630,21 +2634,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "crosslinked",
-        "polyethylene",
-        "systems",
-        "composite",
-        "pipe",
-        "used",
-        "fittings",
-        "csa",
-        "b137",
-        "aluminum",
-        "pex-al-pex",
-        "pressure-pipe",
         "hot",
+        "used",
+        "crosslinked",
         "water",
-        "pex"
+        "systems",
+        "csa",
+        "pex",
+        "aluminum",
+        "fittings",
+        "non-metallic",
+        "b137",
+        "pipe",
+        "pex-al-pex",
+        "polyethylene",
+        "pressure-pipe"
       ],
       "division": "B"
     },
@@ -2987,21 +2991,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pipe",
+        "above",
         "steel",
-        "galvanized",
-        "system",
         "corrugated",
         "used",
+        "prevent",
         "drainage",
-        "building",
+        "ferrous",
+        "ground",
         "fittings",
         "couplings",
-        "prevent",
+        "pipe",
         "venting",
-        "above",
-        "ground",
-        "inside"
+        "inside",
+        "system",
+        "building"
       ],
       "division": "B"
     },
@@ -3337,21 +3341,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "copper",
-        "tube",
-        "astm",
         "standard",
-        "specification",
-        "b88",
-        "seamless",
-        "water",
-        "b306",
-        "drainage",
-        "dwv",
-        "use",
         "used",
+        "non-ferrous",
+        "dwv",
+        "water",
+        "drainage",
+        "use",
+        "astm",
+        "tube",
         "fixture",
-        "drain"
+        "drain",
+        "fittings",
+        "b306",
+        "pipe",
+        "copper"
       ],
       "division": "B"
     },
@@ -3743,21 +3747,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fitting",
-        "cannot",
-        "every",
-        "plug",
         "cap",
-        "nut",
-        "bolt",
         "intended",
-        "removable",
-        "ferrous",
         "non-ferrous",
+        "removable",
+        "normal",
+        "materials",
         "material",
+        "ferrous",
+        "miscellaneous",
         "cleanout",
-        "result",
-        "normal"
+        "fitting",
+        "every",
+        "cannot",
+        "plug",
+        "nut"
       ],
       "division": "B"
     },
@@ -3963,21 +3967,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "breakers",
+        "connection",
+        "protection",
+        "vacuum",
+        "backflow",
+        "materials",
         "csa",
+        "pressure",
+        "fire",
+        "dual",
+        "systems",
+        "miscellaneous",
         "b64",
         "preventers",
-        "backflow",
-        "vacuum",
-        "breakers",
-        "check",
-        "valve",
-        "pressure",
-        "dual",
-        "fire",
-        "protection",
-        "systems",
-        "hose",
-        "connection"
+        "hose"
       ],
       "division": "B"
     },
@@ -4258,19 +4262,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pipe",
-        "drains",
-        "csa",
+        "chlorinated",
+        "waste",
         "floor",
-        "polyvinylchloride",
+        "pvc",
+        "materials",
+        "csa",
+        "miscellaneous",
         "drain",
         "fittings",
         "b181",
-        "pvc",
-        "chlorinated",
         "cpvc",
-        "waste",
         "vent",
+        "pipe",
         "csa-b182",
         "plastic"
       ],
@@ -4765,7 +4769,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "connections",
+        "joints"
+      ]
     },
     {
       "id": "B-2.3.3",
@@ -5263,21 +5271,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "piping",
-        "pipe",
-        "support",
-        "nps",
-        "hangers",
-        "nominally",
-        "horizontal",
-        "pex",
-        "metal",
         "diam",
         "supported",
+        "horizontal",
+        "hangers",
+        "compress",
+        "cut",
+        "support",
+        "nominally",
+        "nps",
+        "metal",
         "plastic",
         "installed",
-        "compress",
-        "cut"
+        "pipe",
+        "pex",
+        "piping"
       ],
       "division": "B"
     },
@@ -5475,20 +5483,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "condensation",
-        "a-2",
-        "piping",
         "used",
+        "protection",
+        "piping",
         "internal",
-        "leader",
         "subject",
+        "due",
         "installed",
-        "manner",
-        "limits",
         "risk",
         "damage",
+        "limits",
         "building",
-        "due"
+        "manner",
+        "a-2",
+        "condensation",
+        "leader"
       ],
       "division": "B"
     },
@@ -5878,7 +5887,10 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "application"
+      ]
     },
     {
       "id": "B-2.4.1",
@@ -6179,15 +6191,17 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "macerating",
-        "system",
-        "toilet",
-        "installed",
         "connection",
-        "gravity",
         "sanitary",
         "drainage",
-        "available"
+        "macerating",
+        "fixtures",
+        "toilet",
+        "installed",
+        "available",
+        "system",
+        "gravity",
+        "location"
       ],
       "division": "B"
     },
@@ -6725,21 +6739,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "sewer",
-        "intended",
-        "serve",
-        "mobile",
-        "home",
-        "nps",
-        "terminated",
         "above",
-        "ground",
-        "tamperproof",
-        "terminal",
+        "mobile",
+        "intended",
         "connection",
-        "capable",
-        "being"
+        "piping",
+        "terminal",
+        "tamperproof",
+        "home",
+        "ground",
+        "serve",
+        "being",
+        "nps",
+        "drainage",
+        "arrangement",
+        "terminated"
       ],
       "division": "B"
     },
@@ -6899,7 +6913,14 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "slope",
+        "drainage",
+        "pipes",
+        "minimum",
+        "length"
+      ]
     },
     {
       "id": "B-2.4.8",
@@ -7637,21 +7658,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vent",
+        "connected",
         "circuit",
         "circuit-vented",
-        "fixtures",
-        "connected",
-        "nps",
-        "branch",
         "fixture",
         "relief",
-        "pipe",
-        "hydraulic",
         "load",
-        "additional",
+        "fixtures",
         "vents",
-        "served"
+        "nps",
+        "hydraulic",
+        "vent",
+        "pipe",
+        "served",
+        "pipes",
+        "branch"
       ],
       "division": "B"
     },
@@ -7894,21 +7915,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "nps",
+        "above",
         "extend",
+        "smaller",
         "independently",
-        "outside",
+        "tanks",
+        "miscellaneous",
+        "ground",
+        "one",
+        "nps",
         "terminate",
         "vent",
+        "outside",
         "pipe",
-        "tanks",
         "air",
-        "above",
-        "ground",
-        "pipes",
-        "referred",
-        "one",
-        "smaller"
+        "referred"
       ],
       "division": "B"
     },
@@ -8155,21 +8176,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "nps",
-        "pipe",
         "roof",
-        "frost",
-        "closure",
-        "vent",
-        "passes",
         "through",
-        "subject",
-        "protected",
-        "increasing",
-        "diameter",
         "one",
-        "immediately",
-        "penetrates"
+        "vent",
+        "closure",
+        "frost",
+        "increasing",
+        "pipes",
+        "size",
+        "diameter",
+        "protected",
+        "minimum",
+        "nps",
+        "subject",
+        "passes"
       ],
       "division": "B"
     },
@@ -8438,21 +8459,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vent",
-        "length",
-        "vents",
-        "stack",
-        "pipe",
-        "purposes",
-        "developed",
         "sanitary",
-        "drainage",
         "connection",
+        "sizing",
+        "drainage",
+        "vents",
         "header",
-        "outside",
+        "length",
+        "dual",
+        "developed",
+        "vent",
         "air",
+        "pipe",
+        "outside",
         "individual",
-        "dual"
+        "stack"
       ],
       "division": "B"
     },
@@ -8469,7 +8490,12 @@
         "b": 621.517,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "vent",
+        "pipes",
+        "sizing"
+      ]
     },
     {
       "id": "B-2.5.8.4",
@@ -8704,20 +8730,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "recirculation",
         "loop",
+        "piping",
+        "water",
+        "heat",
+        "installed",
         "covered",
+        "tracing",
         "replaced",
         "self-regulating",
-        "heat",
-        "tracing",
-        "water",
         "distribution",
-        "installed",
         "drained",
         "blown",
-        "air"
+        "system",
+        "air",
+        "arrangement"
       ],
       "division": "B"
     },
@@ -8893,21 +8920,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "valve",
-        "drain",
-        "tank",
-        "discharge",
-        "water",
-        "pipe",
-        "relief",
-        "installed",
-        "located",
-        "pan",
-        "within",
-        "valves",
         "floor",
+        "water",
+        "relief",
+        "drain",
+        "pan",
+        "discharge",
+        "installed",
+        "valves",
+        "within",
+        "pipe",
+        "nps",
+        "arrangement",
+        "located",
         "larger",
-        "nps"
+        "piping"
       ],
       "division": "B"
     },
@@ -9154,21 +9181,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "backflow",
-        "fire",
-        "systems",
-        "preventers",
-        "csa",
-        "b64",
-        "pressure",
-        "reduced",
+        "contamination",
         "principle",
+        "reduced",
+        "protection",
+        "backflow",
         "check",
-        "valve",
-        "class",
-        "sprinkler",
+        "systems",
+        "csa",
+        "pressure",
         "standpipe",
-        "preventer"
+        "b64",
+        "preventers",
+        "preventer",
+        "sprinkler",
+        "class"
       ],
       "division": "B"
     },
@@ -9364,12 +9391,14 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "tank-type",
-        "water",
-        "closets",
-        "back-siphonage",
+        "contamination",
         "preventer",
-        "conformance"
+        "conformance",
+        "protection",
+        "water",
+        "tank-type",
+        "closets",
+        "back-siphonage"
       ],
       "division": "B"
     },
@@ -9530,21 +9559,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fixture",
-        "forming",
-        "sentences",
-        "static",
-        "pressure",
-        "kpa",
-        "manufacturer",
-        "recommendations",
         "unit",
+        "size",
+        "forming",
+        "capacity",
+        "fixture",
+        "pressure",
+        "manufacturer",
         "values",
         "fixtures",
+        "sentences",
         "direct",
-        "flush",
+        "recommendations",
         "valves",
-        "tables"
+        "static",
+        "flush"
       ],
       "division": "B"
     },
@@ -9918,21 +9947,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "f81-oh2",
-        "oh2",
-        "f20-oh2",
-        "f81-oh1",
-        "f20-op5",
-        "f20",
-        "pipe",
-        "fittings",
-        "f81-op5",
-        "systems",
-        "drainage",
-        "tests",
-        "hydraulic",
         "loads",
-        "objectives"
+        "f81-oh2",
+        "tests",
+        "f20-oh2",
+        "drainage",
+        "systems",
+        "statements",
+        "oh2",
+        "f81-op5",
+        "fittings",
+        "hydraulic",
+        "objectives",
+        "pipe",
+        "f20-op5",
+        "f81-oh1"
       ],
       "division": "B"
     },

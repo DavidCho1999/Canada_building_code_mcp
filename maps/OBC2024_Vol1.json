@@ -1589,21 +1589,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "occupancy",
-        "buildings",
-        "one",
-        "major",
+        "containing",
         "agricultural",
-        "occupant",
+        "their",
+        "one",
         "load",
+        "person",
+        "occupancy",
         "classified",
         "according",
-        "parts",
-        "containing",
-        "person",
+        "buildings",
+        "major",
+        "occupant",
         "per",
-        "their",
-        "belonging"
+        "belonging",
+        "application"
       ],
       "division": "B"
     },

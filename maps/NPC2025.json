@@ -990,21 +990,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "minimize",
-        "risk",
+        "provide",
+        "facilities",
+        "functions",
         "code",
-        "limit",
+        "a-3",
+        "minimize",
         "water",
-        "functional",
+        "limit",
         "statements",
-        "national",
         "group",
         "plumbing",
+        "risk",
+        "national",
         "fire",
-        "facilities",
-        "provide",
-        "functions",
-        "a-3"
+        "functional"
       ],
       "division": "A"
     },
@@ -1266,13 +1266,13 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "documents",
         "referenced",
+        "forming",
         "code",
         "they",
-        "editions",
+        "documents",
         "designated",
-        "forming"
+        "editions"
       ],
       "division": "B"
     },
@@ -1290,21 +1290,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "accuracy",
-        "information",
+        "organizations",
         "referenced",
+        "accuracy",
         "code",
-        "while",
-        "every",
+        "information",
         "effort",
-        "made",
         "ensure",
-        "nrc",
         "responsible",
-        "timeliness",
-        "reliability",
         "content",
-        "presented"
+        "presented",
+        "every",
+        "while",
+        "made",
+        "nrc",
+        "timeliness"
       ],
       "division": "B"
     },
@@ -1607,7 +1607,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "seismic",
+        "design"
+      ]
     },
     {
       "id": "B-2.1.4",
@@ -2082,21 +2086,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "trap",
-        "interceptors",
-        "grease",
-        "designed",
-        "a-2",
-        "sink",
-        "cleanout",
-        "plug",
-        "material",
-        "installed",
-        "they",
-        "csa",
         "b481",
+        "they",
+        "traps",
+        "material",
+        "csa",
         "petroleum",
-        "floor-mounted"
+        "designed",
+        "floor-mounted",
+        "cleanout",
+        "interceptors",
+        "installed",
+        "sink",
+        "grease",
+        "plug",
+        "a-2"
       ],
       "division": "B"
     },
@@ -2455,21 +2459,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pvc",
-        "fittings",
-        "pipe",
+        "standard",
+        "applications",
+        "chloride",
         "water",
         "pressure",
         "csa",
-        "b137",
-        "polyvinylchloride",
-        "applications",
         "astm",
-        "standard",
-        "specification",
+        "non-metallic",
+        "fittings",
+        "polyvinylchloride",
+        "b137",
+        "pipe",
         "poly",
-        "vinyl",
-        "chloride"
+        "pvc",
+        "vinyl"
       ],
       "division": "B"
     },
@@ -2679,21 +2683,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "polypropylene",
-        "pipe",
-        "fittings",
-        "used",
         "hot",
-        "cold",
+        "used",
+        "applications",
         "potable",
         "water",
-        "systems",
-        "csa",
-        "b137",
         "pp-r",
-        "pp-rct",
+        "systems",
+        "cold",
+        "csa",
         "pressure",
-        "applications"
+        "non-metallic",
+        "fittings",
+        "b137",
+        "pipe",
+        "pp-rct"
       ],
       "division": "B"
     },
@@ -3043,14 +3047,17 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sheet",
-        "metal",
-        "leader",
-        "used",
         "above",
+        "used",
+        "sheet",
+        "ferrous",
         "ground",
+        "fittings",
+        "metal",
         "outside",
-        "building"
+        "pipe",
+        "building",
+        "leader"
       ],
       "division": "B"
     },
@@ -3756,21 +3763,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fitting",
-        "cannot",
-        "every",
-        "plug",
         "cap",
-        "nut",
-        "bolt",
         "intended",
-        "removable",
-        "ferrous",
         "non-ferrous",
+        "removable",
+        "normal",
+        "materials",
         "material",
+        "ferrous",
+        "miscellaneous",
         "cleanout",
-        "result",
-        "normal"
+        "fitting",
+        "every",
+        "cannot",
+        "plug",
+        "nut"
       ],
       "division": "B"
     },
@@ -4006,21 +4013,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "csa",
-        "b64",
-        "preventers",
-        "backflow",
-        "check",
-        "valve",
-        "systems",
-        "vacuum",
         "breakers",
-        "dual",
-        "fire",
+        "connection",
         "protection",
+        "backflow",
+        "vacuum",
+        "materials",
+        "csa",
+        "systems",
+        "fire",
+        "dual",
+        "miscellaneous",
+        "b64",
         "valves",
-        "hose",
-        "connection"
+        "preventers",
+        "hose"
       ],
       "division": "B"
     },
@@ -4390,21 +4397,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "making",
-        "screwed",
-        "joint",
-        "ends",
-        "pipe",
-        "reamed",
-        "filed",
-        "size",
         "bore",
-        "chips",
-        "cuttings",
+        "size",
+        "ends",
+        "screwed",
+        "filed",
+        "use",
+        "reamed",
+        "paint",
+        "joints",
         "removed",
         "pipe-joint",
         "cement",
-        "paint"
+        "joint",
+        "construction",
+        "pipe"
       ],
       "division": "B"
     },
@@ -4914,21 +4921,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fixture",
-        "underground",
-        "compression",
-        "fittings",
-        "size",
-        "air",
-        "break",
         "equal",
-        "nps",
-        "drain",
-        "branch",
-        "pipe",
+        "size",
         "terminates",
         "above",
-        "directly"
+        "directly",
+        "fixture",
+        "connections",
+        "joints",
+        "drain",
+        "nps",
+        "fittings",
+        "underground",
+        "air",
+        "pipe",
+        "break"
       ],
       "division": "B"
     },
@@ -5111,21 +5118,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pipe",
-        "nominally",
-        "horizontal",
-        "piping",
-        "underground",
         "supported",
-        "installed",
+        "horizontal",
+        "a-2",
         "hangers",
-        "base",
-        "firm",
+        "support",
+        "nominally",
         "continuous",
         "whole",
-        "a-2",
+        "underground",
+        "installed",
+        "pipe",
+        "fixed",
+        "piping",
         "using",
-        "fixed"
+        "base"
       ],
       "division": "B"
     },
@@ -5553,9 +5560,13 @@
       },
       "keywords": [
         "size",
-        "pipe",
-        "nps",
         "diameter",
+        "potable",
+        "water",
+        "systems",
+        "nps",
+        "testing",
+        "pipe",
         "ball"
       ],
       "division": "B"
@@ -6215,19 +6226,19 @@
       "keywords": [
         "storm",
         "sewer",
-        "trap",
-        "drain",
-        "drainage",
-        "system",
-        "building",
-        "floor",
         "combined",
-        "installed",
+        "protected",
+        "floor",
+        "traps",
+        "drainage",
         "opening",
+        "drain",
+        "installed",
         "leader",
         "air",
         "drains",
-        "protected"
+        "system",
+        "building"
       ],
       "division": "B"
     },
@@ -6512,21 +6523,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "sewer",
-        "intended",
-        "serve",
-        "mobile",
-        "home",
-        "nps",
-        "terminated",
         "above",
-        "ground",
-        "tamperproof",
-        "terminal",
+        "mobile",
+        "intended",
         "connection",
-        "capable",
-        "being"
+        "piping",
+        "terminal",
+        "tamperproof",
+        "home",
+        "ground",
+        "serve",
+        "being",
+        "nps",
+        "drainage",
+        "arrangement",
+        "terminated"
       ],
       "division": "B"
     },
@@ -6719,21 +6730,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "change",
-        "direction",
+        "there",
         "cleanout",
         "fitting",
-        "serves",
-        "fixture",
-        "there",
-        "trap",
-        "piping",
-        "drainage",
-        "system",
-        "cleanouts",
-        "serving",
         "drains",
-        "healthcare"
+        "cleanouts",
+        "piping",
+        "pipes",
+        "slope",
+        "trap",
+        "change",
+        "direction",
+        "fixture",
+        "serves",
+        "drainage",
+        "serving"
       ],
       "division": "B"
     },
@@ -6906,21 +6917,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "clothes",
-        "trap",
-        "nps",
-        "building",
-        "a-table",
-        "multiple",
-        "manifold",
-        "applications",
-        "semi-continuous",
+        "size",
         "flow",
-        "washers",
+        "semi-continuous",
+        "applications",
+        "multiple",
+        "drainage",
+        "clothes",
         "drain",
-        "laundry",
+        "nps",
+        "a-table",
+        "manifold",
+        "inlet",
         "tray",
-        "inlet"
+        "laundry",
+        "building"
       ],
       "division": "B"
     },
@@ -7148,18 +7159,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "loads",
+        "unit",
+        "converted",
+        "units",
         "fixture",
         "load",
-        "units",
-        "number",
-        "hydraulic",
-        "expressed",
-        "litres",
-        "converted",
         "follows",
-        "fewer",
         "exceeds",
-        "unit"
+        "hydraulic",
+        "fewer",
+        "litres",
+        "number",
+        "expressed"
       ],
       "division": "B"
     },
@@ -7462,21 +7474,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "wet",
-        "vent",
-        "one",
-        "storey",
-        "exceed",
-        "offset",
-        "pipes",
-        "nps",
-        "portion",
-        "extends",
-        "through",
-        "total",
-        "discharge",
         "above",
-        "first"
+        "circuit",
+        "through",
+        "wet",
+        "one",
+        "nps",
+        "offset",
+        "discharge",
+        "vent",
+        "storey",
+        "extends",
+        "first",
+        "venting",
+        "total",
+        "portion"
       ],
       "division": "B"
     },
@@ -7691,7 +7703,12 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "vent",
+        "miscellaneous",
+        "pipes"
+      ]
     },
     {
       "id": "B-2.5.5",
@@ -8027,21 +8044,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "roof",
-        "pipe",
-        "vent",
         "above",
-        "frost",
+        "roof",
+        "vent",
         "closure",
-        "nps",
-        "air",
-        "subject",
-        "building",
-        "inlet",
-        "terminated",
-        "direction",
         "every",
-        "a-2"
+        "terminated",
+        "frost",
+        "a-2",
+        "pipes",
+        "size",
+        "direction",
+        "inlet",
+        "nps",
+        "subject",
+        "minimum"
       ],
       "division": "B"
     },
@@ -8310,21 +8327,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vent",
-        "length",
-        "vents",
-        "stack",
-        "pipe",
-        "purposes",
-        "developed",
         "sanitary",
-        "drainage",
         "connection",
+        "sizing",
+        "drainage",
+        "vents",
         "header",
-        "outside",
+        "length",
+        "dual",
+        "developed",
+        "vent",
         "air",
+        "pipe",
+        "outside",
         "individual",
-        "dual"
+        "stack"
       ],
       "division": "B"
     },
@@ -8341,7 +8358,12 @@
         "b": 621.517,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "vent",
+        "pipes",
+        "sizing"
+      ]
     },
     {
       "id": "B-2.5.8.4",
@@ -8357,21 +8379,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vent",
-        "stack",
+        "size",
+        "based",
+        "wet",
+        "sizing",
+        "load",
         "length",
-        "sized",
+        "hydraulic",
+        "pipes",
+        "vent",
+        "air",
         "pipe",
         "outside",
-        "air",
-        "size",
-        "wet",
-        "a-2",
-        "based",
-        "total",
-        "hydraulic",
-        "load",
-        "drained"
+        "drained",
+        "stack",
+        "total"
       ],
       "division": "B"
     },
@@ -8600,21 +8622,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "shut-off",
+        "unit",
+        "close",
+        "enters",
+        "piping",
         "water",
         "supply",
-        "shut-off",
-        "valve",
-        "pipes",
-        "located",
-        "tank",
         "one",
-        "dwelling",
-        "unit",
         "service",
-        "close",
         "pipe",
-        "enters",
-        "building"
+        "arrangement",
+        "located",
+        "dwelling",
+        "building",
+        "pipes"
       ],
       "division": "B"
     },
@@ -8758,21 +8780,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pipe",
-        "relief",
-        "valve",
-        "discharge",
-        "drain",
         "directly",
-        "systems",
-        "solar",
         "water",
-        "drained",
-        "two",
+        "relief",
+        "systems",
+        "discharges",
+        "drain",
         "nps",
+        "discharge",
         "larger",
+        "drained",
+        "pipe",
+        "arrangement",
         "located",
-        "discharges"
+        "solar",
+        "piping"
       ],
       "division": "B"
     },
@@ -9356,21 +9378,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fixture",
-        "plumbing",
-        "hydraulic",
-        "load",
-        "systems",
+        "unit",
+        "size",
+        "capacity",
         "units",
+        "fixture",
         "water",
+        "systems",
+        "load",
         "fixtures",
         "values",
-        "engineering",
+        "hydraulic",
         "design",
         "number",
-        "sentences",
-        "tables",
-        "unit"
+        "plumbing",
+        "sentences"
       ],
       "division": "B"
     },
@@ -9388,21 +9410,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fixture",
-        "values",
-        "static",
-        "pressure",
-        "plumbing",
-        "kpa",
-        "accumulative",
-        "unit",
-        "total",
-        "used",
         "conjunction",
-        "able",
+        "unit",
+        "size",
+        "used",
         "exceed",
+        "capacity",
+        "fixture",
         "pressure-reducing",
-        "valve"
+        "pressure",
+        "values",
+        "plumbing",
+        "static",
+        "total",
+        "able",
+        "kpa"
       ],
       "division": "B"
     },
@@ -9583,21 +9605,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "outlet",
-        "water",
-        "system",
-        "plumbing",
-        "fixture",
-        "nonpotable",
-        "located",
-        "discharge",
-        "potable",
-        "discharged",
         "used",
+        "food",
+        "potable",
+        "fixture",
+        "water",
+        "systems",
         "preparation",
-        "handling",
+        "non-potable",
+        "discharge",
         "dispensing",
-        "food"
+        "plumbing",
+        "outlet",
+        "nonpotable",
+        "discharged",
+        "handling"
       ],
       "division": "B"
     },
@@ -9773,21 +9795,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "oh2",
-        "f81-oh2",
-        "f81-oh1",
-        "f20-oh2",
-        "f20",
-        "f20-op5",
-        "f81-op5",
         "f46-oh2",
-        "f70",
-        "pipe",
-        "fittings",
-        "systems",
+        "f81-oh2",
         "f80",
+        "f20-oh2",
+        "water",
         "drainage",
-        "water"
+        "systems",
+        "f70",
+        "statements",
+        "oh2",
+        "f81-op5",
+        "fittings",
+        "objectives",
+        "pipe",
+        "f20-op5"
       ],
       "division": "B"
     },
@@ -11206,21 +11228,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "plumbing",
-        "fittings",
-        "water",
-        "pipe",
         "alternative",
-        "systems",
-        "documentation",
         "code",
-        "system",
-        "design",
-        "fixtures",
         "definition",
+        "water",
         "traps",
-        "drains",
-        "connections"
+        "systems",
+        "connections",
+        "fixtures",
+        "solutions",
+        "design",
+        "fittings",
+        "documentation",
+        "plumbing",
+        "pipe",
+        "system"
       ],
       "division": "C"
     }

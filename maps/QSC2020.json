@@ -281,10 +281,11 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "contains",
         "administrative",
-        "provisions",
-        "code"
+        "code",
+        "general",
+        "contains",
+        "provisions"
       ],
       "division": "A"
     },
@@ -1222,21 +1223,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "code",
         "referenced",
-        "documents",
-        "editions",
+        "forming",
         "accuracy",
+        "code",
         "information",
         "they",
-        "designated",
-        "forming",
-        "while",
-        "every",
         "effort",
-        "made",
+        "documents",
         "ensure",
-        "nrc"
+        "every",
+        "while",
+        "designated",
+        "made",
+        "nrc",
+        "editions"
       ],
       "division": "B"
     },
@@ -1269,21 +1270,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "www",
-        "canada",
-        "org",
-        "com",
-        "national",
+        "organizations",
         "protection",
-        "international",
-        "nace",
-        "fire",
-        "csa",
-        "epa",
         "global",
-        "imo",
         "code",
-        "nfpa"
+        "canada",
+        "csa",
+        "fire",
+        "www",
+        "imo",
+        "nace",
+        "epa",
+        "com",
+        "nfpa",
+        "national",
+        "international"
       ],
       "division": "B"
     },
@@ -1520,21 +1521,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "voice",
-        "communication",
-        "systems",
-        "integrated",
-        "general",
-        "fire",
-        "alarm",
-        "buildings",
-        "conformance",
+        "installations",
         "requirements",
-        "force",
-        "time",
+        "systems",
+        "fire",
+        "alteration",
         "construction",
-        "alteration"
+        "force",
+        "safety",
+        "time",
+        "conformance",
+        "buildings",
+        "general",
+        "integrated",
+        "system",
+        "communication"
       ],
       "division": "B"
     },
@@ -1824,16 +1825,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "corrosion",
+        "corrosive",
+        "protection",
+        "monoxide",
+        "they",
         "portable",
-        "extinguishers",
+        "alarms",
+        "environment",
         "subject",
         "installed",
-        "corrosive",
-        "environment",
-        "they",
         "appropriate",
-        "protection"
+        "carbon",
+        "corrosion",
+        "extinguishers"
       ],
       "division": "B"
     },
@@ -2195,18 +2199,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "screens",
-        "movable",
-        "partitions",
-        "acoustical",
-        "flame-spread",
-        "rating",
-        "greater",
-        "interior",
-        "finish",
-        "area",
         "they",
-        "located"
+        "partitions",
+        "finish",
+        "rating",
+        "movable",
+        "area",
+        "general",
+        "flame-spread",
+        "acoustical",
+        "located",
+        "interior",
+        "screens",
+        "greater"
       ],
       "division": "B"
     },
@@ -2497,12 +2502,14 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "equipment",
         "lint",
-        "traps",
-        "laundry",
         "cleaned",
-        "use"
+        "combustible",
+        "equipment",
+        "traps",
+        "materials",
+        "use",
+        "laundry"
       ],
       "division": "B"
     },
@@ -3070,7 +3077,12 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "systems",
+        "protection",
+        "lightning"
+      ]
     },
     {
       "id": "B-2.4.11",
@@ -3593,21 +3605,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "systems",
-        "heating",
-        "ventilating",
-        "air-conditioning",
-        "operated",
-        "appliances",
-        "chimneys",
-        "flue",
-        "pipes",
-        "maintained",
         "create",
         "hazardous",
+        "air-conditioning",
+        "chimneys",
+        "systems",
+        "ventilating",
+        "maintained",
+        "operated",
+        "heating",
+        "switches",
+        "appliances",
+        "flue",
+        "pipes",
         "condition",
-        "disconnect",
-        "switches"
+        "disconnect"
       ],
       "division": "B"
     },
@@ -4189,21 +4201,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "sliding",
+        "revolving",
+        "egress",
         "doors",
-        "tested",
         "intervals",
-        "greater",
+        "their",
         "months",
         "locks",
+        "vertical",
+        "direction",
+        "tested",
+        "means",
         "safety",
         "features",
-        "revolving",
-        "sliding",
-        "swing",
-        "their",
-        "vertical",
-        "axes",
-        "direction"
+        "axes"
       ],
       "division": "B"
     },
@@ -4426,21 +4438,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "supervisory",
-        "staff",
-        "building",
-        "department",
+        "standard",
+        "high",
+        "plan",
         "information",
         "use",
-        "procedures",
+        "department",
         "systems",
-        "high",
-        "buildings",
         "defined",
-        "standard",
+        "construction",
+        "supervisory",
+        "safety",
         "time",
-        "construction"
+        "staff",
+        "buildings",
+        "building"
       ],
       "division": "B"
     },
@@ -4728,21 +4740,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "kept",
-        "building",
-        "department",
-        "safety",
-        "plan",
-        "facility",
-        "copy",
-        "place",
         "determined",
+        "authority",
+        "plan",
+        "department",
+        "place",
         "cooperation",
         "occupants",
         "supervisory",
+        "kept",
+        "safety",
+        "facility",
         "staff",
-        "authority"
+        "building",
+        "copy",
+        "fire"
       ],
       "division": "B"
     },
@@ -5076,21 +5088,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "shavings",
-        "used",
-        "hay",
-        "straw",
-        "similar",
-        "combustible",
-        "materials",
-        "necessary",
-        "daily",
-        "feeding",
         "care",
+        "used",
+        "feeding",
+        "control",
+        "straw",
+        "shavings",
+        "materials",
+        "hay",
         "animals",
-        "within",
         "tent",
-        "air-supported"
+        "within",
+        "air-supported",
+        "combustible",
+        "necessary",
+        "similar"
       ],
       "division": "B"
     },
@@ -5648,13 +5660,14 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "access",
+        "mall",
+        "covered",
         "exits",
         "within",
-        "covered",
-        "mall",
         "maintained",
-        "conformance"
+        "conformance",
+        "general",
+        "access"
       ],
       "division": "B"
     },
@@ -6151,20 +6164,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sign",
-        "indicating",
-        "danger",
-        "installed",
-        "entrance",
-        "storage",
-        "area",
         "stored",
-        "pesticides",
-        "pesticide",
-        "unsafe",
-        "oxygen",
         "levels",
-        "controlled-atmosphere"
+        "unsafe",
+        "ambient",
+        "indicating",
+        "oxygen",
+        "pesticide",
+        "conditions",
+        "sign",
+        "installed",
+        "storage",
+        "controlled-atmosphere",
+        "entrance",
+        "area",
+        "danger"
       ],
       "division": "B"
     },
@@ -6261,21 +6275,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "systems",
-        "combustible",
-        "safety",
-        "suppression",
-        "use",
-        "piping",
-        "halon",
-        "flammable",
-        "a-2",
-        "additional",
-        "devices",
         "liquids",
+        "piping",
+        "events",
+        "a-2",
         "code",
-        "events"
+        "use",
+        "systems",
+        "statements",
+        "objectives",
+        "safety",
+        "functional",
+        "combustible",
+        "halon",
+        "suppression",
+        "devices"
       ],
       "division": "B"
     },
@@ -6504,7 +6518,11 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "dangerous",
+        "goods"
+      ]
     },
     {
       "id": "B-3.1.2",
@@ -6813,21 +6831,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "trucks",
-        "combustible",
-        "areas",
         "battery-charging",
         "installations",
+        "trucks",
         "battery-powered",
         "industrial",
-        "located",
         "materials",
+        "areas",
         "serving",
-        "well",
+        "vapours",
         "ventilated",
+        "combustible",
+        "well",
+        "located",
         "flammable",
-        "gases",
-        "vapours"
+        "gases"
       ],
       "division": "B"
     },
@@ -7103,21 +7121,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "storage",
-        "fire",
-        "safety",
-        "plan",
         "conforming",
-        "prepared",
-        "method",
+        "plan",
         "maximum",
-        "height",
         "established",
-        "clauses",
+        "signs",
         "posted",
         "area",
-        "signs",
-        "minimum"
+        "prepared",
+        "clauses",
+        "minimum",
+        "safety",
+        "storage",
+        "general",
+        "height",
+        "fire"
       ],
       "division": "B"
     },
@@ -7842,20 +7860,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heating",
-        "they",
-        "use",
-        "fuel-fired",
-        "appliances",
-        "electrical",
         "elements",
-        "controlled",
-        "manner",
-        "create",
-        "fire",
+        "indoor",
+        "they",
         "explosion",
-        "hazard",
+        "controlled",
+        "heating",
+        "appliances",
         "storage",
+        "electrical",
+        "fibres",
+        "manner",
+        "hazard",
+        "create",
+        "use",
         "area"
       ],
       "division": "B"
@@ -7953,20 +7971,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "used",
-        "dangerous",
-        "goods",
-        "storage",
-        "area",
         "stored",
-        "gases",
-        "vapours",
         "smoking",
+        "indoor",
         "within",
-        "fire",
-        "compartment",
+        "storage",
+        "goods",
+        "gases",
+        "used",
         "signs",
+        "compartment",
+        "dangerous",
         "posted",
+        "area",
+        "vapours",
         "conformance"
       ],
       "division": "B"
@@ -8049,20 +8067,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "goods",
-        "dangerous",
         "products",
-        "controlled",
-        "class",
-        "fire",
         "stored",
+        "combined",
+        "indoor",
+        "sheet",
+        "controlled",
+        "a-table",
         "safety",
         "data",
-        "sheet",
+        "storage",
+        "goods",
+        "class",
         "materials",
-        "a-table",
-        "classified",
-        "combined",
+        "dangerous",
         "sentences"
       ],
       "division": "B"
@@ -8081,20 +8099,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "measures",
-        "taken",
-        "prevent",
-        "minimize",
-        "corrosion",
+        "stored",
         "deterioration",
-        "shelving",
+        "indoor",
         "racks",
-        "piping",
-        "system",
+        "contact",
         "components",
         "due",
-        "contact",
-        "stored",
+        "storage",
+        "corrosion",
+        "goods",
+        "piping",
+        "shelving",
+        "prevent",
+        "minimize",
         "dangerous"
       ],
       "division": "B"
@@ -8695,7 +8713,10 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "scope"
+      ]
     },
     {
       "id": "B-3.3.1",
@@ -9079,18 +9100,19 @@
       },
       "keywords": [
         "liquids",
-        "fuel",
-        "dispensing",
-        "flammable",
-        "combustible",
-        "tank",
-        "vehicle",
-        "clear",
-        "space",
-        "maintained",
         "stored",
         "products",
-        "dispensers"
+        "dispensers",
+        "clear",
+        "maintained",
+        "dispensing",
+        "combustible",
+        "space",
+        "general",
+        "flammable",
+        "fuel",
+        "tank",
+        "vehicle"
       ],
       "division": "B"
     },
@@ -9434,9 +9456,9 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "dangerous",
         "outdoor",
         "storage",
-        "dangerous",
         "goods",
         "articles"
       ],
@@ -9662,21 +9684,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "f01-os1",
+        "os1",
         "products",
-        "storage",
-        "class",
         "materials",
         "a-3",
+        "f12-os1",
+        "dangerous",
         "fire",
         "access",
-        "f12-os1",
-        "flammable",
-        "f01-os1",
-        "combustible",
-        "goods",
-        "dangerous",
         "reactive",
-        "os1"
+        "statements",
+        "objectives",
+        "combustible",
+        "storage",
+        "goods"
       ],
       "division": "B"
     },
@@ -9818,7 +9840,10 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "classification"
+      ]
     },
     {
       "id": "B-4.1.2",
@@ -10133,11 +10158,14 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "conforming",
         "smoking",
-        "areas",
+        "prevention",
+        "protection",
         "designated",
         "safe",
-        "conforming"
+        "areas",
+        "fire"
       ],
       "division": "B"
     },
@@ -10487,21 +10515,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
-        "one",
-        "located",
-        "near",
-        "wall",
-        "flammable",
-        "inlets",
+        "ventilation",
         "outlets",
-        "room",
-        "vapour",
+        "inlets",
         "being",
+        "one",
         "removed",
         "inlet",
-        "point",
-        "higher"
+        "near",
+        "vapour",
+        "air",
+        "wall",
+        "room",
+        "higher",
+        "located",
+        "flammable"
       ],
       "division": "B"
     },
@@ -11468,21 +11496,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "liquids",
-        "storage",
-        "class",
-        "room",
-        "flammable",
-        "combustible",
-        "outside",
-        "cabinet",
-        "single",
-        "exceed",
-        "fire",
-        "compartment",
-        "fire-resistance",
         "rating",
-        "min"
+        "personal",
+        "room",
+        "home-type",
+        "storage",
+        "detention",
+        "class",
+        "exceed",
+        "educational",
+        "liquids",
+        "single",
+        "care",
+        "services",
+        "min",
+        "treatment"
       ],
       "division": "B"
     },
@@ -11967,20 +11995,20 @@
       },
       "keywords": [
         "quantities",
-        "storage",
-        "flammable",
         "liquids",
-        "separation",
-        "a-4",
-        "larger",
+        "use",
         "tanks",
-        "installed",
-        "conformance",
         "areas",
-        "combustible",
-        "transferred",
         "one",
-        "container"
+        "a-4",
+        "separation",
+        "installed",
+        "container",
+        "conformance",
+        "combustible",
+        "storage",
+        "incidental",
+        "larger"
       ],
       "division": "B"
     },
@@ -12289,21 +12317,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "away",
+        "materials",
+        "contains",
+        "indicate",
+        "labelled",
+        "cabinet",
         "cabinets",
+        "kept",
         "container",
         "storage",
-        "labelled",
-        "conspicuous",
         "lettering",
-        "indicate",
-        "cabinet",
-        "contains",
-        "flammable",
-        "materials",
         "open",
         "flames",
-        "kept",
-        "away"
+        "flammable",
+        "conspicuous"
       ],
       "division": "B"
     },
@@ -12710,21 +12738,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "tanks",
-        "storage",
-        "pressure",
-        "liquids",
-        "tank",
-        "combustible",
-        "conformance",
-        "used",
-        "standard",
-        "aboveground",
-        "flammable",
-        "atmospheric",
         "assemblies",
+        "standard",
         "oil",
-        "built"
+        "atmospheric",
+        "tanks",
+        "built",
+        "construction",
+        "aboveground",
+        "storage",
+        "tank",
+        "liquids",
+        "used",
+        "use",
+        "pressure",
+        "design"
       ],
       "division": "B"
     },
@@ -13236,7 +13264,15 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "normal",
+        "venting",
+        "storage",
+        "emergency",
+        "aboveground",
+        "tanks"
+      ]
     },
     {
       "id": "B-4.3.4",
@@ -13961,21 +13997,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "above",
+        "there",
+        "mass",
+        "tanks",
         "ground",
-        "tank",
-        "adjacent",
         "level",
-        "storage",
-        "below",
         "underground",
         "installed",
-        "mass",
-        "there",
-        "cover",
+        "below",
+        "storage",
         "portion",
-        "above",
-        "damage",
-        "repaired"
+        "tank",
+        "adjacent",
+        "installation",
+        "cover"
       ],
       "division": "B"
     },
@@ -14404,21 +14440,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "tanks",
+        "underground",
         "vent",
         "storage",
-        "tank",
-        "tanks",
-        "piping",
-        "underground",
         "class",
+        "piping",
+        "tank",
         "liquids",
         "connected",
-        "building",
+        "opening",
+        "vents",
         "vapours",
-        "pipe",
-        "iiia",
         "liquid",
-        "opening"
+        "iiia",
+        "pipe"
       ],
       "division": "B"
     },
@@ -14929,7 +14965,12 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "tanks",
+        "rooms",
+        "storage"
+      ]
     },
     {
       "id": "B-4.3.14",
@@ -15466,21 +15507,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "storage",
-        "tank",
-        "installed",
-        "check",
-        "valve",
-        "suction",
-        "pump",
-        "installation",
-        "lines",
-        "sufficiently",
-        "sloped",
-        "liquid",
         "line",
-        "drain",
-        "back"
+        "tanks",
+        "sufficiently",
+        "installed",
+        "sloped",
+        "leak",
+        "storage",
+        "check",
+        "tank",
+        "testing",
+        "sumps",
+        "piping",
+        "detection",
+        "suction",
+        "pump"
       ],
       "division": "B"
     },
@@ -15657,7 +15698,16 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "detection",
+        "leak",
+        "storage",
+        "tanks",
+        "systems",
+        "piping",
+        "monitoring"
+      ]
     },
     {
       "id": "B-4.4.4",
@@ -15955,20 +16005,20 @@
       },
       "keywords": [
         "liquids",
-        "piping",
+        "points",
+        "canadian",
         "systems",
-        "flammable",
-        "combustible",
-        "available",
         "fire",
         "transfer",
-        "points",
-        "identified",
         "conformance",
+        "combustible",
+        "identification",
+        "available",
+        "fuels",
         "cfa",
-        "using",
-        "canadian",
-        "fuels"
+        "flammable",
+        "piping",
+        "using"
       ],
       "division": "B"
     },
@@ -16384,21 +16434,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "clean",
-        "compacted",
-        "sand",
-        "pea",
-        "gravel",
-        "crushed",
-        "stone",
-        "underground",
-        "piping",
-        "supported",
-        "undisturbed",
-        "soil",
-        "backfilled",
         "top",
-        "sides"
+        "backfilled",
+        "undisturbed",
+        "supported",
+        "soil",
+        "compacted",
+        "gravel",
+        "underground",
+        "pea",
+        "sand",
+        "clean",
+        "sides",
+        "stone",
+        "arrangement",
+        "piping"
       ],
       "division": "B"
     },
@@ -17193,21 +17243,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pressure",
-        "gas",
-        "transfer",
-        "referred",
-        "systems",
-        "liquid",
-        "valve",
-        "water",
-        "hydraulic",
-        "system",
-        "inert",
+        "methods",
         "supply",
+        "hydraulic",
+        "inert",
+        "gas",
+        "piping",
         "side",
-        "flammable",
-        "combustible"
+        "water",
+        "systems",
+        "pressure",
+        "transfer",
+        "liquid",
+        "referred",
+        "combustible",
+        "system"
       ],
       "division": "B"
     },
@@ -17867,17 +17917,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "dispensers",
+        "stations",
         "marine",
         "fuel-dispensing",
-        "stations",
-        "location",
+        "dispensers",
         "prevent",
         "watercraft",
-        "floatplane",
         "impact",
+        "systems",
+        "dispensing",
+        "damage",
         "physical",
-        "damage"
+        "floatplane",
+        "location"
       ],
       "division": "B"
     },
@@ -18256,21 +18308,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "storage",
-        "dispenser",
-        "piping",
-        "tanks",
+        "control",
         "marine",
         "fuel-dispensing",
         "station",
-        "operated",
-        "valve",
-        "designed",
-        "tank",
-        "shore",
-        "floating",
+        "tanks",
         "structure",
-        "elevated"
+        "spill",
+        "operated",
+        "designed",
+        "shore",
+        "elevated",
+        "floating",
+        "storage",
+        "dispenser",
+        "piping"
       ],
       "division": "B"
     },
@@ -19006,7 +19058,12 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "facilities",
+        "loading",
+        "unloading"
+      ]
     },
     {
       "id": "B-4.7.4",
@@ -19465,7 +19522,12 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "fittings",
+        "valves",
+        "piping"
+      ]
     },
     {
       "id": "B-4.8.4",
@@ -20414,21 +20476,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "processing",
-        "equipment",
-        "property",
-        "distances",
-        "times",
         "liquids",
-        "outdoor",
+        "equipment",
+        "times",
         "having",
-        "emergency",
         "relief",
-        "venting",
-        "working",
         "pressure",
-        "kpa",
-        "gauge"
+        "working",
+        "gauge",
+        "processing",
+        "distances",
+        "property",
+        "outdoor",
+        "venting",
+        "buildings",
+        "emergency"
       ],
       "division": "B"
     },
@@ -20870,16 +20932,17 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "normal",
-        "emergency",
-        "vents",
-        "storage",
-        "tanks",
-        "conformance",
+        "containers",
         "good",
-        "engineering",
+        "normal",
+        "tanks",
+        "vents",
+        "a-4",
+        "conformance",
+        "storage",
+        "emergency",
         "practice",
-        "a-4"
+        "engineering"
       ],
       "division": "B"
     },
@@ -21487,20 +21550,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "liquid",
-        "compartment",
+        "delivery",
+        "vehicles",
+        "drained",
+        "piping",
         "class",
         "tank",
         "vehicle",
-        "used",
         "carry",
-        "piping",
-        "accessory",
-        "delivery",
+        "unloading",
+        "used",
         "equipment",
-        "drained",
-        "iiia",
-        "loaded"
+        "compartment",
+        "loading",
+        "liquid",
+        "dispensing"
       ],
       "division": "B"
     },
@@ -21732,20 +21796,20 @@
       },
       "keywords": [
         "f01-os1",
-        "f01",
         "liquids",
-        "f43-os1",
-        "code",
-        "flammable",
         "os1",
-        "storage",
         "equipment",
-        "f02-os1",
+        "code",
+        "f01",
+        "statements",
+        "f43-os1",
         "a-4",
-        "combustible",
-        "plants",
         "provisions",
-        "objectives"
+        "plants",
+        "objectives",
+        "combustible",
+        "storage",
+        "flammable"
       ],
       "division": "B"
     },
@@ -22185,7 +22249,11 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "flash",
+        "point"
+      ]
     },
     {
       "id": "B-5.1.4",
@@ -22610,20 +22678,20 @@
       },
       "keywords": [
         "hot",
+        "prevention",
+        "their",
+        "fires",
+        "materials",
+        "prevent",
+        "contact",
         "work",
-        "piping",
         "performed",
         "metal",
         "objects",
-        "contact",
-        "combustible",
-        "materials",
         "safety",
         "precautions",
-        "taken",
-        "prevent",
-        "their",
-        "ignition"
+        "combustible",
+        "taken"
       ],
       "division": "B"
     },
@@ -22983,21 +23051,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "electrical",
-        "atmospheres",
         "containing",
-        "combustible",
         "dusts",
-        "controlled",
-        "manner",
-        "create",
-        "fire",
         "explosion",
-        "hazard",
-        "device",
-        "operation",
+        "controlled",
+        "general",
+        "fire",
         "activity",
-        "produces"
+        "produces",
+        "device",
+        "combustible",
+        "electrical",
+        "operation",
+        "atmospheres",
+        "manner",
+        "create"
       ],
       "division": "B"
     },
@@ -23452,16 +23520,16 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "electric",
-        "power",
-        "supply",
-        "shut",
-        "premises",
-        "undergoing",
         "fumigation",
-        "thermal",
         "insecticidal",
-        "fogging"
+        "fogging",
+        "supply",
+        "premises",
+        "shut",
+        "undergoing",
+        "power",
+        "electric",
+        "thermal"
       ],
       "division": "B"
     },
@@ -24049,21 +24117,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "fire",
-        "force",
-        "time",
-        "construction",
-        "alteration",
+        "parts",
+        "prevention",
+        "protection",
         "having",
-        "fire-resistance",
         "rating",
+        "alteration",
+        "designed",
+        "construction",
         "sprinklered",
         "separation",
-        "laboratory",
-        "parts",
-        "designed",
-        "meet"
+        "time",
+        "fire-resistance",
+        "meet",
+        "force",
+        "building"
       ],
       "division": "B"
     },
@@ -24374,20 +24442,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "power-ventilated",
         "enclosure",
-        "exhaust",
-        "duct",
-        "nbc",
-        "instructions",
-        "use",
-        "operation",
         "ventilation",
-        "means",
         "control",
+        "duct",
+        "means",
+        "use",
+        "spillage",
+        "exhaust",
+        "nbc",
+        "operation",
+        "system",
+        "instructions",
         "accidental",
-        "spillage"
+        "power-ventilated"
       ],
       "division": "B"
     },
@@ -24861,21 +24929,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heating",
-        "equipment",
-        "devices",
-        "ignition",
-        "temporary",
-        "combustible",
-        "conformance",
-        "a-5",
-        "capable",
         "producing",
-        "internal",
+        "equipment",
         "combustion",
+        "internal",
+        "heating",
         "engines",
+        "a-5",
         "associated",
-        "kept"
+        "kept",
+        "conformance",
+        "combustible",
+        "general",
+        "temporary",
+        "devices",
+        "capable"
       ],
       "division": "B"
     },
@@ -25294,20 +25362,20 @@
       },
       "keywords": [
         "services",
-        "excavation",
-        "method",
         "suitable",
-        "existing",
-        "gas",
-        "electrical",
         "water",
         "steam",
-        "left",
-        "within",
-        "area",
         "work",
+        "existing",
+        "within",
+        "gas",
+        "service",
+        "excavation",
+        "electrical",
         "begins",
-        "service"
+        "area",
+        "method",
+        "left"
       ],
       "division": "B"
     },
@@ -25582,7 +25650,16 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "additional",
+        "construction",
+        "requirements",
+        "buildings",
+        "mass",
+        "encapsulated",
+        "timber"
+      ]
     },
     {
       "id": "B-5.6.4",
@@ -25668,21 +25745,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "f01-os1",
         "os1",
-        "work",
-        "safety",
-        "a-5",
-        "explosives",
-        "requirements",
-        "areas",
-        "f01",
-        "combustible",
-        "chapter",
         "hot",
+        "requirements",
         "code",
         "sites",
+        "f01",
+        "explosives",
+        "areas",
         "f43-os1",
-        "f01-os1"
+        "work",
+        "chapter",
+        "a-5",
+        "safety",
+        "objectives"
       ],
       "division": "B"
     },
@@ -25994,21 +26071,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "alarm",
-        "systems",
-        "inspection",
         "inspected",
-        "tested",
-        "conformance",
-        "ulc-s536",
         "standard",
-        "testing",
-        "whether",
+        "inspection",
+        "ulc-s536",
+        "systems",
+        "tested",
         "voluntarily",
-        "installed",
         "detection",
-        "system"
+        "installed",
+        "testing",
+        "conformance",
+        "whether",
+        "general",
+        "system",
+        "fire"
       ],
       "division": "B"
     },
@@ -26386,7 +26463,10 @@
         "b": 740.361,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "general"
+      ]
     },
     {
       "id": "B-6.6.1",
@@ -26542,21 +26622,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "system",
-        "systems",
-        "a-6",
-        "department",
-        "code",
-        "protection",
-        "building",
-        "alarm",
-        "installation",
-        "ensure",
-        "sprinkler",
         "intended",
+        "protection",
+        "code",
+        "ensure",
+        "department",
+        "systems",
+        "statements",
         "notification",
-        "emergency"
+        "objectives",
+        "installation",
+        "a-6",
+        "sprinkler",
+        "emergency",
+        "system",
+        "building"
       ],
       "division": "B"
     },
@@ -27588,15 +27668,16 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "alteration",
-        "building",
-        "ensure",
-        "movement",
-        "air",
         "pressurized",
+        "ensure",
+        "alteration",
+        "storeys",
         "core",
+        "air",
+        "movement",
         "outdoors",
-        "storeys"
+        "building",
+        "measure"
       ],
       "division": "B"
     },
@@ -27802,21 +27883,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "equipment",
-        "tested",
-        "objectives",
-        "functional",
-        "statements",
-        "a-7",
         "intended",
-        "test",
         "occasion",
-        "purposes",
+        "a-1",
+        "equipment",
         "code",
-        "attributed",
-        "acceptable",
+        "purposes",
+        "tested",
+        "statements",
         "solutions",
-        "a-1"
+        "objectives",
+        "attributed",
+        "a-7",
+        "acceptable",
+        "test",
+        "functional"
       ],
       "division": "B"
     },
@@ -28156,21 +28237,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "storage",
-        "flammable",
-        "combustible",
         "liquids",
-        "fire",
-        "systems",
-        "occupancies",
-        "tanks",
+        "alternative",
         "piping",
-        "buildings",
-        "emergency",
         "equipment",
+        "indoor",
         "definition",
         "sites",
-        "indoor"
+        "tanks",
+        "systems",
+        "emergency",
+        "occupancies",
+        "solutions",
+        "documentation",
+        "combustible",
+        "storage"
       ],
       "division": "C"
     }

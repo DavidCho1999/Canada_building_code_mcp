@@ -14785,21 +14785,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "locations",
-        "seismic",
-        "buildings",
-        "braced",
-        "acceptable",
-        "requirements",
-        "design",
-        "cwc",
-        "engineering",
-        "guide",
-        "provides",
-        "solutions",
-        "alternative",
+        "loads",
         "ontario",
-        "identified"
+        "buildings",
+        "seismic",
+        "acceptable",
+        "engineering",
+        "identified",
+        "alternative",
+        "requirements",
+        "lateral",
+        "provides",
+        "locations",
+        "braced",
+        "guide",
+        "solutions"
       ]
     },
     {

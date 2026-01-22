@@ -823,21 +823,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "code",
-        "national",
-        "model",
         "referenced",
-        "provisions",
-        "references",
         "another",
-        "objectives",
-        "functional",
+        "conflict",
+        "case",
+        "code",
+        "model",
         "statements",
         "found",
-        "case",
-        "conflict",
+        "provisions",
+        "govern",
+        "objectives",
+        "references",
         "document",
-        "govern"
+        "national",
+        "documents"
       ],
       "division": "A"
     },
@@ -1134,21 +1134,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "limit",
-        "energy",
+        "consumption",
+        "functions",
+        "through",
         "code",
+        "a-3",
+        "limit",
+        "demand",
+        "statements",
+        "functional",
+        "building",
         "unnecessary",
         "national",
-        "building",
+        "energy",
         "amount",
-        "uncontrolled",
-        "through",
-        "demand",
-        "consumption",
-        "functional",
-        "statements",
-        "functions",
-        "a-3"
+        "uncontrolled"
       ],
       "division": "A"
     },
@@ -1381,18 +1381,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "energy",
-        "hydronics",
-        "institute",
-        "manuals",
-        "iso",
-        "performance",
-        "buildings",
-        "calculation",
+        "cooling",
         "use",
-        "space",
+        "iso",
         "heating",
-        "cooling"
+        "performance",
+        "words",
+        "definitions",
+        "space",
+        "hydronics",
+        "buildings",
+        "phrases",
+        "calculation",
+        "energy",
+        "manuals",
+        "institute"
       ],
       "division": "B"
     },
@@ -1555,13 +1558,13 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "documents",
         "referenced",
+        "a-1",
         "code",
         "they",
-        "editions",
+        "documents",
         "designated",
-        "a-1"
+        "editions"
       ],
       "division": "B"
     },
@@ -1579,21 +1582,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "accuracy",
-        "information",
+        "organizations",
         "referenced",
+        "accuracy",
         "code",
-        "while",
-        "every",
+        "information",
         "effort",
-        "made",
         "ensure",
-        "nrc",
         "responsible",
-        "timeliness",
-        "reliability",
         "content",
-        "presented"
+        "presented",
+        "every",
+        "while",
+        "made",
+        "nrc",
+        "timeliness"
       ],
       "division": "B"
     },
@@ -1930,21 +1933,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fenestration",
-        "thermal",
-        "building",
         "assemblies",
-        "transmittance",
-        "doors",
-        "standard",
-        "astm",
-        "test",
-        "method",
-        "performance",
         "envelope",
-        "temperature",
         "determined",
-        "using"
+        "standard",
+        "doors",
+        "fenestration",
+        "transmittance",
+        "astm",
+        "performance",
+        "temperature",
+        "general",
+        "building",
+        "test",
+        "using",
+        "method"
       ],
       "division": "B"
     },
@@ -2391,21 +2394,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heating",
-        "their",
-        "shown",
-        "heating-degree-day",
-        "category",
-        "floors-on-ground",
-        "insulated",
-        "insulation",
         "greater",
+        "cooling",
+        "their",
+        "insulated",
+        "heating",
+        "pipes",
         "embedded",
+        "leakage",
         "ducts",
         "cables",
-        "cooling",
-        "pipes",
-        "placed"
+        "air",
+        "category",
+        "placed",
+        "shown",
+        "floors-on-ground"
       ],
       "division": "B"
     },
@@ -2674,21 +2677,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "path",
-        "a-3",
-        "building",
-        "requirements",
-        "performance",
-        "code",
-        "objective",
-        "functional",
-        "statements",
-        "paths",
-        "achieved",
         "envelope",
-        "purpose",
+        "acceptable",
+        "path",
+        "requirements",
+        "code",
+        "a-3",
+        "achieved",
+        "statements",
+        "performance",
+        "functional",
         "attributed",
-        "acceptable"
+        "purpose",
+        "building",
+        "paths",
+        "objective"
       ],
       "division": "B"
     },
@@ -3029,21 +3032,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "lamp",
-        "power",
-        "fluorescent",
-        "interior",
+        "scope",
         "lighting",
-        "building",
+        "ballast",
+        "csa-c654",
+        "efficacy",
+        "fluorescent",
+        "installed",
         "ballasts",
         "within",
-        "installed",
-        "method",
+        "building",
+        "power",
+        "interior",
         "electronic",
-        "scope",
-        "csa-c654",
-        "ballast",
-        "efficacy"
+        "method",
+        "lamp"
       ],
       "division": "B"
     },
@@ -3125,20 +3128,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "space",
-        "lighting",
-        "type",
         "determined",
-        "controls",
-        "requirements",
-        "power",
-        "automatic",
         "enclosed",
-        "interior",
-        "allowance",
-        "marked",
+        "automatic",
         "implemented",
         "control",
+        "controls",
+        "requirements",
+        "lighting",
+        "interior",
+        "marked",
+        "allowance",
+        "power",
+        "type",
+        "space",
         "using"
       ],
       "division": "B"
@@ -3156,7 +3159,12 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "interior",
+        "controls",
+        "lighting"
+      ]
     },
     {
       "id": "B-4.2.2",
@@ -3379,21 +3387,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "lighting",
-        "exterior",
-        "zone",
-        "allowance",
-        "power",
-        "applications",
-        "building",
-        "basic",
-        "site",
         "connected",
+        "lighting",
+        "applications",
+        "illuminated",
         "allowances",
         "sentences",
-        "illuminated",
+        "exterior",
+        "allowance",
+        "individual",
+        "site",
+        "power",
+        "building",
+        "basic",
         "greater",
-        "individual"
+        "zone"
       ],
       "division": "B"
     },
@@ -3720,21 +3728,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "operational",
-        "time",
-        "annual",
-        "determined",
-        "using",
+        "control",
         "days",
-        "adjusted",
-        "space",
         "during",
-        "daytime",
-        "building",
+        "adjusted",
+        "installed",
+        "annual",
+        "operational",
         "equation",
+        "space",
+        "using",
         "base",
+        "energy",
+        "determined",
         "factor",
-        "control"
+        "lighting"
       ],
       "division": "B"
     },
@@ -4196,21 +4204,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "lighting",
-        "power",
-        "requirements",
-        "interior",
-        "area",
-        "space",
-        "areas",
         "path",
-        "method",
+        "requirements",
+        "lighting",
+        "use",
+        "areas",
+        "statements",
         "a-4",
+        "allowance",
+        "space",
         "type",
         "prescriptive",
-        "allowance",
-        "use"
+        "building",
+        "power",
+        "interior",
+        "area"
       ],
       "division": "B"
     },
@@ -4577,7 +4585,12 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "air",
+        "distribution",
+        "systems"
+      ]
     },
     {
       "id": "B-5.2.2",
@@ -4735,21 +4748,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "protection",
         "duct",
-        "insulation",
+        "prevent",
+        "surface",
         "cold-air",
         "supply",
-        "ducts",
+        "systems",
+        "point",
         "vapour",
+        "ducts",
         "barrier",
-        "protection",
-        "prevent",
-        "condensation",
-        "surface",
-        "temperature",
         "below",
-        "dew",
-        "point"
+        "air",
+        "temperature",
+        "distribution"
       ],
       "division": "B"
     },
@@ -5006,21 +5019,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "day",
-        "category",
-        "equipped",
-        "demand",
-        "control",
         "ventilation",
-        "system",
-        "necessary",
+        "control",
+        "make-up",
+        "equipped",
         "sensors",
+        "outlet",
+        "demand",
         "controls",
+        "system",
         "capable",
-        "reducing",
+        "dampers",
+        "intake",
         "design",
         "exhaust",
-        "make-up"
+        "air"
       ],
       "division": "B"
     },
@@ -5520,21 +5533,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "dead",
+        "drafts",
         "away",
-        "a-5",
-        "heat",
-        "supplementary",
-        "direct",
-        "exposure",
-        "sunlight",
         "heat-producing",
         "sources",
-        "drafts",
-        "dead",
         "pockets",
+        "exposure",
+        "direct",
+        "a-5",
+        "heat",
+        "equipped",
         "air",
-        "pumps",
-        "equipped"
+        "temperature",
+        "controls",
+        "sunlight"
       ],
       "division": "B"
     },
@@ -5738,21 +5751,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "energy",
-        "recovery",
-        "air",
-        "system",
-        "design",
-        "airflow",
-        "supply",
-        "dry",
-        "fan",
-        "systems",
-        "exhaust",
-        "rate",
         "ventilation",
+        "airflow",
+        "fan",
+        "supply",
+        "systems",
+        "rate",
+        "design",
+        "a-5",
+        "exhaust",
+        "air",
         "outdoor",
-        "a-5"
+        "recovery",
+        "dry",
+        "system",
+        "energy"
       ],
       "division": "B"
     },
@@ -5866,21 +5879,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heat-recovery",
-        "system",
-        "heat",
-        "energy",
-        "recovery",
-        "stated",
-        "ventilator",
+        "shut-off",
         "used",
-        "meet",
+        "ventilator",
         "requirements",
-        "performance",
-        "equivalent",
         "ventilators",
+        "heat-recovery",
+        "equivalent",
         "systems",
-        "multi-unit"
+        "setback",
+        "performance",
+        "heat",
+        "meet",
+        "recovery",
+        "system",
+        "controls"
       ],
       "division": "B"
     },
@@ -6073,21 +6086,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "appear",
+        "forming",
+        "coefficient",
+        "equipment",
+        "meanings",
+        "column",
+        "mode",
+        "heating",
         "performance",
         "btu",
-        "efficiency",
-        "ratio",
-        "symbols",
-        "abbreviations",
-        "appear",
-        "column",
-        "meanings",
-        "energy-efficiency",
         "energy",
-        "coefficient",
-        "heating",
-        "mode",
-        "forming"
+        "efficiency",
+        "abbreviations",
+        "energy-efficiency",
+        "symbols"
       ],
       "division": "B"
     },
@@ -6105,21 +6118,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heat",
-        "efficiency",
-        "test",
-        "performance",
-        "equipment",
-        "rejection",
-        "radiant",
-        "temperature",
         "requirements",
-        "fluid",
-        "r-448a",
-        "fan",
+        "equipment",
         "rating",
+        "fan",
+        "r-448a",
+        "rejection",
+        "performance",
+        "heat",
+        "gas-fired",
+        "efficiency",
+        "temperature",
+        "fluid",
+        "radiant",
         "constant",
-        "gas-fired"
+        "test"
       ],
       "division": "B"
     },
@@ -6289,21 +6302,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-5",
-        "code",
-        "requirements",
+        "acceptable",
         "path",
-        "objective",
-        "functional",
-        "statements",
-        "exempted",
-        "building",
-        "paths",
-        "hvac",
+        "requirements",
+        "code",
         "achieved",
-        "purpose",
+        "statements",
+        "paths",
+        "a-5",
+        "functional",
         "attributed",
-        "acceptable"
+        "purpose",
+        "hvac",
+        "building",
+        "exempted",
+        "objective"
       ],
       "division": "B"
     },
@@ -6766,21 +6779,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "water",
-        "efficiency",
+        "heating",
         "service",
-        "performance",
+        "within",
         "temperature",
-        "heaters",
+        "storage",
+        "difference",
+        "energy",
+        "vessels",
         "heater",
         "comply",
-        "outdoor",
+        "equipment",
+        "water",
+        "performance",
         "air",
-        "within",
-        "difference",
-        "thermal",
-        "energy",
-        "rated"
+        "heaters"
       ],
       "division": "B"
     },
@@ -6973,21 +6986,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "insulation",
-        "systems",
-        "heat",
-        "piping",
         "traps",
-        "outlet",
-        "storage",
-        "heating",
-        "first",
-        "sentences",
-        "thickness",
-        "service",
         "water",
+        "systems",
+        "non-circulating",
+        "heating",
+        "sentences",
+        "heat",
+        "first",
+        "outlet",
+        "service",
+        "storage",
+        "thickness",
         "thicknesses",
-        "non-circulating"
+        "controls",
+        "piping"
       ],
       "division": "B"
     },
@@ -7305,7 +7318,12 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "pressure",
+        "booster",
+        "systems"
+      ]
     },
     {
       "id": "B-6.2.8",
@@ -7704,7 +7722,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "voltage",
+        "drop"
+      ]
     },
     {
       "id": "B-7.2.2",
@@ -8089,7 +8111,10 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "compliance"
+      ]
     },
     {
       "id": "B-8.4.1",
@@ -8319,21 +8344,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "data",
-        "climatic",
-        "building",
-        "site",
         "weather",
-        "energy",
-        "model",
-        "calculations",
-        "performed",
-        "using",
-        "measured",
         "climate",
-        "available",
+        "climatic",
+        "calculations",
         "a-8",
-        "values"
+        "model",
+        "values",
+        "compliance",
+        "performed",
+        "data",
+        "measured",
+        "site",
+        "available",
+        "building",
+        "energy"
       ],
       "division": "B"
     },
@@ -8527,21 +8552,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
-        "energy",
-        "temperature",
+        "envelope",
         "calculations",
-        "rise",
-        "due",
-        "building",
-        "fan",
-        "systems",
-        "supply",
-        "heat",
         "return",
+        "systems",
+        "rise",
+        "supply",
         "leakage",
         "rate",
-        "envelope"
+        "due",
+        "heat",
+        "compliance",
+        "air",
+        "temperature",
+        "fan",
+        "building"
       ],
       "division": "B"
     },
@@ -8702,21 +8727,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
-        "leakage",
-        "rate",
-        "pressure",
-        "differential",
-        "energy",
-        "building",
         "loads",
+        "fenestration",
+        "model",
+        "rate",
+        "annual",
+        "consumption",
+        "energy",
+        "solar",
+        "normalized",
         "used",
         "proposed",
-        "a-8",
-        "solar",
-        "model",
-        "fenestration",
-        "normalized"
+        "differential",
+        "pressure",
+        "leakage",
+        "air"
       ],
       "division": "B"
     },
@@ -9080,21 +9105,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "proposed",
-        "modeled",
-        "solar",
-        "absorptance",
-        "used",
-        "thermal",
         "identical",
-        "fenestration",
         "semi-heated",
-        "heating",
-        "a-8",
-        "being",
         "determined",
-        "actual"
+        "used",
+        "proposed",
+        "reference",
+        "fenestration",
+        "being",
+        "modeled",
+        "heating",
+        "actual",
+        "absorptance",
+        "a-8",
+        "building",
+        "solar"
       ],
       "division": "B"
     },
@@ -9238,21 +9263,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "thermal",
-        "system",
-        "proposed",
-        "blocks",
-        "systems",
-        "hvac",
         "single",
-        "serving",
-        "outside",
-        "air",
-        "storeys",
-        "type",
+        "reference",
+        "blocks",
         "block",
-        "modeled"
+        "proposed",
+        "systems",
+        "serving",
+        "storeys",
+        "modeled",
+        "air",
+        "outside",
+        "type",
+        "system",
+        "building",
+        "hvac"
       ],
       "division": "B"
     },
@@ -9752,21 +9777,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "capacity",
-        "electric",
-        "conditions",
-        "rated",
-        "coil",
+        "determined",
         "cooling",
-        "adjustment",
-        "calculated",
-        "using",
+        "capacity",
+        "ratio",
+        "coil",
+        "part-load",
+        "condenser",
+        "conditions",
+        "performance",
+        "characteristics",
         "equation",
         "temperature",
-        "ratio",
-        "determined",
-        "condenser",
-        "part-load"
+        "adjustment",
+        "rated",
+        "electric"
       ],
       "division": "B"
     },
@@ -9959,21 +9984,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "existing",
-        "building",
-        "addition",
-        "parts",
-        "energy",
-        "characteristics",
-        "components",
-        "year",
         "weather",
-        "code",
-        "a-8",
         "used",
         "calculations",
+        "objective",
+        "code",
+        "year",
+        "components",
+        "statements",
+        "existing",
+        "functional",
+        "characteristics",
+        "a-8",
         "considered",
-        "thermal"
+        "thermal",
+        "building"
       ],
       "division": "B"
     },
@@ -10471,7 +10496,10 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "compliance"
+      ]
     },
     {
       "id": "B-11.4.1",
@@ -10566,21 +10594,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ghg",
-        "emissions",
         "factors",
-        "energy",
         "canada",
+        "values",
+        "emissions",
         "district",
-        "plant",
-        "determined",
-        "qualified",
-        "person",
+        "annual",
+        "operational",
+        "net",
         "a-11",
         "zero",
-        "net",
-        "values",
-        "environment"
+        "energy",
+        "qualified",
+        "determined",
+        "proposed",
+        "person"
       ],
       "division": "B"
     },
@@ -10692,21 +10720,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heating",
-        "energy",
+        "environmental",
+        "requirements",
         "equipment",
+        "output",
+        "information",
         "water",
-        "gas",
-        "a-11",
+        "statements",
         "person",
         "iso",
-        "purpose",
+        "heating",
+        "gas",
+        "a-11",
         "kwh",
-        "qualified",
-        "requirements",
-        "environmental",
-        "information",
-        "output"
+        "purpose",
+        "energy"
       ],
       "division": "B"
     },
@@ -10967,21 +10995,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "glazing",
-        "existing",
-        "area",
-        "need",
-        "alteration",
-        "wall",
-        "cavities",
-        "minimum",
-        "structural",
-        "building",
-        "fdwr",
+        "a-13",
         "maximum",
         "comply",
+        "glazing",
+        "general",
+        "structural",
+        "fdwr",
+        "alteration",
+        "minimum",
+        "existing",
         "replacement",
-        "a-13"
+        "cavities",
+        "wall",
+        "need",
+        "building"
       ],
       "division": "B"
     },
@@ -11201,7 +11229,10 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "general"
+      ]
     },
     {
       "id": "B-13.6.1",
@@ -11439,21 +11470,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "alteration",
-        "system",
         "a-13",
-        "hvac",
         "requirements",
-        "extent",
-        "existing",
-        "systems",
-        "building",
         "glazing",
-        "subsystems",
-        "criterion",
-        "functional",
+        "systems",
         "statements",
-        "provisions"
+        "alteration",
+        "criterion",
+        "subsystems",
+        "existing",
+        "provisions",
+        "functional",
+        "system",
+        "building",
+        "objective",
+        "hvac"
       ],
       "division": "B"
     },
@@ -11835,21 +11866,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "area",
-        "building",
-        "total",
-        "gross",
+        "above-ground",
         "envelope",
+        "roofs",
+        "roof",
+        "gross",
         "fenestration",
         "walls",
-        "above-ground",
-        "contact",
-        "ground",
-        "roofs",
-        "floors",
-        "wall",
         "door",
-        "roof"
+        "information",
+        "contact",
+        "floors",
+        "ground",
+        "proposed",
+        "work",
+        "wall"
       ],
       "division": "C"
     },

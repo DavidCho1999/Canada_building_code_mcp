@@ -268,18 +268,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "materials",
-        "appliances",
-        "equipment",
-        "site",
         "stored",
-        "way",
-        "prevent",
         "deterioration",
-        "impairment",
+        "way",
+        "equipment",
         "their",
+        "materials",
+        "prevent",
+        "impairment",
+        "systems",
         "essential",
+        "appliances",
+        "site",
+        "building",
         "properties"
       ],
       "division": "A"
@@ -670,7 +671,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "A"
+      "division": "A",
+      "keywords": [
+        "application"
+      ]
     },
     {
       "id": "A-1.3.4",
@@ -880,21 +884,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "code",
-        "national",
-        "model",
         "referenced",
-        "provisions",
-        "references",
         "another",
-        "objectives",
-        "functional",
+        "conflict",
+        "case",
+        "code",
+        "model",
         "statements",
         "found",
+        "provisions",
+        "objectives",
+        "references",
+        "document",
+        "national",
         "a-2",
-        "case",
-        "conflict",
-        "document"
+        "documents"
       ],
       "division": "A"
     },
@@ -1206,21 +1210,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "facilities",
+        "through",
+        "code",
         "limit",
         "minimize",
-        "risk",
-        "building",
-        "fire",
-        "emergency",
-        "persons",
         "water",
-        "code",
-        "facilities",
         "facilitate",
+        "statements",
+        "functional",
+        "risk",
         "air",
-        "effects",
         "resist",
-        "through"
+        "emergency",
+        "building",
+        "persons"
       ],
       "division": "A"
     },
@@ -1436,7 +1440,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "phrases",
+        "definitions",
+        "words"
+      ]
     },
     {
       "id": "B-1.2.1",
@@ -1590,20 +1599,20 @@
       },
       "keywords": [
         "referenced",
-        "code",
-        "documents",
-        "editions",
-        "accuracy",
-        "information",
-        "therein",
+        "forming",
         "standards",
-        "sprinkler-protected",
+        "accuracy",
+        "code",
+        "information",
         "glazing",
         "context",
+        "documents",
         "they",
+        "therein",
+        "while",
         "designated",
-        "forming",
-        "while"
+        "sprinkler-protected",
+        "editions"
       ],
       "division": "B"
     },
@@ -1636,21 +1645,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "national",
+        "organizations",
+        "a-1",
+        "quebec",
         "code",
         "canada",
-        "building",
-        "quebec",
-        "provisions",
-        "fire",
-        "values",
         "council",
-        "www",
-        "a-1",
-        "objectives",
-        "functional",
+        "values",
         "statements",
-        "attributed"
+        "provisions",
+        "www",
+        "objectives",
+        "attributed",
+        "building",
+        "national",
+        "fire"
       ],
       "division": "B"
     },
@@ -2139,21 +2148,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "area",
-        "sprinklered",
         "throughout",
-        "fire",
-        "room",
-        "building",
-        "service",
-        "farm",
-        "separated",
-        "remainder",
-        "separation",
-        "fire-resistance",
+        "floor",
         "rating",
-        "having"
+        "having",
+        "area",
+        "remainder",
+        "sprinklered",
+        "separation",
+        "farm",
+        "service",
+        "room",
+        "fire-resistance",
+        "general",
+        "building",
+        "fire"
       ],
       "division": "B"
     },
@@ -2464,21 +2473,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "height",
-        "storeys",
-        "storey",
-        "construction",
-        "floor",
         "assembly",
-        "fire-resistance",
         "rating",
+        "storeys",
         "platforms",
+        "construction",
+        "major",
         "conforming",
-        "need",
-        "considered",
+        "size",
+        "relative",
+        "floor",
+        "group",
+        "occupancy",
+        "storey",
         "classified",
-        "group"
+        "fire-resistance"
       ],
       "division": "B"
     },
@@ -2815,18 +2824,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "sprinkler",
-        "annunciator",
+        "condition",
         "automatic",
-        "electrically",
-        "supervised",
+        "systems",
         "indicate",
         "supervisory",
+        "detection",
+        "annunciator",
+        "sprinkler",
+        "supervised",
+        "system",
         "signal",
         "fire",
         "alarm",
-        "condition"
+        "electrically"
       ],
       "division": "B"
     },
@@ -3166,16 +3177,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "access",
-        "exit",
-        "minimum",
-        "width",
-        "obstructions",
-        "fuel-fired",
-        "appliance",
-        "installed",
         "corridor",
-        "serving"
+        "appliance",
+        "serving",
+        "access",
+        "minimum",
+        "exit",
+        "installed",
+        "safety",
+        "within",
+        "width",
+        "farm",
+        "buildings",
+        "fuel-fired",
+        "obstructions"
       ],
       "division": "B"
     },
@@ -3511,21 +3526,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "area",
-        "sprinklered",
-        "throughout",
-        "classified",
-        "group",
-        "major",
-        "occupancy",
-        "served",
         "single",
-        "exit",
-        "minimum",
-        "distance",
         "exits",
-        "one"
+        "throughout",
+        "floor",
+        "distance",
+        "group",
+        "one",
+        "minimum",
+        "sprinklered",
+        "exit",
+        "occupancy",
+        "classified",
+        "served",
+        "major",
+        "area"
       ],
       "division": "B"
     },
@@ -4336,7 +4351,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "general"
+      ]
     },
     {
       "id": "B-2.4.1",
@@ -4613,21 +4631,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "f03-os1",
-        "a-2",
-        "facilities",
-        "storage",
-        "farm",
-        "fire",
-        "buildings",
-        "f11-os1",
-        "f10-os1",
         "manure",
-        "objectives",
-        "functional",
+        "f01-os1",
+        "facilities",
         "statements",
+        "fire",
+        "objectives",
+        "f03-os1",
+        "farm",
         "f02",
-        "f01-os1"
+        "storage",
+        "buildings",
+        "a-2",
+        "f10-os1",
+        "f11-os1",
+        "functional"
       ],
       "division": "B"
     },
@@ -4978,7 +4996,14 @@
         "b": 212.48900000000003,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "classification",
+        "occupancy",
+        "major",
+        "buildings",
+        "parts"
+      ]
     },
     {
       "id": "B-3.1.2.6",
@@ -5245,20 +5270,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "cables",
-        "used",
-        "plenum",
-        "optical",
-        "wires",
-        "smoke",
-        "density",
-        "totally",
         "enclosed",
+        "totally",
+        "used",
         "raceways",
         "systems",
+        "construction",
+        "wires",
+        "density",
+        "transmission",
+        "cables",
+        "optical",
         "combustible",
         "electrical",
-        "transmission",
+        "plenum",
         "vertical"
       ],
       "division": "B"
@@ -5394,7 +5419,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "noncombustible",
+        "construction"
+      ]
     },
     {
       "id": "B-3.1.5",
@@ -5538,21 +5567,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "wall",
-        "assembly",
-        "building",
-        "cladding",
-        "exterior",
-        "fire",
-        "a-3",
-        "combustible",
-        "construction",
-        "tested",
-        "standard",
-        "test",
         "assemblies",
-        "testing",
-        "above"
+        "above",
+        "standard",
+        "a-3",
+        "assembly",
+        "test",
+        "tested",
+        "noncombustible",
+        "construction",
+        "exterior",
+        "wall",
+        "combustible",
+        "cladding",
+        "building",
+        "fire"
       ],
       "division": "B"
     },
@@ -5848,21 +5877,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "insulation",
-        "gypsum",
-        "within",
-        "building",
         "standard",
-        "thick",
-        "exposed",
+        "gypsum",
         "surface",
-        "construction",
         "adjacent",
-        "thermal",
+        "rise",
+        "noncombustible",
+        "construction",
         "barrier",
         "board",
+        "within",
         "temperature",
-        "rise"
+        "thick",
+        "building",
+        "exposed",
+        "insulation"
       ],
       "division": "B"
     },
@@ -5912,21 +5941,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "partitions",
-        "building",
-        "wood",
+        "lumber",
         "used",
+        "solid",
+        "wood",
+        "throughout",
+        "partitions",
         "noncombustible",
         "construction",
+        "sprinklered",
         "occupancy",
         "storage",
-        "solid",
-        "lumber",
         "thick",
+        "building",
         "contain",
-        "framing",
-        "sprinklered",
-        "throughout"
+        "framing"
       ],
       "division": "B"
     },
@@ -6130,20 +6159,20 @@
       },
       "keywords": [
         "raceways",
-        "optical",
-        "cables",
-        "non-metallic",
-        "requirements",
         "cable",
+        "requirements",
         "standard",
         "wood",
         "used",
-        "electrical",
+        "tested",
+        "noncombustible",
+        "non-metallic",
         "wires",
+        "construction",
+        "cables",
+        "optical",
         "meet",
-        "method",
-        "fire",
-        "tested"
+        "electrical"
       ],
       "division": "B"
     },
@@ -6906,14 +6935,17 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sprinklered",
-        "building",
-        "fixed",
+        "throughout",
         "glass",
-        "wall",
-        "system",
+        "separations",
+        "closures",
+        "sprinklered",
         "installed",
-        "throughout"
+        "wall",
+        "fixed",
+        "system",
+        "building",
+        "fire"
       ],
       "division": "B"
     },
@@ -7087,20 +7119,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "separation",
         "size",
-        "opening",
-        "interior",
         "protected",
-        "closure",
-        "dimension",
-        "sprinklered",
-        "compartment",
-        "either",
         "side",
+        "separations",
+        "compartment",
+        "opening",
+        "closures",
+        "separation",
+        "sprinklered",
+        "either",
         "compartments",
-        "sides"
+        "closure",
+        "sides",
+        "interior",
+        "fire"
       ],
       "division": "B"
     },
@@ -7278,21 +7311,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "smoke",
-        "damper",
-        "door",
-        "adjacent",
-        "located",
-        "opening",
-        "separation",
-        "combination",
-        "rating",
-        "corridor",
-        "standard",
-        "duct",
+        "sides",
         "air-transfer",
-        "sides"
+        "standard",
+        "corridor",
+        "duct",
+        "door",
+        "separations",
+        "rating",
+        "adjacent",
+        "opening",
+        "closures",
+        "separation",
+        "located",
+        "smoke",
+        "fire"
       ],
       "division": "B"
     },
@@ -7809,21 +7842,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "firewall",
-        "fire-resistance",
-        "rating",
-        "assembly",
         "above",
-        "roof",
         "slab",
         "concrete",
-        "storage",
-        "garage",
-        "immediately",
-        "need",
-        "constructed",
         "masonry",
-        "providing"
+        "roof",
+        "firewalls",
+        "providing",
+        "assembly",
+        "rating",
+        "constructed",
+        "immediately",
+        "garage",
+        "fire-resistance",
+        "storage",
+        "need"
       ],
       "division": "B"
     },
@@ -8237,7 +8270,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "finish",
+        "interior"
+      ]
     },
     {
       "id": "B-3.1.13",
@@ -8741,21 +8778,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "roof",
-        "covering",
-        "building",
-        "classification",
-        "class",
-        "buildings",
-        "sentences",
-        "deleted",
-        "height",
-        "referred",
-        "metal",
         "conforming",
+        "covering",
         "coverings",
-        "parts",
-        "every"
+        "roof",
+        "deleted",
+        "sentences",
+        "metal",
+        "classification",
+        "referred",
+        "every",
+        "buildings",
+        "height",
+        "building",
+        "class",
+        "parts"
       ],
       "division": "B"
     },
@@ -8867,18 +8904,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pool",
-        "occupant",
-        "load",
-        "swimming",
         "obtained",
-        "allowing",
+        "structures",
+        "a-3",
+        "pool",
         "water",
-        "area",
-        "per",
+        "load",
         "person",
+        "tents",
+        "allowing",
+        "air-supported",
         "depth",
-        "a-3"
+        "occupant",
+        "per",
+        "swimming",
+        "area"
       ],
       "division": "B"
     },
@@ -9535,21 +9575,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-3",
-        "fire",
-        "structure",
-        "cannot",
-        "identified",
-        "characteristics",
-        "building",
-        "articles",
-        "protected",
-        "against",
-        "spread",
-        "collapse",
-        "conformance",
         "good",
-        "protection"
+        "protection",
+        "a-3",
+        "structure",
+        "construction",
+        "cannot",
+        "building",
+        "against",
+        "identified",
+        "size",
+        "protected",
+        "spread",
+        "occupancy",
+        "characteristics",
+        "conformance"
       ],
       "division": "B"
     },
@@ -9816,21 +9856,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
+        "assembly",
+        "noncombustible",
+        "construction",
         "exterior",
         "balcony",
-        "constructed",
-        "construction",
         "type",
-        "articles",
+        "conforming",
+        "size",
+        "comply",
+        "floor",
+        "constructed",
         "occupancy",
         "classification",
-        "floor",
-        "assembly",
-        "conforming",
-        "noncombustible",
         "need",
-        "comply"
+        "relative"
       ],
       "division": "B"
     },
@@ -10705,21 +10745,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "fire-resistance",
-        "rating",
-        "height",
-        "storeys",
-        "mezzanines",
+        "arches",
         "loadbearing",
         "walls",
-        "columns",
-        "arches",
-        "supported",
         "assembly",
-        "classified",
+        "rating",
+        "storeys",
+        "construction",
+        "mezzanines",
+        "columns",
+        "size",
+        "supported",
+        "relative",
         "group",
-        "sentences"
+        "sentences",
+        "occupancy"
       ],
       "division": "B"
     },
@@ -10929,21 +10969,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "single-family",
-        "type",
-        "care",
-        "occupancy",
-        "storey",
-        "means",
-        "egress",
-        "exterior",
-        "doorway",
-        "floor",
         "adjoining",
-        "spaces",
+        "egress",
+        "single-family",
+        "means",
         "separation",
-        "covered"
+        "construction",
+        "exterior",
+        "covered",
+        "type",
+        "doorway",
+        "care",
+        "size",
+        "floor",
+        "occupancy",
+        "storey"
       ],
       "division": "B"
     },
@@ -11975,21 +12015,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "fire-resistance",
-        "rating",
-        "construction",
-        "fire",
-        "height",
+        "supporting",
+        "arches",
         "loadbearing",
         "walls",
-        "columns",
-        "arches",
-        "supporting",
-        "min",
-        "separation",
+        "rating",
         "storeys",
-        "noncombustible"
+        "noncombustible",
+        "construction",
+        "separation",
+        "columns",
+        "size",
+        "relative",
+        "min",
+        "occupancy",
+        "fire-resistance"
       ],
       "division": "B"
     },
@@ -12263,21 +12303,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "construction",
-        "height",
-        "fire-resistance",
+        "throughout",
         "rating",
         "storeys",
-        "combustible",
         "noncombustible",
+        "construction",
+        "size",
+        "relative",
         "min",
-        "classified",
         "group",
         "sentences",
         "sprinklered",
-        "throughout",
-        "area"
+        "occupancy",
+        "classified",
+        "fire-resistance",
+        "combustible"
       ],
       "division": "B"
     },
@@ -12441,21 +12481,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "area",
-        "unprotected",
-        "face",
+        "protection",
         "exposing",
+        "separation",
         "openings",
+        "exterior",
+        "unprotected",
+        "wall",
+        "actual",
         "limiting",
         "distance",
-        "wall",
-        "fire",
+        "exposure",
         "opening",
-        "exterior",
-        "actual",
-        "sprinklered",
-        "fire-resistance"
+        "face",
+        "area",
+        "sprinklered"
       ],
       "division": "B"
     },
@@ -12505,20 +12545,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "exposing",
-        "building",
+        "above",
+        "roof",
+        "requirements",
+        "protection",
+        "attic",
+        "exposure",
+        "spatial",
         "face",
+        "exposing",
+        "constructed",
+        "separation",
         "exterior",
         "wall",
-        "enclosing",
-        "attic",
-        "roof",
-        "space",
-        "located",
-        "above",
-        "constructed",
         "conformance",
-        "requirements"
+        "located"
       ],
       "division": "B"
     },
@@ -12654,21 +12695,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "wall",
-        "requirements",
-        "building",
-        "thick",
         "standard",
-        "fire",
-        "exterior",
-        "face",
+        "protection",
         "assembly",
-        "material",
-        "furring",
-        "masonry",
+        "tested",
+        "separation",
+        "exterior",
+        "wall",
+        "thick",
         "testing",
         "greater",
-        "tested"
+        "masonry",
+        "requirements",
+        "material",
+        "exposure",
+        "spatial"
       ],
       "division": "B"
     },
@@ -12877,21 +12918,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "building",
-        "compartments",
-        "unprotected",
-        "openings",
-        "wall",
-        "compartment",
-        "within",
-        "exterior",
-        "distance",
-        "exposed",
         "roof",
+        "protection",
         "case",
         "exposing",
-        "faces"
+        "separation",
+        "openings",
+        "exterior",
+        "within",
+        "unprotected",
+        "wall",
+        "exposed",
+        "faces",
+        "distance",
+        "compartment",
+        "exposure"
       ],
       "division": "B"
     },
@@ -13069,21 +13110,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "underground",
-        "walkway",
-        "location",
-        "travel",
-        "distance",
-        "adjacent",
-        "exit",
-        "buildings",
-        "outdoor",
+        "protection",
         "noncombustible",
         "construction",
-        "suitable",
+        "separation",
+        "underground",
+        "buildings",
         "smoke",
-        "barrier",
-        "doors"
+        "doors",
+        "suitable",
+        "distance",
+        "exposure",
+        "adjacent",
+        "walkway",
+        "spatial",
+        "exit"
       ],
       "division": "B"
     },
@@ -13279,21 +13320,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "alarm",
-        "systems",
+        "standard",
+        "code",
+        "station",
+        "waterflow",
+        "signal",
+        "detection",
+        "sounded",
         "zone",
         "coded",
+        "systems",
         "alert",
-        "signal",
-        "code",
-        "sounded",
-        "standard",
-        "system",
         "upon",
         "manual",
-        "station",
-        "waterflow"
+        "system",
+        "fire"
       ],
       "division": "B"
     },
@@ -13407,21 +13448,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "fire",
-        "water",
+        "standpipe",
         "loss",
-        "alarm",
-        "electrically",
-        "supervised",
-        "pressure",
+        "valves",
         "annunciator",
         "signal",
-        "valve",
+        "detection",
+        "electrically",
+        "water",
+        "pressure",
+        "systems",
         "pipe",
+        "supervised",
+        "system",
         "building",
-        "valves",
-        "standpipe"
+        "fire"
       ],
       "division": "B"
     },
@@ -13596,21 +13637,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "alarm",
-        "system",
+        "automatic",
+        "detectors",
         "fire",
+        "level",
+        "equipped",
+        "smoke",
+        "detection",
         "recall",
         "floor",
-        "level",
-        "area",
-        "smoke",
-        "detectors",
-        "elevators",
         "alternate",
-        "building",
+        "systems",
         "upon",
-        "equipped",
-        "automatic"
+        "system",
+        "building",
+        "area"
       ],
       "division": "B"
     },
@@ -13724,20 +13765,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "signal",
-        "devices",
-        "audible",
-        "dwelling",
-        "installed",
-        "occupancy",
-        "alarm",
-        "device",
-        "visible",
-        "silenced",
         "units",
         "a-3",
-        "system",
+        "audible",
+        "installed",
+        "dwelling",
+        "visible",
+        "devices",
+        "signal",
+        "detection",
+        "silenced",
         "unit",
+        "systems",
+        "occupancy",
+        "device",
         "referred"
       ],
       "division": "B"
@@ -13788,21 +13829,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "alarm",
+        "period",
+        "detectors",
+        "fire",
+        "installed",
+        "equipped",
+        "emergency",
+        "alarms",
+        "dwelling",
+        "power",
         "smoke",
         "signal",
-        "equipped",
-        "power",
-        "fire",
-        "system",
-        "alarms",
+        "detection",
+        "systems",
         "sound",
-        "installed",
-        "detectors",
-        "emergency",
-        "designed",
-        "dwelling",
-        "period"
+        "system"
       ],
       "division": "B"
     },
@@ -14062,21 +14103,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "vehicle",
-        "access",
-        "fire",
-        "department",
-        "path",
-        "travel",
-        "portion",
-        "connection",
-        "route",
         "unobstructed",
-        "located",
+        "path",
+        "connection",
+        "firefighting",
+        "travel",
+        "pumper",
+        "department",
+        "access",
         "firefighter",
-        "routes",
-        "pumper"
+        "provisions",
+        "located",
+        "portion",
+        "building",
+        "fire",
+        "routes"
       ],
       "division": "B"
     },
@@ -14240,21 +14281,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sprinkler",
-        "system",
-        "installation",
-        "building",
-        "water",
-        "systems",
+        "automatic",
+        "standard",
+        "nfpa",
         "sprinklers",
+        "water",
+        "a-3",
+        "systems",
+        "provisions",
+        "installation",
         "occupancy",
         "hose",
-        "nfpa",
-        "standard",
+        "sprinkler",
         "dwelling",
-        "area",
-        "a-3",
-        "automatic"
+        "system",
+        "building"
       ],
       "division": "B"
     },
@@ -14533,21 +14574,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "fire",
-        "a-3",
-        "shut",
-        "automatically",
-        "upon",
-        "activation",
-        "alarm",
-        "maintain",
-        "corridor",
         "pressurization",
+        "corridor",
+        "high",
+        "a-3",
+        "activation",
+        "maintain",
+        "buildings",
+        "automatically",
         "connected",
-        "measures",
+        "requirements",
+        "limit",
+        "upon",
         "taken",
-        "limit"
+        "measures",
+        "shut"
       ],
       "division": "B"
     },
@@ -14693,21 +14734,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "means",
-        "signal",
-        "system",
         "signals",
-        "supervisory",
-        "trouble",
-        "floor",
-        "safety",
-        "building",
+        "means",
+        "elevator",
+        "high",
         "auxiliary",
-        "equipment",
-        "communicate",
+        "supervisory",
+        "safety",
+        "buildings",
+        "signal",
         "telephones",
-        "passenger",
-        "elevator"
+        "trouble",
+        "requirements",
+        "equipment",
+        "floor",
+        "passenger"
       ],
       "division": "B"
     },
@@ -14891,20 +14932,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "emergency",
-        "electrical",
-        "power",
+        "lighting",
+        "csa",
         "supply",
-        "articles",
-        "system",
+        "emergency",
+        "c282",
+        "systems",
         "installed",
         "conformance",
-        "csa",
-        "c282",
         "buildings",
-        "voice",
+        "electrical",
         "communication",
-        "systems"
+        "power",
+        "articles",
+        "system",
+        "voice"
       ],
       "division": "B"
     },
@@ -15082,21 +15124,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "distribution",
-        "conductors",
-        "emergency",
-        "fire",
-        "panel",
-        "lighting",
-        "protected",
-        "power",
-        "located",
+        "assemblies",
         "units",
-        "referred",
-        "equipment",
-        "leading",
+        "through",
+        "conductors",
+        "openings",
+        "mezzanines",
         "service",
-        "electrical"
+        "panel",
+        "electrical",
+        "emergency",
+        "power",
+        "protected",
+        "lighting",
+        "equipment",
+        "leading"
       ],
       "division": "B"
     },
@@ -15242,21 +15284,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "space",
-        "interconnected",
-        "protected",
-        "vestibules",
-        "conforming",
-        "fire",
-        "separation",
-        "elevator",
-        "doors",
-        "opening",
-        "storeys",
         "above",
+        "assemblies",
+        "elevator",
+        "through",
+        "storeys",
+        "separation",
+        "satisfy",
+        "openings",
+        "mezzanines",
+        "space",
+        "conforming",
         "used",
-        "satisfy"
+        "doors",
+        "protected",
+        "floor"
       ],
       "division": "B"
     },
@@ -15530,19 +15572,19 @@
       "keywords": [
         "corridor",
         "public",
-        "area",
-        "fire",
-        "separation",
-        "remainder",
-        "storey",
         "floor",
-        "occupancy",
-        "fire-resistance",
         "rating",
-        "space",
-        "separated",
         "group",
-        "point"
+        "area",
+        "remainder",
+        "areas",
+        "separation",
+        "point",
+        "occupancy",
+        "storey",
+        "fire-resistance",
+        "space",
+        "fire"
       ],
       "division": "B"
     },
@@ -15742,21 +15784,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "exit",
-        "door",
         "corridor",
-        "suite",
-        "swing",
-        "access",
-        "direction",
-        "travel",
         "doors",
-        "opens",
-        "facility",
+        "door",
         "providing",
-        "room",
+        "floor",
+        "direction",
+        "vertical",
+        "areas",
+        "access",
+        "exit",
+        "facility",
         "within",
-        "vertical"
+        "room",
+        "suite",
+        "opens"
       ],
       "division": "B"
     },
@@ -15925,21 +15967,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "exit",
-        "access",
-        "based",
-        "width",
         "corridors",
-        "per",
-        "person",
+        "based",
         "capacity",
-        "occupant",
-        "load",
         "floor",
-        "area",
+        "doorways",
+        "areas",
+        "person",
+        "access",
+        "load",
+        "exit",
         "ramps",
-        "slope",
-        "doorways"
+        "width",
+        "per",
+        "occupant",
+        "area"
       ],
       "division": "B"
     },
@@ -16085,21 +16127,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
         "floor",
-        "fire-resistance",
-        "rating",
-        "separation",
-        "area",
         "penetrated",
-        "damper",
-        "space",
         "assembly",
+        "rating",
         "separations",
-        "smoke",
+        "area",
         "explosion",
+        "areas",
+        "separation",
+        "room",
+        "fire-resistance",
+        "space",
         "building",
-        "room"
+        "smoke",
+        "fire"
       ],
       "division": "B"
     },
@@ -16372,21 +16414,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "aisle",
-        "seats",
-        "width",
-        "travel",
-        "exit",
         "aisles",
-        "stepped",
-        "platform",
-        "rows",
-        "row",
-        "cross",
+        "assembly",
         "foyer",
+        "row",
         "adjacent",
         "minimum",
-        "riser"
+        "exit",
+        "stepped",
+        "occupancy",
+        "aisle",
+        "width",
+        "cross",
+        "seats",
+        "rows",
+        "platform"
       ],
       "division": "B"
     },
@@ -16532,21 +16574,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sentences",
-        "handrails",
-        "comply",
-        "gaps",
         "size",
-        "opening",
-        "guard",
-        "allow",
+        "handrails",
+        "gaps",
         "passage",
-        "sphere",
         "whose",
+        "comply",
         "diameter",
         "a-3",
         "aisles",
-        "steps"
+        "steps",
+        "assembly",
+        "opening",
+        "sentences",
+        "occupancy",
+        "sphere"
       ],
       "division": "B"
     },
@@ -16692,21 +16734,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "stage",
-        "area",
-        "fire",
-        "building",
-        "sprinkler",
-        "system",
-        "seating",
-        "vents",
-        "purpose",
-        "venting",
-        "smoke",
-        "outside",
         "above",
+        "theatrical",
+        "stage",
+        "assembly",
+        "area",
+        "vents",
         "designed",
-        "theatrical"
+        "occupancy",
+        "outside",
+        "purpose",
+        "sprinkler",
+        "seating",
+        "venting",
+        "system",
+        "building"
       ],
       "division": "B"
     },
@@ -16948,21 +16990,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "rooms",
-        "separation",
         "units",
-        "care",
-        "room",
-        "fire-resistance",
-        "rating",
-        "dwelling",
-        "occupancy",
-        "group",
-        "patients",
         "a-3",
+        "rating",
+        "fire",
+        "separation",
+        "rooms",
+        "room",
+        "detention",
+        "dwelling",
+        "care",
         "floor",
-        "area"
+        "group",
+        "occupancies",
+        "occupancy",
+        "fire-resistance"
       ],
       "division": "B"
     },
@@ -17294,21 +17336,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "above",
+        "protected",
+        "floor",
+        "residential",
+        "suites",
+        "windows",
         "openable",
         "window",
-        "windows",
-        "protected",
         "opening",
-        "located",
-        "above",
-        "floor",
-        "suites",
-        "residential",
+        "minimum",
+        "constructed",
         "occupancy",
         "guard",
-        "minimum",
-        "height",
-        "constructed"
+        "located",
+        "height"
       ],
       "division": "B"
     },
@@ -17652,21 +17694,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vestibule",
-        "area",
-        "occupancy",
+        "flash",
         "facilities",
-        "dispensing",
         "fuel",
         "having",
-        "flash",
-        "point",
-        "below",
+        "industrial",
+        "dispensing",
+        "occupancy",
         "installed",
+        "below",
         "ventilated",
-        "naturally",
         "outside",
-        "air"
+        "naturally",
+        "air",
+        "vestibule",
+        "area"
       ],
       "division": "B"
     },
@@ -17981,21 +18023,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ammonium",
-        "nitrate",
+        "flooring",
+        "intended",
+        "hazardous",
         "materials",
-        "storage",
-        "areas",
-        "constructed",
         "prevent",
         "contact",
-        "become",
-        "flooring",
+        "areas",
+        "coming",
         "noncombustible",
-        "buildings",
-        "intended",
+        "constructed",
         "designed",
-        "coming"
+        "design",
+        "nitrate",
+        "storage",
+        "buildings"
       ],
       "division": "B"
     },
@@ -18567,21 +18609,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "area",
-        "public",
         "corridor",
-        "occupancy",
-        "exit",
-        "one",
-        "separated",
-        "remainder",
-        "exits",
-        "high-hazard",
         "industrial",
-        "conformance",
+        "one",
+        "location",
+        "separation",
+        "number",
+        "exits",
         "requirements",
-        "separation"
+        "public",
+        "floor",
+        "areas",
+        "remainder",
+        "exit",
+        "occupancy",
+        "conformance"
       ],
       "division": "B"
     },
@@ -18912,21 +18954,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "block",
+        "directly",
+        "signs",
+        "glass",
+        "floor",
+        "doorways",
+        "contiguous",
+        "designed",
+        "separation",
         "exit",
+        "wired",
+        "service",
         "rooms",
         "open",
-        "directly",
-        "doorways",
-        "glass",
-        "stairs",
-        "contiguous",
-        "fire",
-        "separation",
-        "floor",
-        "designed",
-        "service",
-        "wired",
-        "block"
+        "stairs"
       ],
       "division": "B"
     },
@@ -19144,21 +19186,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "stairway",
-        "landing",
-        "width",
-        "length",
-        "ramp",
-        "wall",
-        "side",
-        "distance",
-        "doorway",
-        "empties",
-        "onto",
-        "through",
         "there",
+        "facilities",
+        "side",
+        "through",
+        "distance",
+        "empties",
+        "landing",
+        "types",
+        "ramp",
+        "length",
         "level",
-        "area"
+        "exit",
+        "width",
+        "wall",
+        "stairway"
       ],
       "division": "B"
     },
@@ -19240,18 +19282,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ramps",
-        "slope",
-        "uniform",
+        "aisles",
         "along",
         "their",
-        "length",
         "maximum",
-        "aisles",
+        "uniform",
+        "facilities",
         "industrial",
+        "types",
         "occupancies",
+        "length",
+        "exit",
+        "ramps",
+        "exterior",
         "interior",
-        "exterior"
+        "slope"
       ],
       "division": "B"
     },
@@ -19429,21 +19474,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "they",
-        "serve",
-        "storage",
-        "open",
-        "suites",
-        "area",
-        "first",
-        "storey",
-        "warehousing",
-        "buildings",
         "directly",
-        "outdoors",
+        "facilities",
+        "they",
+        "types",
+        "suites",
         "ground",
+        "serve",
+        "warehousing",
         "level",
-        "individual"
+        "first",
+        "exit",
+        "storey",
+        "outdoors",
+        "open",
+        "storage"
       ],
       "division": "B"
     },
@@ -19525,21 +19570,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "complying",
+        "release",
+        "building",
+        "facilities",
         "door",
-        "alarm",
-        "device",
-        "fire",
+        "types",
+        "a-3",
+        "station",
         "locking",
         "exit",
-        "release",
         "installed",
+        "device",
         "actuation",
-        "devices",
-        "building",
-        "complying",
         "system",
-        "station",
-        "a-3"
+        "devices"
       ],
       "division": "B"
     },
@@ -19589,21 +19634,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "doors",
-        "floor",
-        "area",
-        "unlocked",
-        "access",
-        "exit",
-        "door",
-        "side",
-        "areas",
-        "locking",
-        "devices",
-        "prevent",
         "entry",
+        "doors",
+        "facilities",
+        "door",
+        "floor",
+        "side",
+        "prevent",
         "travel",
-        "referred"
+        "areas",
+        "types",
+        "access",
+        "locking",
+        "exit",
+        "referred",
+        "devices"
       ],
       "division": "B"
     },
@@ -19927,21 +19972,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "storey",
-        "passenger",
-        "elevator",
-        "storeys",
-        "containing",
-        "accessible",
-        "dwelling",
         "unit",
-        "elevators",
-        "within",
-        "scope",
         "articles",
+        "containing",
+        "scope",
+        "roof",
+        "elevator",
+        "passenger",
+        "storeys",
         "serve",
-        "roof"
+        "accessible",
+        "storey",
+        "within",
+        "general",
+        "dwelling",
+        "building"
       ],
       "division": "B"
     },
@@ -20189,21 +20234,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "asme",
-        "a17",
-        "csa",
         "b44",
-        "safety",
+        "signs",
         "code",
-        "elevators",
-        "escalators",
-        "occupancy",
         "dimensions",
+        "csa",
         "serves",
         "group",
+        "asme",
+        "safety",
+        "escalators",
+        "occupancy",
         "referred",
+        "numerals",
         "arabic",
-        "numerals"
+        "elevators"
       ],
       "division": "B"
     },
@@ -20966,21 +21011,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "rating",
-        "buildings",
-        "ceiling",
-        "membrane",
-        "construction",
-        "space",
-        "fire",
-        "cables",
-        "combustible",
-        "used",
-        "totally",
         "enclosed",
-        "non-metallic",
         "raceways",
-        "tested"
+        "facilities",
+        "rating",
+        "tested",
+        "construction",
+        "service",
+        "ceiling",
+        "buildings",
+        "space",
+        "totally",
+        "used",
+        "horizontal",
+        "membrane",
+        "non-metallic"
       ],
       "division": "B"
     },
@@ -21368,7 +21413,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "plumbing",
+        "facilities"
+      ]
     },
     {
       "id": "B-3.7.2",
@@ -21867,21 +21916,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "escalator",
         "inclined",
-        "moving",
-        "walk",
-        "level",
+        "escalator",
         "barrier-free",
         "path",
-        "travel",
-        "building",
+        "walk",
+        "moving",
+        "floor",
         "provides",
+        "a-3",
         "access",
+        "level",
         "interior",
+        "application",
         "located",
-        "a-3"
+        "building"
       ],
       "division": "B"
     },
@@ -22268,21 +22317,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "barrier-free",
-        "wide",
-        "level",
-        "path",
-        "travel",
-        "changes",
-        "ramps",
-        "a-3",
         "long",
-        "base",
         "beveled",
+        "barrier-free",
+        "path",
         "maximum",
+        "a-3",
+        "base",
+        "wide",
+        "floors",
+        "changes",
         "slope",
-        "sloped",
-        "floors"
+        "level",
+        "design",
+        "ramps",
+        "sloped"
       ],
       "division": "B"
     },
@@ -22364,21 +22413,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "door",
-        "a-3",
         "path",
-        "travel",
         "barrier-free",
+        "doors",
+        "door",
         "side",
-        "clear",
+        "a-3",
         "floor",
         "swinging",
-        "open",
-        "doors",
+        "clear",
+        "design",
         "width",
-        "space",
+        "open",
+        "located",
         "doorway",
-        "located"
+        "space"
       ],
       "division": "B"
     },
@@ -22490,21 +22539,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "located",
-        "a-3",
-        "front",
-        "wall",
+        "above",
         "side",
         "door",
+        "a-3",
         "floor",
-        "access",
         "tactile",
         "information",
         "signs",
+        "access",
         "latch",
-        "above",
+        "design",
         "sign",
-        "international"
+        "front",
+        "wall",
+        "located"
       ],
       "division": "B"
     },
@@ -22586,21 +22635,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "space",
         "above",
         "conforming",
-        "clear",
-        "side",
-        "dispenser",
-        "water",
+        "long",
         "closet",
+        "side",
+        "floor",
         "door",
+        "water",
         "change",
+        "clear",
+        "design",
         "equipped",
         "wall",
         "located",
-        "long"
+        "dispenser"
       ],
       "division": "B"
     },
@@ -22714,21 +22763,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "shower",
         "above",
-        "a-3",
-        "located",
-        "mounted",
         "long",
-        "space",
-        "wall",
+        "mounted",
         "iii",
-        "position",
+        "floor",
+        "a-3",
         "wide",
         "clear",
+        "position",
+        "grab",
+        "design",
+        "wall",
+        "located",
         "entrance",
-        "grab"
+        "shower"
       ],
       "division": "B"
     },
@@ -22810,21 +22859,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "knee",
-        "space",
-        "service",
-        "counter",
-        "barrier-free",
-        "long",
         "centred",
+        "long",
         "conforming",
-        "surface",
+        "barrier-free",
         "above",
         "floor",
-        "forward-facing",
-        "interaction",
+        "surface",
         "person",
-        "device"
+        "forward-facing",
+        "design",
+        "device",
+        "service",
+        "counter",
+        "knee",
+        "interaction"
       ],
       "division": "B"
     },
@@ -23041,21 +23090,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "water",
-        "closet",
-        "wall",
-        "floor",
-        "measured",
         "long",
-        "lavatory",
-        "side",
+        "units",
+        "surface",
         "wide",
+        "visitable",
         "behind",
         "installed",
-        "washroom",
-        "located",
-        "centered",
-        "surface"
+        "measured",
+        "wall",
+        "dwelling",
+        "lavatory",
+        "closet",
+        "side",
+        "floor",
+        "residential"
       ],
       "division": "B"
     },
@@ -23240,21 +23289,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "floor",
-        "installed",
-        "measured",
-        "bedroom",
-        "continuous",
-        "reinforcement",
-        "walls",
         "around",
+        "units",
+        "walls",
+        "bedroom",
         "bathtub",
-        "shower",
-        "height",
-        "wall",
+        "continuous",
+        "installed",
         "behind",
-        "water",
-        "closet"
+        "measured",
+        "wall",
+        "dwelling",
+        "shower",
+        "closet",
+        "floor",
+        "residential"
       ],
       "division": "B"
     },
@@ -23799,21 +23848,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "f74-oa2",
-        "code",
         "os1",
-        "portion",
-        "text",
-        "building",
-        "f02",
-        "f12-os1",
-        "f04-os1",
-        "f04-op1",
-        "fire",
-        "f12-op1",
-        "f30-os3",
         "requirements",
-        "f10-os3"
+        "code",
+        "f04-op1",
+        "f12-os1",
+        "f30-os3",
+        "statements",
+        "f74-oa2",
+        "text",
+        "f04-os1",
+        "f12-op1",
+        "f02",
+        "f10-os3",
+        "objectives",
+        "portion"
       ],
       "division": "B"
     },
@@ -25169,20 +25218,20 @@
       },
       "keywords": [
         "bnq",
-        "certification",
-        "a23",
+        "established",
+        "general",
+        "theory",
         "structural",
         "components",
         "falling",
-        "within",
-        "scope",
         "amenable",
         "analysis",
-        "using",
+        "within",
+        "certification",
         "generally",
-        "established",
-        "theory",
-        "designed"
+        "scope",
+        "designed",
+        "using"
       ],
       "division": "B"
     },
@@ -25362,20 +25411,20 @@
       },
       "keywords": [
         "fatigue",
-        "a-4",
-        "building",
-        "structural",
-        "components",
-        "connections",
-        "checked",
-        "failure",
-        "effect",
         "cyclical",
         "loads",
+        "effect",
         "standards",
+        "resonance",
+        "limit",
+        "connections",
+        "structural",
+        "components",
+        "checked",
+        "a-4",
+        "failure",
         "vibration",
-        "effects",
-        "resonance"
+        "design"
       ],
       "division": "B"
     },
@@ -25647,21 +25696,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "they",
         "corridors",
-        "a-table",
-        "designed",
-        "carry",
-        "load",
-        "occupancy",
-        "serve",
-        "cannot",
-        "used",
+        "lobbies",
+        "loads",
+        "they",
         "assembly",
-        "people",
+        "a-table",
+        "due",
+        "cannot",
+        "carry",
+        "used",
         "viewing",
-        "area",
-        "lobbies"
+        "use",
+        "load",
+        "serve",
+        "people"
       ],
       "division": "B"
     },
@@ -26390,21 +26439,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "loads",
         "roofs",
-        "arch",
-        "slope",
-        "sentences",
-        "curved",
-        "peak",
         "roof",
-        "slippery",
-        "wind",
-        "domes",
-        "taken",
         "values",
+        "snow",
+        "domes",
+        "due",
+        "axis",
+        "slope",
+        "curved",
+        "slippery",
         "csca",
         "side",
-        "axis"
+        "rain",
+        "wind"
       ],
       "division": "B"
     },
@@ -26454,21 +26503,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "loads",
+        "upper",
         "roof",
-        "load",
         "case",
         "snow",
-        "sliding",
-        "slope",
-        "g68",
-        "upper",
-        "factor",
-        "sentences",
-        "iii",
-        "considered",
+        "due",
         "total",
-        "weight",
-        "resulting"
+        "slope",
+        "factor",
+        "sliding",
+        "g68",
+        "iii",
+        "rain",
+        "resulting",
+        "load"
       ],
       "division": "B"
     },
@@ -26573,21 +26622,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "panels",
-        "roof",
-        "areas",
-        "panel",
-        "surface",
-        "solar",
-        "edge",
-        "taken",
+        "loads",
         "roofs",
-        "cbcwss",
-        "a-4",
+        "roof",
+        "panels",
+        "surface",
         "snow",
+        "due",
+        "panel",
         "determined",
-        "width",
-        "distance"
+        "rain",
+        "distance",
+        "areas",
+        "a-4",
+        "cbcwss",
+        "taken"
       ],
       "division": "B"
     },
@@ -26780,21 +26829,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "coefficients",
         "roofs",
-        "height",
-        "forces",
-        "cgcp",
-        "roof",
-        "dimension",
-        "surface",
-        "slope",
-        "horizontal",
-        "denote",
-        "values",
-        "tributary",
         "greater",
-        "width"
+        "coefficients",
+        "roof",
+        "horizontal",
+        "tributary",
+        "surface",
+        "forces",
+        "wind",
+        "values",
+        "cgcp",
+        "load",
+        "width",
+        "denote",
+        "height"
       ],
       "division": "B"
     },
@@ -26903,21 +26952,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
-        "building",
-        "interior",
-        "due",
-        "differences",
-        "pressure",
-        "sides",
-        "design",
+        "partition",
         "walls",
         "partitions",
+        "wind",
+        "pressure",
+        "load",
+        "design",
+        "due",
         "consideration",
+        "differences",
+        "air",
         "given",
-        "opposite",
         "wall",
-        "partition"
+        "opposite",
+        "building"
       ],
       "division": "B"
     },
@@ -27174,20 +27223,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "site",
-        "designation",
         "determined",
-        "ground",
-        "a-4",
-        "values",
-        "acceleration",
-        "pga",
-        "velocity",
-        "using",
-        "average",
-        "shear",
+        "designation",
+        "earthquake",
         "vs30",
+        "values",
+        "ground",
+        "average",
+        "a-4",
+        "load",
+        "site",
+        "effects",
+        "shear",
         "calculated",
+        "pga",
         "peak"
       ],
       "division": "B"
@@ -27270,21 +27319,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "fundamental",
+        "period",
         "structures",
+        "earthquake",
+        "lateral",
         "defined",
+        "load",
+        "irregularity",
+        "stiffness",
         "sentences",
+        "analysis",
+        "effects",
         "below",
         "need",
-        "considered",
-        "stiffness",
-        "irregularity",
-        "analysis",
-        "procedure",
-        "height",
-        "fundamental",
-        "lateral",
-        "period",
-        "two"
+        "considered"
       ],
       "division": "B"
     },
@@ -27399,20 +27448,20 @@
       },
       "keywords": [
         "determined",
-        "obtained",
-        "lateral",
-        "frames",
-        "values",
-        "using",
-        "greater",
         "fundamental",
         "interpolation",
-        "moment",
         "building",
-        "earthquake",
         "period",
+        "obtained",
+        "earthquake",
+        "lateral",
         "direction",
-        "forces"
+        "values",
+        "forces",
+        "load",
+        "frames",
+        "moment",
+        "using"
       ],
       "division": "B"
     },
@@ -27462,21 +27511,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "deflections",
-        "lateral",
-        "calculated",
-        "sentences",
-        "structure",
-        "buildings",
-        "effects",
         "loads",
-        "requirements",
-        "defined",
-        "obtained",
         "linear",
         "elastic",
+        "requirements",
+        "obtained",
+        "earthquake",
+        "lateral",
+        "structure",
+        "defined",
         "analysis",
-        "using"
+        "load",
+        "sentences",
+        "deflections",
+        "buildings",
+        "calculated"
       ],
       "division": "B"
     },
@@ -27558,21 +27607,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-4",
-        "overturning",
-        "sfrs",
-        "factored",
-        "foundation",
         "equal",
-        "soil",
-        "piles",
         "pile",
-        "structure",
-        "designed",
         "resistances",
-        "load",
         "capacity",
-        "design"
+        "earthquake",
+        "foundation",
+        "structure",
+        "load",
+        "a-4",
+        "design",
+        "piles",
+        "sfrs",
+        "overturning",
+        "soil",
+        "factored"
       ],
       "division": "B"
     },
@@ -27622,21 +27671,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "glass",
-        "designed",
-        "component",
+        "determined",
         "array",
+        "connection",
         "roof",
         "elements",
-        "components",
         "element",
+        "glass",
         "requirements",
         "floor",
-        "anchors",
         "connections",
         "earthquake",
-        "connection",
-        "determined"
+        "components",
+        "load",
+        "anchors",
+        "component"
       ],
       "division": "B"
     },
@@ -27686,21 +27735,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "used",
         "isolation",
-        "system",
+        "units",
+        "period",
+        "earthquake",
+        "forces",
         "structure",
-        "isolated",
-        "isolator",
+        "load",
         "analysis",
         "design",
-        "used",
-        "units",
+        "isolator",
         "seismically",
+        "separate",
         "damping",
-        "period",
-        "interface",
-        "forces",
-        "separate"
+        "system"
       ],
       "division": "B"
     },
@@ -28228,21 +28277,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "used",
-        "support",
         "concrete",
-        "high",
-        "strength",
         "steel",
         "tendons",
+        "used",
+        "high",
         "anchor",
-        "systems",
-        "permanent",
-        "foundation",
-        "erection",
-        "temporary",
         "soil",
-        "rock"
+        "foundations",
+        "foundation",
+        "materials",
+        "systems",
+        "support",
+        "strength",
+        "erection",
+        "temporary"
       ],
       "division": "B"
     },
@@ -28713,7 +28762,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "excavations"
+      ]
     },
     {
       "id": "B-4.2.5",
@@ -29226,21 +29278,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "deep",
-        "foundation",
-        "units",
-        "installed",
         "integrity",
-        "manner",
+        "foundations",
+        "rock",
+        "units",
+        "they",
+        "foundation",
+        "deep",
+        "installed",
         "impair",
         "strength",
-        "properties",
-        "soil",
-        "rock",
-        "they",
         "placed",
-        "beyond",
-        "calculated"
+        "soil",
+        "calculated",
+        "manner",
+        "properties"
       ],
       "division": "B"
     },
@@ -29881,21 +29933,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "f20-os2",
-        "f20-op2",
-        "f22-op2",
-        "op2",
-        "design",
-        "structural",
         "f21",
         "f21-op2",
-        "basis",
-        "f21-op4",
-        "f80-os2",
+        "f22-op2",
+        "f20-os2",
         "f22",
-        "f80-op2",
+        "f21-op4",
+        "structural",
+        "statements",
+        "design",
         "objectives",
-        "functional"
+        "op2",
+        "f80-op2",
+        "basis",
+        "f80-os2",
+        "f20-op2"
       ],
       "division": "B"
     },
@@ -30507,7 +30559,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "loads",
+        "resistance",
+        "deterioration"
+      ]
     },
     {
       "id": "B-5.1.4",
@@ -30731,7 +30788,13 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "loads",
+        "structural",
+        "procedures",
+        "design"
+      ]
     },
     {
       "id": "B-5.2.2",
@@ -31104,7 +31167,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "protection",
+        "precipitation"
+      ]
     },
     {
       "id": "B-5.6.1",
@@ -31710,21 +31777,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sound",
-        "performance",
-        "airborne",
-        "rooms",
-        "iso",
-        "acoustics",
-        "insulation",
-        "index",
         "determined",
-        "buildings",
-        "flanking",
-        "building",
+        "protection",
+        "elements",
+        "iso",
+        "index",
+        "airborne",
+        "performance",
+        "sound",
         "estimation",
+        "acoustics",
         "acoustic",
-        "elements"
+        "rooms",
+        "buildings",
+        "noise",
+        "building"
       ],
       "division": "B"
     },
@@ -31757,21 +31824,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "requirements",
-        "materials",
-        "components",
-        "standards",
-        "elsewhere",
-        "their",
-        "installation",
-        "incorporated",
-        "environmental",
-        "separators",
         "assemblies",
-        "exposed",
+        "environmental",
+        "requirements",
+        "standards",
+        "their",
+        "materials",
+        "separators",
+        "components",
+        "incorporated",
+        "installation",
         "exterior",
         "installed",
-        "fulfill"
+        "elsewhere",
+        "applicable",
+        "exposed"
       ],
       "division": "B"
     },
@@ -31789,21 +31856,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "astm",
-        "flame-spread",
-        "rating",
-        "gypsum",
         "determined",
-        "ulc-s102",
         "lieu",
+        "skylights",
+        "panels",
+        "doors",
+        "gypsum",
         "e84",
-        "indicated",
+        "c1658",
+        "rating",
+        "astm",
+        "windows",
+        "flame-spread",
         "a-table",
         "board",
-        "c1396",
-        "c1396m",
-        "panels",
-        "c1658"
+        "indicated"
       ],
       "division": "B"
     },
@@ -32176,21 +32243,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "spaces",
-        "indoor",
-        "building",
-        "separate",
-        "a-5",
-        "separation",
-        "environments",
-        "elements",
-        "interior",
-        "design",
-        "environmental",
-        "requirements",
-        "dissimilar",
         "conditioned",
-        "ground"
+        "environmental",
+        "dissimilar",
+        "indoor",
+        "elements",
+        "requirements",
+        "statements",
+        "ground",
+        "separation",
+        "a-5",
+        "interior",
+        "separate",
+        "design",
+        "objectives",
+        "spaces"
       ],
       "division": "B"
     },
@@ -33223,21 +33290,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "storage",
-        "air",
-        "mechanical",
         "ventilation",
-        "systems",
         "requirements",
         "nitrogen",
         "dioxide",
-        "parts",
-        "vehicles",
-        "supply",
-        "a-6",
         "controlled",
+        "systems",
+        "mechanical",
+        "supply",
+        "vehicles",
+        "air",
+        "a-6",
+        "storage",
+        "devices",
         "monitoring",
-        "devices"
+        "parts"
       ],
       "division": "B"
     },
@@ -33635,21 +33702,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "exhaust",
-        "ducts",
-        "systems",
-        "serving",
-        "a-6",
-        "fan",
-        "air",
-        "openings",
+        "connected",
+        "duct",
         "equipment",
         "prevent",
-        "rooms",
-        "connected",
-        "laundry-drying",
+        "systems",
+        "serving",
+        "ventilating",
         "accessible",
-        "ventilating"
+        "openings",
+        "exhaust",
+        "ducts",
+        "air",
+        "a-6",
+        "rooms",
+        "laundry-drying"
       ],
       "division": "B"
     },
@@ -33791,21 +33858,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "systems",
         "evaporative",
-        "heat",
+        "means",
+        "maintenance",
+        "duct",
+        "water",
+        "drainage",
+        "systems",
+        "cleaning",
         "rejection",
+        "incorporate",
+        "heat",
         "discharge",
         "air",
-        "water",
-        "system",
-        "building",
-        "means",
-        "cleaning",
-        "maintenance",
         "a-6",
-        "drainage",
-        "incorporate"
+        "system"
       ],
       "division": "B"
     },
@@ -33986,21 +34053,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "chimneys",
-        "masonry",
         "concrete",
-        "appliances",
-        "fireplaces",
-        "rectangular",
-        "height",
-        "they",
-        "serve",
+        "masonry",
         "combined",
-        "total",
-        "rated",
-        "heat",
         "output",
-        "designed"
+        "equipment",
+        "rectangular",
+        "they",
+        "chimneys",
+        "fireplaces",
+        "serve",
+        "heat",
+        "appliances",
+        "venting",
+        "total",
+        "height"
       ],
       "division": "B"
     },
@@ -34801,7 +34868,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "general"
+      ]
     },
     {
       "id": "B-6.9.1",
@@ -35161,20 +35231,20 @@
       },
       "keywords": [
         "f01-os1",
-        "f40",
-        "f41",
-        "code",
-        "f50-oh1",
-        "f02-op1",
-        "f02-os1",
         "f01-op1",
-        "portion",
-        "text",
-        "constructed",
+        "code",
+        "f41",
         "materials",
+        "statements",
+        "f02-op1",
+        "constructed",
+        "f50-oh1",
+        "text",
         "objectives",
-        "functional",
-        "statements"
+        "f40",
+        "portion",
+        "f02-os1",
+        "functional"
       ],
       "division": "B"
     },
@@ -35643,17 +35713,17 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "objectives",
-        "functional",
-        "statements",
-        "purpose",
-        "code",
-        "attributed",
-        "acceptable",
-        "solutions",
+        "parts",
         "a-1",
         "forming",
-        "parts"
+        "code",
+        "statements",
+        "solutions",
+        "objectives",
+        "attributed",
+        "purpose",
+        "acceptable",
+        "functional"
       ],
       "division": "B"
     },
@@ -36555,21 +36625,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "construction",
-        "chapter",
-        "work",
-        "code",
         "gie",
-        "timent",
-        "bec",
-        "use",
-        "performed",
-        "building",
-        "facility",
         "intended",
+        "code",
         "public",
+        "use",
+        "declared",
         "b-1",
-        "declared"
+        "declaration",
+        "work",
+        "chapter",
+        "construction",
+        "performed",
+        "facility",
+        "bec",
+        "building"
       ],
       "division": "C"
     },
@@ -38019,21 +38089,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "movement",
-        "reduce",
-        "effects",
-        "stability",
-        "performance",
         "assemblies",
-        "adversely",
         "affected",
-        "a-9",
+        "adversely",
         "walls",
-        "designed",
-        "resist",
         "lateral",
-        "pressure"
+        "foundation",
+        "pressure",
+        "conditions",
+        "performance",
+        "a-9",
+        "movement",
+        "resist",
+        "reduce",
+        "building",
+        "stability"
       ],
       "division": "B"
     },
@@ -38392,7 +38462,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "sizes",
+        "doorway"
+      ]
     },
     {
       "id": "B-9.5.5",
@@ -38606,21 +38680,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "glass",
+        "sliding",
+        "conforming",
         "doors",
-        "safety",
         "glazing",
         "public",
-        "entrance",
-        "cgsb-12",
-        "wired",
-        "mistaken",
-        "sliding",
-        "every",
-        "dwelling",
+        "glass",
         "areas",
-        "type",
-        "conforming"
+        "cgsb-12",
+        "safety",
+        "wired",
+        "every",
+        "general",
+        "dwelling",
+        "entrance",
+        "type"
       ],
       "division": "B"
     },
@@ -39586,21 +39660,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "tapered",
-        "run",
-        "tread",
-        "point",
         "treads",
-        "narrow",
-        "end",
-        "a-9",
-        "articles",
         "complies",
-        "dimensions",
-        "stated",
-        "measured",
         "centre",
-        "line"
+        "line",
+        "step",
+        "end",
+        "stated",
+        "run",
+        "a-9",
+        "measured",
+        "tapered",
+        "tread",
+        "narrow",
+        "point",
+        "articles"
       ],
       "division": "B"
     },
@@ -39931,15 +40005,16 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "occupancies",
+        "maximum",
         "industrial",
+        "floors",
+        "rise",
+        "occupancies",
         "slope",
         "ramp",
-        "greater",
-        "maximum",
-        "rise",
-        "floors",
-        "landings"
+        "landings",
+        "ramps",
+        "greater"
       ],
       "division": "B"
     },
@@ -40145,20 +40220,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ramps",
-        "stairs",
-        "throughout",
-        "length",
-        "bottom",
-        "riser",
-        "serving",
         "single",
-        "dwelling",
         "unit",
-        "house",
-        "secondary",
-        "suite",
+        "handrails",
+        "throughout",
         "their",
+        "secondary",
+        "serving",
+        "bottom",
+        "length",
+        "house",
+        "ramps",
+        "suite",
+        "dwelling",
+        "stairs",
         "common"
       ],
       "division": "B"
@@ -40508,21 +40583,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "level",
-        "guard",
-        "occupancy",
-        "industrial",
-        "passage",
-        "spherical",
-        "object",
-        "having",
-        "diameter",
-        "a-9",
-        "guards",
-        "located",
         "above",
+        "diameter",
+        "passage",
+        "through",
+        "industrial",
+        "having",
+        "spherical",
+        "guards",
+        "level",
+        "object",
+        "occupancy",
+        "a-9",
         "openings",
-        "through"
+        "guard",
+        "located"
       ],
       "division": "B"
     },
@@ -41328,21 +41403,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "stair",
+        "exits",
+        "another",
+        "protection",
+        "walls",
+        "glass",
+        "ramp",
+        "openings",
+        "exit",
         "exterior",
         "unprotected",
-        "openings",
-        "walls",
-        "exit",
-        "building",
-        "glass",
-        "stair",
-        "ramp",
+        "space",
         "balcony",
-        "passageway",
         "suite",
-        "fire",
-        "another",
-        "space"
+        "passageway"
       ],
       "division": "B"
     },
@@ -42286,19 +42361,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "one",
-        "exit",
-        "floor",
-        "area",
-        "exits",
-        "independent",
-        "placed",
-        "remote",
         "along",
+        "exits",
         "path",
-        "travel",
+        "floor",
+        "areas",
+        "one",
+        "remote",
+        "exit",
+        "a-9",
+        "placed",
         "them",
-        "a-9"
+        "area",
+        "independent",
+        "travel"
       ],
       "division": "B"
     },
@@ -42536,21 +42612,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "window",
-        "without",
-        "a-9",
-        "referred",
-        "opening",
-        "well",
-        "openable",
-        "inside",
-        "use",
-        "keys",
-        "tools",
         "special",
-        "knowledge",
+        "signs",
+        "without",
+        "use",
+        "clearance",
+        "window",
+        "opening",
+        "openable",
+        "a-9",
+        "inside",
+        "referred",
+        "tools",
+        "well",
         "emergency",
-        "clearance"
+        "knowledge"
       ],
       "division": "B"
     },
@@ -43016,21 +43092,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "room",
-        "system",
-        "fire",
-        "sleeping",
         "care",
-        "conformance",
-        "storey",
-        "installed",
-        "residential",
-        "alarm",
         "complies",
-        "accommodation",
+        "egress",
         "means",
-        "egress"
+        "residential",
+        "accommodation",
+        "sleeping",
+        "installed",
+        "occupancy",
+        "storey",
+        "room",
+        "conformance",
+        "classification",
+        "system",
+        "building"
       ],
       "division": "B"
     },
@@ -43251,7 +43327,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "size",
+        "building",
+        "determination"
+      ]
     },
     {
       "id": "B-9.10.4",
@@ -43585,21 +43666,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire-resistance",
-        "rating",
-        "requirements",
-        "sprinkler",
-        "system",
-        "conformance",
-        "floor",
-        "crawl",
-        "space",
-        "structure",
-        "light-frame",
-        "floors",
         "there",
+        "elements",
+        "gypsum",
+        "light-frame",
+        "rating",
+        "crawl",
+        "structure",
+        "floors",
         "covered",
-        "gypsum"
+        "sprinkler",
+        "space",
+        "combustibility",
+        "supported",
+        "requirements",
+        "resistance"
       ],
       "division": "B"
     },
@@ -43954,21 +44035,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "doors",
-        "articles",
-        "openings",
-        "fire",
-        "separations",
-        "protected",
-        "closures",
-        "conforming",
-        "smoke-tight",
         "barriers",
-        "solid-core",
+        "smoke-tight",
         "wood",
-        "thick",
         "self-closing",
-        "device"
+        "openings",
+        "within",
+        "rooms",
+        "thick",
+        "buildings",
+        "conforming",
+        "doors",
+        "protected",
+        "separations",
+        "closures",
+        "solid-core"
       ],
       "division": "B"
     },
@@ -44038,21 +44119,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "separation",
-        "firestop",
-        "method",
-        "rating",
-        "sealed",
-        "penetrations",
-        "subjected",
-        "test",
-        "ulc-s115",
+        "barriers",
         "standard",
+        "smoke-tight",
         "tests",
-        "systems",
-        "fire-resistance",
-        "articles"
+        "rating",
+        "separation",
+        "subjected",
+        "within",
+        "rooms",
+        "buildings",
+        "test",
+        "sealed",
+        "method",
+        "firestop",
+        "penetrations"
       ],
       "division": "B"
     },
@@ -44380,21 +44461,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "barriers",
+        "smoke-tight",
         "corridor",
-        "public",
-        "remainder",
-        "fire",
-        "building",
-        "separation",
-        "sprinkler",
-        "system",
-        "conformance",
-        "framing",
-        "fire-resistance",
         "rating",
+        "fire",
+        "separation",
+        "within",
+        "rooms",
+        "sprinkler",
+        "buildings",
+        "framing",
+        "public",
         "floor",
-        "area",
-        "sprinklered"
+        "separations",
+        "remainder"
       ],
       "division": "B"
     },
@@ -44926,21 +45007,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "space",
+        "prevention",
+        "roof",
+        "walls",
+        "attic",
+        "storeys",
+        "exterior",
         "soffit",
         "wall",
-        "floor",
-        "common",
-        "attic",
-        "roof",
-        "storey",
-        "dwelling",
-        "thick",
-        "suites",
         "projects",
+        "thick",
+        "dwelling",
+        "space",
+        "common",
         "beyond",
-        "exterior",
-        "fire"
+        "floor"
       ],
       "division": "B"
     },
@@ -45180,19 +45261,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fire",
-        "separation",
-        "size",
-        "opening",
-        "interior",
         "even",
-        "protected",
+        "separation",
         "closure",
-        "exceed",
-        "dimension",
-        "greater",
-        "compartments",
         "sides",
+        "exceed",
+        "greater",
+        "dimension",
+        "dampers",
+        "size",
+        "doors",
+        "protected",
+        "separations",
+        "opening",
+        "closures",
         "sprinklered"
       ],
       "division": "B"
@@ -45523,21 +45605,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "limiting",
         "distance",
         "a-3",
-        "fire",
-        "purpose",
-        "using",
+        "vertical",
+        "spatial",
         "location",
         "exposing",
         "face",
-        "vertical",
+        "sentences",
+        "separation",
         "plane",
         "actual",
         "measured",
-        "sentences"
+        "buildings",
+        "limiting",
+        "purpose"
       ],
       "division": "B"
     },
@@ -45587,21 +45669,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "exposing",
-        "face",
-        "accessory",
-        "detached",
-        "dwelling",
-        "garage",
-        "limiting",
-        "property",
-        "distance",
         "unit",
-        "need",
-        "thick",
+        "detached",
         "cladding",
-        "rating"
+        "distance",
+        "rating",
+        "spatial",
+        "face",
+        "exposing",
+        "thick",
+        "separation",
+        "property",
+        "garage",
+        "buildings",
+        "need",
+        "dwelling"
       ],
       "division": "B"
     },
@@ -45665,19 +45747,19 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "area",
-        "exposing",
+        "separation",
+        "glazed",
+        "fire",
         "face",
+        "exposing",
+        "houses",
+        "openings",
+        "spatial",
         "exterior",
-        "wall",
-        "vertical",
         "plane",
+        "wall",
         "taken",
         "measured",
-        "fire",
-        "glazed",
-        "openings",
         "room",
         "space"
       ],
@@ -45761,21 +45843,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "face",
-        "exposing",
-        "thick",
-        "property",
-        "gypsum",
-        "dwelling",
-        "accessory",
-        "line",
-        "installed",
         "unit",
         "detached",
+        "roof",
+        "gypsum",
+        "line",
+        "houses",
+        "exposing",
+        "face",
+        "spatial",
+        "separation",
+        "installed",
+        "property",
         "garage",
         "wall",
-        "roof"
+        "thick"
       ],
       "division": "B"
     },
@@ -45792,7 +45874,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "blocks",
+        "fire"
+      ]
     },
     {
       "id": "B-9.10.16",
@@ -46064,17 +46150,18 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "surface",
-        "flame-spread",
-        "rating",
-        "total",
-        "wall",
-        "public",
-        "corridor",
-        "sprinklered",
         "upper",
         "half",
-        "walls"
+        "corridor",
+        "public",
+        "surface",
+        "walls",
+        "rating",
+        "sprinklered",
+        "flame-spread",
+        "wall",
+        "limits",
+        "total"
       ],
       "division": "B"
     },
@@ -46429,21 +46516,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "rooms",
-        "dwelling",
-        "units",
-        "fire",
-        "alarm",
-        "detectors",
-        "within",
-        "smoke",
-        "sprinklered",
-        "installed",
-        "buildings",
         "recirculating",
+        "building",
+        "units",
+        "detectors",
+        "systems",
         "one",
-        "building"
+        "sprinklered",
+        "detection",
+        "installed",
+        "within",
+        "rooms",
+        "buildings",
+        "dwelling",
+        "system",
+        "smoke"
       ],
       "division": "B"
     },
@@ -46756,21 +46843,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "smoke",
-        "fire",
-        "alarm",
-        "alarms",
-        "they",
-        "suites",
-        "residential",
-        "occupancy",
-        "equipped",
-        "detectors",
-        "installed",
         "ulc-s524",
         "standard",
+        "they",
+        "residential",
+        "detectors",
+        "suites",
+        "systems",
+        "installed",
+        "occupancy",
+        "equipped",
         "installation",
-        "systems"
+        "alarms",
+        "smoke",
+        "fire",
+        "alarm"
       ],
       "division": "B"
     },
@@ -47122,7 +47209,10 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-9"
+        "a-9",
+        "protection",
+        "noise",
+        "airborne"
       ],
       "division": "B"
     },
@@ -47268,7 +47358,8 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-table"
+        "a-table",
+        "general"
       ],
       "division": "B"
     },
@@ -47536,20 +47627,20 @@
       },
       "keywords": [
         "concrete",
+        "trenches",
+        "beneath",
+        "block",
+        "ice",
+        "protected",
+        "walls",
+        "foundation",
         "backfill",
         "material",
-        "block",
         "concentration",
-        "susceptible",
-        "ice",
-        "lensing",
-        "foundation",
-        "walls",
         "cast-in-place",
         "insulated",
-        "exterior",
-        "protected",
-        "serves"
+        "serves",
+        "exterior"
       ],
       "division": "B"
     },
@@ -47789,21 +47880,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "interior",
-        "foundation",
-        "wall",
-        "surface",
-        "insulation",
-        "ground",
-        "level",
-        "finish",
-        "walls",
         "moisture",
-        "contact",
         "protection",
-        "finishes",
+        "walls",
+        "foundation",
+        "surface",
+        "finish",
+        "contact",
+        "ground",
         "membrane",
-        "coating"
+        "level",
+        "coating",
+        "wall",
+        "dampproofing",
+        "interior",
+        "insulation"
       ],
       "division": "B"
     },
@@ -47996,21 +48087,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "waterproofing",
-        "membrane",
-        "waterproofed",
         "during",
-        "system",
-        "surface",
         "protected",
         "suitable",
+        "surface",
         "material",
         "minimize",
+        "membrane",
+        "waterproofing",
+        "waterproofed",
         "mechanical",
+        "carried",
         "damage",
         "backfilling",
-        "area",
-        "carried"
+        "system",
+        "area"
       ],
       "division": "B"
     },
@@ -48142,21 +48233,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "vertical",
-        "radon",
-        "stack",
-        "passive",
-        "space",
-        "within",
-        "a-9",
         "above",
-        "roof",
         "cylindrical",
         "conditioned",
-        "clauses",
         "cgsb-149",
+        "roof",
         "control",
-        "options"
+        "passive",
+        "clauses",
+        "options",
+        "a-9",
+        "within",
+        "gas",
+        "stack",
+        "soil",
+        "vertical"
       ],
       "division": "B"
     },
@@ -48369,20 +48460,20 @@
       },
       "keywords": [
         "tile",
-        "pipe",
-        "drain",
         "top",
-        "joints",
-        "laid",
-        "covered",
-        "material",
+        "slab",
         "undisturbed",
-        "well-compacted",
-        "soil",
-        "below",
-        "bottom",
         "floor",
-        "slab"
+        "material",
+        "laid",
+        "drainage",
+        "joints",
+        "bottom",
+        "drain",
+        "covered",
+        "pipe",
+        "below",
+        "soil"
       ],
       "division": "B"
     },
@@ -48833,16 +48924,17 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "buildings",
-        "erected",
-        "permafrost",
         "foundations",
-        "designed",
-        "designer",
+        "requirements",
         "competent",
+        "designer",
+        "permafrost",
         "field",
         "appropriate",
-        "requirements"
+        "application",
+        "buildings",
+        "erected",
+        "designed"
       ],
       "division": "B"
     },
@@ -49161,21 +49253,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "foundation",
-        "wall",
-        "width",
-        "footing",
-        "storey",
-        "construction",
+        "masonry",
         "supported",
         "walls",
-        "twice",
-        "sentences",
-        "area",
-        "masonry",
+        "foundation",
         "rests",
         "gravel",
-        "sand"
+        "twice",
+        "construction",
+        "sentences",
+        "storey",
+        "width",
+        "wall",
+        "sand",
+        "footings",
+        "area"
       ],
       "division": "B"
     },
@@ -49347,20 +49439,20 @@
       },
       "keywords": [
         "concrete",
-        "walls",
-        "wall",
-        "foundation",
-        "block",
-        "reinforced",
         "top",
+        "block",
+        "flat",
+        "walls",
+        "foundation",
+        "reinforced",
         "lateral",
-        "reinforcement",
-        "thickness",
-        "greater",
-        "installed",
         "made",
         "core",
-        "flat"
+        "installed",
+        "wall",
+        "thickness",
+        "reinforcement",
+        "greater"
       ],
       "division": "B"
     },
@@ -49474,21 +49566,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "foundation",
-        "walls",
+        "concrete",
+        "spaced",
+        "form",
         "flat",
         "insulating",
-        "concrete",
-        "form",
+        "foundation",
+        "walls",
+        "reinforced",
         "cold",
         "joints",
-        "reinforced",
         "one",
-        "bar",
-        "spaced",
         "embedded",
-        "sides",
-        "joint"
+        "joint",
+        "bar",
+        "sides"
       ],
       "division": "B"
     },
@@ -49725,18 +49817,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "concrete",
         "top",
-        "pilasters",
-        "solid",
         "masonry",
-        "cells",
-        "hollow",
-        "semi-solid",
+        "solid",
+        "pilasters",
         "units",
-        "filled",
         "mortar",
         "grout",
-        "concrete"
+        "parging",
+        "walls",
+        "foundation",
+        "finishing",
+        "cells",
+        "filled",
+        "hollow"
       ],
       "division": "B"
     },
@@ -51195,21 +51290,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "register",
+        "beneath",
+        "extend",
+        "protection",
+        "protected",
+        "projection",
+        "material",
+        "crawl",
+        "ground",
         "opening",
         "noncombustible",
-        "combustible",
-        "ground",
         "cover",
-        "crawl",
+        "register",
+        "combustible",
         "spaces",
-        "protected",
-        "beneath",
-        "material",
-        "protection",
-        "extend",
-        "beyond",
-        "projection"
+        "venting"
       ],
       "division": "B"
     },
@@ -51477,7 +51572,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "masonry",
+        "units"
+      ]
     },
     {
       "id": "B-9.20.2",
@@ -52083,14 +52182,16 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "slab",
-        "panel",
-        "facings",
-        "precast",
         "concrete",
+        "slab",
+        "facings",
         "natural",
         "artificial",
-        "stone"
+        "panel",
+        "thickness",
+        "stone",
+        "height",
+        "precast"
       ],
       "division": "B"
     },
@@ -52772,21 +52873,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ties",
-        "corrosion-resistant",
         "steel",
-        "spaced",
-        "vertically",
-        "shaped",
-        "provide",
-        "mechanical",
-        "key",
-        "develop",
-        "strength",
+        "roofs",
+        "ties",
         "walls",
         "end",
+        "floors",
+        "strength",
+        "corrosion-resistant",
+        "spaced",
+        "provide",
         "tying",
-        "used"
+        "used",
+        "anchorage",
+        "develop",
+        "key"
       ],
       "division": "B"
     },
@@ -53172,21 +53273,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "flashing",
-        "sheathing",
+        "beneath",
         "masonry",
-        "walls",
-        "installed",
-        "veneer",
-        "membrane",
-        "insulating",
-        "beyond",
         "outer",
-        "face",
-        "building",
         "element",
-        "below",
-        "beneath"
+        "control",
+        "walls",
+        "veneer",
+        "sheathing",
+        "insulating",
+        "membrane",
+        "penetration",
+        "face",
+        "flashing",
+        "installed",
+        "below"
       ],
       "division": "B"
     },
@@ -53861,7 +53962,11 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "chimney",
+        "flues"
+      ]
     },
     {
       "id": "B-9.21.2",
@@ -54082,19 +54187,19 @@
       },
       "keywords": [
         "chimney",
-        "joints",
-        "liners",
         "provide",
-        "flue",
-        "sealed",
-        "barrier",
         "passage",
+        "masonry",
+        "sealed",
+        "joints",
+        "lining",
         "gases",
         "condensate",
-        "cavity",
+        "barrier",
+        "flue",
         "liner",
         "surrounding",
-        "masonry",
+        "cavity",
         "clay"
       ],
       "division": "B"
@@ -54615,7 +54720,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "clearance",
+        "combustible",
+        "construction"
+      ]
     },
     {
       "id": "B-9.21.5",
@@ -55107,7 +55217,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "damper"
+      ]
     },
     {
       "id": "B-9.22.6",
@@ -55802,20 +55915,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "greater",
-        "sheathing",
-        "wall",
-        "braced",
-        "kpa",
+        "equal",
+        "fasteners",
         "spectral",
-        "acceleration",
         "roof",
-        "seismic",
-        "in-50",
-        "hourly",
+        "sheathing",
         "wind",
         "pressure",
-        "equal",
+        "braced",
+        "connectors",
+        "in-50",
+        "hourly",
+        "wall",
+        "seismic",
+        "kpa",
         "fastening"
       ],
       "division": "B"
@@ -55978,20 +56091,20 @@
       },
       "keywords": [
         "roofing",
-        "roof",
-        "additional",
-        "load",
-        "materials",
-        "spans",
-        "span",
-        "tables",
-        "support",
-        "uniform",
         "dead",
         "concrete",
         "tile",
+        "roof",
+        "maximum",
+        "uniform",
+        "materials",
+        "span",
+        "load",
+        "support",
+        "spans",
+        "tiles",
         "clay",
-        "tiles"
+        "tables"
       ],
       "division": "B"
     },
@@ -56224,21 +56337,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "columns",
-        "posts",
-        "anchored",
-        "resist",
-        "uplift",
-        "movement",
-        "exterior",
-        "lateral",
-        "support",
-        "platforms",
-        "ground",
         "joists",
-        "attached",
+        "anchorage",
+        "posts",
+        "lateral",
         "structure",
-        "sentences"
+        "support",
+        "ground",
+        "platforms",
+        "sentences",
+        "exterior",
+        "columns",
+        "movement",
+        "resist",
+        "anchored",
+        "attached"
       ],
       "division": "B"
     },
@@ -56564,21 +56677,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "bridging",
-        "strapping",
-        "span",
         "joists",
-        "furring",
-        "located",
-        "support",
-        "rows",
-        "fastened",
-        "consist",
-        "ceiling",
+        "solid",
         "wood",
         "comply",
-        "solid",
-        "blocking"
+        "floor",
+        "bridging",
+        "span",
+        "support",
+        "strapping",
+        "rows",
+        "fastened",
+        "furring",
+        "ceiling",
+        "blocking",
+        "located"
       ],
       "division": "B"
     },
@@ -57042,20 +57155,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "top",
-        "walls",
-        "loadbearing",
         "plates",
-        "wall",
-        "nails",
-        "tied",
+        "top",
         "steel",
         "single",
+        "nails",
         "used",
-        "floors",
-        "one",
+        "loadbearing",
+        "walls",
         "side",
         "lintel",
+        "floors",
+        "one",
+        "wall",
+        "tied",
         "thick"
       ],
       "division": "B"
@@ -57216,7 +57329,16 @@
         "b": 259.10699999999997,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "loads",
+        "due",
+        "bracing",
+        "earthquake",
+        "resist",
+        "lateral",
+        "wind"
+      ]
     },
     {
       "id": "B-9.23.13.2",
@@ -57424,21 +57546,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "wall",
-        "braced",
-        "length",
+        "wood-based",
+        "spaced",
+        "parallel",
         "panels",
+        "reduced",
+        "roof",
+        "material",
+        "braced",
         "band",
         "constructed",
-        "exterior",
-        "wood-based",
-        "material",
-        "reduced",
-        "additional",
-        "parallel",
+        "length",
         "adjacent",
-        "interior",
-        "spaced"
+        "exterior",
+        "wall",
+        "ceiling"
       ],
       "division": "B"
     },
@@ -57654,21 +57776,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "nails",
         "joists",
         "rafters",
-        "ceiling",
-        "ridge",
-        "referred",
-        "minimum",
-        "number",
+        "nails",
         "roof",
-        "beam",
         "supported",
-        "members",
-        "nail",
         "maximum",
-        "connections"
+        "members",
+        "connections",
+        "minimum",
+        "nail",
+        "beam",
+        "ceiling",
+        "referred",
+        "ridge",
+        "number"
       ],
       "division": "B"
     },
@@ -57914,20 +58036,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "conforming",
-        "grade",
-        "osb",
-        "thick",
-        "waferboard",
-        "joists",
-        "subflooring",
-        "csa",
-        "o-1",
-        "o-2",
-        "r-1",
-        "sentences",
         "flooring",
+        "conforming",
+        "joists",
+        "waferboard",
+        "r-1",
+        "osb",
+        "csa",
         "o437",
+        "subflooring",
+        "grade",
+        "sentences",
+        "o-2",
+        "thick",
+        "o-1",
         "right"
       ],
       "division": "B"
@@ -58212,21 +58334,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "roof",
-        "thickness",
-        "sheathing",
         "used",
-        "rating",
-        "walking",
-        "deck",
-        "either",
-        "continuous",
-        "sheet",
+        "roof",
         "forming",
         "flat",
+        "sheet",
+        "deck",
+        "sheathing",
+        "rating",
         "subfloors",
+        "asphalt-impregnated",
+        "continuous",
+        "either",
+        "walking",
         "asphalt-coated",
-        "asphalt-impregnated"
+        "thickness"
       ],
       "division": "B"
     },
@@ -58429,7 +58551,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "general"
+      ]
     },
     {
       "id": "B-9.24.1",
@@ -59102,21 +59227,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "insulation",
-        "standard",
-        "installed",
-        "buildings",
-        "thermal",
-        "a-9",
-        "face",
-        "full",
-        "fibre",
         "polyurethane",
+        "standard",
         "boards",
         "insulating",
         "contact",
         "ground",
-        "space"
+        "face",
+        "installed",
+        "a-9",
+        "buildings",
+        "full",
+        "fibre",
+        "space",
+        "insulation",
+        "thermal"
       ],
       "division": "B"
     },
@@ -59307,21 +59432,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
-        "barrier",
-        "wall",
-        "system",
-        "floor",
-        "sealed",
         "masonry",
         "through",
-        "exterior",
+        "floor",
         "across",
         "walls",
+        "systems",
         "leakage",
-        "interior",
+        "barrier",
+        "exterior",
+        "air",
+        "wall",
         "projects",
-        "ceiling"
+        "ceiling",
+        "system",
+        "interior"
       ],
       "division": "B"
     },
@@ -59507,7 +59632,14 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "envelope",
+        "properties",
+        "materials",
+        "building",
+        "position"
+      ]
     },
     {
       "id": "B-9.25.5",
@@ -59878,6 +60010,8 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "flashing",
+        "intersections",
         "forming"
       ],
       "division": "B"
@@ -60117,20 +60251,20 @@
       },
       "keywords": [
         "chimney",
-        "roof",
+        "roofing",
         "saddles",
+        "equal",
+        "roof",
+        "sheet",
+        "intersection",
         "flashing",
         "installed",
-        "sheet",
         "metal",
-        "roofing",
         "flashed",
-        "intersection",
-        "saddle",
         "counterflashed",
-        "height",
-        "equal",
-        "otherwise"
+        "saddle",
+        "otherwise",
+        "height"
       ],
       "division": "B"
     },
@@ -60527,7 +60661,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "slopes",
+        "shingles",
+        "asphalt"
+      ]
     },
     {
       "id": "B-9.26.8",
@@ -61043,10 +61182,12 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "shakes",
         "long",
-        "exposure",
+        "roof",
         "wood",
+        "shakes",
+        "exposure",
+        "cedar",
         "exceed"
       ],
       "division": "B"
@@ -61517,21 +61658,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sheet",
-        "metal",
         "roofing",
-        "supported",
-        "roof",
-        "decking",
-        "spans",
         "spaced",
-        "supports",
-        "panels",
-        "designed",
-        "support",
-        "live",
         "loads",
-        "roofs"
+        "roofs",
+        "roof",
+        "supported",
+        "panels",
+        "sheet",
+        "decking",
+        "support",
+        "metal",
+        "spans",
+        "supports",
+        "live",
+        "designed"
       ],
       "division": "B"
     },
@@ -61911,21 +62052,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "protection",
-        "wall",
-        "first",
-        "plane",
-        "cladding",
-        "constructed",
-        "exterior",
-        "precipitation",
-        "second",
-        "walls",
-        "air",
-        "spaces",
         "moisture",
-        "exposed",
-        "space"
+        "protection",
+        "walls",
+        "constructed",
+        "first",
+        "exterior",
+        "plane",
+        "wall",
+        "air",
+        "precipitation",
+        "spaces",
+        "second",
+        "cladding",
+        "space",
+        "exposed"
       ],
       "division": "B"
     },
@@ -62104,21 +62245,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "sheathing",
-        "membrane",
-        "joints",
-        "panels",
-        "subject",
         "moisture",
         "deterioration",
-        "sealed",
-        "a-9",
+        "panels",
         "used",
-        "framing",
         "layer",
         "insulating",
+        "lapped",
+        "sheathing",
+        "protection",
+        "membrane",
+        "joints",
+        "subject",
         "installed",
-        "lapped"
+        "a-9",
+        "plane"
       ],
       "division": "B"
     },
@@ -62440,21 +62581,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "wood",
+        "masonry",
         "horizontal",
-        "spacing",
-        "web",
-        "fastening",
-        "strips",
-        "options",
-        "screws",
-        "attached",
-        "furring",
+        "wood",
         "members",
-        "two",
-        "given",
         "accommodate",
-        "masonry"
+        "screws",
+        "web",
+        "spacing",
+        "attachment",
+        "options",
+        "strips",
+        "furring",
+        "given",
+        "cladding",
+        "fastening"
       ],
       "division": "B"
     },
@@ -63219,21 +63360,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "osb",
-        "waferboard",
-        "cladding",
-        "joints",
-        "strips",
         "conforming",
-        "grade",
-        "thick",
         "supports",
+        "waferboard",
         "spaced",
+        "osb",
         "directly",
-        "framing",
+        "r-1",
+        "joints",
+        "grade",
+        "strips",
         "furring",
+        "thick",
+        "cladding",
         "o-1",
-        "r-1"
+        "framing"
       ],
       "division": "B"
     },
@@ -63607,21 +63748,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "stucco",
-        "masonry",
-        "lath",
-        "reinforcing",
-        "used",
-        "attach",
-        "substrate",
-        "soft-burned",
         "tile",
-        "brick",
-        "strength",
+        "masonry",
+        "used",
         "surface",
+        "brick",
+        "soft-burned",
+        "sufficiently",
+        "attach",
         "sound",
+        "lath",
+        "substrate",
+        "strength",
         "clean",
-        "sufficiently"
+        "general",
+        "stucco"
       ],
       "division": "B"
     },
@@ -64014,21 +64155,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "lath",
-        "stucco",
+        "long",
         "horizontal",
-        "vertical",
+        "lapped",
+        "staggered",
+        "members",
+        "end",
         "joints",
         "corners",
-        "reinforcing",
-        "long",
-        "dimension",
-        "lapped",
-        "end",
-        "staggered",
+        "lath",
         "occur",
+        "stucco",
+        "vertical",
+        "dimension",
         "framing",
-        "members"
+        "reinforcing"
       ],
       "division": "B"
     },
@@ -64778,21 +64919,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "ceiling",
         "nails",
-        "supports",
+        "gypsum",
+        "walls",
+        "joints",
+        "board",
         "wall",
-        "vertical",
-        "single-layer",
-        "application",
-        "spaced",
+        "ceiling",
         "every",
-        "along",
-        "pairs",
-        "apart",
         "sheets",
-        "support",
-        "walls"
+        "supports",
+        "single-layer",
+        "spaced",
+        "along",
+        "apart",
+        "support"
       ],
       "division": "B"
     },
@@ -65089,14 +65230,15 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "hardboard",
-        "edges",
         "supported",
-        "furring",
-        "blocking",
-        "framing",
+        "finish",
+        "continuous",
         "backing",
-        "continuous"
+        "furring",
+        "edges",
+        "blocking",
+        "hardboard",
+        "framing"
       ],
       "division": "B"
     },
@@ -65593,21 +65735,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "wood",
-        "e96",
-        "e96m",
+        "flooring",
+        "vapor",
         "standard",
-        "test",
+        "e96",
+        "wood",
+        "supporting",
         "methods",
         "water",
-        "vapor",
-        "transmission",
         "materials",
-        "a-9",
-        "sleepers",
-        "supporting",
         "finished",
-        "flooring"
+        "transmission",
+        "a-9",
+        "general",
+        "sleepers",
+        "e96m"
       ],
       "division": "B"
     },
@@ -65920,20 +66062,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "staples",
-        "face",
-        "nails",
-        "countersunk",
-        "used",
-        "fasten",
-        "wood",
         "strip",
         "flooring",
-        "thickness",
         "long",
-        "shank",
+        "used",
+        "nails",
+        "wood",
         "diameter",
-        "crowns"
+        "staples",
+        "crowns",
+        "face",
+        "shank",
+        "thickness",
+        "fasten",
+        "countersunk"
       ],
       "division": "B"
     },
@@ -66457,7 +66599,13 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "water",
+        "service",
+        "facilities",
+        "heating"
+      ]
     },
     {
       "id": "B-9.31.6",
@@ -66912,20 +67060,20 @@
       },
       "keywords": [
         "ventilation",
-        "principal",
-        "fan",
-        "fans",
-        "system",
-        "air",
-        "manual",
-        "a-9",
-        "exhaust",
-        "switch",
-        "located",
         "automatic",
         "control",
+        "duct",
+        "heating-season",
+        "principal",
+        "switch",
         "components",
-        "duct"
+        "fans",
+        "mechanical",
+        "exhaust",
+        "a-9",
+        "air",
+        "located",
+        "manual"
       ],
       "division": "B"
     },
@@ -67006,7 +67154,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "ventilation",
+        "heating-season",
+        "mechanical"
+      ]
     },
     {
       "id": "B-9.32.3.7",
@@ -67118,20 +67271,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fans",
+        "determined",
+        "ventilation",
+        "ventilators",
+        "capacity",
         "rating",
+        "heating-season",
+        "mechanical",
         "performance",
         "heat",
-        "ventilators",
-        "temperature",
-        "ratings",
-        "mechanical",
-        "test",
-        "ventilation",
+        "fans",
         "outdoor",
         "rooms",
-        "capacity",
-        "determined",
+        "temperature",
+        "test",
         "csa-c260-m"
       ],
       "division": "B"
@@ -67488,20 +67641,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "system",
-        "single",
-        "heating",
-        "serves",
-        "house",
         "secondary",
-        "suite",
-        "individual",
-        "temperature",
-        "controls",
-        "dwelling",
-        "unit",
+        "heating",
+        "house",
+        "a-9",
         "served",
-        "a-9"
+        "temperature",
+        "dwelling",
+        "controls",
+        "single",
+        "unit",
+        "requirements",
+        "air-conditioning",
+        "general",
+        "serves",
+        "systems"
       ],
       "division": "B"
     },
@@ -67907,21 +68061,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "moisture",
         "used",
         "duct",
-        "air",
-        "materials",
-        "referred",
-        "sentences",
-        "location",
         "they",
+        "materials",
+        "wet",
+        "systems",
+        "loss",
+        "sentences",
         "subjected",
         "excessive",
-        "moisture",
-        "appreciable",
-        "loss",
+        "air",
+        "referred",
         "strength",
-        "wet"
+        "appreciable"
       ],
       "division": "B"
     },
@@ -68067,21 +68221,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "plenum",
-        "clearance",
-        "duct",
-        "distance",
-        "furnace",
-        "supply",
-        "ducts",
-        "combustible",
-        "horizontal",
-        "register",
-        "material",
-        "within",
         "equal",
         "reduced",
-        "beyond"
+        "duct",
+        "horizontal",
+        "distance",
+        "material",
+        "clearance",
+        "supply",
+        "furnace",
+        "systems",
+        "ducts",
+        "within",
+        "air",
+        "combustible",
+        "register"
       ],
       "division": "B"
     },
@@ -68257,21 +68411,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
+        "adsorption",
         "used",
-        "return",
-        "furnace",
-        "filters",
-        "filter",
-        "units",
-        "installed",
-        "spaces",
         "duct",
-        "openings",
-        "fan",
+        "units",
+        "return",
+        "systems",
+        "filters",
+        "furnace",
         "combustion",
+        "filter",
+        "openings",
+        "installed",
         "access",
-        "adsorption"
+        "air",
+        "spaces"
       ],
       "division": "B"
     },
@@ -68550,7 +68704,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "chimneys",
+        "venting",
+        "equipment"
+      ]
     },
     {
       "id": "B-9.33.10",
@@ -69432,7 +69591,10 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "general"
+      ]
     },
     {
       "id": "B-9.36.1",
@@ -69751,20 +69913,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "regardless",
-        "path",
-        "selected",
-        "area",
-        "space",
-        "thermal",
-        "doors",
-        "overall",
-        "transmittance",
-        "fenestration",
-        "skylights",
-        "separating",
         "conditioned",
+        "skylights",
+        "envelope",
+        "path",
+        "doors",
+        "building",
+        "overall",
+        "fenestration",
+        "transmittance",
         "unconditioned",
+        "space",
+        "regardless",
+        "selected",
+        "separating",
         "total"
       ],
       "division": "B"
@@ -69783,21 +69945,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "thermal",
-        "resistance",
-        "minimum",
-        "heating-degree",
-        "day",
-        "category",
+        "envelope",
+        "integral",
+        "perimeter",
+        "floor",
         "insulated",
         "ground",
-        "perimeter",
-        "level",
-        "floor",
-        "wall",
+        "minimum",
         "sentences",
-        "integral",
-        "footing"
+        "level",
+        "day",
+        "category",
+        "wall",
+        "heating-degree",
+        "resistance",
+        "building"
       ],
       "division": "B"
     },
@@ -69847,21 +70009,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
-        "barrier",
-        "material",
-        "sealing",
-        "constructed",
         "airtight",
-        "wall",
+        "envelope",
+        "materials",
+        "material",
         "structural",
         "components",
-        "a-9",
         "joints",
+        "constructed",
         "adjacent",
-        "building",
-        "envelope",
-        "materials"
+        "barrier",
+        "sealing",
+        "air",
+        "wall",
+        "a-9",
+        "building"
       ],
       "division": "B"
     },
@@ -70086,21 +70248,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "heating",
-        "space",
-        "controls",
         "cooling",
-        "temperature",
-        "heat",
-        "energy",
-        "set-point",
-        "prevent",
-        "devices",
         "used",
+        "requirements",
+        "devices",
+        "prevent",
+        "manually",
+        "heating",
+        "heat",
+        "set-point",
+        "energy",
         "thermostat",
+        "temperature",
         "system",
-        "supplementary",
-        "manually"
+        "controls",
+        "space"
       ],
       "division": "B"
     },
@@ -70227,21 +70389,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "performance",
-        "heating",
+        "factor",
+        "combined",
+        "requirements",
+        "coefficient",
         "water",
         "systems",
-        "thermal",
-        "btu",
-        "factor",
         "decorative",
-        "requirements",
+        "heating",
+        "performance",
+        "heat",
+        "btu",
         "efficiency",
-        "combined",
         "energy-efficiency",
-        "ratio",
-        "coefficient",
-        "heat"
+        "hvac",
+        "ratio"
       ],
       "division": "B"
     },
@@ -70338,21 +70500,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "water",
+        "uef",
+        "heating",
+        "volume",
+        "installed",
         "service",
-        "performance",
-        "thermal",
+        "storage",
         "energy",
         "factor",
-        "efficiency",
-        "uef",
-        "installed",
-        "storage",
-        "heaters",
-        "heating",
+        "requirements",
+        "water",
         "systems",
-        "volume",
-        "requirements"
+        "performance",
+        "heaters",
+        "efficiency",
+        "thermal"
       ],
       "division": "B"
     },
@@ -70481,21 +70643,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "energy",
-        "annual",
-        "consumption",
-        "a-9",
-        "performance",
-        "proposed",
-        "target",
-        "components",
-        "systems",
         "assemblies",
-        "prescriptive",
+        "proposed",
         "requirements",
         "calculations",
-        "establishing"
+        "systems",
+        "target",
+        "components",
+        "compliance",
+        "performance",
+        "establishing",
+        "a-9",
+        "annual",
+        "prescriptive",
+        "consumption",
+        "building"
       ],
       "division": "B"
     },
@@ -70705,21 +70867,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "energy",
-        "building",
-        "walls",
-        "thermal",
-        "assembly",
-        "proposed",
-        "site",
-        "model",
         "assemblies",
-        "mass",
+        "envelope",
+        "proposed",
         "calculations",
+        "walls",
+        "mass",
+        "assembly",
+        "model",
         "area",
+        "compliance",
+        "performance",
+        "site",
+        "building",
         "calculated",
-        "solar",
-        "envelope"
+        "energy"
       ],
       "division": "B"
     },
@@ -70944,21 +71106,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "gypsum",
-        "board",
-        "material",
-        "absorptive",
-        "cavity",
-        "type",
-        "spaced",
-        "f20",
-        "spans",
         "concrete",
+        "spaced",
+        "absorptive",
         "wood",
+        "gypsum",
         "channels",
-        "f10-os3",
+        "material",
+        "statements",
+        "support",
+        "objectives",
         "metal",
-        "support"
+        "board",
+        "f10-os3",
+        "spans",
+        "type"
       ],
       "division": "B"
     },
@@ -74298,21 +74460,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "area",
-        "floor",
-        "alteration",
-        "one",
-        "building",
-        "existing",
-        "serving",
         "barrier-free",
-        "washroom",
-        "application",
-        "excluded",
         "path",
-        "travel",
+        "floor",
+        "pedestrian",
+        "serving",
+        "one",
+        "alteration",
+        "accessibility",
+        "existing",
+        "washroom",
+        "excluded",
         "connect",
-        "pedestrian"
+        "application",
+        "building",
+        "area"
       ],
       "division": "B"
     },
@@ -74923,7 +75085,12 @@
         "b": 740.788,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "objectives",
+        "statements",
+        "functional"
+      ]
     },
     {
       "id": "B-10.10.1",

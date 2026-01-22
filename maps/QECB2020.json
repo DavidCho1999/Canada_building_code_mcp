@@ -681,7 +681,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "A"
+      "division": "A",
+      "keywords": [
+        "symbols",
+        "abbreviations"
+      ]
     },
     {
       "id": "A-1.4.2",
@@ -822,7 +826,10 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "A"
+      "division": "A",
+      "keywords": [
+        "organizations"
+      ]
     },
     {
       "id": "A-1.5.2",
@@ -1322,7 +1329,12 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "phrases",
+        "definitions",
+        "words"
+      ]
     },
     {
       "id": "B-1.2.1",
@@ -1475,21 +1487,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "code",
         "referenced",
-        "documents",
-        "editions",
-        "accuracy",
-        "information",
-        "they",
-        "designated",
         "a-1",
         "forming",
-        "while",
-        "every",
+        "accuracy",
+        "code",
+        "information",
+        "they",
         "effort",
+        "documents",
+        "ensure",
+        "every",
+        "while",
+        "designated",
         "made",
-        "ensure"
+        "editions"
       ],
       "division": "B"
     },
@@ -1522,19 +1534,20 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-1",
-        "options",
-        "abbreviations",
+        "necb",
+        "available",
+        "organizations",
         "proper",
-        "names",
+        "a-1",
         "code",
         "meanings",
-        "assigned",
-        "them",
-        "necb",
-        "shows",
+        "names",
         "three",
-        "available"
+        "options",
+        "assigned",
+        "abbreviations",
+        "them",
+        "shows"
       ],
       "division": "B"
     },
@@ -1828,21 +1841,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "fenestration",
         "assemblies",
-        "thermal",
-        "building",
-        "performance",
+        "determined",
+        "doors",
+        "fenestration",
+        "door",
         "a-3",
-        "area",
-        "a440",
+        "areas",
+        "performance",
         "air",
         "temperature",
-        "areas",
-        "doors",
-        "determined",
+        "general",
+        "building",
+        "area",
         "using",
-        "door"
+        "a440"
       ],
       "division": "B"
     },
@@ -1892,21 +1905,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "air",
+        "assemblies",
+        "assessed",
         "standard",
         "doors",
+        "curtain",
+        "fenestration",
         "walls",
-        "leakage",
         "csa",
         "windows",
-        "assemblies",
-        "building",
-        "curtain",
-        "specification",
-        "fenestration",
-        "aama",
+        "leakage",
         "barrier",
-        "assessed"
+        "aama",
+        "air",
+        "general",
+        "specification"
       ],
       "division": "B"
     },
@@ -2606,21 +2619,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "path",
-        "a-3",
-        "building",
-        "requirements",
-        "performance",
-        "code",
-        "objective",
-        "functional",
-        "statements",
-        "example",
-        "heat",
-        "paths",
-        "achieved",
         "envelope",
-        "purpose"
+        "path",
+        "requirements",
+        "code",
+        "a-3",
+        "achieved",
+        "statements",
+        "performance",
+        "heat",
+        "example",
+        "functional",
+        "purpose",
+        "building",
+        "paths",
+        "objective"
       ],
       "division": "B"
     },
@@ -2638,21 +2651,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "thermal",
-        "building",
-        "calculation",
         "assemblies",
+        "fenestration",
         "a-3",
         "assembly",
-        "fenestration",
-        "area",
-        "resistance",
-        "opaque",
-        "method",
         "effective",
-        "calculating",
         "simplified",
-        "frame"
+        "frame",
+        "opaque",
+        "calculating",
+        "application",
+        "resistance",
+        "building",
+        "calculation",
+        "area",
+        "method"
       ],
       "division": "B"
     },
@@ -3065,21 +3078,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "space",
-        "power",
-        "assembly",
-        "interior",
-        "lighting",
-        "considered",
-        "spaces",
         "building",
-        "allowance",
+        "lighting",
+        "assembly",
         "one",
         "a-4",
         "installed",
+        "allowance",
+        "composed",
+        "spaces",
+        "considered",
+        "power",
+        "interior",
+        "space",
         "exceed",
-        "method",
-        "composed"
+        "method"
       ],
       "division": "B"
     },
@@ -3161,21 +3174,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "determined",
+        "controls",
         "lighting",
-        "space",
+        "surface",
+        "floor",
+        "area",
+        "work",
+        "interior",
+        "allowance",
         "power",
         "type",
-        "surface",
-        "area",
-        "controls",
-        "interior",
-        "portion",
-        "allowance",
+        "calculated",
+        "space",
         "using",
-        "floor",
-        "work",
-        "determined",
-        "calculated"
+        "portion"
       ],
       "division": "B"
     },
@@ -3662,7 +3675,8 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "a-1"
+        "a-1",
+        "general"
       ],
       "division": "B"
     },
@@ -4034,7 +4048,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "equipment",
+        "sizing"
+      ]
     },
     {
       "id": "B-5.2.1",
@@ -4332,20 +4350,20 @@
       },
       "keywords": [
         "cooling",
+        "chill",
+        "capable",
+        "use",
+        "systems",
+        "mechanical",
+        "evaporation",
         "air",
         "outdoor",
-        "hvac",
-        "systems",
-        "reduce",
-        "mechanical",
-        "energy",
-        "use",
-        "using",
-        "chill",
         "distribution",
         "fluid",
-        "evaporation",
-        "capable"
+        "reduce",
+        "hvac",
+        "energy",
+        "using"
       ],
       "division": "B"
     },
@@ -4898,21 +4916,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "walls",
-        "away",
-        "otherwise",
-        "stated",
-        "manufacturer",
-        "instructions",
-        "barrier-free",
-        "installations",
-        "stratified",
-        "ventilation",
-        "sensors",
-        "wall-mounted",
         "thermostats",
+        "installations",
+        "away",
+        "barrier-free",
+        "ventilation",
+        "above",
+        "controls",
+        "walls",
+        "wall-mounted",
+        "manufacturer",
+        "stratified",
         "installed",
-        "above"
+        "sensors",
+        "otherwise",
+        "temperature"
       ],
       "division": "B"
     },
@@ -5090,21 +5108,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "energy",
-        "temperature",
-        "heat",
-        "capacity",
-        "exhaust",
-        "air",
-        "recovery",
-        "energy-recovery",
-        "equipment",
         "sensible",
-        "efficiency",
+        "flow",
+        "capacity",
+        "equipment",
         "established",
-        "heating",
+        "dehumidification",
         "test",
-        "flow"
+        "energy-recovery",
+        "heating",
+        "heat",
+        "exhaust",
+        "humidification",
+        "air",
+        "temperature",
+        "recovery"
       ],
       "division": "B"
     },
@@ -5297,21 +5315,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "measured",
-        "according",
-        "test",
-        "rating",
-        "performance",
-        "iii",
-        "certified",
+        "shut-off",
         "another",
-        "canada",
-        "efficiency",
+        "iii",
         "case",
-        "building",
-        "located",
-        "municipality",
-        "ahri"
+        "ahri",
+        "canada",
+        "setback",
+        "rating",
+        "controls",
+        "performance",
+        "according",
+        "measured",
+        "certified",
+        "efficiency",
+        "located"
       ],
       "division": "B"
     },
@@ -5504,21 +5522,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "efficiency",
-        "performance",
-        "symbols",
-        "abbreviations",
         "appear",
-        "column",
-        "meanings",
-        "btu",
         "coefficient",
-        "ratio",
-        "energy-efficiency",
-        "energy",
+        "equipment",
+        "meanings",
+        "column",
         "mode",
+        "performance",
+        "btu",
         "regulations",
-        "equipment"
+        "energy",
+        "efficiency",
+        "abbreviations",
+        "energy-efficiency",
+        "symbols",
+        "ratio"
       ],
       "division": "B"
     },
@@ -5536,21 +5554,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "efficiency",
-        "airflow",
-        "outdoor",
-        "radiant",
-        "test",
-        "gas-fired",
         "nre",
         "output",
-        "equipment",
-        "performance",
-        "however",
-        "fan",
+        "commercial",
         "rating",
-        "constant",
-        "excludes"
+        "radiant",
+        "airflow",
+        "system",
+        "test",
+        "however",
+        "equipment",
+        "fan",
+        "ventilating",
+        "performance",
+        "gas-fired",
+        "outdoor"
       ],
       "division": "B"
     },
@@ -5689,20 +5707,20 @@
       },
       "keywords": [
         "f95-oe1",
-        "f95",
+        "f93",
+        "process",
+        "systems",
+        "statements",
+        "air",
         "f99-oe1",
-        "f97-oe1",
+        "f95",
         "f92",
         "f91",
-        "f93",
-        "systems",
+        "f97-oe1",
         "hvac",
         "temperature",
-        "air",
         "system",
-        "process",
-        "functional",
-        "statements"
+        "objective"
       ],
       "division": "B"
     },
@@ -6155,7 +6173,14 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "equipment",
+        "storage",
+        "water",
+        "vessels",
+        "heating"
+      ]
     },
     {
       "id": "B-6.2.2",
@@ -6535,7 +6560,15 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "temperature",
+        "use",
+        "end",
+        "one",
+        "design",
+        "systems"
+      ]
     },
     {
       "id": "B-6.2.5",
@@ -7086,7 +7119,11 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "motors",
+        "electrical"
+      ]
     },
     {
       "id": "B-7.2.4",
@@ -7325,7 +7362,10 @@
         "b": 743.28,
         "coord_origin": "BOTTOMLEFT"
       },
-      "division": "B"
+      "division": "B",
+      "keywords": [
+        "compliance"
+      ]
     },
     {
       "id": "B-8.4.1",
@@ -7697,21 +7737,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "hvac",
+        "account",
+        "equipment",
+        "calculations",
+        "return",
         "systems",
-        "air",
-        "temperature",
-        "program",
         "components",
-        "programs",
         "supply",
         "rise",
+        "compliance",
         "due",
-        "efficiency",
-        "equipment",
+        "air",
         "according",
-        "account",
-        "return"
+        "temperature",
+        "efficiency",
+        "program"
       ],
       "division": "B"
     },
@@ -7840,21 +7880,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "factor",
-        "control",
-        "determined",
-        "personal",
         "photocontrol",
+        "control",
         "account",
+        "maximum",
+        "fpho",
+        "personal",
+        "annual",
+        "electrical",
+        "demand",
+        "focc",
         "power",
         "controls",
-        "occupancy",
-        "fpho",
-        "using",
-        "lighting",
         "space",
-        "photocontrols",
-        "focc"
+        "using",
+        "consumption"
       ],
       "division": "B"
     },
@@ -7872,21 +7912,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "energy",
-        "purchased",
-        "used",
-        "heating",
-        "lighting",
-        "service",
-        "water",
-        "load",
-        "use",
-        "space",
         "cooling",
-        "equipment",
-        "provide",
-        "modeled",
-        "sized"
+        "maximum",
+        "heating",
+        "service",
+        "annual",
+        "electrical",
+        "demand",
+        "power",
+        "consumption",
+        "sized",
+        "space",
+        "energy",
+        "used",
+        "purchased",
+        "provide"
       ],
       "division": "B"
     },
@@ -8047,21 +8087,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "energy",
-        "efficiency",
-        "proposed",
-        "heat",
-        "equipment",
-        "thermal",
-        "power",
-        "a-8",
-        "identical",
-        "spaces",
-        "source",
-        "uses",
+        "reference",
+        "maximum",
         "being",
-        "use"
+        "target",
+        "heat",
+        "electrical",
+        "building",
+        "power",
+        "demand",
+        "energy",
+        "identical",
+        "proposed",
+        "equipment",
+        "use",
+        "spaces"
       ],
       "division": "B"
     },
@@ -8190,21 +8230,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "equipment",
-        "heat",
-        "pump",
-        "proposed",
-        "modeled",
-        "requirements",
-        "system",
-        "corresponding",
-        "heating",
-        "hvac",
-        "uses",
-        "energy",
+        "reference",
         "cooling",
-        "chiller"
+        "maximum",
+        "chiller",
+        "target",
+        "heating",
+        "heat",
+        "electrical",
+        "demand",
+        "hvac",
+        "power",
+        "energy",
+        "proposed",
+        "requirements",
+        "equipment"
       ],
       "division": "B"
     },
@@ -8222,21 +8262,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "system",
-        "sentences",
-        "hvac",
-        "proposed",
-        "forming",
-        "corresponding",
-        "determined",
-        "stated",
-        "otherwise",
-        "modeled",
+        "reference",
+        "maximum",
+        "target",
         "present",
-        "modeling",
-        "a-8",
-        "air"
+        "electrical",
+        "demand",
+        "hvac",
+        "power",
+        "energy",
+        "stated",
+        "determined",
+        "forming",
+        "proposed",
+        "corresponding",
+        "modeling"
       ],
       "division": "B"
     },
@@ -8383,21 +8423,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "pumps",
-        "pumping",
-        "system",
-        "modeled",
-        "building",
-        "pump",
-        "peak",
-        "referred",
-        "sentences",
-        "ratio",
-        "power",
+        "reference",
+        "maximum",
+        "target",
+        "electrical",
         "demand",
-        "flow",
+        "power",
+        "energy",
+        "pumping",
+        "pumps",
         "identical",
-        "corresponding"
+        "flow",
+        "corresponding",
+        "pump",
+        "modeled",
+        "sentences"
       ],
       "division": "B"
     },
@@ -8526,21 +8566,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
-        "building",
-        "proposed",
-        "equipment",
-        "fan",
-        "pressure",
-        "load",
-        "system",
-        "static",
-        "unit",
-        "heat-recovery",
-        "heating",
+        "reference",
         "capacity",
+        "maximum",
         "rate",
-        "peak",
-        "adjusted"
+        "target",
+        "heating",
+        "adjusted",
+        "electrical",
+        "demand",
+        "power",
+        "system",
+        "energy",
+        "unit",
+        "proposed",
+        "equipment"
       ],
       "division": "B"
     },
@@ -9004,21 +9044,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "path",
+        "proposed",
+        "requirements",
+        "needs",
+        "code",
+        "systems",
+        "statements",
+        "performance",
+        "functional",
+        "prescriptive",
+        "a-8",
+        "hvac",
         "building",
         "energy",
-        "systems",
-        "requirements",
-        "proposed",
-        "prescriptive",
-        "performance",
-        "hvac",
-        "code",
-        "path",
-        "a-8",
-        "thermal",
-        "needs",
-        "objective",
-        "plans"
+        "objective"
       ],
       "division": "B"
     },
@@ -9685,21 +9725,21 @@
         "coord_origin": "BOTTOMLEFT"
       },
       "keywords": [
+        "used",
+        "proposed",
+        "controls",
         "lighting",
+        "information",
+        "work",
+        "installed",
+        "allowance",
+        "exterior",
+        "space",
+        "total",
+        "building",
         "power",
         "interior",
-        "area",
-        "installed",
-        "used",
-        "allowance",
-        "space",
-        "exterior",
-        "thermal",
-        "building",
-        "calculation",
-        "method",
-        "controls",
-        "total"
+        "calculation"
       ],
       "division": "C"
     },
