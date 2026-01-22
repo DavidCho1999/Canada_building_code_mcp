@@ -7,23 +7,23 @@
 > "When I'm designing a building, I want to quickly find the specific code requirements so that I can ensure compliance."
 
 **Context:**
-- 설계 검토 단계
-- 특정 요구사항 확인 필요 (예: Fire Separation, Egress Width)
+- Design review stage
+- Need to verify specific requirements (e.g., Fire Separation, Egress Width)
 
 **Current Solution:**
-- PDF 검색 (부정확)
-- 목차 수동 탐색 (느림)
-- 동료에게 문의 (의존적)
+- PDF search (inaccurate)
+- Manual table of contents navigation (slow)
+- Ask colleagues (dependent)
 
 **Pain Points:**
-- PDF 검색 결과가 너무 많거나 관련 없음
-- 올바른 섹션 찾는 데 5-10분 소요
-- 테이블 데이터 복사 어려움
+- PDF search results too many or irrelevant
+- Takes 5-10 minutes to find the right section
+- Table data hard to copy
 
 **Desired Outcome:**
-- 30초 내 관련 조항 찾기
-- 정확한 텍스트 참조
-- 테이블 데이터 쉽게 활용
+- Find relevant articles within 30 seconds
+- Accurate text reference
+- Easy table data utilization
 
 ---
 
@@ -32,22 +32,22 @@
 > "When I find a relevant article, I want to see related sections so that I understand the full context."
 
 **Context:**
-- 특정 조항 발견 후
-- 상위/하위 요구사항 파악 필요
+- After finding a specific article
+- Need to understand parent/child requirements
 
 **Current Solution:**
-- PDF에서 앞뒤 페이지 탐색
-- 목차로 돌아가서 구조 파악
+- Navigate pages before/after in PDF
+- Return to table of contents to understand structure
 
 **Pain Points:**
-- 코드 구조가 복잡하고 깊음
-- 관련 조항 간 연결 파악 어려움
-- 여러 창 열어서 비교해야 함
+- Code structure is complex and deep
+- Difficult to identify connections between related articles
+- Must open multiple windows to compare
 
 **Desired Outcome:**
-- 한 번에 계층 구조 파악
-- 상위/하위/형제 조항 쉽게 탐색
-- 관련 테이블 자동 연결
+- Understand hierarchy at a glance
+- Easy navigation of parent/child/sibling articles
+- Automatic connection to related tables
 
 ---
 
@@ -56,22 +56,22 @@
 > "When working on projects in different provinces, I want to compare code requirements so that I can identify differences."
 
 **Context:**
-- 여러 주에서 프로젝트 진행
-- National vs Provincial 차이 확인
+- Projects in multiple provinces
+- Verify National vs Provincial differences
 
 **Current Solution:**
-- 두 PDF 나란히 열기
-- 동일 섹션 수동으로 찾아 비교
+- Open two PDFs side by side
+- Manually find and compare same sections
 
 **Pain Points:**
-- 섹션 번호 체계가 다를 수 있음
-- 수동 비교는 시간 소모적
-- 미묘한 차이 놓칠 수 있음
+- Section numbering systems may differ
+- Manual comparison is time-consuming
+- May miss subtle differences
 
 **Desired Outcome:**
-- 동일 주제의 조항 자동 매칭
-- 차이점 명확히 표시
-- 한 눈에 비교 가능
+- Automatic matching of articles on same topic
+- Clear display of differences
+- Compare at a glance
 
 ---
 
@@ -87,7 +87,7 @@
 
 > "When a code section is unclear, I want guidance on interpretation so that I can apply it correctly."
 
-**Priority:** P3 (Future - AI 해석 필요)
+**Priority:** P3 (Future - requires AI interpretation)
 
 ---
 
@@ -95,9 +95,9 @@
 
 | Job | Functional | Emotional | Social |
 |-----|-----------|-----------|--------|
-| Find Requirements | 빠른 검색 | 자신감 | 전문성 입증 |
-| Navigate Hierarchy | 컨텍스트 이해 | 안심 | 완벽한 검토 |
-| Compare Codes | 차이점 파악 | 편안함 | 다주 프로젝트 |
+| Find Requirements | Fast search | Confidence | Demonstrate expertise |
+| Navigate Hierarchy | Context understanding | Peace of mind | Thorough review |
+| Compare Codes | Identify differences | Comfort | Multi-province projects |
 
 ---
 
@@ -111,4 +111,4 @@
 
 **Opportunity Score = Importance + (Importance - Satisfaction)**
 
-→ **"Find Requirements"가 가장 큰 기회**
+→ **"Find Requirements" is the biggest opportunity**

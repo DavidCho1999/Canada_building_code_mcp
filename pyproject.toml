@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "building-code-mcp"
+version = "1.0.1"
+description = "MCP server for searching Canadian Building Codes (NBC, OBC, BCBC, etc.)"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["mcp", "building-code", "canada", "nbc", "obc", "claude"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "mcp>=0.1.0",
+]
+
+[project.optional-dependencies]
+pdf = ["PyMuPDF>=1.23.0"]
+all = [
+    "PyMuPDF>=1.23.0",
+    "beautifulsoup4>=4.12.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-username/building-code-mcp"
+Repository = "https://github.com/your-username/building-code-mcp"
+Issues = "https://github.com/your-username/building-code-mcp/issues"
+
+[project.scripts]
+building-code-mcp = "src.mcp_server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*", "maps*"]
+
+[tool.setuptools.package-data]
+"*" = ["*.json"]

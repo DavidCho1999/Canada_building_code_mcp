@@ -1,125 +1,140 @@
 # CLAUDE.md - Canadian Building Code MCP
 
-## 프로젝트 정보
+## Project Information
 
-- **프로젝트명**: Canadian Building Code MCP
-- **목적**: 캐나다 Building Code를 Claude에서 검색/참조할 수 있는 MCP 서버
-- **전략**: "Map & Territory" - 좌표만 배포, 텍스트는 사용자 PDF에서 추출
-- **상태**: Phase 1-2 완료 (Docling + Map 생성)
+- **Project Name**: Canadian Building Code MCP
+- **Purpose**: MCP server enabling Claude to search/reference Canadian Building Codes
+- **Strategy**: "Map & Territory" - Distribute coordinates only, text extracted from user's PDF
+- **Status**: Phase 1-2 Complete (Docling + Map Generation)
 
 ---
 
-## 핵심 개념
+## Core Concepts
 
-### 법적 안전 전략
+### Legal Safety Strategy
 ```
-배포: 좌표 (page, bbox), Section ID, 구조 타입
-배포 안 함: 실제 텍스트, 테이블 데이터
-→ 99% 법적 안전
+Distributed: Coordinates (page, bbox), Section ID, structure type
+NOT Distributed: Actual text, table data
+→ 99% legally safe
 ```
 
-### 현재 파이프라인 (Docling 기반)
+### Current Pipeline (Docling-based)
 ```
 [PDF] → [Docling] → [MD + JSON]
             ↓
-    [generate_map.py] Section 추출 + TF-IDF 키워드
+    [generate_map.py] Section extraction + TF-IDF keywords
             ↓
-    [maps/*.json] 좌표 맵 생성
+    [maps/*.json] Coordinate map generation
             ↓
-    [MCP Server] Mode A (맵만) / Mode B (BYOD 텍스트)
+    [MCP Server] Mode A (map only) / Mode B (BYOD text)
 ```
 
 ---
 
-## 파일 구조
+## File Structure
 
 ```
 building_code_mcp/
-├── docs/               # 문서
-├── scripts/            # 파이프라인 스크립트
-├── src/                # MCP 서버 코드 (나중에)
-├── marker/             # Marker 출력물
-├── sources/            # PDF (gitignore)
+├── docs/               # Documentation
+├── scripts/            # Pipeline scripts
+├── src/                # MCP server code
+├── marker/             # Marker output
+├── sources/            # PDF files (gitignore)
 └── maps/               # structure_map.json
 ```
 
 ---
 
-## 개발 규칙
+## Development Rules
 
-### 0. 메모리 제한 (중요!)
-- **사용자 환경: 16GB RAM 랩탑**
-- Docling 변환은 **반드시 하나씩** 순차 실행
-- 병렬 실행 절대 금지 → 메모리 부족으로 시스템 크래시
-- 큰 PDF (>50MB)는 특히 주의
+### 0. Memory Limitation (Important!)
+- **User Environment: 16GB RAM laptop**
+- Docling conversion must be run **one at a time** sequentially
+- Parallel execution strictly prohibited → System crash from memory shortage
+- Be especially careful with large PDFs (>50MB)
 
-### 1. PDF는 절대 git에 올리지 않음
-- sources/ 폴더는 .gitignore에 포함
-- 저작권 문제
+### 1. Never commit PDFs to git
+- sources/ folder is included in .gitignore
+- Copyright issues
 
-### 2. 테이블 품질 판별 6가지 기준
+### 2. Table Quality Assessment (6 Criteria)
 1. NO_PIPES - Flat text
-2. COL_MISMATCH - 열 개수 불일치
-3. EMPTY_CELLS - 빈 셀 25%+
-4. ROWSPAN_BROKEN - 첫 열 빈 셀 반복
-5. NO_DATA - 헤더만
-6. DUPLICATE_HEADER - Multi-page 분리
+2. COL_MISMATCH - Column count mismatch
+3. EMPTY_CELLS - Empty cells 25%+
+4. ROWSPAN_BROKEN - First column empty cells repeated
+5. NO_DATA - Header only
+6. DUPLICATE_HEADER - Multi-page split
 
-### 3. 페이지 찾기는 meta.json 사용
-- PDF 전체 스캔 ❌
-- 수동 매핑 ❌
+### 3. Use meta.json for Page Lookup
+- Full PDF scan ❌
+- Manual mapping ❌
 - meta.json → Table Index ✅
 
 ---
 
-## 대상 코드 (14개)
+## Target Documents (16)
 
-**National (4):** NBC, NFC, NPC, NECB (2025)
-**Provincial (7):** OBC, BCBC, ABC, QCC×4
-**User's Guides (3):** NBC Part 9, Part 4, NECB
+**Codes (13):**
+- National (4): NBC, NFC, NPC, NECB (2025)
+- Provincial (9): OBC×2, BCBC, ABC, OFC, QCC, QECB, QPC, QSC
+
+**User's Guides (3):**
+- IUGP9: Part 9 Guide (Housing & Small Buildings)
+- UGP4: Part 4 Guide (Structural Commentaries)
+- UGNECB: Energy Code Guide
 
 ---
 
-## 실행 명령
+## Commands
 
 ```bash
-# 1. PDF → MD/JSON 변환 (하나씩!)
+# 1. PDF → MD/JSON conversion (one at a time!)
 python scripts/convert_with_docling.py sources/NBC2025p1.pdf
 
-# 2. Map 생성
-python scripts/generate_map.py docling_output/nbc2025p1/
+# 2. Generate map for Building Codes (Division A/B/C structure)
+python scripts/generate_map_v2.py docling_output/nbc2025p1/
 
-# 3. MCP 서버 실행
+# 3. Generate map for User's Guides (Commentary structure)
+python scripts/generate_map_guide.py docling_output/ugp4_2020p1/ --type ugp4
+python scripts/generate_map_guide.py docling_output/ugnecb_2020p1/ --type ugnecb
+
+# 4. Run MCP server
 python src/mcp_server.py
 ```
 
 ---
 
-## 변환 진행 상황 (완료)
+## Conversion Progress (Complete)
 
-| 코드 | Docling | Map | Sections |
-|------|---------|-----|----------|
-| NPC2025 | ✅ | ✅ | 595 |
-| NFC2025 | ✅ | ✅ | 1,407 |
-| NBC2025 | ✅ | ✅ | 4,213 |
-| NECB2025 | ✅ | ✅ | 777 |
-| BCBC2024 | ✅ | ✅ | 2,645 |
-| OBC Vol1 | ✅ | ✅ | 3,580 |
-| OBC Vol2 | ✅ | ✅ | 345 |
-| QCC2020 | ✅ | ✅ | 3,925 |
-| QECB2020 | ✅ | ✅ | 612 |
-| QPC2020 | ✅ | ✅ | 615 |
-| QSC2020 | ✅ | ✅ | 1,408 |
-| UGP4 | ✅ | ✅ | 21 |
-| IUGP9 | ✅ | ✅ | 1,399 |
-| UGNECB2020 | ✅ | ✅ | 0 |
-| Alberta | ✅ | ✅ | 4,165 |
+### Codes (13)
+| Code | Sections |
+|------|----------|
+| NBC | 2,783 |
+| NFC | 1,044 |
+| NPC | 413 |
+| NECB | 475 |
+| ABC | 2,832 |
+| BCBC | 2,584 |
+| OBC Vol1 | 3,327 |
+| OBC Vol2 | 781 |
+| OFC | 1,906 |
+| QCC | 2,726 |
+| QECB | 384 |
+| QPC | 428 |
+| QSC | 1,063 |
 
-**Total: 25,707 sections indexed**
+### User's Guides (3)
+| Guide | Sections |
+|-------|----------|
+| IUGP9 (Part 9) | 1,096 |
+| UGP4 (Part 4) | 495 |
+| UGNECB | 165 |
+
+**Total: 22,502 sections indexed**
 
 ---
 
-## 참고 문서
+## Reference Documents
 
-- `docs/PDF_DOWNLOAD_LINKS.md` - PDF 다운로드 링크
-- `docs/archive/` - 이전 문서들
+- `docs/PDF_DOWNLOAD_LINKS.md` - PDF download links
+- `docs/archive/` - Previous documentation

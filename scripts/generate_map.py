@@ -75,6 +75,13 @@ def extract_keywords(text: str, max_keywords: int = 15) -> List[str]:
     return keywords
 
 
+def is_numeric_title(title: str) -> bool:
+    """제목이 숫자와 점, 공백만으로 구성되어 있는지 확인"""
+    if not title:
+        return False
+    return bool(re.match(r'^[\d.\s]+$', title.strip()))
+
+
 def get_level_from_id(section_id: str) -> str:
     """Determine hierarchy level from ID pattern."""
     # Division A, B, C
@@ -174,7 +181,17 @@ def parse_markdown_sections(md_path: str) -> List[Section]:
         )
 
         # Extract keywords from content
-        section.keywords = extract_keywords(section_content)
+        # 부모 제목 상속: 제목이 숫자만이면 부모 제목을 키워드 텍스트에 추가
+        keyword_text = section_content
+        if is_numeric_title(section.title) and section.parent_id:
+            # 이미 파싱된 sections에서 부모 찾기
+            for parent in sections:
+                if parent.id == section.parent_id and parent.title:
+                    # 부모 제목을 키워드 텍스트 앞에 추가
+                    keyword_text = f"{parent.title} {keyword_text}"
+                    break
+
+        section.keywords = extract_keywords(keyword_text)
 
         sections.append(section)
 

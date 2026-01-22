@@ -1,0 +1,149 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Search, ArrowRight } from 'lucide-react';
+
+const typewriterQueries = [
+  'What is the minimum stair width in Ontario?',
+  'NBC 2025 fire rating requirements',
+  'BCBC maximum height for wood buildings',
+  'Energy code window U-value requirements',
+  'Barrier-free ramp slope limits',
+];
+
+export default function Hero() {
+  const [currentQuery, setCurrentQuery] = useState('');
+  const [queryIndex, setQueryIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const query = typewriterQueries[queryIndex];
+
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        if (currentQuery.length < query.length) {
+          setCurrentQuery(query.slice(0, currentQuery.length + 1));
+        } else {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        if (currentQuery.length > 0) {
+          setCurrentQuery(currentQuery.slice(0, -1));
+        } else {
+          setIsDeleting(false);
+          setQueryIndex((prev) => (prev + 1) % typewriterQueries.length);
+        }
+      }
+    }, isDeleting ? 30 : 80);
+
+    return () => clearTimeout(timeout);
+  }, [currentQuery, isDeleting, queryIndex]);
+
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-50" />
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-emerald-100 rounded-full blur-3xl opacity-50" />
+      </div>
+
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
+        {/* Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 rounded-full text-sm font-medium mb-8"
+        >
+          <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+          25,707 sections indexed
+        </motion.div>
+
+        {/* Headline */}
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight"
+        >
+          Canadian Building Codes
+          <br />
+          <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">MCP Server</span>
+        </motion.h1>
+
+        {/* Subheadline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto"
+        >
+          Search 14 codes and 25,707 sections in plain language.
+          <br className="hidden md:block" />
+          No more hunting through PDFs. Just ask.
+        </motion.p>
+
+        {/* Fake Search Bar with Typewriter */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="max-w-2xl mx-auto mb-12"
+        >
+          <div className="relative bg-white rounded-2xl shadow-xl border border-slate-200 p-2">
+            <div className="flex items-center gap-3 px-4 py-3">
+              <Search className="w-5 h-5 text-slate-400" />
+              <span className="text-slate-700 text-left flex-1">
+                {currentQuery}
+                <span className="inline-block w-0.5 h-5 bg-blue-600 ml-1 animate-pulse" />
+              </span>
+            </div>
+            <div className="absolute right-4 top-1/2 -translate-y-1/2">
+              <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-sm font-medium">
+                Search
+              </div>
+            </div>
+          </div>
+          <p className="text-sm text-slate-500 mt-3">
+            Free & Open Source MCP Server
+          </p>
+        </motion.div>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="flex flex-col sm:flex-row gap-4 justify-center"
+        >
+          <a
+            href="#how-it-works"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300"
+          >
+            Get Started
+            <ArrowRight className="w-4 h-4" />
+          </a>
+        </motion.div>
+      </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ delay: 1.5, duration: 0.5 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+      >
+        <motion.div
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          className="text-slate-400"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M12 5v14M5 12l7 7 7-7" />
+          </svg>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}

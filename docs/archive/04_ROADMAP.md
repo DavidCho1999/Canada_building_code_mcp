@@ -1,70 +1,51 @@
-# 04. Roadmap - 개발 로드맵
+# 04. Roadmap - Development Roadmap
 
-## 전체 타임라인
+## Overall Timeline
 
 ```
-Phase 0: 준비 ────────────────┐
-                              │
-Phase 1: Marker 배치 ─────────┼── 1일 (6~12시간 실행)
-                              │
-Phase 2: 하이브리드 파이프라인 ┼── 1일
-                              │
-Phase 3: MCP 서버 구현 ───────┼── 2~3일
-                              │
-Phase 4: 검증 & 개선 ─────────┼── 2~3일
-                              │
-Phase 5: 다중 코드 지원 ──────┼── 1주+
-                              │
-Phase 6: 배포 & 문서화 ───────┘
-```
-
----
-
-## Phase 0: 준비 (완료)
-
-### 목표
-- 프로젝트 구조 설정
-- 필요 도구 확인
-- Marker bbox 출력 검증
-
-### 체크리스트
-
-- [ ] GitHub 저장소 생성
-- [ ] 기본 디렉토리 구조 생성
-- [ ] Marker bbox 출력 테스트
-- [ ] PyMuPDF clip 기능 테스트
-- [ ] 개발 환경 문서화
-
-### 핵심 검증
-
-```python
-# Marker bbox 테스트
-# data/marker/chunk_01/301880/301880_meta.json에서
-# polygon 데이터가 실제로 사용 가능한지 확인
-
-import fitz
-doc = fitz.open("source/.../301880.pdf")
-page = doc[0]  # 첫 페이지
-
-# meta.json의 polygon을 rect로 변환
-polygon = [[66.6, 42.5], [254.0, 42.5], [254.0, 70.6], [66.6, 70.6]]
-rect = fitz.Rect(polygon[0][0], polygon[0][1], polygon[2][0], polygon[2][1])
-
-text = page.get_text("text", clip=rect)
-print(text)  # "Ministry of..." 출력되어야 함
+Phase 0: Preparation ─────────────┐
+                                  │
+Phase 1: Marker Batch ────────────┼── 1 day (6~12 hours runtime)
+                                  │
+Phase 2: Hybrid Pipeline ─────────┼── 1 day
+                                  │
+Phase 3: MCP Server Implementation┼── 2~3 days
+                                  │
+Phase 4: Validation & Improvement ┼── 2~3 days
+                                  │
+Phase 5: Multi-Code Support ──────┼── 1 week+
+                                  │
+Phase 6: Deployment & Documentation┘
 ```
 
 ---
 
-## Phase 1: Marker 배치 실행 (6~12시간)
+## Phase 0: Preparation (Complete)
 
-### 목표
-- 모든 PDF를 Marker로 변환
-- MD + meta.json 생성
+### Goals
+- Project structure setup
+- Required tools verification
+- Marker bbox output verification
 
-### 대상 PDF (12개)
+### Checklist
 
-| # | 파일 | Code |
+- [ ] Create GitHub repository
+- [ ] Create basic directory structure
+- [ ] Test Marker bbox output
+- [ ] Test PyMuPDF clip feature
+- [ ] Document development environment
+
+---
+
+## Phase 1: Marker Batch Execution (6~12 hours)
+
+### Goals
+- Convert all PDFs with Marker
+- Generate MD + meta.json
+
+### Target PDFs (12)
+
+| # | File | Code |
 |---|------|------|
 | 1 | NBC2025p1.pdf | NBC 2025 |
 | 2 | NFC2025p1.pdf | NFC 2025 |
@@ -79,32 +60,17 @@ print(text)  # "Ministry of..." 출력되어야 함
 | 11 | UGNECB_2020p1.pdf | NECB Guide |
 | 12 | UGP4_2020p1.pdf | NBC Part 4 Guide |
 
-### 실행 명령
+### Execution Commands
 
 ```bash
-# 배치 실행
+# Batch execution
 python scripts/batch_process.py marker
 
-# 또는 개별 실행
+# Or individual execution
 marker_single "sources/NBC2025p1.pdf" --output_dir "marker/nbc_2025"
 ```
 
-### 체크리스트
-
-- [ ] NBC 2025 Marker 완료
-- [ ] NFC 2025 Marker 완료
-- [ ] NPC 2020 Marker 완료
-- [ ] NECB 2025 Marker 완료
-- [ ] BCBC 2024 Marker 완료
-- [ ] ABC 2023 Marker 완료
-- [ ] QCC Building Marker 완료
-- [ ] QCC Energy Marker 완료
-- [ ] QCC Plumbing Marker 완료
-- [ ] QSC Fire Marker 완료
-- [ ] NECB Guide Marker 완료
-- [ ] NBC Part 4 Guide Marker 완료
-
-### 산출물
+### Output
 
 ```
 marker/
@@ -118,84 +84,64 @@ marker/
 
 ---
 
-## Phase 2: 하이브리드 파이프라인 (1~2시간)
+## Phase 2: Hybrid Pipeline (1~2 hours)
 
-### 목표
-- 깨진 테이블 감지 및 수정
-- pdfplumber로 고품질 테이블 추출
+### Goals
+- Detect and fix broken tables
+- Extract high-quality tables with pdfplumber
 
-### 워크플로우
+### Workflow
 
 ```
 [1. Marker MD] → [2. Scanner] → [3. Judge] → [4. Surgery] → [5. Injection]
      ↓              ↓              ↓             ↓              ↓
-   전체 MD      테이블 탐지    품질 검사    pdfplumber    HTML 교체
+   Full MD      Table detection  Quality check  pdfplumber   HTML replace
 ```
 
-### 실행 명령
+### Execution Commands
 
 ```bash
-# 하이브리드 파이프라인 실행
+# Hybrid pipeline execution
 python scripts/hybrid_pipeline.py sources/NBC2025p1.pdf marker/nbc_2025
 
-# 또는 배치 실행
+# Or batch execution
 python scripts/batch_process.py
 ```
 
-### 체크리스트
-
-- [ ] Scanner 스크립트 작성
-- [ ] Judge 스크립트 작성
-- [ ] Surgery (pdfplumber) 스크립트 작성
-- [ ] Injection 스크립트 작성
-- [ ] 통합 파이프라인 테스트
-- [ ] 모든 PDF에 대해 파이프라인 실행
-
-### 산출물
-
-```
-marker/
-├── nbc_2025/
-│   ├── nbc_2025.md          # 원본
-│   ├── nbc_2025_fixed.md    # 수정본
-│   └── nbc_2025_meta.json
-└── ...
-```
-
-→ 상세: [06_HYBRID_PIPELINE.md](./06_HYBRID_PIPELINE.md)
+→ Details: [06_HYBRID_PIPELINE.md](./06_HYBRID_PIPELINE.md)
 
 ---
 
-## Phase 3: MCP 서버 구현 (2~3일)
+## Phase 3: MCP Server Implementation (2~3 days)
 
-### 목표
-- structure_map 생성
-- MCP 서버 구현
-- 로컬 테스트 완료
+### Goals
+- Generate structure_map
+- Implement MCP server
+- Complete local testing
 
 ### Tasks
 
-#### Day 1: 맵 생성
+#### Day 1: Map Generation
 
-- [ ] `generate_map.py` 작성
-- [ ] Marker 출력에서 좌표 추출 로직 구현
-- [ ] Section ID 파싱 로직 구현
-- [ ] 각 코드별 map.json 생성
+- [ ] Write `generate_map.py`
+- [ ] Implement coordinate extraction logic from Marker output
+- [ ] Implement Section ID parsing logic
+- [ ] Generate map.json for each code
 
-#### Day 2: 추출기 & DB
+#### Day 2: Extractor & DB
 
-- [ ] `extractor.py` 작성
-- [ ] Fast Mode (bbox 기반) 구현
-- [ ] Slow Mode (패턴 매칭) 구현
-- [ ] `database.py` SQLite + FTS5 구현
+- [ ] Write `extractor.py`
+- [ ] Implement Fast Mode (bbox-based)
+- [ ] Implement Slow Mode (pattern matching)
+- [ ] Implement `database.py` SQLite + FTS5
 
-#### Day 3: MCP 서버
+#### Day 3: MCP Server
 
-- [ ] `server.py` MCP 서버 구현
-- [ ] Claude Desktop 연동 테스트
-- [ ] 버그 수정
+- [ ] Implement `server.py` MCP server
+- [ ] Test Claude Desktop integration
+- [ ] Bug fixes
 
-### 산출물
+### Output
 
 ```
 maps/
@@ -213,97 +159,61 @@ src/
 
 ---
 
-## Phase 4: 검증 & 개선 (2~3일)
+## Phase 4: Validation & Improvement (2~3 days)
 
-### 목표
-- 추출 정확도 검증
-- 누락 섹션 보완
-- 성능 최적화
-
-### Tasks
-
-#### 검증
-
-- [ ] 전체 섹션 추출 테스트
-- [ ] 테이블 추출 검증
-- [ ] 수식 영역 처리 확인
-- [ ] 다중 페이지 콘텐츠 처리
-
-#### 보완
-
-- [ ] 누락된 섹션 수동 추가
-- [ ] 테이블 특수 처리 로직
-- [ ] 에러 핸들링 강화
-
-#### 최적화
-
-- [ ] 추출 속도 측정 및 개선
-- [ ] 메모리 사용량 최적화
-- [ ] 캐싱 전략 구현
-
-### 품질 기준
-
-| 항목 | 목표 |
-|------|------|
-| 섹션 커버리지 | > 95% |
-| 추출 정확도 | > 98% |
-| 설정 시간 | < 2분 |
-| 검색 응답 | < 1초 |
-
----
-
-## Phase 3: NBC 확장 (3-5일)
-
-### 목표
-- National Building Code 지원 추가
-- 다중 코드 아키텍처 검증
-
-### 선행 조건
-
-```
-Option A: NRC 허가 받음 → 텍스트 직접 저장 가능
-Option B: 허가 없음 → 좌표 방식으로 진행
-```
+### Goals
+- Validate extraction accuracy
+- Fill in missing sections
+- Performance optimization
 
 ### Tasks
 
-- [ ] NBC PDF 획득 (NRC 아카이브)
-- [ ] Marker로 NBC 파싱
-- [ ] `nbc_2025_map.json` 생성
-- [ ] 다중 코드 검색 로직 구현
-- [ ] 코드 간 상호 참조 기능
+#### Validation
 
-### 구조 변경
+- [ ] Test full section extraction
+- [ ] Verify table extraction
+- [ ] Check formula area handling
+- [ ] Handle multi-page content
 
-```python
-# 다중 코드 지원
-@server.tool()
-async def search_code(
-    query: str,
-    codes: list = ["OBC", "NBC"],  # 다중 코드 검색
-    province: str = None           # 주별 필터
-) -> str:
-    ...
-```
+#### Improvement
+
+- [ ] Manually add missing sections
+- [ ] Table special handling logic
+- [ ] Strengthen error handling
+
+#### Optimization
+
+- [ ] Measure and improve extraction speed
+- [ ] Optimize memory usage
+- [ ] Implement caching strategy
+
+### Quality Criteria
+
+| Item | Target |
+|------|--------|
+| Section coverage | > 95% |
+| Extraction accuracy | > 98% |
+| Setup time | < 2 min |
+| Search response | < 1 sec |
 
 ---
 
-## Phase 4: 다중 코드 지원 (1주+)
+## Phase 5: Multi-Code Support (1 week+)
 
-### 목표
-- BC, Alberta, Quebec 코드 추가
-- 코드 비교 기능 구현
+### Goals
+- Add BC, Alberta, Quebec codes
+- Implement code comparison feature
 
-### 우선순위
+### Priority
 
-| 순위 | 코드 | 이유 |
-|------|------|------|
-| 1 | NBC | 8개 주 커버 |
-| 2 | BCBC | 캐나다 3번째 큰 주 |
-| 3 | ABC (Alberta) | 에너지 산업 중심지 |
-| 4 | QCC (Quebec) | 불어권, 별도 시장 |
+| Priority | Code | Reason |
+|----------|------|--------|
+| 1 | NBC | Covers 8 provinces |
+| 2 | BCBC | Canada's 3rd largest province |
+| 3 | ABC (Alberta) | Energy industry hub |
+| 4 | QCC (Quebec) | French market, separate |
 
-### 고급 기능
+### Advanced Features
 
 ```python
 @server.tool()
@@ -312,8 +222,8 @@ async def compare_codes(
     codes: list = ["OBC", "NBC"]
 ) -> str:
     """
-    여러 코드 간 동일 섹션 비교
-    예: "9.8.2.1 OBC vs NBC 차이점"
+    Compare same section across multiple codes
+    e.g., "9.8.2.1 OBC vs NBC differences"
     """
     ...
 
@@ -323,66 +233,66 @@ async def get_provincial_requirements(
     province: str
 ) -> str:
     """
-    특정 주의 요구사항 조회
-    예: "Ontario 에너지 효율 요구사항"
+    Get requirements for specific province
+    e.g., "Ontario energy efficiency requirements"
     """
     ...
 ```
 
 ---
 
-## Phase 5: 배포 & 문서화 (3-5일)
+## Phase 6: Deployment & Documentation (3-5 days)
 
-### 목표
-- GitHub 공개 배포
-- 사용자 문서 완성
-- 커뮤니티 피드백 수집
+### Goals
+- Public GitHub release
+- Complete user documentation
+- Collect community feedback
 
 ### Tasks
 
-#### 문서화
+#### Documentation
 
-- [ ] README.md (설치 가이드)
+- [ ] README.md (Installation guide)
 - [ ] CONTRIBUTING.md
-- [ ] API 문서
-- [ ] 튜토리얼 영상/GIF
+- [ ] API documentation
+- [ ] Tutorial video/GIF
 
-#### 배포
+#### Deployment
 
-- [ ] PyPI 패키지 등록 (선택)
-- [ ] GitHub Releases 생성
-- [ ] Anthropic MCP 레지스트리 등록 (가능하면)
+- [ ] PyPI package registration (optional)
+- [ ] Create GitHub Releases
+- [ ] Register with Anthropic MCP registry (if possible)
 
-#### 홍보
+#### Promotion
 
 - [ ] Reddit (r/architecture, r/engineering)
-- [ ] LinkedIn 포스트
+- [ ] LinkedIn post
 - [ ] Anthropic Discord/Forum
 
 ---
 
-## 마일스톤 요약
+## Milestone Summary
 
-| 마일스톤 | 목표 날짜 | 산출물 |
-|----------|----------|--------|
-| **M1: OBC MVP** | +1주 | 작동하는 OBC MCP |
-| **M2: 검증 완료** | +2주 | 95% 커버리지 달성 |
-| **M3: NBC 추가** | +3주 | 다중 코드 지원 |
-| **M4: 공개 배포** | +4주 | GitHub v1.0 릴리스 |
-
----
-
-## 리스크 & 대응
-
-| 리스크 | 확률 | 대응 |
-|--------|------|------|
-| Marker bbox 불완전 | 중간 | PyMuPDF로 보완 |
-| PDF 버전 다양성 | 높음 | 여러 해시 지원 |
-| NRC 허가 거절 | 낮음 | 좌표 방식으로 진행 |
-| 성능 문제 | 낮음 | 캐싱, 인덱싱 최적화 |
+| Milestone | Target Date | Deliverable |
+|-----------|-------------|-------------|
+| **M1: OBC MVP** | +1 week | Working OBC MCP |
+| **M2: Validation Complete** | +2 weeks | 95% coverage achieved |
+| **M3: NBC Added** | +3 weeks | Multi-code support |
+| **M4: Public Release** | +4 weeks | GitHub v1.0 release |
 
 ---
 
-## 다음 문서
+## Risks & Mitigation
 
-→ [05_USER_GUIDE.md](./05_USER_GUIDE.md) - 사용자 가이드
+| Risk | Probability | Mitigation |
+|------|-------------|------------|
+| Marker bbox incomplete | Medium | Supplement with PyMuPDF |
+| PDF version diversity | High | Support multiple hashes |
+| NRC permission denied | Low | Proceed with coordinate approach |
+| Performance issues | Low | Caching, indexing optimization |
+
+---
+
+## Next Document
+
+→ [05_USER_GUIDE.md](./05_USER_GUIDE.md) - User Guide

@@ -1,36 +1,36 @@
-# 03. Legal Analysis - 법적 분석
+# 03. Legal Analysis
 
-## 핵심 질문
+## Core Question
 
-> "좌표만 배포하면 법적 문제가 없는가?"
-
----
-
-## 저작권법 기본 원칙
-
-### 보호 대상 vs 비보호 대상
-
-| 보호됨 (저작물) | 보호 안 됨 (사실/아이디어) |
-|----------------|--------------------------|
-| 창작적 표현 | 객관적 사실 |
-| 문장, 문단 | 숫자, 좌표 |
-| 테이블 데이터 | 페이지 번호 |
-| 편집 저작물의 창작적 배열 | 기능적/기술적 구조 |
-
-### Building Code의 특수성
-
-```
-Building Code는:
-1. 법규 텍스트 = 정부 저작물 (일부 보호)
-2. 구조 = 기술적 필요에 의한 배열 (창작성 낮음)
-3. 섹션 번호 = 참조 체계 (사실)
-```
+> "Is there no legal issue if we only distribute coordinates?"
 
 ---
 
-## 좌표 오버레이 방식 분석
+## Copyright Law Basic Principles
 
-### 배포하는 데이터
+### Protected vs Non-Protected
+
+| Protected (Copyrighted) | Not Protected (Facts/Ideas) |
+|------------------------|---------------------------|
+| Creative expression | Objective facts |
+| Sentences, paragraphs | Numbers, coordinates |
+| Table data | Page numbers |
+| Creative arrangement of compilations | Functional/technical structure |
+
+### Building Code Specifics
+
+```
+Building Code consists of:
+1. Regulatory text = Government work (partially protected)
+2. Structure = Arrangement by technical necessity (low creativity)
+3. Section numbers = Reference system (facts)
+```
+
+---
+
+## Coordinate Overlay Approach Analysis
+
+### Data We Distribute
 
 ```json
 {
@@ -40,110 +40,110 @@ Building Code는:
 }
 ```
 
-### 법적 분석
+### Legal Analysis
 
-| 데이터 | 성격 | 저작권 보호 |
-|--------|------|-------------|
-| `"id": "9.8.2.1"` | 참조 번호 (사실) | ❌ 보호 안 됨 |
-| `"page": 245` | 물리적 위치 (사실) | ❌ 보호 안 됨 |
-| `"bbox": [50, 100, 550, 300]` | 좌표 (숫자) | ❌ 보호 안 됨 |
-| `"type": "article"` | 분류 (사실) | ❌ 보호 안 됨 |
+| Data | Nature | Copyright Protection |
+|------|--------|---------------------|
+| `"id": "9.8.2.1"` | Reference number (fact) | Not protected |
+| `"page": 245` | Physical location (fact) | Not protected |
+| `"bbox": [50, 100, 550, 300]` | Coordinates (numbers) | Not protected |
+| `"type": "article"` | Classification (fact) | Not protected |
 
-### 법적 논거
+### Legal Arguments
 
-#### 1. 사실/아이디어 불보호 원칙
-
-```
-저작권법은 "표현"을 보호하지, "사실"이나 "아이디어"를 보호하지 않음.
-
-"9.8.2.1 조항이 245페이지에 있다"는 것은
-누구나 PDF를 열어 확인할 수 있는 객관적 사실.
-
-사실의 기록은 저작권 보호 대상이 아님.
-```
-
-#### 2. 합병 원칙 (Merger Doctrine)
+#### 1. Fact/Idea Non-Protection Principle
 
 ```
-아이디어를 표현하는 방법이 하나밖에 없으면,
-그 표현은 아이디어와 "합병"되어 보호받지 못함.
+Copyright protects "expression", not "facts" or "ideas".
 
-"9.8.2.1이 245페이지에 있다"를 표현하는 방법은
-{ "id": "9.8.2.1", "page": 245 } 외에 없음.
+"Section 9.8.2.1 is on page 245" is
+an objective fact anyone can verify by opening the PDF.
 
-따라서 이 표현은 보호받지 못함.
+Recording facts is not subject to copyright protection.
 ```
 
-#### 3. 기능적 저작물 제한
+#### 2. Merger Doctrine
 
 ```
-Building Code의 구조(Part → Section → Article)는
-기술적/기능적 필요에 의한 것.
+If there's only one way to express an idea,
+that expression "merges" with the idea and is not protected.
 
-창작적 선택의 결과가 아니라 기능적 요구의 결과.
-기능적 요소는 저작권 보호가 제한됨.
+There's no other way to express "9.8.2.1 is on page 245"
+than { "id": "9.8.2.1", "page": 245 }.
+
+Therefore, this expression is not protected.
 ```
 
----
-
-## 잠재적 리스크 분석
-
-### 리스크 1: 편집 저작물 주장
+#### 3. Functional Work Limitation
 
 ```
-주장: "전체 구조 맵은 편집 저작물이다"
+Building Code structure (Part → Section → Article) is
+due to technical/functional necessity.
 
-반론:
-- 편집 저작물은 "선택과 배열의 창작성"을 요구
-- Building Code 구조는 기술적 필요에 의한 것
-- 우리는 그 구조를 "복제"한 게 아니라 "기록"한 것
-- 전화번호부 판례 (Feist v. Rural): 사실의 편집은 보호 안 됨
-```
-
-### 리스크 2: 파생 저작물 주장
-
-```
-주장: "structure_map은 PDF의 파생 저작물이다"
-
-반론:
-- 파생 저작물은 원저작물의 "표현"을 변형해야 함
-- 우리는 표현(텍스트)을 포함하지 않음
-- 좌표는 원저작물의 "위치 정보"일 뿐
-- 책의 목차 페이지 번호를 기록하는 것과 같음
-```
-
-### 리스크 3: 데이터베이스 권리
-
-```
-EU: sui generis 데이터베이스 권리 존재
-캐나다/미국: 해당 없음
-
-캐나다 법에서는 데이터베이스 자체에 대한
-별도의 권리가 인정되지 않음.
+It's not a result of creative choice but functional requirements.
+Functional elements have limited copyright protection.
 ```
 
 ---
 
-## 리스크 매트릭스
+## Potential Risk Analysis
 
-| 리스크 | 발생 가능성 | 영향도 | 종합 |
-|--------|------------|--------|------|
-| 저작권 침해 소송 | 🟢 매우 낮음 | 🔴 높음 | 🟢 낮음 |
-| 중단 요청 (C&D) | 🟡 낮음 | 🟡 중간 | 🟢 낮음 |
-| 법적 방어 성공 | 🟢 매우 높음 | N/A | N/A |
-
-### 종합 평가
+### Risk 1: Compilation Copyright Claim
 
 ```
-텍스트 배포: 🔴 확실한 저작권 침해
-좌표만 배포: 🟢 99% 안전 (법적 방어 가능)
+Claim: "The entire structure map is a compilation work"
+
+Counter-argument:
+- Compilations require "creativity in selection and arrangement"
+- Building Code structure is due to technical necessity
+- We didn't "copy" the structure, we "recorded" it
+- Phone book precedent (Feist v. Rural): Compilation of facts is not protected
+```
+
+### Risk 2: Derivative Work Claim
+
+```
+Claim: "structure_map is a derivative work of the PDF"
+
+Counter-argument:
+- Derivative works must transform "expression" of original work
+- We don't include expression (text)
+- Coordinates are just "location information" of the original work
+- Same as recording page numbers of a book's table of contents
+```
+
+### Risk 3: Database Rights
+
+```
+EU: sui generis database rights exist
+Canada/US: Not applicable
+
+Under Canadian law, there's no separate
+right recognized for databases themselves.
 ```
 
 ---
 
-## 안전장치
+## Risk Matrix
 
-### 1. 면책조항 (Disclaimer)
+| Risk | Probability | Impact | Overall |
+|------|------------|--------|---------|
+| Copyright infringement lawsuit | Very Low | High | Low |
+| Cease & Desist request | Low | Medium | Low |
+| Legal defense success | Very High | N/A | N/A |
+
+### Overall Assessment
+
+```
+Text distribution: DEFINITE copyright infringement
+Coordinates only: 99% safe (legally defensible)
+```
+
+---
+
+## Safeguards
+
+### 1. Disclaimer
 
 ```markdown
 ## Legal Notice
@@ -161,7 +161,7 @@ All copyrights belong to their respective owners:
 This tool is for educational and professional reference purposes only.
 ```
 
-### 2. 사용자 동의
+### 2. User Agreement
 
 ```python
 def first_run_agreement():
@@ -183,7 +183,7 @@ def first_run_agreement():
     """)
 ```
 
-### 3. PDF 출처 안내
+### 3. PDF Source Information
 
 ```markdown
 ## How to Obtain Official PDFs
@@ -202,95 +202,56 @@ def first_run_agreement():
 
 ---
 
-## 선제적 조치 (권장)
+## Similar Cases/Precedents
 
-### NRC에 사전 문의
-
-```
-To: Codes@nrc-cnrc.gc.ca
-Subject: Inquiry about coordinate-based reference tool
-
-Dear Codes Canada Team,
-
-I am developing an educational tool that provides
-structural coordinate information for building codes
-(page numbers, bounding boxes) without distributing
-the actual text content.
-
-Users would need to obtain their own official PDF
-copies and the tool would help them navigate the
-document more efficiently.
-
-Does this approach require any permission from NRC?
-
-Thank you for your guidance.
-```
-
-### 예상 답변
+### 1. Google Books Decision (US)
 
 ```
-가능성 높은 답변들:
+Google scanning books and showing only "snippets" was fair use.
+Providing partial information instead of full text may be permitted.
+```
 
-1. "텍스트를 배포하지 않으면 허가 필요 없습니다" ✅
-2. "공식 답변을 드리기 어렵습니다" (묵인)
-3. "법률 자문을 받으세요" (중립)
+### 2. Phone Book Case (Feist v. Rural)
 
-가능성 낮은 답변:
-4. "좌표 배포도 허가가 필요합니다" ⚠️
+```
+Name+number listings in phone books are not copyright protected.
+Compilation of facts is not protected without creativity.
+```
+
+### 3. API Copyright (Oracle v. Google)
+
+```
+API structure can be copied under fair use (final ruling).
+Copying functional structures may be permitted.
 ```
 
 ---
 
-## 유사 판례/사례
+## Conclusion
 
-### 1. Google Books 판결 (미국)
-
-```
-Google이 책을 스캔하여 "snippet"만 보여준 것은 fair use.
-전체 텍스트가 아닌 일부 정보만 제공하면 허용될 수 있음.
-```
-
-### 2. 전화번호부 판례 (Feist v. Rural)
-
-```
-전화번호부의 이름+번호 목록은 저작권 보호 안 됨.
-사실의 편집은 창작성이 없으면 보호되지 않음.
-```
-
-### 3. API 저작권 (Oracle v. Google)
-
-```
-API 구조는 fair use로 복제 가능 (최종 판결).
-기능적 구조의 복제는 허용될 수 있음.
-```
-
----
-
-## 결론
-
-### 법적 안전성 평가
+### Legal Safety Assessment
 
 ```
 ┌─────────────────────────────────────────┐
 │                                         │
-│   텍스트 배포     ████████████ 🔴 위험  │
+│   Text distribution  ████████████ RISKY │
 │                                         │
-│   좌표만 배포     ██ 🟢 안전            │
+│   Coordinates only   ██ SAFE            │
 │                                         │
-│   아무것도 안 함  █ 🟢 완전 안전        │
+│   Do nothing         █ COMPLETELY SAFE  │
 │                                         │
 └─────────────────────────────────────────┘
 ```
 
-### 권장 사항
+### Recommendations
 
-1. **좌표만 배포** - 99% 안전
-2. **면책조항 포함** - 추가 보호
-3. **NRC 사전 문의** - 명시적 확인 (선택)
-4. **법률 자문** - 100% 확신 필요 시 (비용 발생)
+1. **Distribute coordinates only** - 99% safe
+2. **Include disclaimer** - Additional protection
+3. **Pre-inquiry to NRC** - Explicit confirmation (optional)
+4. **Legal consultation** - If 100% certainty needed (costs money)
 
 ---
 
-## 다음 문서
+## Next Document
 
-→ [04_ROADMAP.md](./04_ROADMAP.md) - 개발 로드맵
+→ [04_ROADMAP.md](./04_ROADMAP.md) - Development Roadmap

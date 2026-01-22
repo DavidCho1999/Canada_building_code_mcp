@@ -1,87 +1,101 @@
-# 05. User Guide - 사용자 가이드
+# 05. User Guide
 
-## 개요
+## Overview
 
-Canadian Building Code MCP는 Claude가 캐나다 건축 코드를 직접 검색하고 참조할 수 있게 해주는 도구입니다.
+Canadian Building Code MCP is a tool that enables Claude to directly search and reference Canadian building codes.
 
-**특징:**
-- 로컬에서 실행 (데이터 외부 전송 없음)
-- 사용자의 합법적 PDF에서 직접 추출
-- 빠른 검색 (< 1초)
+**Features:**
+- Runs locally (no data sent externally)
+- Extracts directly from user's legally obtained PDF
+- Fast search (< 1 second)
+- Hallucination prevention (verify_section tool)
+- Jurisdiction guidance (get_applicable_code tool)
+
+## Available Tools (7)
+
+| Tool | Description |
+|------|-------------|
+| `list_codes` | List all available codes with download links |
+| `search_code` | Search sections by keywords |
+| `get_section` | Get details of a specific section |
+| `get_hierarchy` | Get parent/children/siblings of a section |
+| `set_pdf_path` | Connect your PDF for text extraction (BYOD) |
+| `verify_section` | Verify section exists + get formal citation |
+| `get_applicable_code` | Get which codes apply to a location |
 
 ---
 
-## 설치 요구사항
+## Installation Requirements
 
-### 시스템 요구사항
+### System Requirements
 
 ```
-- Python 3.10 이상
-- 저장 공간: 500MB (PDF + DB)
+- Python 3.10 or higher
+- Storage: 500MB (PDF + DB)
 - OS: Windows, macOS, Linux
 ```
 
-### 필수 소프트웨어
+### Required Software
 
 ```bash
-# Python 패키지
+# Python packages
 pip install mcp pymupdf
 
-# 선택: 개발/테스트용
+# Optional: for development/testing
 pip install pytest
 ```
 
 ---
 
-## 빠른 시작
+## Quick Start
 
-### 1단계: MCP 다운로드
+### Step 1: Download MCP
 
 ```bash
-# GitHub에서 클론
+# Clone from GitHub
 git clone https://github.com/username/canadian-building-code-mcp.git
 cd canadian-building-code-mcp
 ```
 
-### 2단계: 의존성 설치
+### Step 2: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3단계: PDF 준비
+### Step 3: Prepare PDF
 
 **Ontario Building Code:**
-1. https://www.ontario.ca/form/get-2024-building-code-compendium-non-commercial-use 방문
-2. 양식 작성 후 다운로드 링크 수신
-3. PDF를 `pdfs/` 폴더에 저장
+1. Visit https://www.ontario.ca/form/get-2024-building-code-compendium-non-commercial-use
+2. Fill out form and receive download link
+3. Save PDF to `pdfs/` folder
 
 **National Building Code:**
-1. https://nrc-publications.canada.ca 방문
-2. "National Building Code of Canada" 검색
-3. 무료 전자 버전 다운로드
-4. PDF를 `pdfs/` 폴더에 저장
+1. Visit https://nrc-publications.canada.ca
+2. Search for "National Building Code of Canada"
+3. Download free electronic version
+4. Save PDF to `pdfs/` folder
 
-### 4단계: 초기 설정
+### Step 4: Initial Setup
 
 ```bash
-# 초기 설정 실행 (PDF에서 텍스트 추출 및 DB 생성)
+# Run initial setup (extract text from PDF and create DB)
 python setup.py
 
-# 예상 출력:
-# ✓ PDF 해시 검증 완료 (OBC 2024)
-# ✓ Fast Mode 사용 가능
-# ✓ 텍스트 추출 중... (약 30초)
-# ✓ 데이터베이스 생성 완료
-# ✓ 검색 인덱스 생성 완료
+# Expected output:
+# ✓ PDF hash verification complete (OBC 2024)
+# ✓ Fast Mode available
+# ✓ Extracting text... (about 30 seconds)
+# ✓ Database created
+# ✓ Search index created
 #
-# 설정 완료! Claude Desktop에 연결할 준비가 되었습니다.
+# Setup complete! Ready to connect to Claude Desktop.
 ```
 
-### 5단계: Claude Desktop 연결
+### Step 5: Connect to Claude Desktop
 
-`~/.config/claude/claude_desktop_config.json` (Mac/Linux) 또는
-`%APPDATA%\Claude\claude_desktop_config.json` (Windows) 수정:
+Edit `~/.config/claude/claude_desktop_config.json` (Mac/Linux) or
+`%APPDATA%\Claude\claude_desktop_config.json` (Windows):
 
 ```json
 {
@@ -97,132 +111,181 @@ python setup.py
 }
 ```
 
-### 6단계: 테스트
+### Step 6: Test
 
-Claude Desktop을 재시작하고 다음을 물어보세요:
-
-```
-"OBC 9.8.2.1 계단 너비 요구사항을 알려줘"
-```
-
----
-
-## 사용 예시
-
-### 섹션 조회
+Restart Claude Desktop and ask:
 
 ```
-사용자: "9.8.2.1 내용 보여줘"
-Claude: [get_section 도구 호출]
-
-응답:
-9.8.2.1. Width
-(1) Except as permitted by Sentences (2) to (5),
-the width of stairs shall be not less than 860 mm.
-...
-```
-
-### 키워드 검색
-
-```
-사용자: "fire separation 관련 조항 찾아줘"
-Claude: [search_code 도구 호출]
-
-응답:
-검색 결과 (15건):
-1. 9.10.9.6 - Fire Separations in Houses
-2. 9.10.9.7 - Required Fire Separations
-3. 9.10.9.8 - Fire Separation of Service Rooms
-...
-```
-
-### 테이블 조회
-
-```
-사용자: "Table 9.10.14.4 내용은?"
-Claude: [get_table 도구 호출]
-
-응답:
-Table 9.10.14.4
-Maximum Aggregate Area of Unprotected Openings
-
-| Limiting Distance | Residential | Other |
-|-------------------|-------------|-------|
-| Less than 1.2 m   | N.P.        | N.P.  |
-| 1.2 m             | 0.2         | 0.1   |
-...
-```
-
-### 다중 코드 비교 (NBC 포함 시)
-
-```
-사용자: "OBC와 NBC의 9.8.2.1 차이점은?"
-Claude: [compare_codes 도구 호출]
-
-응답:
-비교: 9.8.2.1 계단 너비
-
-OBC 2024:
-- 최소 너비: 860 mm
-- 예외: 860 mm 미만 허용 조건 5가지
-
-NBC 2020:
-- 최소 너비: 860 mm
-- 예외 조건 동일
-
-차이점: 실질적 차이 없음
+"Tell me the stair width requirements in OBC 9.8.2.1"
 ```
 
 ---
 
-## 문제 해결
+## Usage Examples
 
-### PDF 해시 불일치
-
-```
-⚠️ PDF 해시 불일치
-예상: a1b2c3d4...
-실제: f6e5d4c3...
-
-Slow Mode로 전환합니다. (시간이 더 소요됩니다)
-```
-
-**원인:** 다른 버전의 PDF를 사용 중
-
-**해결:**
-1. 공식 소스에서 최신 PDF 다운로드
-2. 또는 Slow Mode 사용 (정확도 95%)
-
-### 섹션을 찾을 수 없음
+### 1. List Available Codes
 
 ```
-❌ 섹션 '9.99.99.99'를 찾을 수 없습니다
+User: "What building codes are available?"
+Claude: [calls list_codes tool]
+
+Response:
+Indexed codes: 15
+- NBC (National Building Code 2025) - 4,213 sections
+- OBC (Ontario Building Code 2024) - 3,925 sections
+- BCBC (BC Building Code 2024) - 2,645 sections
+...
+
+Download links provided for each code.
 ```
 
-**원인:** 존재하지 않는 섹션 ID
-
-**해결:**
-1. 섹션 ID 형식 확인 (예: 9.8.2.1)
-2. 검색 기능으로 관련 섹션 찾기
-
-### MCP 서버 연결 실패
+### 2. Search by Keywords
 
 ```
-❌ MCP 서버에 연결할 수 없습니다
+User: "Find fire separation requirements"
+Claude: [calls search_code tool with query="fire separation"]
+
+Response:
+Search results (15 items):
+1. B-9.10.9.6 - Fire Separations in Houses (score: 1.0)
+2. B-9.10.9.7 - Required Fire Separations (score: 0.9)
+3. B-9.10.9.8 - Fire Separation of Service Rooms (score: 0.85)
+...
 ```
 
-**원인:** 설정 파일 오류 또는 Python 경로 문제
+### 3. Get Section Details
 
-**해결:**
-1. `claude_desktop_config.json` 경로 확인
-2. Python 절대 경로 사용
-3. Claude Desktop 재시작
+```
+User: "Show me section 9.8.2.1 in OBC"
+Claude: [calls get_section tool]
+
+Response:
+{
+  "id": "B-9.8.2.1",
+  "title": "Width",
+  "code": "OBC",
+  "version": "2024",
+  "page": 245,
+  "citation": "OBC 2024, Section B-9.8.2.1, Page 245",
+  "citation_short": "OBC 2024, s. B-9.8.2.1",
+  "disclaimer": "This tool provides references only..."
+}
+```
+
+### 4. Navigate Hierarchy
+
+```
+User: "What are the subsections of 9.8.2?"
+Claude: [calls get_hierarchy tool]
+
+Response:
+Parent: B-9.8 (Stairs, Ramps, Handrails and Guards)
+Children:
+- B-9.8.2.1 (Width)
+- B-9.8.2.2 (Rise and Run)
+- B-9.8.2.3 (Flight Length)
+Siblings: B-9.8.1, B-9.8.3, B-9.8.4
+```
+
+### 5. Connect PDF for Text Extraction (BYOD)
+
+```
+User: "Connect my OBC PDF"
+Claude: [calls set_pdf_path tool]
+
+Response:
+{
+  "success": true,
+  "code": "OBC",
+  "path": "C:/Users/user/Documents/OBC2024.pdf",
+  "verified": true
+}
+
+Now get_section will also return actual text content!
+```
+
+### 6. Verify Section (Prevent Hallucination)
+
+```
+User: "Is section 9.99.99 real in NBC?"
+Claude: [calls verify_section tool]
+
+Response:
+{
+  "exists": false,
+  "error": "Section 9.99.99 not found in NBC",
+  "similar_sections": ["B-9.9.9.1", "B-9.9.9.2", ...],
+  "suggestion": "Check the section number or use search_code"
+}
+```
+
+### 7. Get Applicable Code for Location
+
+```
+User: "What building code applies in Vancouver?"
+Claude: [calls get_applicable_code tool]
+
+Response:
+{
+  "location": "Vancouver",
+  "primary_code": "BCBC",
+  "primary_version": "2024",
+  "also_check": [{"code": "NBC", "version": "2025"}],
+  "notes": "BCBC is mandatory, check municipal bylaws",
+  "warning": "Always verify with local Authority Having Jurisdiction (AHJ)"
+}
+```
 
 ---
 
-## 고급 설정
+## Troubleshooting
 
-### 여러 코드 동시 사용
+### PDF Hash Mismatch
+
+```
+⚠️ PDF hash mismatch
+Expected: a1b2c3d4...
+Actual: f6e5d4c3...
+
+Switching to Slow Mode. (Takes longer)
+```
+
+**Cause:** Using a different version of the PDF
+
+**Solution:**
+1. Download latest PDF from official source
+2. Or use Slow Mode (95% accuracy)
+
+### Section Not Found
+
+```
+❌ Section '9.99.99.99' not found
+```
+
+**Cause:** Non-existent section ID
+
+**Solution:**
+1. Verify section ID format (e.g., 9.8.2.1)
+2. Use search feature to find related sections
+
+### MCP Server Connection Failed
+
+```
+❌ Cannot connect to MCP server
+```
+
+**Cause:** Config file error or Python path issue
+
+**Solution:**
+1. Verify `claude_desktop_config.json` path
+2. Use absolute Python path
+3. Restart Claude Desktop
+
+---
+
+## Advanced Configuration
+
+### Using Multiple Codes Simultaneously
 
 ```json
 {
@@ -239,78 +302,115 @@ Slow Mode로 전환합니다. (시간이 더 소요됩니다)
 }
 ```
 
-### 캐시 설정
+### Cache Settings
 
 ```python
 # config.py
-CACHE_SIZE = 1000      # 캐시할 섹션 수
-CACHE_TTL = 3600       # 캐시 유효 시간 (초)
+CACHE_SIZE = 1000      # Number of sections to cache
+CACHE_TTL = 3600       # Cache validity time (seconds)
 ```
 
-### 로깅 설정
+### Logging Settings
 
 ```python
 # config.py
 LOG_LEVEL = "INFO"     # DEBUG, INFO, WARNING, ERROR
-LOG_FILE = "mcp.log"   # 로그 파일 경로
+LOG_FILE = "mcp.log"   # Log file path
 ```
 
 ---
 
-## CLI 명령어
+## CLI Commands
 
-### 상태 확인
+### Status Check
 
 ```bash
 python cli.py status
 
-# 출력:
+# Output:
 # Building Code MCP Status
 # ========================
-# OBC 2024: ✓ 설정됨 (Fast Mode)
-# NBC 2020: ✓ 설정됨 (Fast Mode)
-# BCBC 2024: ✗ PDF 없음
+# OBC 2024: ✓ Configured (Fast Mode)
+# NBC 2020: ✓ Configured (Fast Mode)
+# BCBC 2024: ✗ PDF not found
 #
-# 데이터베이스: 15,234 섹션
-# 마지막 업데이트: 2026-01-21
+# Database: 15,234 sections
+# Last updated: 2026-01-21
 ```
 
-### 데이터베이스 재생성
+### Rebuild Database
 
 ```bash
 python cli.py rebuild --code OBC
 
-# PDF가 업데이트되었을 때 사용
+# Use when PDF is updated
 ```
 
-### 검색 테스트
+### Search Test
 
 ```bash
 python cli.py search "fire separation"
 
-# MCP 서버 없이 직접 검색 테스트
+# Test search directly without MCP server
 ```
+
+---
+
+## For AEC Professionals
+
+### Hallucination Prevention
+
+AI can sometimes generate fake section numbers. Use `verify_section` before citing:
+
+```
+BEFORE citing "OBC 9.10.14.5":
+1. Call verify_section(id="9.10.14.5", code="OBC")
+2. If exists=true → safe to cite
+3. If exists=false → check similar_sections or search again
+```
+
+### Formal Citations
+
+Every `get_section` response includes:
+- `citation`: "OBC 2024, Section B-9.8.2.1, Page 245"
+- `citation_short`: "OBC 2024, s. B-9.8.2.1"
+
+Use these in reports, drawings, and permit applications.
+
+### Multi-Province Projects
+
+For projects spanning multiple jurisdictions:
+1. Call `get_applicable_code("Toronto")` → OBC
+2. Call `get_applicable_code("Vancouver")` → BCBC
+3. Compare requirements using `search_code` in both codes
+
+### Disclaimer
+
+All responses include a standard disclaimer:
+> "This tool provides references only. Verify with official documents before use. Not legal or professional advice."
+
+Always verify with official PDF and consult with Authority Having Jurisdiction (AHJ).
 
 ---
 
 ## FAQ
 
-### Q: 인터넷 연결이 필요한가요?
+### Q: Do I need an internet connection?
 
-**A:** 아니요. 초기 설치 후에는 모든 데이터가 로컬에 저장됩니다.
-Claude Desktop과의 통신도 로컬에서 이루어집니다.
+**A:** No. After initial installation, all data is stored locally.
+Communication with Claude Desktop is also local.
 
-### Q: PDF를 배포해도 되나요?
+### Q: Can I distribute the PDF?
 
-**A:** 아니요. PDF는 각 사용자가 공식 소스에서 직접 다운로드해야 합니다.
-이 MCP는 좌표 정보만 배포하며, 실제 텍스트는 사용자의 PDF에서 추출됩니다.
+**A:** No. Users must download PDFs from official sources themselves.
+This MCP only distributes coordinate information; actual text is extracted from user's PDF.
 
-### Q: 다른 국가의 Building Code도 지원하나요?
+### Q: Does it support other countries' Building Codes?
 
-**A:** 현재는 캐나다 코드만 지원합니다.
-동일한 아키텍처로 다른 코드도 추가할 수 있습니다.
+**A:** Currently only Canadian codes are supported.
+The same architecture can be extended to add other codes.
 
-### Q: 업데이트는 어떻게 하나요?
+### Q: How do I update?
 
 **A:**
 ```bash
@@ -319,52 +419,69 @@ pip install -r requirements.txt --upgrade
 python setup.py --update
 ```
 
-### Q: 오프라인에서 작동하나요?
+### Q: How do I prevent AI from making up section numbers?
 
-**A:** 네, 완전히 오프라인으로 작동합니다.
-Claude Desktop은 로컬 MCP 서버와 통신합니다.
+**A:** Use the `verify_section` tool before citing any section:
+```
+verify_section(id="9.10.14.1", code="OBC")
+```
+This returns `exists: true/false` and provides similar sections if not found.
+
+### Q: Which code applies to my project?
+
+**A:** Use the `get_applicable_code` tool:
+```
+get_applicable_code("Toronto")  → OBC
+get_applicable_code("Vancouver") → BCBC
+get_applicable_code("Calgary")   → ABC
+```
+
+### Q: Does it work offline?
+
+**A:** Yes, it works completely offline.
+Claude Desktop communicates with the local MCP server.
 
 ---
 
-## 지원 및 기여
+## Support & Contributing
 
-### 버그 신고
+### Bug Reports
 
-GitHub Issues에서 버그를 신고해주세요:
+Report bugs on GitHub Issues:
 https://github.com/username/canadian-building-code-mcp/issues
 
-### 기여
+### Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Submit a Pull Request
 
-### 라이선스
+### License
 
-MIT License - 자유롭게 사용, 수정, 배포 가능
+MIT License - Free to use, modify, and distribute
 
 ---
 
-## 법적 고지
+## Legal Notice
 
 ```
-이 도구는 교육 및 전문가 참조 목적으로만 사용해야 합니다.
+This tool should only be used for educational and professional reference purposes.
 
-실제 건축 프로젝트에서는 반드시 공식 Building Code 문서를
-참조하고, 관할 기관의 검토를 받으세요.
+For actual construction projects, always refer to official Building Code documents
+and obtain review from the relevant authority.
 
-모든 저작권은 원 저작권자에게 있습니다:
+All copyrights belong to their respective owners:
 - Ontario Building Code: © King's Printer for Ontario
 - National Building Code: © National Research Council of Canada
 
-이 도구는 좌표 정보만 배포하며,
-실제 콘텐츠는 사용자가 합법적으로 취득한 PDF에서 추출됩니다.
+This tool only distributes coordinate information;
+actual content is extracted from user's legally obtained PDF.
 ```
 
 ---
 
-## 다음 단계
+## Next Steps
 
-1. **피드백 제공**: 사용 경험을 공유해주세요
-2. **기여**: 새로운 코드 지원을 추가해주세요
-3. **커뮤니티**: Discord/Forum에서 토론에 참여하세요
+1. **Provide Feedback**: Share your usage experience
+2. **Contribute**: Add support for new codes
+3. **Community**: Join discussions on Discord/Forum

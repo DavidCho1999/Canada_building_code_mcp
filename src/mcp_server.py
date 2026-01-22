@@ -156,13 +156,17 @@ class BuildingCodeMCP:
 
     def list_codes(self) -> Dict:
         """List all available codes with download links."""
-        # Searchable codes (have map index)
-        indexed_codes = []
+        # Separate codes from guides based on document_type
+        codes_list = []
+        guides_list = []
+
         for code, data in self.maps.items():
+            doc_type = data.get("document_type", "code")
             code_info = {
                 "code": code,
                 "version": data.get("version", "unknown"),
                 "sections": len(data.get("sections", [])),
+                "document_type": doc_type,
                 "searchable": True,
                 "pdf_connected": code in self.pdf_paths
             }
@@ -172,7 +176,12 @@ class BuildingCodeMCP:
                 code_info["download_url"] = link_info["url"]
                 code_info["source"] = link_info["source"]
                 code_info["free"] = link_info.get("free", True)
-            indexed_codes.append(code_info)
+
+            if doc_type == "guide":
+                code_info["note"] = "Interpretation guide - NOT legally binding"
+                guides_list.append(code_info)
+            else:
+                codes_list.append(code_info)
 
         # Web reference codes (no map, AI reads directly)
         web_references = []
@@ -188,9 +197,11 @@ class BuildingCodeMCP:
             })
 
         return {
-            "indexed_codes": indexed_codes,
+            "codes": codes_list,
+            "guides": guides_list,
             "web_references": web_references,
-            "total_indexed": len(indexed_codes),
+            "total_codes": len(codes_list),
+            "total_guides": len(guides_list),
             "total_web": len(web_references)
         }
 
@@ -225,6 +236,7 @@ class BuildingCodeMCP:
         maps_to_search = {code: self.maps[code]} if code and code in self.maps else self.maps
 
         for code_name, data in maps_to_search.items():
+            doc_type = data.get("document_type", "code")
             for section in data.get("sections", []):
                 section_id = section.get("id", "")
                 title = section.get("title", "")
@@ -246,13 +258,18 @@ class BuildingCodeMCP:
                         score = len(matches) / len(query_terms)
 
                 if score > 0:
-                    results.append({
+                    result_item = {
                         "code": code_name,
                         "id": section_id,
                         "title": title,
                         "page": section.get("page"),
-                        "score": score
-                    })
+                        "score": score,
+                        "document_type": doc_type
+                    }
+                    # Add warning for guides
+                    if doc_type == "guide":
+                        result_item["note"] = "Interpretation guide - NOT legally binding"
+                    results.append(result_item)
 
         results.sort(key=lambda x: x["score"], reverse=True)
         return {"query": query, "results": results[:20], "total": len(results)}
@@ -264,23 +281,63 @@ class BuildingCodeMCP:
 
         data = self.maps[code]
         version = data.get("version", "unknown")
+        doc_type = data.get("document_type", "code")
+
+        # Try exact match first, then try with Division prefixes
+        search_ids = [section_id]
+        # If no prefix, try adding common Division prefixes
+        if not section_id.startswith(('A-', 'B-', 'C-', 'Commentary-', 'Part')):
+            search_ids.extend([f'A-{section_id}', f'B-{section_id}', f'C-{section_id}'])
 
         for section in data.get("sections", []):
-            if section.get("id") == section_id:
+            if section.get("id") in search_ids:
                 result = dict(section)
+                actual_id = section.get("id")
                 result["code"] = code
                 result["version"] = version
+                result["document_type"] = doc_type
+
+                # Note if we found it with a different prefix
+                if actual_id != section_id:
+                    result["note"] = f"Found as '{actual_id}' (you searched for '{section_id}')"
 
                 # Add formal citation
                 page = section.get("page")
-                result["citation"] = f"{code} {version}, Section {section_id}" + (f", Page {page}" if page else "")
-                result["citation_short"] = f"{code} {version}, s. {section_id}"
+                result["citation"] = f"{code} {version}, Section {actual_id}" + (f", Page {page}" if page else "")
+                result["citation_short"] = f"{code} {version}, s. {actual_id}"
+
+                # Add warning for guides
+                if doc_type == "guide":
+                    result["warning"] = "This is an interpretation guide - NOT legally binding. Always cite the actual code section."
 
                 # BYOD: Extract text if PDF connected
                 if code in self.pdf_paths and self.pdf_verified.get(code):
                     text = self._extract_text(code, section)
                     if text:
                         result["text"] = text
+                        result["text_available"] = True
+                    else:
+                        result["text"] = None
+                        result["text_available"] = False
+                        result["text_error"] = "Could not extract text from PDF"
+                else:
+                    # PDF not connected - provide guidance
+                    result["text"] = None
+                    result["text_available"] = False
+                    if code in self.pdf_paths and not self.pdf_verified.get(code):
+                        result["text_status"] = "PDF connected but version mismatch detected"
+                    else:
+                        result["text_status"] = "PDF not connected"
+
+                    # Provide download link if available
+                    if code in PDF_DOWNLOAD_LINKS:
+                        link = PDF_DOWNLOAD_LINKS[code]
+                        result["how_to_get_text"] = (
+                            f"1. Download PDF from: {link['url']}\n"
+                            f"2. Use set_pdf_path('{code}', '/path/to/your.pdf') to connect"
+                        )
+                    else:
+                        result["how_to_get_text"] = f"Use set_pdf_path('{code}', '/path/to/your.pdf') to enable text extraction"
 
                 result["disclaimer"] = DISCLAIMER
                 return result
@@ -425,27 +482,37 @@ class BuildingCodeMCP:
         data = self.maps[code]
         version = data.get("version", "unknown")
 
+        # Try exact match first, then try with Division prefixes
+        search_ids = [section_id]
+        if not section_id.startswith(('A-', 'B-', 'C-', 'Commentary-', 'Part')):
+            search_ids.extend([f'A-{section_id}', f'B-{section_id}', f'C-{section_id}'])
+
         for section in data.get("sections", []):
-            if section.get("id") == section_id:
+            if section.get("id") in search_ids:
+                actual_id = section.get("id")
                 page = section.get("page")
                 title = section.get("title", "")
 
                 # Build formal citation
-                citation = f"{code} {version}, Section {section_id}"
+                citation = f"{code} {version}, Section {actual_id}"
                 if page:
                     citation += f", Page {page}"
 
-                return {
+                result = {
                     "exists": True,
-                    "section_id": section_id,
+                    "section_id": actual_id,
                     "code": code,
                     "version": version,
                     "title": title,
                     "page": page,
                     "citation": citation,
-                    "citation_format": f"{code} {version}, s. {section_id}" + (f", p. {page}" if page else ""),
+                    "citation_format": f"{code} {version}, s. {actual_id}" + (f", p. {page}" if page else ""),
                     "disclaimer": DISCLAIMER
                 }
+                # Note if found with different prefix
+                if actual_id != section_id:
+                    result["note"] = f"Found as '{actual_id}' (you searched for '{section_id}')"
+                return result
 
         # Section not found - suggest similar sections
         similar = []
@@ -686,11 +753,16 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
     return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
 
 
-async def main():
+async def _async_main():
     async with stdio_server() as (read_stream, write_stream):
         await server.run(read_stream, write_stream, server.create_initialization_options())
 
 
-if __name__ == "__main__":
+def main():
+    """Entry point for the MCP server."""
     import asyncio
-    asyncio.run(main())
+    asyncio.run(_async_main())
+
+
+if __name__ == "__main__":
+    main()

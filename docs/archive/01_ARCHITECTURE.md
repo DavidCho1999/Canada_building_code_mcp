@@ -1,28 +1,28 @@
-# 01. Architecture - 상세 아키텍처
+# 01. Architecture - Detailed Architecture
 
-## 핵심 개념: Map & Territory
+## Core Concept: Map & Territory
 
 ```
-Map (지도)     = structure_map.json (좌표, 페이지, ID)
-Territory (땅) = 사용자의 PDF 파일 (실제 콘텐츠)
+Map (coordinate)  = structure_map.json (coordinates, pages, IDs)
+Territory (data)  = User's PDF file (actual content)
 ```
 
-**비유:**
-> 구글 지도가 "서울역은 북위 37.5°에 있다"고 알려주는 것처럼,
-> 우리는 "9.8.2.1 조항은 245페이지, 좌표 [50,100]에 있다"고 알려줌.
+**Analogy:**
+> Just like Google Maps tells you "Seoul Station is at 37.5° N latitude",
+> we tell you "Section 9.8.2.1 is at page 245, coordinates [50,100]".
 >
-> 실제로 서울역에 가는 건 사용자 몫.
-> 실제로 텍스트를 읽는 건 사용자의 PDF에서.
+> Actually going to Seoul Station is up to the user.
+> Actually reading the text is from the user's PDF.
 
 ---
 
-## 데이터 흐름
+## Data Flow
 
-### Phase 1: 개발자 측 (맵 생성)
+### Phase 1: Developer Side (Map Generation)
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                    개발자 컴퓨터                         │
+│                    Developer Computer                    │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌─────────┐                                            │
@@ -31,79 +31,79 @@ Territory (땅) = 사용자의 PDF 파일 (실제 콘텐츠)
 │       │                                                 │
 │       ▼                                                 │
 │  ┌─────────────────────────────────────────────┐       │
-│  │              Marker 파싱                     │       │
-│  │  - 구조 분석 (Section, Article, Table)       │       │
-│  │  - bbox 좌표 추출                            │       │
-│  │  - 페이지 번호 기록                          │       │
-│  │  (시간: 30분 ~ 1시간)                        │       │
+│  │              Marker Parsing                  │       │
+│  │  - Structure analysis (Section, Article)     │       │
+│  │  - bbox coordinate extraction                │       │
+│  │  - Page number recording                     │       │
+│  │  (Time: 30min ~ 1hour)                       │       │
 │  └────┬────────────────────────────────────────┘       │
 │       │                                                 │
 │       ▼                                                 │
 │  ┌─────────────────────────────────────────────┐       │
 │  │           structure_map.json                 │       │
-│  │  - 텍스트 내용 없음 (저작권 안전)            │       │
-│  │  - 좌표만 포함                               │       │
-│  │  - 용량: 수백 KB                             │       │
+│  │  - No text content (copyright safe)          │       │
+│  │  - Coordinates only                          │       │
+│  │  - Size: hundreds of KB                      │       │
 │  └────┬────────────────────────────────────────┘       │
 │       │                                                 │
 │       ▼                                                 │
 │  ┌─────────┐                                            │
-│  │ GitHub  │ ← 배포                                     │
+│  │ GitHub  │ ← Distribution                             │
 │  └─────────┘                                            │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
 
-### Phase 2: 사용자 측 (텍스트 추출)
+### Phase 2: User Side (Text Extraction)
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                     사용자 컴퓨터                        │
+│                     User Computer                        │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
 │  ┌─────────────────┐    ┌──────────────────────┐       │
-│  │ 사용자 OBC PDF  │    │ structure_map.json   │       │
-│  │ (합법 취득)     │    │ (GitHub에서 다운)    │       │
+│  │ User's OBC PDF  │    │ structure_map.json   │       │
+│  │ (legally obtained)│   │ (downloaded from GitHub)│    │
 │  └────────┬────────┘    └──────────┬───────────┘       │
 │           │                        │                    │
 │           │    ┌───────────────────┘                    │
 │           ▼    ▼                                        │
 │  ┌─────────────────────────────────────────────┐       │
-│  │            PDF 해시 검증                     │       │
-│  │  - 사용자 PDF 해시 계산                      │       │
-│  │  - checksums.json과 비교                    │       │
-│  │  - 일치: Fast Mode / 불일치: Slow Mode      │       │
+│  │            PDF Hash Verification             │       │
+│  │  - Calculate user's PDF hash                 │       │
+│  │  - Compare with checksums.json               │       │
+│  │  - Match: Fast Mode / Mismatch: Slow Mode    │       │
 │  └────┬────────────────────────────────────────┘       │
 │       │                                                 │
-│       ▼ (일치 시)                                       │
+│       ▼ (on match)                                      │
 │  ┌─────────────────────────────────────────────┐       │
-│  │         PyMuPDF 좌표 기반 추출               │       │
+│  │         PyMuPDF Coordinate-based Extraction  │       │
 │  │                                              │       │
-│  │  for item in structure_map:                 │       │
-│  │      page = doc[item.page]                  │       │
-│  │      text = page.get_text(clip=item.bbox)   │       │
+│  │  for item in structure_map:                  │       │
+│  │      page = doc[item.page]                   │       │
+│  │      text = page.get_text(clip=item.bbox)    │       │
 │  │                                              │       │
-│  │  (시간: 10초 ~ 1분)                          │       │
+│  │  (Time: 10sec ~ 1min)                        │       │
 │  └────┬────────────────────────────────────────┘       │
 │       │                                                 │
 │       ▼                                                 │
 │  ┌─────────────────────────────────────────────┐       │
-│  │              로컬 SQLite DB                  │       │
-│  │  - section_id, content, type, page          │       │
-│  │  - 검색 인덱스 생성                          │       │
+│  │              Local SQLite DB                 │       │
+│  │  - section_id, content, type, page           │       │
+│  │  - Search index creation                     │       │
 │  └────┬────────────────────────────────────────┘       │
 │       │                                                 │
 │       ▼                                                 │
 │  ┌─────────────────────────────────────────────┐       │
-│  │              MCP 서버 실행                   │       │
-│  │  - search_code(query)                       │       │
-│  │  - get_section(id)                          │       │
-│  │  - get_table(id)                            │       │
+│  │              MCP Server Running              │       │
+│  │  - search_code(query)                        │       │
+│  │  - get_section(id)                           │       │
+│  │  - get_table(id)                             │       │
 │  └────┬────────────────────────────────────────┘       │
 │       │                                                 │
 │       ▼                                                 │
 │  ┌─────────┐                                            │
-│  │ Claude  │ ← MCP 연결                                 │
+│  │ Claude  │ ← MCP Connection                           │
 │  └─────────┘                                            │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
@@ -111,9 +111,9 @@ Territory (땅) = 사용자의 PDF 파일 (실제 콘텐츠)
 
 ---
 
-## structure_map.json 스키마
+## structure_map.json Schema
 
-### 기본 구조
+### Basic Structure
 
 ```json
 {
@@ -157,7 +157,7 @@ Territory (땅) = 사용자의 PDF 파일 (실제 콘텐츠)
 }
 ```
 
-### 타입 정의
+### Type Definitions
 
 ```typescript
 interface StructureMap {
@@ -174,7 +174,7 @@ interface StructureMap {
 interface Section {
   id: string;           // "9.8.2.1"
   type: "part" | "section" | "subsection" | "article" | "clause";
-  title?: string;       // 제목 (좌표로 추출 가능하면 생략)
+  title?: string;       // Title (omit if extractable by coordinates)
   page: number;         // 1-indexed
   bbox: [number, number, number, number];  // [x1, y1, x2, y2]
   parent_id?: string;
@@ -188,42 +188,42 @@ interface Table {
   body_bbox: [number, number, number, number];
   columns: number;
   rows: number;
-  spans_pages?: number[];  // 여러 페이지에 걸친 테이블
+  spans_pages?: number[];  // Multi-page tables
 }
 ```
 
 ---
 
-## PDF 버전 검증
+## PDF Version Verification
 
-### 왜 필요한가?
+### Why Is It Needed?
 
 ```
-문제: 사용자 PDF가 개발자 PDF와 다른 버전이면?
-     → 좌표가 전부 어긋남
-     → 잘못된 텍스트 추출
+Problem: What if user's PDF is a different version than developer's?
+     → All coordinates are misaligned
+     → Wrong text extraction
 ```
 
-### 검증 로직
+### Verification Logic
 
 ```python
 import hashlib
 
 def verify_pdf(user_pdf_path: str, expected_hash: str) -> bool:
-    """PDF 파일의 해시값 검증"""
+    """Verify PDF file hash"""
     with open(user_pdf_path, 'rb') as f:
         file_hash = hashlib.md5(f.read()).hexdigest()
 
     return file_hash == expected_hash
 
 def get_extraction_mode(user_pdf: str, checksums: dict) -> str:
-    """추출 모드 결정"""
+    """Determine extraction mode"""
     user_hash = calculate_hash(user_pdf)
 
     if user_hash in checksums.values():
-        return "fast"   # 좌표 기반 추출
+        return "fast"   # Coordinate-based extraction
     else:
-        return "slow"   # 패턴 매칭 추출 (fallback)
+        return "slow"   # Pattern matching extraction (fallback)
 ```
 
 ### checksums.json
@@ -241,34 +241,34 @@ def get_extraction_mode(user_pdf: str, checksums: dict) -> str:
     "source": "ontario.ca",
     "date": "2024-06-15",
     "pages": 1200,
-    "note": "오타 수정 버전"
+    "note": "Typo correction version"
   }
 }
 ```
 
 ---
 
-## Fallback 모드
+## Fallback Mode
 
-### 해시 불일치 시
+### When Hash Mismatch
 
 ```python
 def slow_mode_extraction(pdf_path: str, structure_map: dict) -> dict:
     """
-    해시 불일치 시 패턴 매칭으로 추출
-    좌표 대신 텍스트 패턴 사용
+    Pattern matching extraction when hash doesn't match
+    Uses text patterns instead of coordinates
     """
     doc = fitz.open(pdf_path)
     results = {}
 
     for section in structure_map['sections']:
-        # 좌표 대신 ID 패턴으로 검색
+        # Search by ID pattern instead of coordinates
         pattern = rf"^{re.escape(section['id'])}\.\s+"
 
         for page_num, page in enumerate(doc):
             text = page.get_text()
             if re.search(pattern, text, re.MULTILINE):
-                # 해당 섹션 텍스트 추출
+                # Extract section text
                 results[section['id']] = extract_section_text(page, pattern)
                 break
 
@@ -277,16 +277,16 @@ def slow_mode_extraction(pdf_path: str, structure_map: dict) -> dict:
 
 ---
 
-## 성능 비교
+## Performance Comparison
 
-| 모드 | 방식 | 시간 | 정확도 |
-|------|------|------|--------|
-| **Fast** | 좌표 기반 | 10초 ~ 1분 | 100% (검수된 좌표) |
-| **Slow** | 패턴 매칭 | 5분 ~ 10분 | 95% (패턴 의존) |
-| **Full** | Marker 재실행 | 30분 ~ 1시간 | 98% (Marker 품질) |
+| Mode | Method | Time | Accuracy |
+|------|--------|------|----------|
+| **Fast** | Coordinate-based | 10sec ~ 1min | 100% (verified coordinates) |
+| **Slow** | Pattern matching | 5min ~ 10min | 95% (pattern dependent) |
+| **Full** | Re-run Marker | 30min ~ 1hour | 98% (Marker quality) |
 
 ---
 
-## 다음 문서
+## Next Document
 
-→ [02_IMPLEMENTATION.md](./02_IMPLEMENTATION.md) - 구현 가이드
+→ [02_IMPLEMENTATION.md](./02_IMPLEMENTATION.md) - Implementation Guide

@@ -1,36 +1,36 @@
-# 02. Implementation - 구현 가이드
+# 02. Implementation - Implementation Guide
 
-## 개발 환경 설정
+## Development Environment Setup
 
-### 필수 패키지
+### Required Packages
 
 ```bash
-# 개발자 측 (맵 생성)
+# Developer side (map generation)
 pip install marker-pdf pymupdf
 
-# 사용자 측 (MCP 서버)
+# User side (MCP server)
 pip install mcp pymupdf
 ```
 
-### 디렉토리 구조
+### Directory Structure
 
 ```
 canadian-building-code-mcp/
-├── scripts/                  # 개발자용 스크립트
-│   ├── generate_map.py      # structure_map 생성
-│   ├── validate_map.py      # 맵 검증
-│   └── extract_checksums.py # PDF 해시 추출
+├── scripts/                  # Developer scripts
+│   ├── generate_map.py      # structure_map generation
+│   ├── validate_map.py      # Map validation
+│   └── extract_checksums.py # PDF hash extraction
 │
-├── maps/                     # 배포용 맵 파일
+├── maps/                     # Distribution map files
 │   ├── obc_2024_map.json
 │   └── checksums.json
 │
-├── src/                      # MCP 서버 코드
+├── src/                      # MCP server code
 │   ├── __init__.py
-│   ├── server.py            # MCP 서버 메인
-│   ├── extractor.py         # PDF 텍스트 추출
-│   ├── database.py          # SQLite 관리
-│   └── config.py            # 설정
+│   ├── server.py            # MCP server main
+│   ├── extractor.py         # PDF text extraction
+│   ├── database.py          # SQLite management
+│   └── config.py            # Configuration
 │
 └── tests/
     └── test_extraction.py
@@ -38,9 +38,9 @@ canadian-building-code-mcp/
 
 ---
 
-## Part 1: 맵 생성 (개발자 측)
+## Part 1: Map Generation (Developer Side)
 
-### 1.1 Marker 실행 및 좌표 추출
+### 1.1 Marker Execution and Coordinate Extraction
 
 ```python
 # scripts/generate_map.py
@@ -52,14 +52,14 @@ from datetime import datetime
 import hashlib
 
 def calculate_pdf_hash(pdf_path: str) -> str:
-    """PDF 파일의 MD5 해시 계산"""
+    """Calculate MD5 hash of PDF file"""
     with open(pdf_path, 'rb') as f:
         return hashlib.md5(f.read()).hexdigest()
 
 def extract_structure_from_marker(marker_output_dir: str) -> dict:
     """
-    Marker 출력에서 구조 정보 추출
-    - meta.json의 table_of_contents에서 polygon 정보 사용
+    Extract structure information from Marker output
+    - Uses polygon info from meta.json table_of_contents
     """
     meta_path = Path(marker_output_dir) / "meta.json"
 
@@ -69,7 +69,7 @@ def extract_structure_from_marker(marker_output_dir: str) -> dict:
     sections = []
 
     for item in meta.get('table_of_contents', []):
-        # polygon을 bbox로 변환 (4점 → [x1, y1, x2, y2])
+        # Convert polygon to bbox (4 points → [x1, y1, x2, y2])
         polygon = item.get('polygon', [])
         if len(polygon) >= 4:
             bbox = [
@@ -89,134 +89,9 @@ def extract_structure_from_marker(marker_output_dir: str) -> dict:
         })
 
     return sections
-
-def parse_section_id(title: str) -> dict:
-    """
-    제목에서 Section ID 파싱
-    예: "9.8.2.1. Width" → {"id": "9.8.2.1", "type": "article"}
-    """
-    import re
-
-    # 패턴: 9.X.X.X 형식
-    match = re.match(r'^(\d+\.\d+(?:\.\d+)?(?:\.\d+)?[A-Z]?)\.?\s*(.*)$', title)
-
-    if match:
-        section_id = match.group(1)
-        section_title = match.group(2).strip()
-
-        # 타입 결정
-        parts = section_id.split('.')
-        if len(parts) == 1:
-            section_type = "part"
-        elif len(parts) == 2:
-            section_type = "section"
-        elif len(parts) == 3:
-            section_type = "subsection"
-        elif len(parts) == 4:
-            section_type = "article"
-        else:
-            section_type = "clause"
-
-        return {
-            "id": section_id,
-            "title": section_title,
-            "type": section_type
-        }
-
-    # Table 패턴
-    table_match = re.match(r'^Table\s+(\d+\.\d+\.\d+\.\d+[A-Z]?(?:-[A-Z])?)', title)
-    if table_match:
-        return {
-            "id": f"Table {table_match.group(1)}",
-            "title": title,
-            "type": "table"
-        }
-
-    return None
-
-def generate_structure_map(
-    pdf_path: str,
-    marker_output_dir: str,
-    code_name: str,
-    year: str
-) -> dict:
-    """전체 structure_map 생성"""
-
-    # PDF 해시 계산
-    pdf_hash = calculate_pdf_hash(pdf_path)
-
-    # Marker 출력에서 구조 추출
-    raw_sections = extract_structure_from_marker(marker_output_dir)
-
-    # 구조화
-    sections = []
-    tables = []
-
-    for item in raw_sections:
-        parsed = parse_section_id(item['title'])
-
-        if parsed:
-            entry = {
-                "id": parsed['id'],
-                "type": parsed['type'],
-                "title": parsed.get('title', ''),
-                "page": item['page'],
-                "bbox": item['bbox']
-            }
-
-            if parsed['type'] == 'table':
-                tables.append(entry)
-            else:
-                sections.append(entry)
-
-    # 계층 구조 생성 (parent_id, children)
-    sections = build_hierarchy(sections)
-
-    return {
-        "version": "1.0.0",
-        "code": code_name,
-        "year": year,
-        "pdf_hash": pdf_hash,
-        "created_at": datetime.now().isoformat(),
-        "sections": sections,
-        "tables": tables
-    }
-
-def build_hierarchy(sections: list) -> list:
-    """섹션 간 계층 관계 설정"""
-    id_map = {s['id']: s for s in sections}
-
-    for section in sections:
-        # parent_id 찾기
-        parts = section['id'].split('.')
-        if len(parts) > 1:
-            parent_id = '.'.join(parts[:-1])
-            if parent_id in id_map:
-                section['parent_id'] = parent_id
-
-                # 부모의 children에 추가
-                if 'children' not in id_map[parent_id]:
-                    id_map[parent_id]['children'] = []
-                id_map[parent_id]['children'].append(section['id'])
-
-    return sections
-
-# 실행
-if __name__ == "__main__":
-    structure_map = generate_structure_map(
-        pdf_path="source/2024 Building Code Compendium/301880.pdf",
-        marker_output_dir="data/marker/chunk_01/301880",
-        code_name="OBC",
-        year="2024"
-    )
-
-    with open("maps/obc_2024_map.json", 'w', encoding='utf-8') as f:
-        json.dump(structure_map, f, indent=2, ensure_ascii=False)
-
-    print(f"Generated map with {len(structure_map['sections'])} sections")
 ```
 
-### 1.2 맵 검증
+### 1.2 Map Validation
 
 ```python
 # scripts/validate_map.py
@@ -226,7 +101,7 @@ import fitz
 
 def validate_map(map_path: str, pdf_path: str) -> dict:
     """
-    structure_map이 PDF와 일치하는지 검증
+    Validate that structure_map matches the PDF
     """
     with open(map_path, 'r') as f:
         structure_map = json.load(f)
@@ -240,7 +115,7 @@ def validate_map(map_path: str, pdf_path: str) -> dict:
         "errors": []
     }
 
-    for section in structure_map['sections'][:50]:  # 샘플 검증
+    for section in structure_map['sections'][:50]:  # Sample validation
         try:
             page = doc[section['page'] - 1]  # 0-indexed
 
@@ -248,7 +123,7 @@ def validate_map(map_path: str, pdf_path: str) -> dict:
                 rect = fitz.Rect(section['bbox'])
                 text = page.get_text("text", clip=rect)
 
-                # ID가 추출된 텍스트에 포함되어 있는지 확인
+                # Check if ID is in extracted text
                 if section['id'] in text or section.get('title', '') in text:
                     results['valid'] += 1
                 else:
@@ -270,9 +145,9 @@ def validate_map(map_path: str, pdf_path: str) -> dict:
 
 ---
 
-## Part 2: MCP 서버 (사용자 측)
+## Part 2: MCP Server (User Side)
 
-### 2.1 PDF 텍스트 추출기
+### 2.1 PDF Text Extractor
 
 ```python
 # src/extractor.py
@@ -290,7 +165,7 @@ class PDFExtractor:
         self.mode = "fast"  # or "slow"
 
     def verify_pdf(self) -> bool:
-        """PDF 해시 검증"""
+        """Verify PDF hash"""
         expected_hash = self.structure_map.get('pdf_hash')
 
         with open(self.pdf_path, 'rb') as f:
@@ -302,22 +177,10 @@ class PDFExtractor:
         else:
             self.mode = "slow"
             print(f"Warning: PDF hash mismatch. Using slow mode.")
-            print(f"Expected: {expected_hash}")
-            print(f"Got: {actual_hash}")
             return False
 
-    def open(self):
-        """PDF 열기"""
-        self.doc = fitz.open(self.pdf_path)
-
-    def close(self):
-        """PDF 닫기"""
-        if self.doc:
-            self.doc.close()
-
     def extract_section(self, section_id: str) -> Optional[str]:
-        """특정 섹션 텍스트 추출"""
-        # 섹션 찾기
+        """Extract specific section text"""
         section = None
         for s in self.structure_map['sections']:
             if s['id'] == section_id:
@@ -333,52 +196,13 @@ class PDFExtractor:
             return self._extract_by_pattern(section)
 
     def _extract_by_bbox(self, section: dict) -> str:
-        """좌표 기반 추출 (Fast Mode)"""
+        """Coordinate-based extraction (Fast Mode)"""
         page = self.doc[section['page'] - 1]
         rect = fitz.Rect(section['bbox'])
         return page.get_text("text", clip=rect).strip()
-
-    def _extract_by_pattern(self, section: dict) -> str:
-        """패턴 기반 추출 (Slow Mode)"""
-        import re
-
-        page = self.doc[section['page'] - 1]
-        text = page.get_text()
-
-        # 섹션 시작 패턴
-        start_pattern = rf"(?:^|\n){re.escape(section['id'])}\.\s+"
-
-        match = re.search(start_pattern, text)
-        if match:
-            start_pos = match.end()
-
-            # 다음 섹션까지 추출 (간단한 버전)
-            end_pos = len(text)
-            next_section_match = re.search(r'\n\d+\.\d+\.\d+\.\d+\.', text[start_pos:])
-            if next_section_match:
-                end_pos = start_pos + next_section_match.start()
-
-            return text[start_pos:end_pos].strip()
-
-        return ""
-
-    def extract_all(self) -> dict:
-        """전체 텍스트 추출"""
-        results = {}
-
-        for section in self.structure_map['sections']:
-            text = self.extract_section(section['id'])
-            if text:
-                results[section['id']] = {
-                    "content": text,
-                    "type": section['type'],
-                    "page": section['page']
-                }
-
-        return results
 ```
 
-### 2.2 로컬 데이터베이스
+### 2.2 Local Database
 
 ```python
 # src/database.py
@@ -419,41 +243,11 @@ class LocalDB:
 
         self.conn.commit()
 
-    def insert_section(self, section: dict, code: str):
-        cursor = self.conn.cursor()
-
-        cursor.execute("""
-            INSERT OR REPLACE INTO sections
-            (id, code, type, title, content, page, parent_id)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-        """, (
-            section['id'],
-            code,
-            section.get('type'),
-            section.get('title', ''),
-            section.get('content', ''),
-            section.get('page'),
-            section.get('parent_id')
-        ))
-
-        # FTS 업데이트
-        cursor.execute("""
-            INSERT OR REPLACE INTO sections_fts (id, title, content)
-            VALUES (?, ?, ?)
-        """, (
-            section['id'],
-            section.get('title', ''),
-            section.get('content', '')
-        ))
-
-        self.conn.commit()
-
     def search(self, query: str, code: str = None, limit: int = 10) -> list:
         cursor = self.conn.cursor()
-
         sql = """
             SELECT s.id, s.title, s.type, s.page,
-                   snippet(sections_fts, 2, '<mark>', '</mark>', '...', 32) as snippet
+                   snippet(sections_fts, 2, '<mark>', '</mark>', '...', 32)
             FROM sections_fts
             JOIN sections s ON sections_fts.id = s.id
             WHERE sections_fts MATCH ?
@@ -469,29 +263,9 @@ class LocalDB:
 
         cursor.execute(sql, params)
         return cursor.fetchall()
-
-    def get_section(self, section_id: str) -> dict:
-        cursor = self.conn.cursor()
-        cursor.execute("""
-            SELECT id, code, type, title, content, page, parent_id
-            FROM sections WHERE id = ?
-        """, (section_id,))
-
-        row = cursor.fetchone()
-        if row:
-            return {
-                "id": row[0],
-                "code": row[1],
-                "type": row[2],
-                "title": row[3],
-                "content": row[4],
-                "page": row[5],
-                "parent_id": row[6]
-            }
-        return None
 ```
 
-### 2.3 MCP 서버
+### 2.3 MCP Server
 
 ```python
 # src/server.py
@@ -510,13 +284,13 @@ db = LocalDB()
 @server.tool()
 async def setup_code(pdf_path: str, code: str = "OBC") -> str:
     """
-    Building Code PDF를 설정하고 인덱싱합니다.
+    Set up and index the Building Code PDF.
 
     Args:
-        pdf_path: PDF 파일 경로
-        code: 코드 종류 (OBC, NBC, BCBC 등)
+        pdf_path: PDF file path
+        code: Code type (OBC, NBC, BCBC, etc.)
     """
-    # 맵 로드
+    # Load map
     map_path = Path(__file__).parent.parent / f"maps/{code.lower()}_2024_map.json"
 
     if not map_path.exists():
@@ -525,12 +299,12 @@ async def setup_code(pdf_path: str, code: str = "OBC") -> str:
     with open(map_path, 'r') as f:
         structure_map = json.load(f)
 
-    # 추출기 초기화
+    # Initialize extractor
     extractor = PDFExtractor(pdf_path, structure_map)
     extractor.verify_pdf()
     extractor.open()
 
-    # 텍스트 추출 및 DB 저장
+    # Extract text and save to DB
     db.connect()
 
     sections = extractor.extract_all()
@@ -547,11 +321,11 @@ async def setup_code(pdf_path: str, code: str = "OBC") -> str:
 @server.tool()
 async def search_code(query: str, code: str = None) -> str:
     """
-    Building Code에서 검색합니다.
+    Search the Building Code.
 
     Args:
-        query: 검색어
-        code: 특정 코드로 제한 (선택)
+        query: Search terms
+        code: Limit to specific code (optional)
     """
     db.connect()
     results = db.search(query, code)
@@ -568,10 +342,10 @@ async def search_code(query: str, code: str = None) -> str:
 @server.tool()
 async def get_section(section_id: str) -> str:
     """
-    특정 섹션의 전체 내용을 가져옵니다.
+    Get the full content of a specific section.
 
     Args:
-        section_id: 섹션 ID (예: 9.8.2.1)
+        section_id: Section ID (e.g., 9.8.2.1)
     """
     db.connect()
     section = db.get_section(section_id)
@@ -589,28 +363,13 @@ async def get_section(section_id: str) -> str:
 
 {section['content']}
 """
-
-@server.tool()
-async def get_table(table_id: str) -> str:
-    """
-    특정 테이블을 가져옵니다.
-
-    Args:
-        table_id: 테이블 ID (예: Table 9.10.14.4)
-    """
-    return await get_section(table_id)
-
-# 서버 실행
-if __name__ == "__main__":
-    import asyncio
-    asyncio.run(server.run())
 ```
 
 ---
 
-## Part 3: 사용자 설정
+## Part 3: User Configuration
 
-### Claude Desktop 설정
+### Claude Desktop Configuration
 
 ```json
 // claude_desktop_config.json
@@ -627,22 +386,22 @@ if __name__ == "__main__":
 }
 ```
 
-### 첫 실행 시
+### First Run
 
 ```
-사용자: "OBC PDF를 설정해줘"
+User: "Set up the OBC PDF"
 
-Claude: [setup_code 호출]
+Claude: [calls setup_code]
         "Successfully indexed 1,247 sections from OBC"
 
-사용자: "계단 너비 규정 알려줘"
+User: "Tell me the stair width requirements"
 
-Claude: [search_code("계단 너비") 또는 search_code("stair width")]
-        "9.8.2.1에 따르면..."
+Claude: [calls search_code("stair width")]
+        "According to 9.8.2.1..."
 ```
 
 ---
 
-## 다음 문서
+## Next Document
 
-→ [03_LEGAL.md](./03_LEGAL.md) - 법적 분석
+→ [03_LEGAL.md](./03_LEGAL.md) - Legal Analysis

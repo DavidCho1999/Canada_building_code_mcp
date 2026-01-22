@@ -30,26 +30,44 @@ Claude will search 20,000+ indexed sections across 13 Canadian building codes an
 
 ## Installation
 
-### 1. Clone the repository
+### Option A: pip install (Recommended)
+
+```bash
+# Basic installation
+pip install git+https://github.com/DavidCho1999/Canada-AEC-Code-MCP.git
+
+# With PDF text extraction support
+pip install "git+https://github.com/DavidCho1999/Canada-AEC-Code-MCP.git#egg=building-code-mcp[pdf]"
+```
+
+### Option B: Clone and install
 
 ```bash
 git clone https://github.com/DavidCho1999/Canada-AEC-Code-MCP.git
 cd Canada-AEC-Code-MCP
+pip install -e .          # Basic
+pip install -e ".[pdf]"   # With PDF support
 ```
 
-### 2. Install dependencies
-
-```bash
-pip install mcp pymupdf
-```
-
-### 3. Configure Claude Desktop
+### Configure Claude Desktop
 
 Find your Claude Desktop config file:
 - **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
 - **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
 Add this to the config file:
+
+```json
+{
+  "mcpServers": {
+    "building-code": {
+      "command": "building-code-mcp"
+    }
+  }
+}
+```
+
+Or if using the cloned repository:
 
 ```json
 {
@@ -62,9 +80,7 @@ Add this to the config file:
 }
 ```
 
-**Important**: Use the full absolute path to `mcp_server.py`
-
-### 4. Restart Claude Desktop
+### Restart Claude Desktop
 
 Close and reopen Claude Desktop. You should see "building-code" in the MCP tools.
 

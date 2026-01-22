@@ -1,11 +1,11 @@
 # Canadian Building Code PDF Download Links
 
-> 모든 PDF 무료 다운로드 가능
-> "좌표 오버레이" 전략 = 99% 법적 안전
+> All PDFs available for free download
+> "Coordinate overlay" strategy = 99% legally safe
 
 ---
 
-## National Codes (NRC) - 4개
+## National Codes (NRC) - 4 codes
 
 | Code | Version | Link |
 |------|---------|------|
@@ -16,7 +16,7 @@
 
 ---
 
-## Provincial Codes - 7개
+## Provincial Codes - 7 codes
 
 ### Ontario
 | Code | Version | Link |
@@ -33,7 +33,7 @@
 |------|---------|------|
 | **ABC** (Alberta Building Code) | 2023 | [NRC](https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-2023-alberta-edition) |
 
-### Quebec (불어)
+### Quebec (French)
 | Code | Version | Link |
 |------|---------|------|
 | **QCC Building** (Chapter I) | 2020 | [NRC Archive](https://nrc-publications.canada.ca/eng/view/object/?id=fbb47c66-fcda-4d5b-a045-882dfa80ab0e) |
@@ -43,7 +43,7 @@
 
 ---
 
-## User's Guides - 3개
+## User's Guides - 3 guides
 
 | Guide | Version | Link |
 |-------|---------|------|
@@ -70,7 +70,7 @@
 - [ ] NFC 2025
 - [ ] NPC 2025
 - [ ] NECB 2025
-- [x] OBC 2024 (이미 있음)
+- [x] OBC 2024 (already have)
 - [ ] BCBC 2024
 - [ ] ABC 2023
 - [ ] QCC Building
@@ -85,7 +85,7 @@
 
 ## Notes
 
-- **NBC**: 나머지 주 (Manitoba, Saskatchewan, Nova Scotia 등) 커버
-- **Quebec**: 불어지만 MCP 가능
-- **좌표만 배포**: 텍스트 배포 X → 저작권 문제 없음
-- **Marker 소요 시간**: PDF당 30분~1시간 (CPU)
+- **NBC**: Covers other provinces (Manitoba, Saskatchewan, Nova Scotia, etc.)
+- **Quebec**: French language but MCP compatible
+- **Coordinates only**: No text distribution → No copyright issues
+- **Marker processing time**: 30min-1hour per PDF (CPU)
