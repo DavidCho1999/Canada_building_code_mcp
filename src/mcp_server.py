@@ -21,6 +21,67 @@ except ImportError:
     PYMUPDF_AVAILABLE = False
 
 
+# PDF Download Links (all free)
+PDF_DOWNLOAD_LINKS = {
+    "NBC": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=adf1ad94-7ea8-4b08-a19f-653ebb7f45f6",
+        "source": "NRC",
+        "free": True
+    },
+    "NFC": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=e8a18373-a824-42d5-8823-bfad854c2ebd",
+        "source": "NRC",
+        "free": True
+    },
+    "NPC": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=6e7cabf5-d83e-4efd-9a1c-6515fc7cdc71",
+        "source": "NRC",
+        "free": True
+    },
+    "NECB": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=0d558a8e-28fe-4b5d-bb73-35b5a3703e8b",
+        "source": "NRC",
+        "free": True
+    },
+    "OBC": {
+        "url": "https://www.ontario.ca/page/2024-ontario-building-code",
+        "source": "Ontario.ca",
+        "free": True,
+        "note": "Request form required, PDF sent via email"
+    },
+    "BCBC": {
+        "url": "https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/bc-codes/2024-bc-codes",
+        "source": "BC Government",
+        "free": True
+    },
+    "ABC": {
+        "url": "https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-2023-alberta-edition",
+        "source": "NRC",
+        "free": True
+    },
+    "QCC": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=fbb47c66-fcda-4d5b-a045-882dfa80ab0e",
+        "source": "NRC",
+        "free": True
+    },
+    "QECB": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=ad5eaa41-7532-4cbb-9a1e-49c54b25371e",
+        "source": "NRC",
+        "free": True
+    },
+    "QPC": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=4931b15f-9344-43b6-a0f3-446b7b25c410",
+        "source": "NRC",
+        "free": True
+    },
+    "QSC": {
+        "url": "https://nrc-publications.canada.ca/eng/view/object/?id=6a46f33c-2fc3-4d85-8ee7-34e6780e4bf5",
+        "source": "NRC",
+        "free": True
+    },
+}
+
+
 class BuildingCodeMCP:
     """Canadian Building Code MCP Server"""
 
@@ -45,38 +106,73 @@ class BuildingCodeMCP:
                 pass
 
     def list_codes(self) -> Dict:
-        """List all available codes."""
+        """List all available codes with download links."""
         codes = []
         for code, data in self.maps.items():
-            codes.append({
+            code_info = {
                 "code": code,
                 "version": data.get("version", "unknown"),
                 "sections": len(data.get("sections", [])),
                 "pdf_connected": code in self.pdf_paths
-            })
+            }
+            # Add download link if available
+            if code in PDF_DOWNLOAD_LINKS:
+                link_info = PDF_DOWNLOAD_LINKS[code]
+                code_info["download_url"] = link_info["url"]
+                code_info["source"] = link_info["source"]
+                code_info["free"] = link_info.get("free", True)
+                if "note" in link_info:
+                    code_info["note"] = link_info["note"]
+            codes.append(code_info)
         return {"codes": codes, "total": len(codes)}
 
     def search_code(self, query: str, code: Optional[str] = None) -> Dict:
         """Search for sections matching query."""
+        # Input validation
+        if not query or not isinstance(query, str):
+            return {"error": "Query is required", "query": "", "results": [], "total": 0}
+
+        # Bug fix: Return error if specified code doesn't exist
+        if code and code not in self.maps:
+            return {"error": f"Code not found: {code}", "query": query, "results": [], "total": 0}
+
         results = []
-        query_terms = set(query.lower().split())
+        query_lower = query.lower().strip()
+        if not query_lower:
+            return {"error": "Query cannot be empty", "query": query, "results": [], "total": 0}
+
+        query_terms = set(query_lower.split())
 
         maps_to_search = {code: self.maps[code]} if code and code in self.maps else self.maps
 
         for code_name, data in maps_to_search.items():
             for section in data.get("sections", []):
+                section_id = section.get("id", "")
+                title = section.get("title", "")
                 keywords = set(kw.lower() for kw in section.get('keywords', []))
-                title_words = set(section.get('title', '').lower().split())
+                title_words = set(title.lower().split())
                 all_terms = keywords | title_words
-                matches = query_terms & all_terms
 
-                if matches:
+                # Score calculation
+                score = 0.0
+
+                # 1. Section ID exact/partial match (highest priority)
+                if query_lower in section_id.lower():
+                    score = 2.0 if section_id.lower().endswith(query_lower) else 1.5
+
+                # 2. Keyword/title word matches
+                elif query_terms:
+                    matches = query_terms & all_terms
+                    if matches:
+                        score = len(matches) / len(query_terms)
+
+                if score > 0:
                     results.append({
                         "code": code_name,
-                        "id": section.get("id"),
-                        "title": section.get("title"),
+                        "id": section_id,
+                        "title": title,
                         "page": section.get("page"),
-                        "score": len(matches) / len(query_terms)
+                        "score": score
                     })
 
         results.sort(key=lambda x: x["score"], reverse=True)
@@ -104,46 +200,87 @@ class BuildingCodeMCP:
 
     def get_hierarchy(self, section_id: str, code: str) -> Dict:
         """Get parent, children, siblings of a section."""
-        if code not in self.maps:
+        # Input validation
+        if not section_id or not isinstance(section_id, str):
+            return {"error": "Section ID is required"}
+        if not code or code not in self.maps:
             return {"error": f"Code not found: {code}"}
 
         sections = self.maps[code].get("sections", [])
 
-        # Find parent
-        parts = section_id.split(".")
-        parent_id = ".".join(parts[:-1]) if len(parts) > 1 else None
+        # Find current section first (to get parent_id field)
+        current = None
+        for s in sections:
+            if s.get("id") == section_id:
+                current = s
+                break
+
+        # Bug fix: Use parent_id field from section data, not string parsing
         parent = None
+        parent_id = current.get("parent_id") if current else None
+
+        # Fallback to string parsing if parent_id field not available
+        if not parent_id:
+            parts = section_id.split(".")
+            parent_id = ".".join(parts[:-1]) if len(parts) > 1 else None
+
+        # Find parent section
         if parent_id:
             for s in sections:
                 if s.get("id") == parent_id:
                     parent = {"id": s["id"], "title": s.get("title")}
                     break
+            # If parent not in sections, return parent_id info anyway
+            if not parent:
+                parent = {"id": parent_id, "title": "(not in map)", "note": "Parent section not indexed"}
 
         # Find children
         children = []
         for s in sections:
             sid = s.get("id", "")
-            if sid.startswith(section_id + ".") and sid.count(".") == section_id.count(".") + 1:
+            # Check if this section's parent_id matches current section
+            if s.get("parent_id") == section_id:
                 children.append({"id": sid, "title": s.get("title")})
+            # Fallback: string matching for older maps
+            elif sid.startswith(section_id + ".") and sid.count(".") == section_id.count(".") + 1:
+                if not any(c["id"] == sid for c in children):
+                    children.append({"id": sid, "title": s.get("title")})
 
-        # Find siblings
+        # Find siblings (same parent)
         siblings = []
         if parent_id:
             for s in sections:
                 sid = s.get("id", "")
-                if sid.startswith(parent_id + ".") and sid.count(".") == section_id.count(".") and sid != section_id:
+                s_parent = s.get("parent_id")
+                # Check by parent_id field
+                if s_parent == parent_id and sid != section_id:
                     siblings.append({"id": sid, "title": s.get("title")})
+                # Fallback: string matching
+                elif not s_parent and sid.startswith(parent_id + ".") and sid.count(".") == section_id.count(".") and sid != section_id:
+                    if not any(sib["id"] == sid for sib in siblings):
+                        siblings.append({"id": sid, "title": s.get("title")})
 
-        return {"parent": parent, "children": children, "siblings": siblings}
+        return {"section_id": section_id, "parent": parent, "children": children, "siblings": siblings}
 
     def set_pdf_path(self, code: str, path: str) -> Dict:
         """Connect user's PDF for text extraction."""
-        if code not in self.maps:
+        if not code or code not in self.maps:
             return {"error": f"Code not found: {code}"}
+
+        if not path:
+            return {"error": "Path is required"}
 
         path = Path(path)
         if not path.exists():
             return {"error": f"PDF not found: {path}"}
+
+        # Validate it's a file, not a directory
+        if not path.is_file():
+            return {"error": f"Path is not a file: {path}"}
+
+        # Validate it's a PDF
+        if path.suffix.lower() != '.pdf':
+            return {"error": f"File is not a PDF: {path}"}
 
         self.pdf_paths[code] = str(path.absolute())
         self.pdf_verified[code] = True  # Skip hash verification for now
