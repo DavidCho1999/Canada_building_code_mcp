@@ -10,10 +10,10 @@ const codeGroups = [
     icon: Landmark,
     color: 'bg-blue-500',
     codes: [
-      { name: 'NBC 2025', full: 'National Building Code', sections: 4213 },
-      { name: 'NFC 2025', full: 'National Fire Code', sections: 1407 },
-      { name: 'NPC 2025', full: 'National Plumbing Code', sections: 595 },
-      { name: 'NECB 2025', full: 'National Energy Code', sections: 777 },
+      { name: 'NBC 2025', full: 'National Building Code', sections: '4,200+' },
+      { name: 'NFC 2025', full: 'National Fire Code', sections: '1,400+' },
+      { name: 'NPC 2025', full: 'National Plumbing Code', sections: '590+' },
+      { name: 'NECB 2025', full: 'National Energy Code', sections: '770+' },
     ],
   },
   {
@@ -21,10 +21,10 @@ const codeGroups = [
     icon: Building,
     color: 'bg-emerald-500',
     codes: [
-      { name: 'OBC', full: 'Ontario Building Code', sections: 3925, province: 'ON' },
-      { name: 'BCBC 2024', full: 'BC Building Code', sections: 2645, province: 'BC' },
-      { name: 'ABC', full: 'Alberta Building Code', sections: 4165, province: 'AB' },
-      { name: 'QCC', full: 'Quebec Construction Code', sections: 3925, province: 'QC' },
+      { name: 'OBC', full: 'Ontario Building Code', sections: '3,900+', province: 'ON' },
+      { name: 'BCBC 2024', full: 'BC Building Code', sections: '2,600+', province: 'BC' },
+      { name: 'ABC', full: 'Alberta Building Code', sections: '4,100+', province: 'AB' },
+      { name: 'QCC', full: 'Quebec Construction Code', sections: '3,900+', province: 'QC' },
     ],
   },
   {
@@ -32,9 +32,9 @@ const codeGroups = [
     icon: BookOpen,
     color: 'bg-amber-500',
     codes: [
-      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: 1399 },
-      { name: 'Part 4 Guide', full: 'Structural Design', sections: 21 },
-      { name: 'NECB Guide', full: 'Energy Code Guide', sections: 612 },
+      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,300+' },
+      { name: 'Part 4 Guide', full: 'Structural Design', sections: '20+' },
+      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '610+' },
     ],
   },
 ];
@@ -110,7 +110,7 @@ export default function CodeList() {
                         {code.full}
                       </div>
                       <div className="text-xs text-slate-400">
-                        {code.sections.toLocaleString()} sections
+                        {code.sections} sections
                       </div>
                     </motion.div>
                   ))}
@@ -174,7 +174,7 @@ export default function CodeList() {
                             )}
                           </div>
                           <div className="text-xs text-slate-500">
-                            {code.full} • {code.sections.toLocaleString()} sections
+                            {code.full} • {code.sections} sections
                           </div>
                         </div>
                       ))}
