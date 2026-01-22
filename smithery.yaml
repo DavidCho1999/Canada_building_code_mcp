@@ -22,6 +22,8 @@ author: DavidCho1999
 repository: https://github.com/DavidCho1999/Canada-AEC-Code-MCP
 license: MIT
 version: 1.0.0
+homepage: https://canada-building-code.vercel.app
+icon: https://canada-building-code.vercel.app/icon.svg
 
 # Tags for discovery
 tags:
