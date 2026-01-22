@@ -113,3 +113,9 @@ htmlcov/
 *.key
 *credentials*.json
 *secrets*.json
+
+# ========================================
+# Internal Documents (Private)
+# ========================================
+product-development/
+test_mcp.py

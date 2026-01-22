@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(npm search:*)",
-      "mcp__brave-search__brave_web_search"
-    ]
-  }
-}
