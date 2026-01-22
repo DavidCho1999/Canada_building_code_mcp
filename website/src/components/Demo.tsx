@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageSquare, Bot, FileText, ExternalLink } from 'lucide-react';
+import { MessageSquare, Bot, FileText, ExternalLink, Sparkles, MousePointer2, Wind, Code } from 'lucide-react';
 import clsx from 'clsx';
 
 const demoConversations = [
@@ -75,10 +75,18 @@ export default function Demo() {
             Works with any MCP-compatible client.
           </p>
           <div className="flex gap-3 text-sm overflow-x-auto md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Claude Desktop</span>
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Cursor</span>
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Windsurf</span>
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">VS Code + Copilot</span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
+              <Sparkles className="w-3.5 h-3.5" />Claude Desktop
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
+              <MousePointer2 className="w-3.5 h-3.5" />Cursor
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
+              <Wind className="w-3.5 h-3.5" />Windsurf
+            </span>
+            <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
+              <Code className="w-3.5 h-3.5" />VS Code + Copilot
+            </span>
           </div>
         </motion.div>
 
