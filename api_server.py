@@ -55,6 +55,46 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/.well-known/mcp/server-card.json")
+def server_card():
+    """Smithery MCP server card for discovery."""
+    return {
+        "name": "canada-building-code-mcp",
+        "description": "Search 20,000+ sections across 13 Canadian building codes",
+        "version": "1.0.0",
+        "tools": [
+            {
+                "name": "list_codes",
+                "description": "List all available Canadian building codes with section counts"
+            },
+            {
+                "name": "search_code",
+                "description": "Search for building code sections by keywords",
+                "parameters": {
+                    "query": {"type": "string", "description": "Search query"},
+                    "code": {"type": "string", "description": "Code to search (optional)"}
+                }
+            },
+            {
+                "name": "get_section",
+                "description": "Get details of a specific section by ID",
+                "parameters": {
+                    "section_id": {"type": "string", "description": "Section ID"},
+                    "code": {"type": "string", "description": "Code name (optional)"}
+                }
+            },
+            {
+                "name": "get_hierarchy",
+                "description": "Get parent, children, and sibling sections",
+                "parameters": {
+                    "section_id": {"type": "string", "description": "Section ID"},
+                    "code": {"type": "string", "description": "Code name (optional)"}
+                }
+            }
+        ]
+    }
+
+
 @app.get("/codes")
 def list_codes():
     """List all available building codes."""
