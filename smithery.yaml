@@ -1,0 +1,48 @@
+name: canada-building-code
+description: Search 20,000+ sections across 13 Canadian building codes (NBC, OBC, BCBC, OFC, and more)
+author: DavidCho1999
+repository: https://github.com/DavidCho1999/Canada-AEC-Code-MCP
+license: MIT
+
+runtime: python
+entrypoint: src/mcp_server.py
+
+dependencies:
+  - mcp
+  - pymupdf
+  - beautifulsoup4
+
+tags:
+  - building-code
+  - construction
+  - architecture
+  - engineering
+  - canada
+  - regulations
+  - AEC
+
+tools:
+  - name: list_codes
+    description: List all available Canadian building codes with section counts
+  - name: search_code
+    description: Search for building code sections by keywords (e.g., "fire separation", "stair width")
+  - name: get_section
+    description: Get details of a specific section by ID (e.g., "9.9.4.1")
+  - name: get_hierarchy
+    description: Get parent, children, and sibling sections for navigation
+  - name: set_pdf_path
+    description: Connect your PDF for full text extraction (BYOD mode)
+
+supported_codes:
+  - NBC 2025 (National Building Code)
+  - NFC 2025 (National Fire Code)
+  - NPC 2025 (National Plumbing Code)
+  - NECB 2025 (National Energy Code)
+  - OBC 2024 (Ontario Building Code)
+  - OFC (Ontario Fire Code)
+  - BCBC 2024 (BC Building Code)
+  - ABC 2023 (Alberta Building Code)
+  - QCC 2020 (Quebec Construction Code)
+  - QECB 2020 (Quebec Energy Code)
+  - QPC 2020 (Quebec Plumbing Code)
+  - QSC 2020 (Quebec Safety Code)
