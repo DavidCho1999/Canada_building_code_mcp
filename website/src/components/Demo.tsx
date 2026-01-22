@@ -59,9 +59,6 @@ export default function Demo() {
     <section id="demo" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-12">
-          <span className="inline-block px-4 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium mb-4">
-            Interactive Demo
-          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 pb-1 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent hover:from-blue-600 hover:to-cyan-500 hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300 cursor-default">
             See It in Action
           </h2>
