@@ -749,14 +749,16 @@ class BuildingCodeMCP:
 
     def get_page(self, code: str, page: int) -> Dict:
         """
-        Get full text content of a specific page.
+        Get full text content of a specific page from the Building Code PDF.
+
+        Use this when you need to:
+        - Read continuous text or tables that span multiple sections
+        - See context around a specific section
+        - Read tables that may be cut off in get_section
 
         Args:
-            code: Code name (e.g., "NBC")
-            page: Page number
-
-        Returns:
-            Page text content
+            code: Building code name (e.g., 'NBC', 'OBC')
+            page: Page number to read (1-indexed)
         """
         if not code or code not in self.maps:
             return {"error": f"Code not found: {code}"}
@@ -776,33 +778,32 @@ class BuildingCodeMCP:
 
         try:
             doc = fitz.open(pdf_path)
-            if page <= 0 or page > len(doc):
-                return {
-                    "error": f"Invalid page number: {page}",
-                    "total_pages": len(doc)
-                }
+            total_pages = len(doc)
+
+            if page < 1 or page > total_pages:
+                doc.close()
+                return {"error": f"Page {page} out of range (1-{total_pages})"}
 
             page_obj = doc[page - 1]
-            text = page_obj.get_text()
+            text = page_obj.get_text("text")
             doc.close()
-
-            # Limit text length
-            max_chars = 3000
-            truncated = len(text) > max_chars
 
             return {
                 "code": code,
                 "page": page,
-                "text": text[:max_chars],
-                "truncated": truncated,
-                "char_count": len(text),
+                "total_pages": total_pages,
+                "text": text,
                 "disclaimer": DISCLAIMER
             }
         except Exception as e:
             return {"error": f"Failed to read page: {str(e)}"}
 
-    def _extract_text(self, code: str, section: Dict) -> Optional[str]:
-        """Extract text from PDF."""
+    def _extract_text(self, code: str, section: Dict, max_chars: int = 8000) -> Optional[str]:
+        """Extract text from PDF for a section.
+
+        Supports multi-page sections using page_end field.
+        Uses markdown format for better table rendering.
+        """
         if not PYMUPDF_AVAILABLE:
             return None
 
@@ -812,30 +813,97 @@ class BuildingCodeMCP:
 
         try:
             doc = fitz.open(pdf_path)
-            page_num = section.get("page", 0)
-            if page_num <= 0 or page_num > len(doc):
+            page_start = section.get("page", 0)
+            page_end = section.get("page_end", page_start)  # Multi-page support
+
+            if page_start <= 0 or page_start > len(doc):
                 return None
 
-            page = doc[page_num - 1]
-            bbox = section.get("bbox")
+            all_text = []
 
-            if bbox:
-                page_height = page.rect.height
-                # "Read to End of Page" - 헤더 바닥부터 페이지 끝까지
-                rect = fitz.Rect(
-                    bbox["l"],
-                    page_height - bbox["b"],  # 헤더 바닥부터
-                    page.rect.width - 50,     # 오른쪽 여백
-                    page_height               # 페이지 끝까지
-                )
-                text = page.get_text(clip=rect)[:800]  # 미리보기 제한
-            else:
-                text = page.get_text()[:500]
+            for page_num in range(page_start, min(page_end + 1, len(doc) + 1)):
+                page = doc[page_num - 1]
+
+                # First page: use bbox if available
+                if page_num == page_start and section.get("bbox"):
+                    bbox = section["bbox"]
+                    page_height = page.rect.height
+                    rect = fitz.Rect(
+                        bbox["l"],
+                        page_height - bbox["b"],
+                        page.rect.width - 50,
+                        page_height
+                    )
+                    text = page.get_text("text", clip=rect)
+                else:
+                    # Full page with markdown for better tables
+                    text = page.get_text("text")
+
+                if text:
+                    all_text.append(text.strip())
 
             doc.close()
-            return text.strip() if text else None
-        except Exception:
+
+            combined = "\n\n".join(all_text)
+            # Limit total chars but don't cut mid-sentence
+            if len(combined) > max_chars:
+                combined = combined[:max_chars].rsplit('.', 1)[0] + '...'
+
+            return combined if combined else None
+        except Exception as e:
             return None
+
+    def get_pages(self, code: str, start_page: int, end_page: int) -> Dict:
+        """Read text from a range of pages.
+
+        Use this for multi-page tables or sections that span several pages.
+        Maximum 5 pages per request to avoid context overflow.
+
+        Args:
+            code: Building code name
+            start_page: First page number (1-indexed)
+            end_page: Last page number (inclusive)
+        """
+        if not PYMUPDF_AVAILABLE:
+            return {"error": "PyMuPDF not installed. Run: pip install pymupdf"}
+
+        if code not in self.pdf_paths:
+            return {"error": f"No PDF loaded for code '{code}'. Use set_pdf_path first."}
+
+        # Limit to 5 pages max
+        if end_page - start_page > 4:
+            return {"error": f"Maximum 5 pages per request. Requested {end_page - start_page + 1} pages."}
+
+        pdf_path = self.pdf_paths[code]
+
+        try:
+            doc = fitz.open(pdf_path)
+            total_pages = len(doc)
+
+            if start_page < 1 or end_page > total_pages or start_page > end_page:
+                doc.close()
+                return {"error": f"Invalid page range. Valid: 1-{total_pages}"}
+
+            pages_text = []
+            for page_num in range(start_page, end_page + 1):
+                page = doc[page_num - 1]
+                text = page.get_text("text")
+                pages_text.append({
+                    "page": page_num,
+                    "text": text
+                })
+
+            doc.close()
+
+            return {
+                "code": code,
+                "page_range": f"{start_page}-{end_page}",
+                "total_pages": total_pages,
+                "pages": pages_text,
+                "disclaimer": DISCLAIMER
+            }
+        except Exception as e:
+            return {"error": f"Failed to read pages: {str(e)}"}
 
 
 # Create server and instance
@@ -1052,7 +1120,7 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="get_page",
-            description="Get full text content of a specific page. Requires PDF to be connected via set_pdf_path. Use this when you need to see all content on a page, not just a specific section.",
+            description="Get full text content of a specific page. Requires PDF to be connected via set_pdf_path. Use this when you need to see all content on a page, including tables and context around sections.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -1070,6 +1138,36 @@ async def list_tools() -> List[Tool]:
             },
             annotations=ToolAnnotations(
                 title="Get Page Content",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
+        ),
+        Tool(
+            name="get_pages",
+            description="Get text from a range of pages (max 5). Use this for multi-page tables or sections that span several pages. Requires PDF connected via set_pdf_path.",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "code": {
+                        "type": "string",
+                        "description": "Code name (e.g., 'NBC', 'OBC')"
+                    },
+                    "start_page": {
+                        "type": "integer",
+                        "description": "First page number (1-indexed)"
+                    },
+                    "end_page": {
+                        "type": "integer",
+                        "description": "Last page number (inclusive)"
+                    }
+                },
+                "required": ["code", "start_page", "end_page"],
+                "additionalProperties": False
+            },
+            annotations=ToolAnnotations(
+                title="Get Multiple Pages",
                 readOnlyHint=True,
                 destructiveHint=False,
                 idempotentHint=True,
@@ -1101,6 +1199,12 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
         result = mcp.get_table(arguments.get("table_id", ""), arguments.get("code"))
     elif name == "get_page":
         result = mcp.get_page(arguments.get("code", ""), arguments.get("page", 0))
+    elif name == "get_pages":
+        result = mcp.get_pages(
+            arguments.get("code", ""),
+            arguments.get("start_page", 0),
+            arguments.get("end_page", 0)
+        )
     else:
         result = {"error": f"Unknown tool: {name}"}
 

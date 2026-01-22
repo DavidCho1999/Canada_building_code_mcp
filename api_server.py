@@ -72,8 +72,43 @@ MCP_TOOLS = [
         }
     },
     {
+        "name": "verify_section",
+        "description": "Verify that a section ID exists and get a formal citation",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "id": {"type": "string", "description": "Section ID to verify"},
+                "code": {"type": "string", "description": "Code name"}
+            },
+            "required": ["id", "code"]
+        }
+    },
+    {
+        "name": "get_applicable_code",
+        "description": "Determine which building codes apply to a specific Canadian location",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "location": {"type": "string", "description": "Canadian location (city or province)"}
+            },
+            "required": ["location"]
+        }
+    },
+    {
+        "name": "get_table",
+        "description": "Get a specific table from the building code",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "table_id": {"type": "string", "description": "Table ID (e.g., '4.1.5.3', 'Table-9.10.14.4')"},
+                "code": {"type": "string", "description": "Code name (optional)"}
+            },
+            "required": ["table_id"]
+        }
+    },
+    {
         "name": "set_pdf_path",
-        "description": "[LOCAL ONLY] Connect your PDF for text extraction. NOT available in hosted API - use local MCP instead.",
+        "description": "[LOCAL ONLY] Connect your PDF for text extraction. NOT available in hosted API.",
         "inputSchema": {
             "type": "object",
             "properties": {
@@ -81,6 +116,31 @@ MCP_TOOLS = [
                 "path": {"type": "string", "description": "Path to PDF file"}
             },
             "required": ["code", "path"]
+        }
+    },
+    {
+        "name": "get_page",
+        "description": "[LOCAL ONLY] Get full text of a specific page. Requires PDF connected.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "code": {"type": "string", "description": "Code name"},
+                "page": {"type": "integer", "description": "Page number"}
+            },
+            "required": ["code", "page"]
+        }
+    },
+    {
+        "name": "get_pages",
+        "description": "[LOCAL ONLY] Get text from a range of pages (max 5). Requires PDF connected.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "code": {"type": "string", "description": "Code name"},
+                "start_page": {"type": "integer", "description": "First page"},
+                "end_page": {"type": "integer", "description": "Last page"}
+            },
+            "required": ["code", "start_page", "end_page"]
         }
     }
 ]
@@ -178,10 +238,24 @@ def handle_mcp_request(method: str, params: Dict = None, req_id: Any = None) -> 
                     arguments.get("section_id", ""),
                     arguments.get("code")
                 )
-            elif tool_name == "set_pdf_path":
+            elif tool_name == "verify_section":
+                result = mcp.verify_section(
+                    arguments.get("id", ""),
+                    arguments.get("code", "")
+                )
+            elif tool_name == "get_applicable_code":
+                result = mcp.get_applicable_code(
+                    arguments.get("location", "")
+                )
+            elif tool_name == "get_table":
+                result = mcp.get_table(
+                    arguments.get("table_id", ""),
+                    arguments.get("code")
+                )
+            elif tool_name in ("set_pdf_path", "get_page", "get_pages"):
                 # Not available in hosted mode
                 result = {
-                    "error": "set_pdf_path is not available in hosted API mode",
+                    "error": f"{tool_name} is not available in hosted API mode",
                     "reason": "Hosted servers cannot access your local PDF files",
                     "solution": "Run the MCP server locally to use BYOD (Bring Your Own Document) mode",
                     "local_setup": "pip install building-code-mcp && building-code-mcp"

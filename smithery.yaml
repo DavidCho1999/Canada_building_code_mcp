@@ -17,11 +17,12 @@ startCommand:
 
 # Metadata
 name: canada-building-code
+displayName: Canadian Building Code MCP
 description: Search and navigate 25,000+ sections across 16 Canadian building codes and guides. Includes NBC, OBC, BCBC, ABC, QCC, OFC, and more. Features section verification, jurisdiction lookup, and hierarchy navigation.
 author: DavidCho1999
-repository: https://github.com/DavidCho1999/Canada-AEC-Code-MCP
+repository: https://github.com/DavidCho1999/Canada_building_code_mcp
 license: MIT
-version: 1.0.6
+version: 1.0.7
 homepage: https://canada-building-code.vercel.app
 icon: https://canada-building-code.vercel.app/icon.svg
 
@@ -43,54 +44,216 @@ tags:
   - alberta
   - quebec
 
-# All 7 tools with detailed descriptions
+# Tools with full schema and annotations
 tools:
   - name: list_codes
-    description: |
-      List all available Canadian building codes and user guides with section counts and download links.
-      Returns codes (legally binding) and guides (interpretation only) separately.
-      Use this to discover which codes are available before searching.
+    description: List all available Canadian building codes and user guides with section counts, versions, and download links. Returns codes (legally binding) and guides (interpretation only) separately.
+    inputSchema:
+      type: object
+      properties: {}
+      additionalProperties: false
+    annotations:
+      title: List Building Codes
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
 
   - name: search_code
-    description: |
-      Search for building code sections by keywords across all codes or a specific code.
-      Examples: "fire separation", "stair width", "egress requirements", "energy efficiency"
-      Returns matching sections with page numbers, section IDs, and relevance scores.
-      Supports cross-code search to compare requirements across jurisdictions.
+    description: Search building code sections by keywords across all codes or a specific code. Returns matching sections with page numbers, section IDs, and relevance scores. Supports synonym expansion (e.g., "restroom" finds "washroom").
+    inputSchema:
+      type: object
+      properties:
+        query:
+          type: string
+          description: Keywords to search for (e.g., "fire separation", "stair width", "egress requirements", "barrier-free")
+        code:
+          type: string
+          description: Optional specific code to search (e.g., "NBC", "OBC", "BCBC"). If omitted, searches all codes.
+      required:
+        - query
+      additionalProperties: false
+    annotations:
+      title: Search Building Code
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
 
   - name: get_section
-    description: |
-      Get detailed information about a specific section by its ID.
-      Examples: "9.9.4.1", "3.2.4.1", "B-9.10.14.1"
-      Returns page number, coordinates (bbox), keywords, and hierarchy info.
-      Auto-detects Division prefix (A/B/C) if not provided.
-      If PDF is connected, also extracts the actual text content.
+    description: Get detailed information about a specific section by its ID. Returns page number, coordinates, keywords, and hierarchy info. Auto-detects Division prefix (A/B/C) if not provided. If PDF is connected via BYOD mode, also returns full text content.
+    inputSchema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Section ID to retrieve (e.g., "9.10.14.1", "3.2.4.1", "B-9.10.14.1"). Division prefix is auto-detected if omitted.
+        code:
+          type: string
+          description: Code name (e.g., "NBC", "OBC", "BCBC", "ABC", "QCC")
+      required:
+        - id
+        - code
+      additionalProperties: false
+    annotations:
+      title: Get Section Details
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
 
   - name: get_hierarchy
-    description: |
-      Navigate the code structure by getting parent, children, and sibling sections.
-      Useful for understanding context and finding related requirements.
-      Example: Get children of "Section 9.9" to see all subsections about stairs.
-
-  - name: set_pdf_path
-    description: |
-      Connect your legally obtained PDF file for full text extraction (BYOD mode).
-      Once connected, get_section will return actual code text, not just coordinates.
-      Path should be absolute (e.g., "C:/codes/NBC2025.pdf" or "/home/user/codes/NBC2025.pdf").
+    description: Navigate the code structure by getting parent, children, and sibling sections. Useful for understanding context and finding related requirements.
+    inputSchema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Section ID to get hierarchy for (e.g., "9.9" to see all stair subsections)
+        code:
+          type: string
+          description: Code name (e.g., "NBC", "OBC")
+      required:
+        - id
+        - code
+      additionalProperties: false
+    annotations:
+      title: Get Section Hierarchy
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
 
   - name: verify_section
-    description: |
-      Verify that a section ID exists and get a formal citation.
-      Use this to prevent hallucination by confirming section references are valid.
-      Returns exists (boolean), formal citation format, and page number.
-      Auto-detects Division prefix if not provided.
+    description: Verify that a section ID exists and get a formal citation. Use this to prevent hallucination by confirming section references are valid before citing them.
+    inputSchema:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Section ID to verify (e.g., "9.10.14.1"). Division prefix is auto-detected if omitted.
+        code:
+          type: string
+          description: Code name to verify against (e.g., "NBC", "OBC")
+      required:
+        - id
+        - code
+      additionalProperties: false
+    annotations:
+      title: Verify Section Exists
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
 
   - name: get_applicable_code
-    description: |
-      Determine which building codes apply to a specific location in Canada.
-      Input: city name, province, or address (e.g., "Toronto", "Vancouver", "Montreal")
-      Returns applicable provincial and national codes with adoption dates.
-      Helps users understand which jurisdiction's code to reference.
+    description: Determine which building codes apply to a specific location in Canada. Returns applicable provincial and national codes with notes about jurisdiction.
+    inputSchema:
+      type: object
+      properties:
+        location:
+          type: string
+          description: Canadian location (city, province, or territory). Examples "Toronto", "Vancouver", "Montreal", "British Columbia", "Alberta"
+      required:
+        - location
+      additionalProperties: false
+    annotations:
+      title: Get Applicable Code by Location
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
+
+  - name: get_table
+    description: Get a specific table from the building code with content. Use this for tables like "Table 4.1.5.3" (live loads), "Table 9.10.14.4" (spatial separation), etc.
+    inputSchema:
+      type: object
+      properties:
+        table_id:
+          type: string
+          description: Table ID (e.g., "4.1.5.3", "Table-4.1.5.3", "9.10.14.4-A")
+        code:
+          type: string
+          description: Optional code name (e.g., "NBC", "OBC"). If omitted, searches all codes.
+      required:
+        - table_id
+      additionalProperties: false
+    annotations:
+      title: Get Table Content
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
+
+  - name: set_pdf_path
+    description: Connect your legally obtained PDF file for full text extraction (BYOD mode). Once connected, get_section will return actual code text, not just coordinates.
+    inputSchema:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Code name to connect PDF for (e.g., "NBC", "OBC")
+        path:
+          type: string
+          description: Absolute path to your PDF file (e.g., "C:/codes/NBC2025.pdf" or "/home/user/codes/NBC2025.pdf")
+      required:
+        - code
+        - path
+      additionalProperties: false
+    annotations:
+      title: Connect PDF File
+      readOnlyHint: false
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
+
+  - name: get_page
+    description: Get full text content of a specific page. Requires PDF to be connected via set_pdf_path. Use this when you need to see all content on a page, including tables and context around sections.
+    inputSchema:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Code name (e.g., "NBC", "OBC")
+        page:
+          type: integer
+          description: Page number to retrieve (1-indexed)
+      required:
+        - code
+        - page
+      additionalProperties: false
+    annotations:
+      title: Get Page Content
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
+
+  - name: get_pages
+    description: Get text from a range of pages (max 5). Use this for multi-page tables or sections that span several pages. Requires PDF connected via set_pdf_path.
+    inputSchema:
+      type: object
+      properties:
+        code:
+          type: string
+          description: Code name (e.g., "NBC", "OBC")
+        start_page:
+          type: integer
+          description: First page number (1-indexed)
+        end_page:
+          type: integer
+          description: Last page number (inclusive)
+      required:
+        - code
+        - start_page
+        - end_page
+      additionalProperties: false
+    annotations:
+      title: Get Multiple Pages
+      readOnlyHint: true
+      destructiveHint: false
+      idempotentHint: true
+      openWorldHint: false
 
 # Supported codes summary
 supported_codes:
