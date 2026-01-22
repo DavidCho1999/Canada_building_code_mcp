@@ -7,13 +7,15 @@ A Model Context Protocol (MCP) server that enables Claude to search and navigate
 
 ## Quick Setup
 
-Add to Claude Desktop config and restart:
+### Option A: Smithery (One-click install)
 
-Config file location:
-- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
-- Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
+```bash
+npx -y @smithery/cli@latest install davidcho/ca-building-code-mcp --client claude
+```
 
-### Option A: uvx (Recommended - No install needed)
+### Option B: uvx (No install needed)
+
+Add to Claude Desktop config (`%APPDATA%\Claude\claude_desktop_config.json` on Windows, `~/Library/Application Support/Claude/claude_desktop_config.json` on Mac):
 
 ```json
 {
@@ -26,7 +28,7 @@ Config file location:
 }
 ```
 
-### Option B: pip install
+### Option C: pip install
 
 ```bash
 pip install building-code-mcp
@@ -41,8 +43,6 @@ pip install building-code-mcp
   }
 }
 ```
-
-> **Note:** If `building-code-mcp` command not found, use full path or `python -m src.mcp_server`
 
 ---
 
@@ -61,26 +61,26 @@ Claude will search **22,500+ indexed sections** across 16 Canadian building code
 
 | Code | Version | Sections | Description |
 |------|---------|----------|-------------|
-| NBC | 2025 | 2,783 | National Building Code |
-| NFC | 2025 | 1,044 | National Fire Code |
-| NPC | 2025 | 413 | National Plumbing Code |
-| NECB | 2025 | 475 | National Energy Code for Buildings |
-| OBC | 2024 | 4,108 | Ontario Building Code (Vol 1 & 2) |
-| OFC | O. Reg. 213/07 | 1,906 | Ontario Fire Code |
-| BCBC | 2024 | 2,584 | British Columbia Building Code |
-| ABC | 2023 | 2,832 | Alberta Building Code |
-| QCC | 2020 | 2,726 | Quebec Construction Code |
-| QECB | 2020 | 384 | Quebec Energy Code |
-| QPC | 2020 | 428 | Quebec Plumbing Code |
-| QSC | 2020 | 1,063 | Quebec Safety Code |
+| NBC | 2025 | 2,700+ | National Building Code |
+| NFC | 2025 | 1,000+ | National Fire Code |
+| NPC | 2025 | 400+ | National Plumbing Code |
+| NECB | 2025 | 450+ | National Energy Code for Buildings |
+| OBC | 2024 | 4,100+ | Ontario Building Code (Vol 1 & 2) |
+| OFC | O. Reg. 213/07 | 1,900+ | Ontario Fire Code |
+| BCBC | 2024 | 2,500+ | British Columbia Building Code |
+| ABC | 2023 | 2,800+ | Alberta Building Code |
+| QCC | 2020 | 2,700+ | Quebec Construction Code |
+| QECB | 2020 | 380+ | Quebec Energy Code |
+| QPC | 2020 | 420+ | Quebec Plumbing Code |
+| QSC | 2020 | 1,000+ | Quebec Safety Code |
 
 ### User's Guides (3)
 
 | Guide | Version | Sections | Description |
 |-------|---------|----------|-------------|
-| IUGP9 | 2020 | 1,096 | Illustrated Guide - Part 9 Housing |
-| UGP4 | 2020 | 495 | User's Guide - NBC Structural Commentaries |
-| UGNECB | 2020 | 165 | User's Guide - NECB |
+| IUGP9 | 2020 | 1,000+ | Illustrated Guide - Part 9 Housing |
+| UGP4 | 2020 | 490+ | User's Guide - NBC Structural Commentaries |
+| UGNECB | 2020 | 160+ | User's Guide - NECB |
 
 ## Usage Examples
 
