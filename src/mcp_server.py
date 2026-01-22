@@ -652,78 +652,170 @@ async def list_tools() -> List[Tool]:
     return [
         Tool(
             name="list_codes",
-            description="List all available Canadian building codes",
-            inputSchema={"type": "object", "properties": {}}
+            description="List all available Canadian building codes and user guides with section counts, versions, and download links. Returns codes (legally binding) and guides (interpretation only) separately.",
+            inputSchema={
+                "type": "object",
+                "properties": {},
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "List Building Codes",
+                "readOnlyHint": True,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
+            }
         ),
         Tool(
             name="search_code",
-            description="Search building code sections by keywords",
+            description="Search building code sections by keywords across all codes or a specific code. Returns matching sections with page numbers, section IDs, and relevance scores.",
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "query": {"type": "string", "description": "Search terms"},
-                    "code": {"type": "string", "description": "Code name (optional)"}
+                    "query": {
+                        "type": "string",
+                        "description": "Keywords to search for (e.g., 'fire separation', 'stair width', 'egress requirements')"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Optional: Specific code to search (e.g., 'NBC', 'OBC', 'BCBC'). If omitted, searches all codes."
+                    }
                 },
-                "required": ["query"]
+                "required": ["query"],
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "Search Building Code",
+                "readOnlyHint": True,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
             }
         ),
         Tool(
             name="get_section",
-            description="Get details of a specific section",
+            description="Get detailed information about a specific section by its ID. Returns page number, coordinates, keywords, and hierarchy info. Auto-detects Division prefix (A/B/C) if not provided.",
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "id": {"type": "string", "description": "Section ID (e.g., 9.10.14)"},
-                    "code": {"type": "string", "description": "Code name (e.g., NBC)"}
+                    "id": {
+                        "type": "string",
+                        "description": "Section ID to retrieve (e.g., '9.10.14.1', '3.2.4.1', 'B-9.10.14.1'). Division prefix is auto-detected if omitted."
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Code name (e.g., 'NBC', 'OBC', 'BCBC', 'ABC', 'QCC')"
+                    }
                 },
-                "required": ["id", "code"]
+                "required": ["id", "code"],
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "Get Section Details",
+                "readOnlyHint": True,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
             }
         ),
         Tool(
             name="get_hierarchy",
-            description="Get parent, children, siblings of a section",
+            description="Navigate the code structure by getting parent, children, and sibling sections. Useful for understanding context and finding related requirements.",
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "id": {"type": "string", "description": "Section ID"},
-                    "code": {"type": "string", "description": "Code name"}
+                    "id": {
+                        "type": "string",
+                        "description": "Section ID to get hierarchy for (e.g., '9.9' to see all stair subsections)"
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Code name (e.g., 'NBC', 'OBC')"
+                    }
                 },
-                "required": ["id", "code"]
+                "required": ["id", "code"],
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "Get Section Hierarchy",
+                "readOnlyHint": True,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
             }
         ),
         Tool(
             name="set_pdf_path",
-            description="Connect your PDF for text extraction (BYOD)",
+            description="Connect your legally obtained PDF file for full text extraction (BYOD mode). Once connected, get_section will return actual code text, not just coordinates.",
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "code": {"type": "string", "description": "Code name"},
-                    "path": {"type": "string", "description": "PDF file path"}
+                    "code": {
+                        "type": "string",
+                        "description": "Code name to connect PDF for (e.g., 'NBC', 'OBC')"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Absolute path to your PDF file (e.g., 'C:/codes/NBC2025.pdf' or '/home/user/codes/NBC2025.pdf')"
+                    }
                 },
-                "required": ["code", "path"]
+                "required": ["code", "path"],
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "Connect PDF File",
+                "readOnlyHint": False,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
             }
         ),
         Tool(
             name="verify_section",
-            description="Verify if a section exists and get its formal citation (use this to prevent hallucination)",
+            description="Verify that a section ID exists and get a formal citation. Use this to prevent hallucination by confirming section references are valid before citing them.",
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "id": {"type": "string", "description": "Section ID to verify (e.g., 9.10.14.1)"},
-                    "code": {"type": "string", "description": "Code name (e.g., NBC, OBC)"}
+                    "id": {
+                        "type": "string",
+                        "description": "Section ID to verify (e.g., '9.10.14.1'). Division prefix is auto-detected if omitted."
+                    },
+                    "code": {
+                        "type": "string",
+                        "description": "Code name to verify against (e.g., 'NBC', 'OBC')"
+                    }
                 },
-                "required": ["id", "code"]
+                "required": ["id", "code"],
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "Verify Section Exists",
+                "readOnlyHint": True,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
             }
         ),
         Tool(
             name="get_applicable_code",
-            description="Get which building codes apply to a Canadian location (city, province, or territory)",
+            description="Determine which building codes apply to a specific location in Canada. Returns applicable provincial and national codes with notes about jurisdiction.",
             inputSchema={
                 "type": "object",
                 "properties": {
-                    "location": {"type": "string", "description": "Location name (e.g., Toronto, British Columbia, Calgary)"}
+                    "location": {
+                        "type": "string",
+                        "description": "Canadian location (city, province, or territory). Examples: 'Toronto', 'Vancouver', 'Montreal', 'British Columbia', 'Alberta'"
+                    }
                 },
-                "required": ["location"]
+                "required": ["location"],
+                "additionalProperties": False
+            },
+            annotations={
+                "title": "Get Applicable Code by Location",
+                "readOnlyHint": True,
+                "destructiveHint": False,
+                "idempotentHint": True,
+                "openWorldHint": False
             }
         ),
     ]
