@@ -1,147 +1,138 @@
 # Canadian Building Code MCP Server
 
-A Model Context Protocol (MCP) server that provides search and navigation capabilities for Canadian building codes.
+A Model Context Protocol (MCP) server that enables Claude to search and navigate Canadian building codes.
 
-## Overview
+## What It Does
 
-This tool helps professionals navigate Canadian building codes by providing:
-- **Keyword search** across code sections
-- **Section lookup** by ID (e.g., "9.10.14.1")
-- **Hierarchy navigation** (parent, children, siblings)
-- **BYOD Mode**: Connect your own PDF for full text extraction
+Ask Claude questions like:
+- "Find fire separation requirements for garages in NBC"
+- "What are the stair width requirements in OBC?"
+- "Show me section 9.10.14 of the Building Code"
+
+Claude will search 18,000+ indexed sections across 12 Canadian building codes and return relevant sections with page numbers.
 
 ## Supported Codes
 
-| Code | Version | Description |
-|------|---------|-------------|
-| NBC | 2025 | National Building Code |
-| NPC | 2025 | National Plumbing Code |
-| NFC | 2025 | National Fire Code |
-| NECB | 2025 | National Energy Code for Buildings |
-| OBC | 2024 | Ontario Building Code |
-| BCBC | 2024 | British Columbia Building Code |
-| ABC | 2023 | Alberta Building Code |
+| Code | Version | Sections | Description |
+|------|---------|----------|-------------|
+| NBC | 2025 | 2,783 | National Building Code |
+| NFC | 2025 | 1,044 | National Fire Code |
+| NPC | 2025 | 413 | National Plumbing Code |
+| NECB | 2025 | 475 | National Energy Code for Buildings |
+| OBC | 2024 | 4,108 | Ontario Building Code (Vol 1 & 2) |
+| BCBC | 2024 | 2,584 | British Columbia Building Code |
+| ABC | 2023 | 2,832 | Alberta Building Code |
+| QCC | 2020 | 2,726 | Quebec Construction Code |
+| QECB | 2020 | 384 | Quebec Energy Code |
+| QPC | 2020 | 428 | Quebec Plumbing Code |
+| QSC | 2020 | 1,063 | Quebec Safety Code (Fire) |
 
 ## Installation
 
-\`\`\`bash
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/DavidCho1999/Canada-AEC-Code-MCP.git
+cd Canada-AEC-Code-MCP
+```
+
+### 2. Install dependencies
+
+```bash
 pip install mcp pymupdf
-\`\`\`
+```
 
-## Usage
+### 3. Configure Claude Desktop
 
-### As MCP Server
+Find your Claude Desktop config file:
+- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
+- **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 
-Add to your Claude Desktop config:
+Add this to the config file:
 
-\`\`\`json
+```json
 {
   "mcpServers": {
     "building-code": {
       "command": "python",
-      "args": ["path/to/src/mcp_server.py"]
+      "args": ["C:/full/path/to/Canada-AEC-Code-MCP/src/mcp_server.py"]
     }
   }
 }
-\`\`\`
+```
 
-### Available Tools
+**Important**: Use the full absolute path to `mcp_server.py`
 
-#### \`list_codes\`
-List all available building codes and their status.
+### 4. Restart Claude Desktop
 
-#### \`search_code\`
-Search building code sections by keywords.
-\`\`\`
-search_code("fire separation garage", code="NBC")
-\`\`\`
+Close and reopen Claude Desktop. You should see "building-code" in the MCP tools.
 
-#### \`get_section\`
-Get details of a specific section by ID.
-\`\`\`
-get_section(id="9.10.14.1", code="NBC")
-\`\`\`
+## Usage Examples
 
-#### \`get_hierarchy\`
-Get parent, children, and siblings of a section.
-\`\`\`
-get_hierarchy(id="9.10.14", code="NBC")
-\`\`\`
+Once installed, just ask Claude naturally:
 
-#### \`set_pdf_path\` (BYOD Mode)
-Connect your own PDF file for full text extraction.
-\`\`\`
-set_pdf_path(code="NBC", path="C:/codes/NBC2025.pdf")
-\`\`\`
+```
+"Search for egress requirements in NBC"
+"What does section 3.2.4.1 say in OBC?"
+"Find fire resistance ratings for walls"
+"List all available building codes"
+```
+
+## Available Tools
+
+| Tool | Description |
+|------|-------------|
+| `list_codes` | List all available codes and section counts |
+| `search_code` | Search by keywords (e.g., "fire separation") |
+| `get_section` | Get specific section by ID (e.g., "9.10.14.1") |
+| `get_hierarchy` | Get parent, children, siblings of a section |
+| `set_pdf_path` | Connect your PDF for full text extraction (BYOD) |
 
 ## How It Works
 
 ### Mode A: Map Only (Default)
-Returns structural metadata: section ID, title, page number, and keywords.
-This mode works without any PDF files.
+Returns section metadata: ID, title, page number, keywords.
+Works without any PDF files.
 
 ### Mode B: BYOD (Bring Your Own Document)
-When you connect your legally obtained PDF copy:
-1. The server verifies the PDF version using hash comparison
-2. Uses stored coordinates to extract actual text from specific sections
-3. Returns both metadata and full text content
+Connect your legally obtained PDF to get full text:
+```
+"Connect my NBC PDF at C:/codes/NBC2025.pdf"
+```
+The server extracts text from the exact page and coordinates.
 
 ## Project Structure
 
-\`\`\`
-building_code_mcp/
-├── maps/               # Structural index files (JSON)
+```
+Canada-AEC-Code-MCP/
+├── maps/               # 12 code index files (JSON)
 ├── src/
-│   └── mcp_server.py   # MCP server implementation
+│   └── mcp_server.py   # MCP server
 ├── scripts/
-│   ├── convert_with_docling.py  # PDF conversion tool
-│   └── generate_map.py          # Map generation tool
+│   └── generate_map_v2.py  # Map generation tool
 └── README.md
-\`\`\`
+```
 
 ## For Developers
 
-### Creating Maps for New Codes
+### Adding New Codes
 
 1. Convert PDF with Docling:
-\`\`\`bash
+```bash
+pip install docling
 python scripts/convert_with_docling.py path/to/code.pdf
-\`\`\`
+```
 
 2. Generate map:
-\`\`\`bash
-python scripts/generate_map.py docling_output/code_name/
-\`\`\`
-
-### Map JSON Schema
-
-\`\`\`json
-{
-  "code": "NBC",
-  "version": "2025",
-  "source_pdf": {
-    "md5": "abc123...",
-    "page_count": 1200
-  },
-  "sections": [
-    {
-      "id": "9.10.14.1",
-      "title": "Fire Separations Required",
-      "page": 892,
-      "level": "article",
-      "parent_id": "9.10.14",
-      "keywords": ["fire", "separation", "dwelling", "garage"],
-      "bbox": {"l": 72, "t": 120, "r": 540, "b": 680}
-    }
-  ]
-}
-\`\`\`
+```bash
+python scripts/generate_map_v2.py docling_output/code_name/
+```
 
 ## Disclaimer
 
-This is a structural index for Canadian Building Codes. It helps you navigate your legally obtained copy of the code. No copyrighted text is distributed with this tool. This is not an official NRC or government product.
+This is a structural index for Canadian Building Codes. No copyrighted text is distributed. This is not an official NRC or government product.
 
-The building codes themselves are published by the National Research Council of Canada (NRC) and provincial authorities. Please obtain official copies through proper channels.
+Building codes are published by the National Research Council of Canada (NRC) and provincial authorities. Please obtain official copies through proper channels.
 
 ## License
 
