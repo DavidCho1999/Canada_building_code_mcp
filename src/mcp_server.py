@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import List, Dict, Optional, Any
 
 from mcp.server import Server
-from mcp.types import Tool, TextContent
+from mcp.types import Tool, TextContent, ToolAnnotations
 from mcp.server.stdio import stdio_server
 
 # For PDF text extraction (BYOD mode)
@@ -658,13 +658,13 @@ async def list_tools() -> List[Tool]:
                 "properties": {},
                 "additionalProperties": False
             },
-            annotations={
-                "title": "List Building Codes",
-                "readOnlyHint": True,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="List Building Codes",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
         Tool(
             name="search_code",
@@ -684,13 +684,13 @@ async def list_tools() -> List[Tool]:
                 "required": ["query"],
                 "additionalProperties": False
             },
-            annotations={
-                "title": "Search Building Code",
-                "readOnlyHint": True,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="Search Building Code",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
         Tool(
             name="get_section",
@@ -710,13 +710,13 @@ async def list_tools() -> List[Tool]:
                 "required": ["id", "code"],
                 "additionalProperties": False
             },
-            annotations={
-                "title": "Get Section Details",
-                "readOnlyHint": True,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="Get Section Details",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
         Tool(
             name="get_hierarchy",
@@ -736,13 +736,13 @@ async def list_tools() -> List[Tool]:
                 "required": ["id", "code"],
                 "additionalProperties": False
             },
-            annotations={
-                "title": "Get Section Hierarchy",
-                "readOnlyHint": True,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="Get Section Hierarchy",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
         Tool(
             name="set_pdf_path",
@@ -762,13 +762,13 @@ async def list_tools() -> List[Tool]:
                 "required": ["code", "path"],
                 "additionalProperties": False
             },
-            annotations={
-                "title": "Connect PDF File",
-                "readOnlyHint": False,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="Connect PDF File",
+                readOnlyHint=False,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
         Tool(
             name="verify_section",
@@ -788,13 +788,13 @@ async def list_tools() -> List[Tool]:
                 "required": ["id", "code"],
                 "additionalProperties": False
             },
-            annotations={
-                "title": "Verify Section Exists",
-                "readOnlyHint": True,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="Verify Section Exists",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
         Tool(
             name="get_applicable_code",
@@ -810,13 +810,13 @@ async def list_tools() -> List[Tool]:
                 "required": ["location"],
                 "additionalProperties": False
             },
-            annotations={
-                "title": "Get Applicable Code by Location",
-                "readOnlyHint": True,
-                "destructiveHint": False,
-                "idempotentHint": True,
-                "openWorldHint": False
-            }
+            annotations=ToolAnnotations(
+                title="Get Applicable Code by Location",
+                readOnlyHint=True,
+                destructiveHint=False,
+                idempotentHint=True,
+                openWorldHint=False
+            )
         ),
     ]
 
