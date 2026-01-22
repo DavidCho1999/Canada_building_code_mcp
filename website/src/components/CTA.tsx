@@ -30,13 +30,17 @@ export default function CTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
+          className="text-center"
         >
+          <span className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium mb-4">
+            Get Started
+          </span>
           <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
             Quick Setup
           </h2>
 
           {/* Setup Steps */}
-          <div className="space-y-6 mb-10">
+          <div className="space-y-6 mb-10 text-left">
             {/* Step 1 */}
             <div className="flex gap-4">
               <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
@@ -88,7 +92,7 @@ export default function CTA() {
           {/* GitHub Button */}
           <div className="text-center">
             <a
-              href="https://github.com"
+              href="https://github.com/DavidCho1999/Canada-AEC-Code-MCP"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 hover:shadow-xl hover:shadow-slate-900/30 transition-all duration-300"

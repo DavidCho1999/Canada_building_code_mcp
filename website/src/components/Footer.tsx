@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="py-8 border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6 text-center">
         <p className="text-sm text-slate-400">
-          © {new Date().getFullYear()} BuildingCode MCP
+          © {new Date().getFullYear()} BuildingCode MCP. All rights reserved.
         </p>
       </div>
     </footer>

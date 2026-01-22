@@ -58,7 +58,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://github.com"
+              href="https://github.com/DavidCho1999/Canada-AEC-Code-MCP"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 hover:shadow-lg transition-all duration-300"
@@ -95,7 +95,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://github.com"
+              href="https://github.com/DavidCho1999/Canada-AEC-Code-MCP"
               target="_blank"
               rel="noopener noreferrer"
               className="block px-4 py-3 text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-colors"
