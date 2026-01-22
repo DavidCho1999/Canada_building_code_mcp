@@ -31,7 +31,7 @@ export default function HowItWorks() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 pb-1 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent hover:from-blue-600 hover:to-cyan-500 hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300 cursor-default">
             Get Started in 2 Steps
           </h2>
-          <p className="text-slate-600 text-sm mb-3">Works with any MCP-compatible client</p>
+          <p className="text-slate-600 text-sm mb-3">Works with <span className="font-semibold">any MCP-compatible client</span></p>
           <div className="flex gap-3 text-sm justify-center flex-wrap">
             <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
               <SiAnthropic className="w-4 h-4 text-[#D4A27F]" />
@@ -91,7 +91,9 @@ export default function HowItWorks() {
                 Copyright Safe
               </h3>
               <p className="text-slate-600 text-sm mb-2">
-                This tool only distributes coordinates (page, position), not the actual text. Content is read from your own PDF files.
+                This tool only distributes coordinates (page, position), not the actual text.
+                <br className="hidden md:block" />
+                Content is read from your own PDF files.
               </p>
               <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
                 <span className="flex items-center gap-1">
