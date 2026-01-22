@@ -1002,6 +1002,12 @@ async def list_resources() -> List[Resource]:
     mcp = get_mcp()
     resources = [
         Resource(
+            uri="buildingcode://welcome",
+            name="Getting Started",
+            description="Introduction, legal info, and setup guide for Canada Building Code MCP",
+            mimeType="application/json"
+        ),
+        Resource(
             uri="buildingcode://codes",
             name="Available Building Codes",
             description="List of all available Canadian building codes with section counts and download links",
@@ -1039,7 +1045,45 @@ async def read_resource(uri) -> str:
     # Convert AnyUrl to string
     uri_str = str(uri)
 
-    if uri_str == "buildingcode://codes":
+    if uri_str == "buildingcode://welcome":
+        welcome = {
+            "title": "Canada Building Code MCP - Getting Started",
+            "legal_notice": {
+                "status": "100% Copyright Safe",
+                "explanation": "This MCP only provides coordinates (page numbers, bounding boxes, section IDs). No copyrighted text is distributed. You must obtain the PDF yourself from official sources."
+            },
+            "how_it_works": {
+                "mode_a_map_only": {
+                    "description": "Default mode - returns page numbers and coordinates only",
+                    "use_case": "When you have the PDF open separately"
+                },
+                "mode_b_byod": {
+                    "description": "Bring Your Own Document - connect YOUR legally obtained PDF",
+                    "use_case": "For full text extraction within the MCP",
+                    "setup": "Use set_pdf_path tool with your PDF location"
+                }
+            },
+            "recommendation": "For the best experience, download the official PDF (FREE from government sources) and connect it using the set_pdf_path tool.",
+            "free_pdf_sources": {
+                "National_Codes": "https://nrc-publications.canada.ca (NBC, NFC, NPC, NECB)",
+                "Ontario": "https://publications.gov.on.ca (OBC, OFC)",
+                "BC": "https://free.bcpublications.ca (BCBC)",
+                "Alberta": "https://open.alberta.ca (ABC)",
+                "Quebec": "https://www.rbq.gouv.qc.ca (QCC, QECB, QPC, QSC)"
+            },
+            "quick_start": [
+                "1. list_codes - See all available codes (13 codes + 3 guides)",
+                "2. search_code - Find sections by keywords",
+                "3. get_section - Get page number and coordinates",
+                "4. verify_section - Confirm a section exists before citing",
+                "5. get_applicable_code - Find which codes apply to a location",
+                "6. (Optional) set_pdf_path - Connect your PDF for full text"
+            ],
+            "total_coverage": "25,000+ sections across 16 documents"
+        }
+        return json.dumps(welcome, indent=2, ensure_ascii=False)
+
+    elif uri_str == "buildingcode://codes":
         return json.dumps(mcp.list_codes(), indent=2, ensure_ascii=False)
 
     elif uri_str == "buildingcode://stats":

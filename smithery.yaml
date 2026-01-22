@@ -21,7 +21,7 @@ description: Search and navigate 25,000+ sections across 16 Canadian building co
 author: DavidCho1999
 repository: https://github.com/DavidCho1999/Canada-AEC-Code-MCP
 license: MIT
-version: 1.0.5
+version: 1.0.6
 homepage: https://canada-building-code.vercel.app
 icon: https://canada-building-code.vercel.app/icon.svg
 
