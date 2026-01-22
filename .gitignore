@@ -83,11 +83,15 @@ logs/
 .env.*.local
 
 # ========================================
-# Claude Code Local Settings
+# Claude Code (Private)
 # ========================================
-.claude/settings.local.json
-.claude/plans/
-.claude/todos/
+CLAUDE.md
+.claude/
+
+# ========================================
+# Documentation (Archive)
+# ========================================
+docs/
 
 # ========================================
 # Website (Next.js) - handled by website/.gitignore

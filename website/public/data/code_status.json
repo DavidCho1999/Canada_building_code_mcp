@@ -1,0 +1,13 @@
+{
+  "lastChecked": "2025-01-22",
+  "codes": {
+    "NBC": { "name": "National Building Code 2025", "status": "ok" },
+    "NFC": { "name": "National Fire Code 2025", "status": "ok" },
+    "NPC": { "name": "National Plumbing Code 2025", "status": "ok" },
+    "NECB": { "name": "National Energy Code 2025", "status": "ok" },
+    "OBC": { "name": "Ontario Building Code", "status": "ok" },
+    "BCBC": { "name": "BC Building Code 2024", "status": "ok" },
+    "ABC": { "name": "Alberta Building Code 2023", "status": "ok" }
+  },
+  "hasUpdates": false
+}
