@@ -1032,14 +1032,17 @@ async def list_resources() -> List[Resource]:
 
 
 @server.read_resource()
-async def read_resource(uri: str) -> str:
+async def read_resource(uri) -> str:
     """Read a specific resource."""
     mcp = get_mcp()
 
-    if uri == "buildingcode://codes":
+    # Convert AnyUrl to string
+    uri_str = str(uri)
+
+    if uri_str == "buildingcode://codes":
         return json.dumps(mcp.list_codes(), indent=2, ensure_ascii=False)
 
-    elif uri == "buildingcode://stats":
+    elif uri_str == "buildingcode://stats":
         total_sections = sum(len(d.get("sections", [])) for d in mcp.maps.values())
         stats = {
             "total_codes": len([c for c, d in mcp.maps.items() if d.get("document_type") != "guide"]),
@@ -1049,8 +1052,8 @@ async def read_resource(uri: str) -> str:
         }
         return json.dumps(stats, indent=2, ensure_ascii=False)
 
-    elif uri.startswith("buildingcode://code/"):
-        code = uri.replace("buildingcode://code/", "")
+    elif uri_str.startswith("buildingcode://code/"):
+        code = uri_str.replace("buildingcode://code/", "")
         if code in mcp.maps:
             data = mcp.maps[code]
             summary = {
@@ -1068,7 +1071,7 @@ async def read_resource(uri: str) -> str:
             return json.dumps({"error": f"Code not found: {code}"})
 
     else:
-        return json.dumps({"error": f"Unknown resource: {uri}"})
+        return json.dumps({"error": f"Unknown resource: {uri_str}"})
 
 
 async def _async_main():
