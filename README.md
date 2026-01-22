@@ -5,18 +5,15 @@
 
 A Model Context Protocol (MCP) server that enables Claude to search and navigate Canadian building codes.
 
-## Quick Setup (3 Steps)
+## Quick Setup
 
-**1. Install the package**
-```bash
-pip install building-code-mcp
-```
-
-**2. Add to Claude Desktop config**
+Add to Claude Desktop config and restart:
 
 Config file location:
 - Windows: `%APPDATA%\Claude\claude_desktop_config.json`
 - Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+### Option A: uvx (Recommended - No install needed)
 
 ```json
 {
@@ -29,7 +26,23 @@ Config file location:
 }
 ```
 
-**3. Restart Claude Desktop and start asking!**
+### Option B: pip install
+
+```bash
+pip install building-code-mcp
+```
+
+```json
+{
+  "mcpServers": {
+    "building-code": {
+      "command": "building-code-mcp"
+    }
+  }
+}
+```
+
+> **Note:** If `building-code-mcp` command not found, use full path or `python -m src.mcp_server`
 
 ---
 
