@@ -10,8 +10,7 @@ export default function CTA() {
   const configCode = `{
   "mcpServers": {
     "building-code": {
-      "command": "uvx",
-      "args": ["building-code-mcp"]
+      "command": "building-code-mcp"
     }
   }
 }`;
