@@ -3,6 +3,14 @@ HTTP API wrapper for Building Code MCP Server.
 For hosting on Railway/Render/Vercel.
 """
 
+import os
+import sys
+from pathlib import Path
+
+# Fix path for Vercel
+BASE_DIR = Path(__file__).parent
+sys.path.insert(0, str(BASE_DIR))
+
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
@@ -11,6 +19,9 @@ from typing import Optional, Any, Dict
 import uvicorn
 
 from src.mcp_server import BuildingCodeMCP
+
+# Maps directory (absolute path for Vercel)
+MAPS_DIR = str(BASE_DIR / "maps")
 
 
 # MCP Tool definitions
@@ -78,7 +89,7 @@ app.add_middleware(
 )
 
 # Initialize MCP
-mcp = BuildingCodeMCP("maps")
+mcp = BuildingCodeMCP(MAPS_DIR)
 
 
 class SearchRequest(BaseModel):
