@@ -3,13 +3,64 @@ HTTP API wrapper for Building Code MCP Server.
 For hosting on Railway/Render/Vercel.
 """
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Any, Dict
 import uvicorn
 
 from src.mcp_server import BuildingCodeMCP
+
+
+# MCP Tool definitions
+MCP_TOOLS = [
+    {
+        "name": "list_codes",
+        "description": "List all available Canadian building codes with section counts",
+        "inputSchema": {
+            "type": "object",
+            "properties": {},
+            "required": []
+        }
+    },
+    {
+        "name": "search_code",
+        "description": "Search for building code sections by keywords (e.g., 'fire separation', 'stair width')",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "query": {"type": "string", "description": "Search query"},
+                "code": {"type": "string", "description": "Specific code to search (e.g., 'NBC', 'OBC', 'OFC')"}
+            },
+            "required": ["query"]
+        }
+    },
+    {
+        "name": "get_section",
+        "description": "Get details of a specific section by ID",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "section_id": {"type": "string", "description": "Section ID (e.g., '9.9.4.1')"},
+                "code": {"type": "string", "description": "Code name (optional)"}
+            },
+            "required": ["section_id"]
+        }
+    },
+    {
+        "name": "get_hierarchy",
+        "description": "Get parent, children, and sibling sections for navigation",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "section_id": {"type": "string", "description": "Section ID"},
+                "code": {"type": "string", "description": "Code name (optional)"}
+            },
+            "required": ["section_id"]
+        }
+    }
+]
 
 app = FastAPI(
     title="Canadian Building Code API",
@@ -53,6 +104,118 @@ def root():
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+# ============== MCP JSON-RPC Protocol ==============
+
+def handle_mcp_request(method: str, params: Dict = None, req_id: Any = None) -> Dict:
+    """Handle MCP JSON-RPC methods."""
+    params = params or {}
+
+    if method == "initialize":
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "result": {
+                "protocolVersion": "2024-11-05",
+                "capabilities": {"tools": {}},
+                "serverInfo": {
+                    "name": "canada-building-code-mcp",
+                    "version": "1.0.0"
+                }
+            }
+        }
+
+    elif method == "tools/list":
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "result": {"tools": MCP_TOOLS}
+        }
+
+    elif method == "tools/call":
+        tool_name = params.get("name")
+        arguments = params.get("arguments", {})
+
+        try:
+            if tool_name == "list_codes":
+                result = mcp.list_codes()
+            elif tool_name == "search_code":
+                result = mcp.search_code(
+                    arguments.get("query", ""),
+                    arguments.get("code")
+                )
+            elif tool_name == "get_section":
+                result = mcp.get_section(
+                    arguments.get("section_id", ""),
+                    arguments.get("code")
+                )
+            elif tool_name == "get_hierarchy":
+                result = mcp.get_hierarchy(
+                    arguments.get("section_id", ""),
+                    arguments.get("code")
+                )
+            else:
+                return {
+                    "jsonrpc": "2.0",
+                    "id": req_id,
+                    "error": {"code": -32601, "message": f"Unknown tool: {tool_name}"}
+                }
+
+            import json
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {
+                    "content": [{"type": "text", "text": json.dumps(result)}],
+                    "isError": False
+                }
+            }
+        except Exception as e:
+            return {
+                "jsonrpc": "2.0",
+                "id": req_id,
+                "result": {
+                    "content": [{"type": "text", "text": f"Error: {str(e)}"}],
+                    "isError": True
+                }
+            }
+
+    elif method == "notifications/initialized":
+        return None
+
+    else:
+        return {
+            "jsonrpc": "2.0",
+            "id": req_id,
+            "error": {"code": -32601, "message": f"Method not found: {method}"}
+        }
+
+
+@app.post("/")
+async def mcp_jsonrpc(request: Request):
+    """MCP JSON-RPC endpoint."""
+    try:
+        body = await request.json()
+    except:
+        return JSONResponse({
+            "jsonrpc": "2.0",
+            "id": None,
+            "error": {"code": -32700, "message": "Parse error"}
+        })
+
+    if isinstance(body, list):
+        responses = []
+        for req in body:
+            resp = handle_mcp_request(req.get("method"), req.get("params"), req.get("id"))
+            if resp:
+                responses.append(resp)
+        return JSONResponse(responses)
+    else:
+        resp = handle_mcp_request(body.get("method"), body.get("params"), body.get("id"))
+        if resp:
+            return JSONResponse(resp)
+        return JSONResponse({"jsonrpc": "2.0", "result": "ok"})
 
 
 @app.get("/.well-known/mcp/server-card.json")
