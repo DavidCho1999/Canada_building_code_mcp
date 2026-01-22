@@ -7,7 +7,7 @@ const steps = [
     step: 1,
     icon: Plug,
     title: 'Connect MCP Server',
-    description: 'Add Building Code MCP to Claude Desktop config. Setup takes 5 minutes.',
+    description: 'Add Building Code MCP to Claude Desktop config.',
     color: 'bg-emerald-500',
   },
   {
