@@ -34,7 +34,7 @@ export default function HowItWorks() {
           <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
             How It Works
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 pb-1 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
             Get Started in 2 Steps
           </h2>
           <p className="text-slate-600 max-w-xl mx-auto">

@@ -7,10 +7,10 @@ import clsx from 'clsx';
 
 const demoConversations = [
   {
-    id: 'structure',
-    category: 'Structural',
-    question: 'What is the maximum height for wood buildings in Ontario?',
-    answer: 'According to OBC 2024 Section 3.2.2.58, Encapsulated Mass Timber Construction (EMTC) buildings can be up to 12 storeys. Standard wood frame construction is limited to 6 storeys.',
+    id: 'mass-timber',
+    category: 'Mass Timber',
+    question: 'Can I build a 10-storey condo with mass timber in Toronto?',
+    answer: 'Yes! OBC 2024 now permits Encapsulated Mass Timber Construction (EMTC) up to 12 storeys. Your 10-storey condo qualifies. Key requirements: noncombustible protection on mass timber elements, 2-hour fire separation between suites, and automatic sprinklers throughout.',
     reference: {
       code: 'OBC Vol.1',
       section: '3.2.2.58',
@@ -18,36 +18,36 @@ const demoConversations = [
     },
   },
   {
-    id: 'fire',
-    category: 'Fire Safety',
-    question: 'When can sprinklers be exempted under NBC?',
-    answer: 'Per NBC 2025 Section 3.2.5.12, buildings not more than 3 storeys with a building area not exceeding 2,000m² may be exempt from sprinkler requirements for certain occupancies (Group C, D).',
+    id: 'egress',
+    category: 'Egress',
+    question: 'My client wants a single exit stair for a 3-storey office. Possible?',
+    answer: 'Under NBC 2025, a single exit is permitted if: floor area ≤ 200m² per storey, travel distance ≤ 15m to exit, and building is sprinklered. However, for a typical office building exceeding these limits, you\'ll need minimum 2 exits with separation ≥ 9m or half the diagonal.',
     reference: {
       code: 'NBC 2025',
-      section: '3.2.5.12',
-      page: 312,
+      section: '3.4.2.1',
+      page: 287,
     },
   },
   {
     id: 'energy',
-    category: 'Energy',
-    question: 'What is the window U-value requirement in NECB?',
-    answer: 'Per NECB 2025 Table 3.2.2.2, for Climate Zone 7A (Toronto, Ottawa), the maximum fenestration U-value is 1.9 W/(m²·K). For Zone 8 (northern regions), it\'s 1.6 W/(m²·K).',
+    category: 'NECB',
+    question: 'What\'s the required wall insulation for a new building in Ottawa?',
+    answer: 'Ottawa is Climate Zone 6. Per NECB 2020, above-grade walls require minimum R-27.4 (RSI 4.84) for mass walls or R-24.5 (RSI 4.31) for steel-framed. The 2025 NECB increases this by ~15%. Consider continuous exterior insulation to minimize thermal bridging.',
     reference: {
-      code: 'NECB 2025',
+      code: 'NECB 2020',
       section: 'Table 3.2.2.2',
       page: 89,
     },
   },
   {
-    id: 'accessibility',
-    category: 'Accessibility',
-    question: 'What is the maximum ramp slope for barrier-free design?',
-    answer: 'Per NBC 2025 Section 3.8.3.4, barrier-free ramps shall have a maximum slope of 1:12 (approximately 8.33%). A level rest area of at least 1.5m × 1.5m is required for every 9m of horizontal run.',
+    id: 'fire-rating',
+    category: 'Fire Rating',
+    question: 'What fire rating do I need between a parking garage and residential above?',
+    answer: 'Per OBC 3.2.1.2, a parking garage (Group F3) below residential (Group C) requires a 2-hour fire separation. If the garage is sprinklered and ≤ 2 storeys below grade, the floor assembly above must be a fire separation with no openings except for required exits.',
     reference: {
-      code: 'NBC 2025',
-      section: '3.8.3.4',
-      page: 421,
+      code: 'OBC Vol.1',
+      section: '3.2.1.2',
+      page: 156,
     },
   },
 ];

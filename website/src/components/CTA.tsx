@@ -35,7 +35,7 @@ export default function CTA() {
           <span className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium mb-4">
             Get Started
           </span>
-          <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 pb-1 text-center bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
             Quick Setup
           </h2>
 
