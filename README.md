@@ -9,7 +9,7 @@ Ask Claude questions like:
 - "What are the stair width requirements in OBC?"
 - "Show me section 9.10.14 of the Building Code"
 
-Claude will search 18,000+ indexed sections across 12 Canadian building codes and return relevant sections with page numbers.
+Claude will search 20,000+ indexed sections across 13 Canadian building codes and return relevant sections with page numbers.
 
 ## Supported Codes
 
@@ -26,14 +26,7 @@ Claude will search 18,000+ indexed sections across 12 Canadian building codes an
 | QECB | 2020 | 384 | Quebec Energy Code |
 | QPC | 2020 | 428 | Quebec Plumbing Code |
 | QSC | 2020 | 1,063 | Quebec Safety Code (Fire) |
-
-### Web References (Read-Only)
-
-These codes don't have searchable indexes but Claude can read them directly:
-
-| Code | Description | Source |
-|------|-------------|--------|
-| OFC | Ontario Fire Code | [Ontario e-Laws](https://www.ontario.ca/laws/regulation/070213) |
+| OFC | O. Reg. 213/07 | 1,906 | Ontario Fire Code |
 
 ## Installation
 
@@ -141,6 +134,46 @@ python scripts/generate_map_v2.py docling_output/code_name/
 This is a structural index for Canadian Building Codes. No copyrighted text is distributed. This is not an official NRC or government product.
 
 Building codes are published by the National Research Council of Canada (NRC) and provincial authorities. Please obtain official copies through proper channels.
+
+## Running Tests
+
+```bash
+# Install test dependencies
+pip install pytest
+
+# Run smoke tests
+pytest tests/test_smoke.py -v
+```
+
+## Troubleshooting
+
+### "MCP server not showing in Claude Desktop"
+1. Check the path in config is absolute (not relative)
+2. Make sure Python is in your PATH
+3. Restart Claude Desktop completely
+
+### "No results found"
+- Try simpler search terms (e.g., "fire" instead of "fire separation requirements")
+- Check if the code exists: ask Claude "list available codes"
+
+### "PDF text extraction not working"
+- Ensure the PDF path is correct and file exists
+- The PDF version must match the map version (e.g., NBC 2025 map needs NBC 2025 PDF)
+
+## Contributing
+
+Contributions welcome! Please:
+1. Fork the repository
+2. Create a feature branch
+3. Run tests: `pytest tests/test_smoke.py -v`
+4. Submit a pull request
+
+## Changelog
+
+### v1.0.0 (2026-01)
+- Initial release with 12 Canadian building codes
+- 18,000+ indexed sections
+- BYOD mode for full text extraction
 
 ## License
 

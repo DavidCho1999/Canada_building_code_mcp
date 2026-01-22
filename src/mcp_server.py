@@ -78,18 +78,57 @@ PDF_DOWNLOAD_LINKS = {
         "source": "NRC",
         "free": True
     },
-}
-
-# Web-only references (no searchable index, AI reads directly)
-WEB_REFERENCE_CODES = {
     "OFC": {
-        "name": "Ontario Fire Code",
         "url": "https://www.ontario.ca/laws/regulation/070213",
         "source": "Ontario e-Laws",
-        "version": "O. Reg. 213/07 (current)",
-        "note": "Web reference only - AI can read directly from URL"
+        "free": True
     },
 }
+
+# Jurisdiction to applicable code mapping
+JURISDICTION_MAP = {
+    # Ontario
+    "ontario": {"primary": "OBC", "also_check": ["NBC"], "notes": "OBC is mandatory, NBC for reference"},
+    "toronto": {"primary": "OBC", "also_check": ["NBC"], "notes": "OBC is mandatory, NBC for reference"},
+    "ottawa": {"primary": "OBC", "also_check": ["NBC"], "notes": "OBC is mandatory, NBC for reference"},
+    "mississauga": {"primary": "OBC", "also_check": ["NBC"], "notes": "OBC is mandatory, NBC for reference"},
+    # British Columbia
+    "british columbia": {"primary": "BCBC", "also_check": ["NBC"], "notes": "BCBC is mandatory"},
+    "bc": {"primary": "BCBC", "also_check": ["NBC"], "notes": "BCBC is mandatory"},
+    "vancouver": {"primary": "BCBC", "also_check": ["NBC"], "notes": "BCBC is mandatory, check municipal bylaws"},
+    "victoria": {"primary": "BCBC", "also_check": ["NBC"], "notes": "BCBC is mandatory"},
+    # Alberta
+    "alberta": {"primary": "ABC", "also_check": ["NBC"], "notes": "ABC (Alberta Edition) is mandatory"},
+    "calgary": {"primary": "ABC", "also_check": ["NBC"], "notes": "ABC is mandatory"},
+    "edmonton": {"primary": "ABC", "also_check": ["NBC"], "notes": "ABC is mandatory"},
+    # Quebec
+    "quebec": {"primary": "QCC", "also_check": ["QPC", "QECB", "QSC"], "notes": "Quebec has separate codes for construction, plumbing, energy, safety"},
+    "montreal": {"primary": "QCC", "also_check": ["QPC", "QECB", "QSC"], "notes": "Quebec codes mandatory"},
+    "quebec city": {"primary": "QCC", "also_check": ["QPC", "QECB", "QSC"], "notes": "Quebec codes mandatory"},
+    # Other provinces (use National codes directly)
+    "manitoba": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes with amendments"},
+    "winnipeg": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "saskatchewan": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes with amendments"},
+    "regina": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "saskatoon": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "nova scotia": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "halifax": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "new brunswick": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "newfoundland": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "pei": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "prince edward island": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    # Territories
+    "yukon": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "northwest territories": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+    "nunavut": {"primary": "NBC", "also_check": ["NFC", "NPC"], "notes": "Adopts National Codes"},
+}
+
+# Standard disclaimer for all responses
+DISCLAIMER = "This tool provides references only. Verify with official documents before use. Not legal or professional advice."
+
+# Web-only references (no searchable index, AI reads directly)
+# OFC is now indexed in maps/OFC.json - searchable!
+WEB_REFERENCE_CODES = {}
 
 
 class BuildingCodeMCP:
@@ -221,12 +260,21 @@ class BuildingCodeMCP:
     def get_section(self, section_id: str, code: str) -> Optional[Dict]:
         """Get a specific section by ID."""
         if code not in self.maps:
-            return {"error": f"Code not found: {code}"}
+            return {"error": f"Code not found: {code}", "disclaimer": DISCLAIMER}
 
-        for section in self.maps[code].get("sections", []):
+        data = self.maps[code]
+        version = data.get("version", "unknown")
+
+        for section in data.get("sections", []):
             if section.get("id") == section_id:
                 result = dict(section)
                 result["code"] = code
+                result["version"] = version
+
+                # Add formal citation
+                page = section.get("page")
+                result["citation"] = f"{code} {version}, Section {section_id}" + (f", Page {page}" if page else "")
+                result["citation_short"] = f"{code} {version}, s. {section_id}"
 
                 # BYOD: Extract text if PDF connected
                 if code in self.pdf_paths and self.pdf_verified.get(code):
@@ -234,9 +282,10 @@ class BuildingCodeMCP:
                     if text:
                         result["text"] = text
 
+                result["disclaimer"] = DISCLAIMER
                 return result
 
-        return {"error": f"Section not found: {section_id}"}
+        return {"error": f"Section not found: {section_id}", "disclaimer": DISCLAIMER}
 
     def get_hierarchy(self, section_id: str, code: str) -> Dict:
         """Get parent, children, siblings of a section."""
@@ -322,10 +371,162 @@ class BuildingCodeMCP:
         if path.suffix.lower() != '.pdf':
             return {"error": f"File is not a PDF: {path}"}
 
-        self.pdf_paths[code] = str(path.absolute())
-        self.pdf_verified[code] = True  # Skip hash verification for now
+        # Version verification: check page count
+        warning = None
+        if PYMUPDF_AVAILABLE:
+            try:
+                doc = fitz.open(str(path))
+                pdf_pages = len(doc)
+                doc.close()
 
-        return {"success": True, "code": code, "path": str(path)}
+                # Get max page from map
+                sections = self.maps[code].get("sections", [])
+                max_map_page = max((s.get("page", 0) for s in sections), default=0)
+
+                if pdf_pages < max_map_page:
+                    warning = (
+                        f"PDF version mismatch detected! "
+                        f"PDF has {pdf_pages} pages, but map references page {max_map_page}. "
+                        f"Text extraction may return incorrect content. "
+                        f"Please ensure you have the correct PDF version for {code}."
+                    )
+            except Exception:
+                pass  # If check fails, continue anyway
+
+        self.pdf_paths[code] = str(path.absolute())
+        self.pdf_verified[code] = warning is None
+
+        result = {"success": True, "code": code, "path": str(path)}
+        if warning:
+            result["warning"] = warning
+            result["verified"] = False
+        else:
+            result["verified"] = True
+
+        return result
+
+    def verify_section(self, section_id: str, code: str) -> Dict:
+        """Verify if a section exists and return its citation."""
+        if not section_id or not isinstance(section_id, str):
+            return {
+                "exists": False,
+                "error": "Section ID is required",
+                "disclaimer": DISCLAIMER
+            }
+
+        if not code or code not in self.maps:
+            return {
+                "exists": False,
+                "error": f"Code not found: {code}",
+                "available_codes": list(self.maps.keys()),
+                "disclaimer": DISCLAIMER
+            }
+
+        data = self.maps[code]
+        version = data.get("version", "unknown")
+
+        for section in data.get("sections", []):
+            if section.get("id") == section_id:
+                page = section.get("page")
+                title = section.get("title", "")
+
+                # Build formal citation
+                citation = f"{code} {version}, Section {section_id}"
+                if page:
+                    citation += f", Page {page}"
+
+                return {
+                    "exists": True,
+                    "section_id": section_id,
+                    "code": code,
+                    "version": version,
+                    "title": title,
+                    "page": page,
+                    "citation": citation,
+                    "citation_format": f"{code} {version}, s. {section_id}" + (f", p. {page}" if page else ""),
+                    "disclaimer": DISCLAIMER
+                }
+
+        # Section not found - suggest similar sections
+        similar = []
+        section_prefix = section_id.rsplit(".", 1)[0] if "." in section_id else section_id
+        for section in data.get("sections", []):
+            sid = section.get("id", "")
+            if sid.startswith(section_prefix):
+                similar.append(sid)
+                if len(similar) >= 5:
+                    break
+
+        return {
+            "exists": False,
+            "section_id": section_id,
+            "code": code,
+            "version": version,
+            "error": f"Section {section_id} not found in {code}",
+            "similar_sections": similar,
+            "suggestion": "Check the section number or use search_code to find the correct section",
+            "disclaimer": DISCLAIMER
+        }
+
+    def get_applicable_code(self, location: str) -> Dict:
+        """Get applicable building codes for a location."""
+        if not location or not isinstance(location, str):
+            return {
+                "error": "Location is required",
+                "example": "get_applicable_code('Toronto')",
+                "disclaimer": DISCLAIMER
+            }
+
+        location_lower = location.lower().strip()
+
+        # Direct match
+        if location_lower in JURISDICTION_MAP:
+            info = JURISDICTION_MAP[location_lower]
+            primary_code = info["primary"]
+
+            # Get version info if we have the map
+            primary_version = "unknown"
+            if primary_code in self.maps:
+                primary_version = self.maps[primary_code].get("version", "unknown")
+
+            also_check_info = []
+            for code in info["also_check"]:
+                version = self.maps[code].get("version", "unknown") if code in self.maps else "unknown"
+                also_check_info.append({"code": code, "version": version})
+
+            return {
+                "location": location,
+                "primary_code": primary_code,
+                "primary_version": primary_version,
+                "also_check": also_check_info,
+                "notes": info["notes"],
+                "warning": "Always verify with local Authority Having Jurisdiction (AHJ)",
+                "disclaimer": DISCLAIMER
+            }
+
+        # Fuzzy match - check if location contains a known jurisdiction
+        for jurisdiction, info in JURISDICTION_MAP.items():
+            if jurisdiction in location_lower or location_lower in jurisdiction:
+                return {
+                    "location": location,
+                    "matched_jurisdiction": jurisdiction,
+                    "primary_code": info["primary"],
+                    "also_check": info["also_check"],
+                    "notes": info["notes"],
+                    "warning": "Partial match - verify with local Authority Having Jurisdiction (AHJ)",
+                    "disclaimer": DISCLAIMER
+                }
+
+        # Unknown location - default to National codes
+        return {
+            "location": location,
+            "error": "Location not in database",
+            "suggestion": "For unknown Canadian locations, start with National Codes",
+            "default_codes": ["NBC", "NFC", "NPC", "NECB"],
+            "warning": "Contact local Authority Having Jurisdiction (AHJ) to confirm applicable codes",
+            "available_jurisdictions": list(set(JURISDICTION_MAP.keys())),
+            "disclaimer": DISCLAIMER
+        }
 
     def _extract_text(self, code: str, section: Dict) -> Optional[str]:
         """Extract text from PDF."""
@@ -435,6 +636,29 @@ async def list_tools() -> List[Tool]:
                 "required": ["code", "path"]
             }
         ),
+        Tool(
+            name="verify_section",
+            description="Verify if a section exists and get its formal citation (use this to prevent hallucination)",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "id": {"type": "string", "description": "Section ID to verify (e.g., 9.10.14.1)"},
+                    "code": {"type": "string", "description": "Code name (e.g., NBC, OBC)"}
+                },
+                "required": ["id", "code"]
+            }
+        ),
+        Tool(
+            name="get_applicable_code",
+            description="Get which building codes apply to a Canadian location (city, province, or territory)",
+            inputSchema={
+                "type": "object",
+                "properties": {
+                    "location": {"type": "string", "description": "Location name (e.g., Toronto, British Columbia, Calgary)"}
+                },
+                "required": ["location"]
+            }
+        ),
     ]
 
 
@@ -452,6 +676,10 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
         result = mcp.get_hierarchy(arguments.get("id", ""), arguments.get("code", ""))
     elif name == "set_pdf_path":
         result = mcp.set_pdf_path(arguments.get("code", ""), arguments.get("path", ""))
+    elif name == "verify_section":
+        result = mcp.verify_section(arguments.get("id", ""), arguments.get("code", ""))
+    elif name == "get_applicable_code":
+        result = mcp.get_applicable_code(arguments.get("location", ""))
     else:
         result = {"error": f"Unknown tool: {name}"}
 
