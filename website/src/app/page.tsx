@@ -1,5 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
+import Comparison from '@/components/Comparison';
 import HowItWorks from '@/components/HowItWorks';
 import Demo from '@/components/Demo';
 import CodeList from '@/components/CodeList';
@@ -12,6 +13,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Comparison />
         <HowItWorks />
         <CTA />
         <Demo />
