@@ -273,6 +273,33 @@ class BuildingCodeMCP:
             except Exception:
                 pass
 
+    def _add_mode_info(self, result: Dict, code: str) -> Dict:
+        """Add mode status information to response."""
+        pdf_connected = code in self.pdf_paths
+        can_extract = pdf_connected and PYMUPDF_AVAILABLE
+
+        result["mode_info"] = {
+            "code": code,
+            "mode": "BYOD Active" if pdf_connected else "Map Only",
+            "status_icon": "✓" if pdf_connected else "○",
+            "showing": "Full text extraction" if can_extract else "Coordinates only"
+        }
+
+        # Add suggestion if not connected
+        if not pdf_connected:
+            tip_parts = ["💡 Want to see actual text?"]
+
+            # Add download link if available
+            if code in PDF_DOWNLOAD_LINKS:
+                tip_parts.append(f"Download PDF: {PDF_DOWNLOAD_LINKS[code]['url']}")
+
+            # Add usage instruction
+            tip_parts.append(f"Then use: set_pdf_path('{code}', 'path/to/pdf')")
+
+            result["mode_info"]["tip"] = " ".join(tip_parts)
+
+        return result
+
     def list_codes(self) -> Dict:
         """List all available codes with download links."""
         # Separate codes from guides based on document_type
@@ -281,13 +308,18 @@ class BuildingCodeMCP:
 
         for code, data in self.maps.items():
             doc_type = data.get("document_type", "code")
+            pdf_connected = code in self.pdf_paths
+            can_extract = pdf_connected and PYMUPDF_AVAILABLE
+
             code_info = {
                 "code": code,
                 "version": data.get("version", "unknown"),
                 "sections": len(data.get("sections", [])),
                 "document_type": doc_type,
                 "searchable": True,
-                "pdf_connected": code in self.pdf_paths
+                "status": f"{'✓' if pdf_connected else '○'} {'BYOD Active' if pdf_connected else 'Map Only'}",
+                "pdf_connected": pdf_connected,
+                "can_extract_text": can_extract
             }
             # Add download link if available
             if code in PDF_DOWNLOAD_LINKS:
@@ -315,13 +347,29 @@ class BuildingCodeMCP:
                 "note": info["note"]
             })
 
+        # Calculate summary statistics
+        all_items = codes_list + guides_list
+        byod_count = sum(1 for item in all_items if item.get("pdf_connected", False))
+        map_only_count = len(all_items) - byod_count
+
         return {
             "codes": codes_list,
             "guides": guides_list,
             "web_references": web_references,
             "total_codes": len(codes_list),
             "total_guides": len(guides_list),
-            "total_web": len(web_references)
+            "total_web": len(web_references),
+            "summary": {
+                "total": len(all_items),
+                "byod_active": byod_count,
+                "map_only": map_only_count,
+                "pymupdf_installed": PYMUPDF_AVAILABLE
+            },
+            "modes_explained": {
+                "map_only": "○ Provides page numbers and coordinates (legally safe, no text extraction)",
+                "byod": "✓ Extract actual text from your own PDFs (requires set_pdf_path)"
+            },
+            "quick_start": "💡 New user? Connect your PDFs with set_pdf_path to enable text extraction, or use set_pdf_path with a folder to auto-connect multiple PDFs!"
         }
 
     def _expand_query_with_synonyms(self, query_terms: set) -> set:
@@ -462,6 +510,10 @@ class BuildingCodeMCP:
         else:
             response["search_features"] = ["synonyms"]
 
+        # Add mode info if searching specific code
+        if code:
+            response = self._add_mode_info(response, code)
+
         return response
 
     def get_section(self, section_id: str, code: str) -> Optional[Dict]:
@@ -530,6 +582,9 @@ class BuildingCodeMCP:
                         result["how_to_get_text"] = f"Use set_pdf_path('{code}', '/path/to/your.pdf') to enable text extraction"
 
                 result["disclaimer"] = DISCLAIMER
+
+                # Add mode info
+                result = self._add_mode_info(result, code)
                 return result
 
         return {"error": f"Section not found: {section_id}", "disclaimer": DISCLAIMER}
@@ -596,7 +651,10 @@ class BuildingCodeMCP:
                     if not any(sib["id"] == sid for sib in siblings):
                         siblings.append({"id": sid, "title": s.get("title")})
 
-        return {"section_id": section_id, "parent": parent, "children": children, "siblings": siblings}
+        result = {"section_id": section_id, "parent": parent, "children": children, "siblings": siblings}
+        # Add mode info
+        result = self._add_mode_info(result, code)
+        return result
 
     def set_pdf_path(self, code: str, path: str) -> Dict:
         """Connect user's PDF for text extraction. If path is a folder, auto-scan for PDFs."""
@@ -816,6 +874,9 @@ class BuildingCodeMCP:
                 # Note if found with different prefix
                 if actual_id != section_id:
                     result["note"] = f"Found as '{actual_id}' (you searched for '{section_id}')"
+
+                # Add mode info
+                result = self._add_mode_info(result, code)
                 return result
 
         # Section not found - suggest similar sections
