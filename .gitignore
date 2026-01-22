@@ -1,18 +1,24 @@
-# PDF 파일 (저작권 - git에 올리면 안 됨)
+# ========================================
+# PDF Files (Copyright - DO NOT commit)
+# ========================================
 sources/
 *.pdf
 
-# Docling 출력 (용량 큼, 재생성 가능)
+# ========================================
+# Large Generated Outputs (Regeneratable)
+# ========================================
 docling_output/
-
-# Marker 출력 (용량 큼, 재생성 가능)
 marker/
 marker REFERENCE/
 
-# 이전 채팅 로그
+# ========================================
+# Previous Chat Logs
+# ========================================
 previous_chat/
 
+# ========================================
 # Python
+# ========================================
 __pycache__/
 *.py[cod]
 *$py.class
@@ -22,48 +28,88 @@ venv/
 env/
 .venv/
 ENV/
+.pytest_cache/
 
-# IDE
+# ========================================
+# Build & Distribution
+# ========================================
+dist/
+build/
+*.egg-info/
+
+# ========================================
+# IDE & Editor
+# ========================================
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
-# OS
+# ========================================
+# OS Files
+# ========================================
 .DS_Store
 Thumbs.db
+Desktop.ini
 
-# 캐시
+# ========================================
+# Cache & Temp
+# ========================================
 *.cache
 .cache/
-
-# 로그
-*.log
-logs/
-
-# 임시 파일
 *.tmp
 *.temp
 temp/
 
-# Marker 출력 (용량 큼 - 선택적)
-# marker/*/images/
-# marker/*/*.jpeg
+# ========================================
+# Logs
+# ========================================
+*.log
+logs/
 
-# 로컬 DB
+# ========================================
+# Database (Local)
+# ========================================
 *.db
 *.sqlite
 *.sqlite3
 
-# 환경 변수
+# ========================================
+# Environment Variables
+# ========================================
 .env
 .env.local
+.env.*.local
 
-# Claude Code 로컬 설정
+# ========================================
+# Claude Code Local Settings
+# ========================================
 .claude/settings.local.json
 .claude/plans/
+.claude/todos/
 
-# Build artifacts
-dist/
-build/
-*.egg-info/
+# ========================================
+# Website (Next.js) - handled by website/.gitignore
+# But ensure these are never committed from root
+# ========================================
+website/node_modules/
+website/.next/
+website/out/
+website/.vercel/
+
+# ========================================
+# Test Outputs
+# ========================================
+coverage/
+htmlcov/
+.tox/
+.nox/
+
+# ========================================
+# Secrets & Credentials (NEVER commit)
+# ========================================
+*.pem
+*.key
+*credentials*.json
+*secrets*.json

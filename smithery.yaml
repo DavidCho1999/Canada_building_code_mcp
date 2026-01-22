@@ -1,17 +1,29 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      pdfPath:
+        type: string
+        description: Optional path to your building code PDF for full text extraction (BYOD mode). If not provided, the server operates in map-only mode returning page numbers and coordinates.
+  commandFunction: |
+    config => ({
+      command: 'uvx',
+      args: ['building-code-mcp'],
+      env: config.pdfPath ? { BUILDING_CODE_PDF_PATH: config.pdfPath } : {}
+    })
+
+# Metadata
 name: canada-building-code
-description: Search 20,000+ sections across 13 Canadian building codes (NBC, OBC, BCBC, OFC, and more)
+description: Search and navigate 25,000+ sections across 16 Canadian building codes and guides. Includes NBC, OBC, BCBC, ABC, QCC, OFC, and more. Features section verification, jurisdiction lookup, and hierarchy navigation.
 author: DavidCho1999
 repository: https://github.com/DavidCho1999/Canada-AEC-Code-MCP
 license: MIT
+version: 1.0.0
 
-runtime: python
-entrypoint: src/mcp_server.py
-
-dependencies:
-  - mcp
-  - pymupdf
-  - beautifulsoup4
-
+# Tags for discovery
 tags:
   - building-code
   - construction
@@ -20,29 +32,81 @@ tags:
   - canada
   - regulations
   - AEC
+  - compliance
+  - fire-code
+  - plumbing-code
+  - energy-code
+  - ontario
+  - british-columbia
+  - alberta
+  - quebec
 
+# All 7 tools with detailed descriptions
 tools:
   - name: list_codes
-    description: List all available Canadian building codes with section counts
-  - name: search_code
-    description: Search for building code sections by keywords (e.g., "fire separation", "stair width")
-  - name: get_section
-    description: Get details of a specific section by ID (e.g., "9.9.4.1")
-  - name: get_hierarchy
-    description: Get parent, children, and sibling sections for navigation
-  - name: set_pdf_path
-    description: Connect your PDF for full text extraction (BYOD mode)
+    description: |
+      List all available Canadian building codes and user guides with section counts and download links.
+      Returns codes (legally binding) and guides (interpretation only) separately.
+      Use this to discover which codes are available before searching.
 
+  - name: search_code
+    description: |
+      Search for building code sections by keywords across all codes or a specific code.
+      Examples: "fire separation", "stair width", "egress requirements", "energy efficiency"
+      Returns matching sections with page numbers, section IDs, and relevance scores.
+      Supports cross-code search to compare requirements across jurisdictions.
+
+  - name: get_section
+    description: |
+      Get detailed information about a specific section by its ID.
+      Examples: "9.9.4.1", "3.2.4.1", "B-9.10.14.1"
+      Returns page number, coordinates (bbox), keywords, and hierarchy info.
+      Auto-detects Division prefix (A/B/C) if not provided.
+      If PDF is connected, also extracts the actual text content.
+
+  - name: get_hierarchy
+    description: |
+      Navigate the code structure by getting parent, children, and sibling sections.
+      Useful for understanding context and finding related requirements.
+      Example: Get children of "Section 9.9" to see all subsections about stairs.
+
+  - name: set_pdf_path
+    description: |
+      Connect your legally obtained PDF file for full text extraction (BYOD mode).
+      Once connected, get_section will return actual code text, not just coordinates.
+      Path should be absolute (e.g., "C:/codes/NBC2025.pdf" or "/home/user/codes/NBC2025.pdf").
+
+  - name: verify_section
+    description: |
+      Verify that a section ID exists and get a formal citation.
+      Use this to prevent hallucination by confirming section references are valid.
+      Returns exists (boolean), formal citation format, and page number.
+      Auto-detects Division prefix if not provided.
+
+  - name: get_applicable_code
+    description: |
+      Determine which building codes apply to a specific location in Canada.
+      Input: city name, province, or address (e.g., "Toronto", "Vancouver", "Montreal")
+      Returns applicable provincial and national codes with adoption dates.
+      Helps users understand which jurisdiction's code to reference.
+
+# Supported codes summary
 supported_codes:
-  - NBC 2025 (National Building Code)
-  - NFC 2025 (National Fire Code)
-  - NPC 2025 (National Plumbing Code)
-  - NECB 2025 (National Energy Code)
-  - OBC 2024 (Ontario Building Code)
-  - OFC (Ontario Fire Code)
-  - BCBC 2024 (BC Building Code)
-  - ABC 2023 (Alberta Building Code)
-  - QCC 2020 (Quebec Construction Code)
-  - QECB 2020 (Quebec Energy Code)
-  - QPC 2020 (Quebec Plumbing Code)
-  - QSC 2020 (Quebec Safety Code)
+  national:
+    - NBC 2025 (National Building Code) - 2,783 sections
+    - NFC 2025 (National Fire Code) - 1,044 sections
+    - NPC 2025 (National Plumbing Code) - 413 sections
+    - NECB 2025 (National Energy Code) - 475 sections
+  provincial:
+    - OBC 2024 (Ontario Building Code) - 4,108 sections
+    - OFC (Ontario Fire Code) - 1,906 sections
+    - BCBC 2024 (BC Building Code) - 2,584 sections
+    - ABC 2023 (Alberta Building Code) - 2,832 sections
+    - QCC 2020 (Quebec Construction Code) - 2,726 sections
+    - QECB 2020 (Quebec Energy Code) - 384 sections
+    - QPC 2020 (Quebec Plumbing Code) - 428 sections
+    - QSC 2020 (Quebec Safety Code) - 1,063 sections
+  guides:
+    - IUGP9 2020 (Illustrated Guide Part 9) - 1,096 sections
+    - UGP4 2020 (Structural Commentaries) - 495 sections
+    - UGNECB 2020 (Energy Code Guide) - 165 sections
