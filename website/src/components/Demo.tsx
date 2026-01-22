@@ -74,7 +74,7 @@ export default function Demo() {
           <p className="text-slate-600 max-w-xl mx-auto mb-4">
             Works with any MCP-compatible client.
           </p>
-          <div className="flex gap-3 text-sm overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible md:pb-0">
+          <div className="flex gap-3 text-sm overflow-x-auto md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
             <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Claude Desktop</span>
             <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Cursor</span>
             <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Windsurf</span>
@@ -83,7 +83,7 @@ export default function Demo() {
         </motion.div>
 
         {/* Category tabs */}
-        <div className="flex gap-3 mb-8 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible md:pb-0">
+        <div className="flex gap-3 mb-8 overflow-x-auto md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
           {demoConversations.map((demo) => (
             <button
               key={demo.id}
