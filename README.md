@@ -36,9 +36,22 @@ This MCP server operates in **two modes**:
 npx -y @smithery/cli@latest install davidcho/ca-building-code-mcp --client claude
 ```
 
-### Option B: uvx (No install needed)
+### Option B: uvx (Auto-updates, recommended)
 
-Add to Claude Desktop config (`%APPDATA%\Claude\claude_desktop_config.json` on Windows, `~/Library/Application Support/Claude/claude_desktop_config.json` on Mac):
+**Prerequisites:** Install `uv` first (one-time setup):
+
+```bash
+# Windows (PowerShell)
+powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# macOS/Linux
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Or via pip
+pip install uv
+```
+
+Then add to Claude Desktop config (`%APPDATA%\Claude\claude_desktop_config.json` on Windows, `~/Library/Application Support/Claude/claude_desktop_config.json` on Mac):
 
 ```json
 {
@@ -51,7 +64,9 @@ Add to Claude Desktop config (`%APPDATA%\Claude\claude_desktop_config.json` on W
 }
 ```
 
-### Option C: pip install
+**Benefits:** Automatically checks for updates on each run - always get the latest version!
+
+### Option C: pip install (Manual updates)
 
 ```bash
 pip install building-code-mcp
@@ -66,6 +81,8 @@ pip install building-code-mcp
   }
 }
 ```
+
+**To update:** Run `pip install --upgrade building-code-mcp`
 
 ---
 
