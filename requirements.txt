@@ -1,0 +1,6 @@
+# PDF Conversion (for developers creating maps)
+docling>=2.0.0
+PyMuPDF>=1.23.0
+
+# MCP Server
+mcp>=0.1.0

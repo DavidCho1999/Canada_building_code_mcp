@@ -1,0 +1,60 @@
+# PDF 파일 (저작권 - git에 올리면 안 됨)
+sources/
+*.pdf
+
+# Docling 출력 (용량 큼, 재생성 가능)
+docling_output/
+
+# Marker 출력 (용량 큼, 재생성 가능)
+marker/
+marker REFERENCE/
+
+# 이전 채팅 로그
+previous_chat/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 캐시
+*.cache
+.cache/
+
+# 로그
+*.log
+logs/
+
+# 임시 파일
+*.tmp
+*.temp
+temp/
+
+# Marker 출력 (용량 큼 - 선택적)
+# marker/*/images/
+# marker/*/*.jpeg
+
+# 로컬 DB
+*.db
+*.sqlite
+*.sqlite3
+
+# 환경 변수
+.env
+.env.local
