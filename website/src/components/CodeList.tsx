@@ -1,7 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Building, Landmark, BookOpen } from 'lucide-react';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Building, Landmark, BookOpen, ChevronDown } from 'lucide-react';
 
 const codeGroups = [
   {
@@ -39,6 +40,12 @@ const codeGroups = [
 ];
 
 export default function CodeList() {
+  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+
+  const toggleAccordion = (index: number) => {
+    setOpenAccordion(openAccordion === index ? null : index);
+  };
+
   return (
     <section id="codes" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
@@ -61,7 +68,8 @@ export default function CodeList() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-3 gap-8">
           {codeGroups.map((group, groupIndex) => (
             <motion.div
               key={group.title}
@@ -108,6 +116,72 @@ export default function CodeList() {
                   ))}
                 </div>
               </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Mobile Accordion */}
+        <div className="md:hidden space-y-3">
+          {codeGroups.map((group, groupIndex) => (
+            <motion.div
+              key={group.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
+              className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden"
+            >
+              {/* Accordion Header */}
+              <button
+                onClick={() => toggleAccordion(groupIndex)}
+                className={`${group.color} p-4 flex items-center justify-between w-full`}
+              >
+                <div className="flex items-center gap-3">
+                  <group.icon className="w-5 h-5 text-white" />
+                  <h3 className="text-base font-bold text-white">{group.title}</h3>
+                </div>
+                <ChevronDown
+                  className={`w-5 h-5 text-white transition-transform duration-300 ${
+                    openAccordion === groupIndex ? 'rotate-180' : ''
+                  }`}
+                />
+              </button>
+
+              {/* Accordion Content */}
+              <AnimatePresence>
+                {openAccordion === groupIndex && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-3 space-y-2">
+                      {group.codes.map((code) => (
+                        <div
+                          key={code.name}
+                          className="p-3 bg-slate-50 rounded-lg"
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="font-semibold text-slate-900 text-sm">
+                              {code.name}
+                            </span>
+                            {'province' in code && (
+                              <span className="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">
+                                {code.province}
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-xs text-slate-500">
+                            {code.full} • {code.sections.toLocaleString()} sections
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>
