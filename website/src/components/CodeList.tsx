@@ -9,10 +9,10 @@ const codeGroups = [
     icon: Landmark,
     color: 'bg-blue-500',
     codes: [
-      { name: 'NBC 2025', full: 'National Building Code', sections: '3,000+' },
-      { name: 'NFC 2025', full: 'National Fire Code', sections: '1,000+' },
-      { name: 'NPC 2025', full: 'National Plumbing Code', sections: '400+' },
-      { name: 'NECB 2025', full: 'National Energy Code', sections: '500+' },
+      { name: 'NBC 2025', full: 'National Building Code', sections: '3,000+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=adf1ad94-7ea8-4b08-a19f-653ebb7f45f6' },
+      { name: 'NFC 2025', full: 'National Fire Code', sections: '1,000+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=e8a18373-a824-42d5-8823-bfad854c2ebd' },
+      { name: 'NPC 2025', full: 'National Plumbing Code', sections: '400+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=6e7cabf5-d83e-4efd-9a1c-6515fc7cdc71' },
+      { name: 'NECB 2025', full: 'National Energy Code', sections: '500+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=0d558a8e-28fe-4b5d-bb73-35b5a3703e8b' },
     ],
   },
   {
@@ -20,10 +20,10 @@ const codeGroups = [
     icon: Building,
     color: 'bg-emerald-500',
     codes: [
-      { name: 'OBC', full: 'Ontario Building Code', sections: '4,400+', province: 'ON' },
-      { name: 'BCBC 2024', full: 'BC Building Code', sections: '2,700+', province: 'BC' },
-      { name: 'ABC', full: 'Alberta Building Code', sections: '3,000+', province: 'AB' },
-      { name: 'QCC', full: 'Quebec Construction Code', sections: '2,900+', province: 'QC' },
+      { name: 'OBC', full: 'Ontario Building Code', sections: '4,400+', province: 'ON', url: 'https://www.ontario.ca/form/get-2024-building-code-compendium-non-commercial-use' },
+      { name: 'BCBC 2024', full: 'BC Building Code', sections: '2,700+', province: 'BC', url: 'https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/bc-codes/2024-bc-codes' },
+      { name: 'ABC', full: 'Alberta Building Code', sections: '3,000+', province: 'AB', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-2023-alberta-edition' },
+      { name: 'QCC', full: 'Quebec Construction Code', sections: '2,900+', province: 'QC', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=fbb47c66-fcda-4d5b-a045-882dfa80ab0e' },
     ],
   },
   {
@@ -31,9 +31,9 @@ const codeGroups = [
     icon: BookOpen,
     color: 'bg-amber-500',
     codes: [
-      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,400+' },
-      { name: 'Part 4 Guide', full: 'Structural Design', sections: '400+' },
-      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '100+' },
+      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,400+', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/illustrated-users-guide-national-building-code-canada-2020-part-9-division-b-housing-small-buildings' },
+      { name: 'Part 4 Guide', full: 'Structural Design', sections: '400+', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications' },
+      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '100+', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/users-guide-national-energy-code-canada-buildings-2020' },
     ],
   },
 ];
@@ -75,12 +75,15 @@ export default function CodeList() {
                 {/* Code list */}
                 <div className="p-4 space-y-3">
                   {group.codes.map((code) => (
-                    <div
+                    <a
                       key={code.name}
-                      className="group p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors cursor-default"
+                      href={code.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block group p-3 bg-slate-50 rounded-xl hover:bg-cyan-50 hover:border-cyan-200 border border-transparent transition-all cursor-pointer"
                     >
                       <div className="flex items-center justify-between mb-1">
-                        <span className="font-semibold text-slate-900">
+                        <span className="font-semibold text-slate-900 group-hover:text-cyan-700">
                           {code.name}
                         </span>
                         {'province' in code && (
@@ -95,7 +98,7 @@ export default function CodeList() {
                       <div className="text-xs text-slate-400">
                         {code.sections} sections
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               </div>
@@ -127,9 +130,12 @@ export default function CodeList() {
               {openAccordion === groupIndex && (
                 <div className="p-3 space-y-2">
                   {group.codes.map((code) => (
-                    <div
+                    <a
                       key={code.name}
-                      className="p-3 bg-slate-50 rounded-lg"
+                      href={code.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-3 bg-slate-50 rounded-lg hover:bg-cyan-50 hover:border-cyan-200 border border-transparent transition-all"
                     >
                       <div className="flex items-center justify-between mb-1">
                         <span className="font-semibold text-slate-900 text-sm">
@@ -144,7 +150,7 @@ export default function CodeList() {
                       <div className="text-xs text-slate-500">
                         {code.full} • {code.sections} sections
                       </div>
-                    </div>
+                    </a>
                   ))}
                 </div>
               )}
