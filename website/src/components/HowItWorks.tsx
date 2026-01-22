@@ -15,7 +15,7 @@ const steps = [
     step: 2,
     icon: FileText,
     title: 'Bring Your Own PDF',
-    description: 'MCP server can help auto-download PDFs, or get them manually from official sources (NRC, Ontario.ca, BC Codes).',
+    description: 'MCP server can help download PDFs, or get them manually from official sources.',
     color: 'bg-blue-500',
   },
 ];
