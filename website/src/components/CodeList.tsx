@@ -9,10 +9,10 @@ const codeGroups = [
     icon: Landmark,
     color: 'bg-blue-500',
     codes: [
-      { name: 'NBC 2025', full: 'National Building Code', sections: '4,200+' },
-      { name: 'NFC 2025', full: 'National Fire Code', sections: '1,400+' },
-      { name: 'NPC 2025', full: 'National Plumbing Code', sections: '590+' },
-      { name: 'NECB 2025', full: 'National Energy Code', sections: '770+' },
+      { name: 'NBC 2025', full: 'National Building Code', sections: '3,000+' },
+      { name: 'NFC 2025', full: 'National Fire Code', sections: '1,000+' },
+      { name: 'NPC 2025', full: 'National Plumbing Code', sections: '400+' },
+      { name: 'NECB 2025', full: 'National Energy Code', sections: '500+' },
     ],
   },
   {
@@ -20,10 +20,10 @@ const codeGroups = [
     icon: Building,
     color: 'bg-emerald-500',
     codes: [
-      { name: 'OBC', full: 'Ontario Building Code', sections: '3,900+', province: 'ON' },
-      { name: 'BCBC 2024', full: 'BC Building Code', sections: '2,600+', province: 'BC' },
-      { name: 'ABC', full: 'Alberta Building Code', sections: '4,100+', province: 'AB' },
-      { name: 'QCC', full: 'Quebec Construction Code', sections: '3,900+', province: 'QC' },
+      { name: 'OBC', full: 'Ontario Building Code', sections: '4,400+', province: 'ON' },
+      { name: 'BCBC 2024', full: 'BC Building Code', sections: '2,700+', province: 'BC' },
+      { name: 'ABC', full: 'Alberta Building Code', sections: '3,000+', province: 'AB' },
+      { name: 'QCC', full: 'Quebec Construction Code', sections: '2,900+', province: 'QC' },
     ],
   },
   {
@@ -31,9 +31,9 @@ const codeGroups = [
     icon: BookOpen,
     color: 'bg-amber-500',
     codes: [
-      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,300+' },
-      { name: 'Part 4 Guide', full: 'Structural Design', sections: '20+' },
-      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '610+' },
+      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,400+' },
+      { name: 'Part 4 Guide', full: 'Structural Design', sections: '400+' },
+      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '100+' },
     ],
   },
 ];

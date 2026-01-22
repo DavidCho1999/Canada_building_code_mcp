@@ -58,7 +58,7 @@ export default function Hero() {
         >
           <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-blue-50 text-blue-700 rounded-full text-xs md:text-sm font-medium border border-blue-200">
             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-            25,707 sections indexed
+            24,201 sections indexed
           </span>
           <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-emerald-50 text-emerald-700 rounded-full text-xs md:text-sm font-medium border border-emerald-200">
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -87,7 +87,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-600 mb-6 md:mb-12 max-w-2xl mx-auto"
         >
-          Search 14 codes and 25,707 sections in plain language.
+          Search 16 codes and 24,201 sections in plain language.
           <br className="hidden md:block" />
           No more hunting through PDFs. Just ask.
         </motion.p>

@@ -5,7 +5,8 @@
 - **Project Name**: Canadian Building Code MCP
 - **Purpose**: MCP server enabling Claude to search/reference Canadian Building Codes
 - **Strategy**: "Map & Territory" - Distribute coordinates only, text extracted from user's PDF
-- **Status**: Phase 1-2 Complete (Docling + Map Generation)
+- **Status**: Phase 1-3 Complete (Docling + Map Generation + MCP Server with Prompts/Resources)
+- **Current Version**: 1.0.8 (PyPI + Smithery)
 
 ---
 
@@ -104,33 +105,65 @@ python src/mcp_server.py
 
 ---
 
+## MCP Server Features
+
+### Tools (10)
+1. **list_codes** - List all available codes with download links
+2. **search_code** - Search sections by keywords with TF-IDF ranking
+3. **get_section** - Get section details (page, coords, text if BYOD)
+4. **get_hierarchy** - Navigate parent/child/sibling sections
+5. **verify_section** - Verify section exists (prevent hallucination)
+6. **get_applicable_code** - Find which codes apply to location
+7. **get_table** - Get table content by ID
+8. **set_pdf_path** - Connect PDF for BYOD mode
+9. **get_page** - Get full page text (BYOD mode)
+10. **get_pages** - Get multi-page text (BYOD mode)
+
+### Prompts (4)
+1. **search_building_code** - Search for requirements/regulations
+2. **verify_code_reference** - Confirm section references are valid
+3. **find_applicable_code** - Determine jurisdiction
+4. **explore_code_structure** - Navigate code hierarchy
+
+### Resources (4)
+1. **buildingcode://welcome** - Getting Started guide with legal notice, PDF sources
+2. **buildingcode://codes** - List of all available codes
+3. **buildingcode://stats** - Section counts and coverage stats
+4. **buildingcode://code/{code}** - Metadata for specific code
+
+### Operating Modes
+- **Map-Only Mode** (Default): Returns page numbers + coordinates only
+- **BYOD Mode** (Bring Your Own Document): Full text extraction after `set_pdf_path`
+
+---
+
 ## Conversion Progress (Complete)
 
 ### Codes (13)
 | Code | Sections |
 |------|----------|
-| NBC | 2,783 |
-| NFC | 1,044 |
-| NPC | 413 |
-| NECB | 475 |
-| ABC | 2,832 |
-| BCBC | 2,584 |
-| OBC Vol1 | 3,327 |
-| OBC Vol2 | 781 |
-| OFC | 1,906 |
-| QCC | 2,726 |
-| QECB | 384 |
-| QPC | 428 |
-| QSC | 1,063 |
+| NBC | 3,000+ |
+| NFC | 1,000+ |
+| NPC | 440+ |
+| NECB | 530+ |
+| ABC | 3,000+ |
+| BCBC | 2,700+ |
+| OBC Vol1 | 3,500+ |
+| OBC Vol2 | 890+ |
+| OFC | 1,900+ |
+| QCC | 2,900+ |
+| QECB | 420+ |
+| QPC | 450+ |
+| QSC | 1,000+ |
 
 ### User's Guides (3)
 | Guide | Sections |
 |-------|----------|
-| IUGP9 (Part 9) | 1,096 |
-| UGP4 (Part 4) | 495 |
-| UGNECB | 165 |
+| IUGP9 (Part 9) | 1,400+ |
+| UGP4 (Part 4) | 490+ |
+| UGNECB | 160+ |
 
-**Total: 22,502 sections indexed**
+**Total: 24,000+ sections indexed**
 
 ---
 
@@ -138,3 +171,21 @@ python src/mcp_server.py
 
 - `docs/PDF_DOWNLOAD_LINKS.md` - PDF download links
 - `docs/archive/` - Previous documentation
+
+---
+
+## Recent Updates
+
+### v1.0.8 (2026-01-22)
+- Added **Welcome Resource** (buildingcode://welcome) with legal notice and PDF sources
+- Added **4 Prompts** for common use cases
+- Added **4 Resources** for code discovery
+- Updated section counts to **24,000+** (improved map generation)
+- Added **full tool schema** to smithery.yaml for better quality score
+- README simplified with "##+" format for section counts
+
+### Smithery Quality Score Improvements
+- Tool Quality: Added ToolAnnotations (readOnlyHint, destructiveHint, idempotentHint, openWorldHint)
+- Server Capabilities: Added Prompts and Resources (+10 points expected)
+- Server Metadata: Added homepage, icon, displayName
+- Full inputSchema for all 10 tools in smithery.yaml
