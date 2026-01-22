@@ -6,17 +6,17 @@ import { FileText, Plug, Shield, Check } from 'lucide-react';
 const steps = [
   {
     step: 1,
-    icon: FileText,
-    title: 'Bring Your Own PDF',
-    description: 'Download Building Code PDFs from official government websites (NRC, Ontario.ca, BC Codes).',
-    color: 'bg-blue-500',
-  },
-  {
-    step: 2,
     icon: Plug,
     title: 'Connect MCP Server',
     description: 'Add Building Code MCP to Claude Desktop config. Setup takes 5 minutes.',
     color: 'bg-emerald-500',
+  },
+  {
+    step: 2,
+    icon: FileText,
+    title: 'Bring Your Own PDF',
+    description: 'MCP server can help auto-download PDFs, or get them manually from official sources (NRC, Ontario.ca, BC Codes).',
+    color: 'bg-blue-500',
   },
 ];
 
@@ -95,7 +95,7 @@ export default function HowItWorks() {
               <p className="text-slate-600 text-sm mb-2">
                 This tool only distributes coordinates (page, position), not the actual text. Content is read from your own PDF files.
               </p>
-              <div className="flex flex-wrap gap-4 text-xs text-slate-500">
+              <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-slate-500">
                 <span className="flex items-center gap-1">
                   <Check className="w-3 h-3 text-emerald-500" />
                   No text stored
