@@ -74,22 +74,22 @@ export default function Demo() {
           <p className="text-slate-600 max-w-xl mx-auto mb-4">
             Works with any MCP-compatible client.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 text-sm">
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default">Claude Desktop</span>
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default">Cursor</span>
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default">Windsurf</span>
-            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default">VS Code + Copilot</span>
+          <div className="flex gap-3 text-sm overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible md:pb-0">
+            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Claude Desktop</span>
+            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Cursor</span>
+            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">Windsurf</span>
+            <span className="px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">VS Code + Copilot</span>
           </div>
         </motion.div>
 
         {/* Category tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
+        <div className="flex gap-3 mb-8 overflow-x-auto pb-2 md:flex-wrap md:justify-center md:overflow-visible md:pb-0">
           {demoConversations.map((demo) => (
             <button
               key={demo.id}
               onClick={() => setActiveDemo(demo)}
               className={clsx(
-                'px-4 py-2 rounded-full text-sm font-medium transition-all duration-300',
+                'px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 whitespace-nowrap',
                 activeDemo.id === demo.id
                   ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg shadow-cyan-500/25'
                   : 'bg-slate-100 text-slate-600 hover:bg-slate-200 hover:scale-105'
