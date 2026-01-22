@@ -80,6 +80,17 @@ PDF_DOWNLOAD_LINKS = {
     },
 }
 
+# Web-only references (no searchable index, AI reads directly)
+WEB_REFERENCE_CODES = {
+    "OFC": {
+        "name": "Ontario Fire Code",
+        "url": "https://www.ontario.ca/laws/regulation/070213",
+        "source": "Ontario e-Laws",
+        "version": "O. Reg. 213/07 (current)",
+        "note": "Web reference only - AI can read directly from URL"
+    },
+}
+
 
 class BuildingCodeMCP:
     """Canadian Building Code MCP Server"""
@@ -106,12 +117,14 @@ class BuildingCodeMCP:
 
     def list_codes(self) -> Dict:
         """List all available codes with download links."""
-        codes = []
+        # Searchable codes (have map index)
+        indexed_codes = []
         for code, data in self.maps.items():
             code_info = {
                 "code": code,
                 "version": data.get("version", "unknown"),
                 "sections": len(data.get("sections", [])),
+                "searchable": True,
                 "pdf_connected": code in self.pdf_paths
             }
             # Add download link if available
@@ -120,10 +133,27 @@ class BuildingCodeMCP:
                 code_info["download_url"] = link_info["url"]
                 code_info["source"] = link_info["source"]
                 code_info["free"] = link_info.get("free", True)
-                if "note" in link_info:
-                    code_info["note"] = link_info["note"]
-            codes.append(code_info)
-        return {"codes": codes, "total": len(codes)}
+            indexed_codes.append(code_info)
+
+        # Web reference codes (no map, AI reads directly)
+        web_references = []
+        for code, info in WEB_REFERENCE_CODES.items():
+            web_references.append({
+                "code": code,
+                "name": info["name"],
+                "version": info["version"],
+                "url": info["url"],
+                "source": info["source"],
+                "searchable": False,
+                "note": info["note"]
+            })
+
+        return {
+            "indexed_codes": indexed_codes,
+            "web_references": web_references,
+            "total_indexed": len(indexed_codes),
+            "total_web": len(web_references)
+        }
 
     def search_code(self, query: str, code: Optional[str] = None) -> Dict:
         """Search for sections matching query."""
@@ -131,7 +161,18 @@ class BuildingCodeMCP:
         if not query or not isinstance(query, str):
             return {"error": "Query is required", "query": "", "results": [], "total": 0}
 
-        # Bug fix: Return error if specified code doesn't exist
+        # Check if code is web-reference only (like OFC)
+        if code and code in WEB_REFERENCE_CODES:
+            web_info = WEB_REFERENCE_CODES[code]
+            return {
+                "error": f"{code} is a web reference only (not searchable)",
+                "suggestion": f"Read directly from: {web_info['url']}",
+                "query": query,
+                "results": [],
+                "total": 0
+            }
+
+        # Return error if specified code doesn't exist
         if code and code not in self.maps:
             return {"error": f"Code not found: {code}", "query": query, "results": [], "total": 0}
 

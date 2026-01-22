@@ -27,6 +27,14 @@ Claude will search 18,000+ indexed sections across 12 Canadian building codes an
 | QPC | 2020 | 428 | Quebec Plumbing Code |
 | QSC | 2020 | 1,063 | Quebec Safety Code (Fire) |
 
+### Web References (Read-Only)
+
+These codes don't have searchable indexes but Claude can read them directly:
+
+| Code | Description | Source |
+|------|-------------|--------|
+| OFC | Ontario Fire Code | [Ontario e-Laws](https://www.ontario.ca/laws/regulation/070213) |
+
 ## Installation
 
 ### 1. Clone the repository
