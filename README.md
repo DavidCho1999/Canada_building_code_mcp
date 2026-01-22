@@ -5,6 +5,34 @@
 
 A Model Context Protocol (MCP) server that enables Claude to search and navigate Canadian building codes.
 
+## Quick Setup (3 Steps)
+
+**1. Install the package**
+```bash
+pip install building-code-mcp
+```
+
+**2. Add to Claude Desktop config**
+
+Config file location:
+- Windows: `%APPDATA%\Claude\claude_desktop_config.json`
+- Mac: `~/Library/Application Support/Claude/claude_desktop_config.json`
+
+```json
+{
+  "mcpServers": {
+    "building-code": {
+      "command": "uvx",
+      "args": ["building-code-mcp"]
+    }
+  }
+}
+```
+
+**3. Restart Claude Desktop and start asking!**
+
+---
+
 ## What It Does
 
 Ask Claude questions like:
@@ -41,51 +69,6 @@ Claude will search **22,500+ indexed sections** across 16 Canadian building code
 | UGP4 | 2020 | 495 | User's Guide - NBC Structural Commentaries |
 | UGNECB | 2020 | 165 | User's Guide - NECB |
 
-## Installation
-
-### Option A: pip install (Recommended)
-
-```bash
-pip install building-code-mcp
-
-# With PDF text extraction support
-pip install building-code-mcp[pdf]
-```
-
-### Option B: From GitHub
-
-```bash
-pip install git+https://github.com/DavidCho1999/Canada-AEC-Code-MCP.git
-```
-
-### Option C: Clone and install
-
-```bash
-git clone https://github.com/DavidCho1999/Canada-AEC-Code-MCP.git
-cd Canada-AEC-Code-MCP
-pip install -e ".[pdf]"
-```
-
-### Configure Claude Desktop
-
-Find your Claude Desktop config file:
-- **Windows**: `%APPDATA%\Claude\claude_desktop_config.json`
-- **Mac**: `~/Library/Application Support/Claude/claude_desktop_config.json`
-
-Add this to the config file:
-
-```json
-{
-  "mcpServers": {
-    "building-code": {
-      "command": "building-code-mcp"
-    }
-  }
-}
-```
-
-Restart Claude Desktop. You should see "building-code" in the MCP tools.
-
 ## Usage Examples
 
 Once installed, just ask Claude naturally:
@@ -98,108 +81,15 @@ Once installed, just ask Claude naturally:
 "List all available building codes"
 ```
 
-## Available Tools
+## API Access
 
-| Tool | Description |
-|------|-------------|
-| `list_codes` | List all available codes and section counts |
-| `search_code` | Search by keywords (e.g., "fire separation") |
-| `get_section` | Get specific section by ID (e.g., "9.10.14.1") |
-| `get_hierarchy` | Get parent, children, siblings of a section |
-| `set_pdf_path` | Connect your PDF for full text extraction (BYOD) |
-| `verify_section` | Verify section exists and get formal citation |
-| `get_applicable_code` | Get which codes apply to a Canadian location |
-
-## How It Works
-
-### Mode A: Map Only (Default)
-Returns section metadata: ID, title, page number, keywords.
-Works without any PDF files.
-
-### Mode B: BYOD (Bring Your Own Document)
-Connect your legally obtained PDF to get full text:
-```
-"Connect my NBC PDF at C:/codes/NBC2025.pdf"
-```
-The server extracts text from the exact page and coordinates.
-
-## Running Tests
-
-```bash
-pip install pytest
-pytest tests/test_smoke.py -v
-```
-
-## Troubleshooting
-
-### "MCP server not showing in Claude Desktop"
-1. Make sure Python is in your PATH
-2. Restart Claude Desktop completely
-3. Check logs: `%APPDATA%\Claude\logs\` (Windows)
-
-### "No results found"
-- Try simpler search terms (e.g., "fire" instead of "fire separation requirements")
-- Check if the code exists: ask Claude "list available codes"
-
-### "PDF text extraction not working"
-- Ensure the PDF path is correct and file exists
-- The PDF version must match the map version (e.g., NBC 2025 map needs NBC 2025 PDF)
-- Install with PDF support: `pip install building-code-mcp[pdf]`
-
-## For Developers
-
-### Adding New Codes
-
-1. Convert PDF with Docling:
-```bash
-pip install docling
-python scripts/convert_with_docling.py path/to/code.pdf
-```
-
-2. Generate map:
-```bash
-python scripts/generate_map_v2.py docling_output/code_name/
-```
-
-### Project Structure
+REST API available at: https://canada-aec-code-mcp.onrender.com
 
 ```
-Canada-AEC-Code-MCP/
-├── maps/               # 16 code index files (JSON)
-├── src/
-│   └── mcp_server.py   # MCP server
-├── scripts/            # Pipeline scripts
-├── tests/              # Smoke tests
-└── README.md
+GET /codes              - List all codes
+GET /search/{query}     - Search sections
+GET /section/{id}       - Get section details
 ```
-
-## Disclaimer
-
-This is a structural index for Canadian Building Codes. **No copyrighted text is distributed.** This is not an official NRC or government product.
-
-Building codes are published by the National Research Council of Canada (NRC) and provincial authorities. Please obtain official copies through proper channels.
-
-## Contributing
-
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Run tests: `pytest tests/test_smoke.py -v`
-4. Submit a pull request
-
-## Changelog
-
-### v1.0.1 (2026-01-22)
-- PyPI package release (`pip install building-code-mcp`)
-- GitHub Actions auto-publish on tag
-- Added User's Guides (IUGP9, UGP4, UGNECB)
-- Bug fixes and improvements
-- Added smoke tests
-
-### v1.0.0 (2026-01-21)
-- Initial release with 13 Canadian building codes
-- 20,000+ indexed sections
-- BYOD mode for full text extraction
 
 ## License
 
