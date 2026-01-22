@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, ArrowRight, Copy, Check } from 'lucide-react';
+import { ArrowRight, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 
 export default function CTA() {
@@ -39,73 +39,56 @@ export default function CTA() {
             Quick Setup
           </h2>
 
-          {/* Setup Steps */}
-          <div className="space-y-6 mb-10 text-left">
-            {/* Step 1 */}
-            <div className="flex gap-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                1
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-slate-900 mb-2">Install the package</h3>
-                <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300">
-                  pip install building-code-mcp
+          {/* Installation Options */}
+          <div className="grid md:grid-cols-2 gap-4 mb-10 text-left">
+            {/* Option 1: pip install */}
+            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                  1
                 </div>
+                <h3 className="font-semibold text-slate-900">pip install</h3>
+              </div>
+              <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300 mb-4">
+                pip install building-code-mcp
+              </div>
+              <p className="text-xs text-slate-500 mb-2">
+                Add this to your MCP client config file:
+              </p>
+              <div className="relative">
+                <pre className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
+                  {configCode}
+                </pre>
+                <button
+                  onClick={copyToClipboard}
+                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                </button>
               </div>
             </div>
 
-            {/* Step 2 */}
-            <div className="flex gap-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                2
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-slate-900 mb-2">Add to Claude Desktop config</h3>
-                <div className="text-xs text-slate-500 mb-2 space-y-1">
-                  <p className="break-all"><span className="font-medium">Windows:</span> %APPDATA%\Claude\claude_desktop_config.json</p>
-                  <p className="break-all"><span className="font-medium">Mac:</span> ~/Library/Application Support/Claude/claude_desktop_config.json</p>
+            {/* Option 2: Smithery */}
+            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
+                  2
                 </div>
-                <div className="relative">
-                  <pre className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300 overflow-x-auto">
-                    {configCode}
-                  </pre>
-                  <button
-                    onClick={copyToClipboard}
-                    className="absolute top-2 right-2 p-2 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
-                  >
-                    {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                  </button>
-                </div>
+                <h3 className="font-semibold text-slate-900">Smithery (One-click)</h3>
               </div>
-            </div>
-
-            {/* Step 3 */}
-            <div className="flex gap-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold">
-                3
-              </div>
-              <div className="flex-1">
-                <h3 className="font-semibold text-slate-900 mb-2">Restart Claude Desktop and start asking</h3>
-                <p className="text-slate-600 text-sm">
-                  That&apos;s it! Ask questions like &quot;What is the minimum stair width in OBC?&quot;
-                </p>
-              </div>
+              <a
+                href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-3 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors w-full justify-center mb-3"
+              >
+                Install on Smithery
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-xs text-slate-500">No manual config needed. Just click and install.</p>
             </div>
           </div>
 
-          {/* GitHub Button */}
-          <div className="text-center">
-            <a
-              href="https://github.com/DavidCho1999/Canada-AEC-Code-MCP"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-slate-800 to-slate-900 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 hover:shadow-xl hover:shadow-slate-900/30 transition-all duration-300"
-            >
-              <Github className="w-5 h-5" />
-              View on GitHub
-              <ArrowRight className="w-4 h-4" />
-            </a>
-          </div>
         </motion.div>
       </div>
     </section>
