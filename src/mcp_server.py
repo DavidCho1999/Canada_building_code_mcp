@@ -44,10 +44,9 @@ PDF_DOWNLOAD_LINKS = {
         "free": True
     },
     "OBC": {
-        "url": "https://www.ontario.ca/page/2024-ontario-building-code",
-        "source": "Ontario.ca",
-        "free": True,
-        "note": "Request form required, PDF sent via email"
+        "url": "https://www.publications.gov.on.ca/browse-catalogues/building-code-and-guides/2024-ontarios-building-code-compendium-updated-to-january-16-2025-two-volume-pdf-set-kit",
+        "source": "Publications Ontario",
+        "free": True
     },
     "BCBC": {
         "url": "https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/bc-codes/2024-bc-codes",
