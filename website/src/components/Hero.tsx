@@ -41,20 +41,20 @@ export default function Hero() {
   }, [currentQuery, isDeleting, queryIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white">
+    <section className="relative min-h-[85vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-b from-slate-50 to-white">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-100 rounded-full blur-3xl opacity-50" />
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-emerald-100 rounded-full blur-3xl opacity-50" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto px-6 py-20 text-center">
+      <div className="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-20 text-center">
         {/* Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex flex-wrap justify-center gap-3 mb-8"
+          className="flex flex-wrap justify-center gap-3 mb-4 md:mb-8"
         >
           <span className="inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-blue-50 text-blue-700 rounded-full text-xs md:text-sm font-medium border border-blue-200">
             <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
@@ -85,7 +85,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-slate-600 mb-6 md:mb-12 max-w-2xl mx-auto"
         >
           Search 14 codes and 25,707 sections in plain language.
           <br className="hidden md:block" />
@@ -97,7 +97,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="max-w-2xl mx-auto mb-12"
+          className="max-w-2xl mx-auto mb-6 md:mb-12"
         >
           <div className="relative bg-white rounded-2xl shadow-xl border border-slate-200 p-2">
             <div className="flex items-center gap-3 px-3 md:px-4 py-3 pr-12 md:pr-24">
