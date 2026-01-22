@@ -104,7 +104,7 @@ export default function Hero() {
               <Search className="w-5 h-5 text-slate-400 flex-shrink-0" />
               <span className="text-slate-700 text-left flex-1 text-sm md:text-base truncate">
                 {currentQuery}
-                <span className="inline-block w-0.5 h-5 bg-blue-600 ml-1 animate-pulse" />
+                <span className="inline-block w-0.5 h-4 bg-blue-600 ml-1 animate-pulse align-middle" />
               </span>
             </div>
             <div className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2">
