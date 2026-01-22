@@ -62,8 +62,8 @@ export default function CTA() {
               <div className="flex-1">
                 <h3 className="font-semibold text-slate-900 mb-2">Add to Claude Desktop config</h3>
                 <div className="text-xs text-slate-500 mb-2 space-y-1">
-                  <p><span className="font-medium">Windows:</span> %APPDATA%\Claude\claude_desktop_config.json</p>
-                  <p><span className="font-medium">Mac:</span> ~/Library/Application Support/Claude/claude_desktop_config.json</p>
+                  <p className="break-all"><span className="font-medium">Windows:</span> %APPDATA%\Claude\claude_desktop_config.json</p>
+                  <p className="break-all"><span className="font-medium">Mac:</span> ~/Library/Application Support/Claude/claude_desktop_config.json</p>
                 </div>
                 <div className="relative">
                   <pre className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300 overflow-x-auto">

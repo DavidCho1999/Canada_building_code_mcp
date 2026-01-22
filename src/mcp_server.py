@@ -10,7 +10,11 @@ from pathlib import Path
 from typing import List, Dict, Optional, Any
 
 from mcp.server import Server
-from mcp.types import Tool, TextContent, ToolAnnotations
+from mcp.types import (
+    Tool, TextContent, ToolAnnotations,
+    Prompt, PromptArgument, PromptMessage, GetPromptResult,
+    Resource
+)
 from mcp.server.stdio import stdio_server
 
 # For PDF text extraction (BYOD mode)
@@ -843,6 +847,228 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
         result = {"error": f"Unknown tool: {name}"}
 
     return [TextContent(type="text", text=json.dumps(result, indent=2, ensure_ascii=False))]
+
+
+# ============================================
+# PROMPTS - Reusable templates for LLM interactions
+# ============================================
+
+@server.list_prompts()
+async def list_prompts() -> List[Prompt]:
+    """List available prompts for building code interactions."""
+    return [
+        Prompt(
+            name="search_building_code",
+            description="Search Canadian building codes for specific requirements or regulations",
+            arguments=[
+                PromptArgument(
+                    name="query",
+                    description="What to search for (e.g., 'fire separation requirements', 'stair dimensions')",
+                    required=True
+                ),
+                PromptArgument(
+                    name="code",
+                    description="Specific code to search (NBC, OBC, BCBC, etc.) or leave empty for all",
+                    required=False
+                )
+            ]
+        ),
+        Prompt(
+            name="verify_code_reference",
+            description="Verify a building code section exists before citing it (prevents hallucination)",
+            arguments=[
+                PromptArgument(
+                    name="section_id",
+                    description="Section ID to verify (e.g., '9.10.14.1', '3.2.4.1')",
+                    required=True
+                ),
+                PromptArgument(
+                    name="code",
+                    description="Code name (NBC, OBC, BCBC, etc.)",
+                    required=True
+                )
+            ]
+        ),
+        Prompt(
+            name="find_applicable_code",
+            description="Determine which building codes apply to a specific Canadian location",
+            arguments=[
+                PromptArgument(
+                    name="location",
+                    description="City, province, or territory (e.g., 'Toronto', 'Vancouver', 'Alberta')",
+                    required=True
+                )
+            ]
+        ),
+        Prompt(
+            name="explore_code_structure",
+            description="Navigate and explore the hierarchy of a building code section",
+            arguments=[
+                PromptArgument(
+                    name="section_id",
+                    description="Section ID to explore (e.g., '9.9' for stairs)",
+                    required=True
+                ),
+                PromptArgument(
+                    name="code",
+                    description="Code name (NBC, OBC, BCBC, etc.)",
+                    required=True
+                )
+            ]
+        )
+    ]
+
+
+@server.get_prompt()
+async def get_prompt(name: str, arguments: Optional[Dict[str, str]] = None) -> GetPromptResult:
+    """Get a specific prompt with arguments filled in."""
+    args = arguments or {}
+
+    if name == "search_building_code":
+        query = args.get("query", "building requirements")
+        code = args.get("code", "")
+        code_text = f" in {code}" if code else " across all Canadian building codes"
+        return GetPromptResult(
+            description=f"Search for '{query}'{code_text}",
+            messages=[
+                PromptMessage(
+                    role="user",
+                    content=TextContent(
+                        type="text",
+                        text=f"Please search for '{query}'{code_text}. Use the search_code tool to find relevant sections, then use get_section to get details on the most relevant results."
+                    )
+                )
+            ]
+        )
+
+    elif name == "verify_code_reference":
+        section_id = args.get("section_id", "")
+        code = args.get("code", "")
+        return GetPromptResult(
+            description=f"Verify section {section_id} in {code}",
+            messages=[
+                PromptMessage(
+                    role="user",
+                    content=TextContent(
+                        type="text",
+                        text=f"Before citing section {section_id} from {code}, please verify it exists using the verify_section tool. If it exists, provide the formal citation. If not, suggest similar sections that do exist."
+                    )
+                )
+            ]
+        )
+
+    elif name == "find_applicable_code":
+        location = args.get("location", "")
+        return GetPromptResult(
+            description=f"Find applicable codes for {location}",
+            messages=[
+                PromptMessage(
+                    role="user",
+                    content=TextContent(
+                        type="text",
+                        text=f"What building codes apply to construction projects in {location}, Canada? Use the get_applicable_code tool to determine the primary and secondary codes that apply to this jurisdiction."
+                    )
+                )
+            ]
+        )
+
+    elif name == "explore_code_structure":
+        section_id = args.get("section_id", "")
+        code = args.get("code", "")
+        return GetPromptResult(
+            description=f"Explore structure of {section_id} in {code}",
+            messages=[
+                PromptMessage(
+                    role="user",
+                    content=TextContent(
+                        type="text",
+                        text=f"Please explore the structure of section {section_id} in {code}. Use get_hierarchy to show the parent section, all child subsections, and sibling sections. This helps understand the context and related requirements."
+                    )
+                )
+            ]
+        )
+
+    else:
+        raise ValueError(f"Unknown prompt: {name}")
+
+
+# ============================================
+# RESOURCES - Data entities exposed by the server
+# ============================================
+
+@server.list_resources()
+async def list_resources() -> List[Resource]:
+    """List available resources."""
+    mcp = get_mcp()
+    resources = [
+        Resource(
+            uri="buildingcode://codes",
+            name="Available Building Codes",
+            description="List of all available Canadian building codes with section counts and download links",
+            mimeType="application/json"
+        ),
+        Resource(
+            uri="buildingcode://stats",
+            name="Server Statistics",
+            description="Statistics about indexed building codes and sections",
+            mimeType="application/json"
+        )
+    ]
+
+    # Add each code as a resource
+    for code in mcp.maps.keys():
+        data = mcp.maps[code]
+        doc_type = data.get("document_type", "code")
+        version = data.get("version", "unknown")
+        sections = len(data.get("sections", []))
+        resources.append(Resource(
+            uri=f"buildingcode://code/{code}",
+            name=f"{code} {version}",
+            description=f"{'Guide' if doc_type == 'guide' else 'Building Code'} with {sections} indexed sections",
+            mimeType="application/json"
+        ))
+
+    return resources
+
+
+@server.read_resource()
+async def read_resource(uri: str) -> str:
+    """Read a specific resource."""
+    mcp = get_mcp()
+
+    if uri == "buildingcode://codes":
+        return json.dumps(mcp.list_codes(), indent=2, ensure_ascii=False)
+
+    elif uri == "buildingcode://stats":
+        total_sections = sum(len(d.get("sections", [])) for d in mcp.maps.values())
+        stats = {
+            "total_codes": len([c for c, d in mcp.maps.items() if d.get("document_type") != "guide"]),
+            "total_guides": len([c for c, d in mcp.maps.items() if d.get("document_type") == "guide"]),
+            "total_sections": total_sections,
+            "codes": {code: len(data.get("sections", [])) for code, data in mcp.maps.items()}
+        }
+        return json.dumps(stats, indent=2, ensure_ascii=False)
+
+    elif uri.startswith("buildingcode://code/"):
+        code = uri.replace("buildingcode://code/", "")
+        if code in mcp.maps:
+            data = mcp.maps[code]
+            summary = {
+                "code": code,
+                "version": data.get("version"),
+                "document_type": data.get("document_type", "code"),
+                "total_sections": len(data.get("sections", [])),
+                "sample_sections": [
+                    {"id": s.get("id"), "title": s.get("title"), "page": s.get("page")}
+                    for s in data.get("sections", [])[:10]
+                ]
+            }
+            return json.dumps(summary, indent=2, ensure_ascii=False)
+        else:
+            return json.dumps({"error": f"Code not found: {code}"})
+
+    else:
+        return json.dumps({"error": f"Unknown resource: {uri}"})
 
 
 async def _async_main():

@@ -120,7 +120,7 @@ export default function Demo() {
             </div>
 
             {/* Chat content */}
-            <div className="p-6 space-y-4 min-h-[300px]">
+            <div className="p-4 md:p-6 space-y-4 min-h-[280px] md:min-h-[300px]">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeDemo.id}
@@ -131,27 +131,27 @@ export default function Demo() {
                   className="space-y-4"
                 >
                   {/* User message */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <MessageSquare className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                    <div className="w-7 h-7 md:w-8 md:h-8 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MessageSquare className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
                     </div>
-                    <div className="bg-blue-600 text-white px-4 py-3 rounded-2xl rounded-tl-none max-w-md">
+                    <div className="bg-blue-600 text-white px-3 md:px-4 py-2 md:py-3 rounded-2xl rounded-tl-none text-sm md:text-base">
                       {activeDemo.question}
                     </div>
                   </div>
 
                   {/* AI response */}
-                  <div className="flex items-start gap-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Bot className="w-4 h-4 text-white" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                    <div className="w-7 h-7 md:w-8 md:h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Bot className="w-3.5 h-3.5 md:w-4 md:h-4 text-white" />
                     </div>
                     <div className="flex-1 space-y-3">
-                      <div className="bg-slate-800 text-slate-100 px-4 py-3 rounded-2xl rounded-tl-none">
+                      <div className="bg-slate-800 text-slate-100 px-3 md:px-4 py-2 md:py-3 rounded-2xl rounded-tl-none text-sm md:text-base">
                         {activeDemo.answer}
                       </div>
 
                       {/* Reference card */}
-                      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-4 max-w-sm">
+                      <div className="bg-slate-800/50 border border-slate-700 rounded-xl p-3 md:p-4 max-w-xs md:max-w-sm">
                         <div className="flex items-center gap-2 text-slate-400 text-xs mb-2">
                           <FileText className="w-3 h-3" />
                           Reference
