@@ -59,13 +59,7 @@ export default function Demo() {
   return (
     <section id="demo" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-emerald-100 text-emerald-700 rounded-full text-sm font-medium mb-4">
             Interactive Demo
           </span>
@@ -93,7 +87,7 @@ export default function Demo() {
               VS Code
             </span>
           </div>
-        </motion.div>
+        </div>
 
         {/* Category tabs */}
         <div className="flex gap-3 mb-8 overflow-x-auto md:flex-wrap md:justify-center md:overflow-visible scrollbar-hide">
@@ -114,13 +108,7 @@ export default function Demo() {
         </div>
 
         {/* Chat window */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl mx-auto"
-        >
+        <div className="max-w-3xl mx-auto">
           <div className="bg-slate-900 rounded-2xl shadow-2xl overflow-hidden">
             {/* Window header */}
             <div className="bg-slate-800 px-4 py-3 flex items-center gap-2">
@@ -186,7 +174,7 @@ export default function Demo() {
               </AnimatePresence>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Note */}
         <p className="text-center text-slate-500 text-sm mt-6">

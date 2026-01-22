@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { FileText, Plug, Shield, Check } from 'lucide-react';
 
 const steps = [
@@ -24,13 +23,7 @@ export default function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-12"
-        >
+        <div className="text-center mb-12">
           <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
             How It Works
           </span>
@@ -40,18 +33,12 @@ export default function HowItWorks() {
           <p className="text-slate-600 max-w-xl mx-auto">
             No complex setup. Anyone can use it.
           </p>
-        </motion.div>
+        </div>
 
         {/* Steps */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.step}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-            >
+          {steps.map((step) => (
+            <div key={step.step}>
               <div className="bg-white rounded-2xl p-6 shadow-sm border border-slate-200 hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all duration-300 h-full">
                 <div className="flex items-start gap-4">
                   <div className="relative flex-shrink-0">
@@ -72,18 +59,12 @@ export default function HowItWorks() {
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Copyright Safe */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-slate-50 rounded-2xl p-5 border border-slate-200"
-        >
+        <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
               <Shield className="w-5 h-5" />
@@ -111,7 +92,7 @@ export default function HowItWorks() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -119,6 +119,91 @@ PDF_DOWNLOAD_LINKS = {
     },
 }
 
+# Version markers for PDF verification
+# Check first page for these text patterns to verify correct version
+VERSION_MARKERS = {
+    "NBC": {
+        "page": 0,  # 0-indexed
+        "markers": ["National Building", "Code of Canada", "2025"],
+        "expected_pages": 1693
+    },
+    "NFC": {
+        "page": 0,
+        "markers": ["National Fire", "Code of Canada", "2025"],
+        "expected_pages": 352
+    },
+    "NPC": {
+        "page": 0,
+        "markers": ["National Plumbing", "Code of Canada", "2025"],
+        "expected_pages": 246
+    },
+    "NECB": {
+        "page": 0,
+        "markers": ["National Energy", "Code of Canada", "2025"],
+        "expected_pages": 350
+    },
+    "OBC_Vol1": {
+        "page": 0,
+        "markers": ["Ontario", "Building Code", "2024"],
+        "expected_pages": None  # Variable
+    },
+    "OBC_Vol2": {
+        "page": 0,
+        "markers": ["Ontario", "Building Code", "2024"],
+        "expected_pages": None
+    },
+    "BCBC": {
+        "page": 0,
+        "markers": ["British Columbia", "BUILDING CODE", "2024"],
+        "expected_pages": 1932
+    },
+    "ABC": {
+        "page": 0,
+        "markers": ["National Building Code", "2023 Alberta Edition"],
+        "expected_pages": 1570
+    },
+    "QCC": {
+        "page": 0,
+        "markers": ["Construction Code", "Qu", "bec"],  # Quebec has special chars
+        "expected_pages": None
+    },
+    "QECB": {
+        "page": 0,
+        "markers": ["Energy Conservation Code", "Qu", "bec"],
+        "expected_pages": None
+    },
+    "QPC": {
+        "page": 0,
+        "markers": ["Plumbing Code", "Qu", "bec"],
+        "expected_pages": None
+    },
+    "QSC": {
+        "page": 0,
+        "markers": ["Safety Code", "Qu", "bec"],
+        "expected_pages": None
+    },
+    "OFC": {
+        "page": 0,
+        "markers": ["Ontario", "Fire Code"],
+        "expected_pages": None
+    },
+    "IUGP9": {
+        "page": 0,
+        "markers": ["Housing and", "Small Buildings", "National Building Code of Canada 2020"],
+        "expected_pages": 650
+    },
+    "UGP4": {
+        "page": 0,
+        "markers": ["Structural Commentaries", "Part 4"],
+        "expected_pages": None
+    },
+    "UGNECB": {
+        "page": 0,
+        "markers": ["User's Guide", "NECB"],
+        "expected_pages": None
+    },
+}
+
 # Jurisdiction to applicable code mapping
 JURISDICTION_MAP = {
     # Ontario
@@ -514,46 +599,90 @@ class BuildingCodeMCP:
         return {"section_id": section_id, "parent": parent, "children": children, "siblings": siblings}
 
     def set_pdf_path(self, code: str, path: str) -> Dict:
-        """Connect user's PDF for text extraction."""
-        if not code or code not in self.maps:
-            return {"error": f"Code not found: {code}"}
-
+        """Connect user's PDF for text extraction. If path is a folder, auto-scan for PDFs."""
         if not path:
             return {"error": "Path is required"}
 
         path = Path(path)
         if not path.exists():
-            return {"error": f"PDF not found: {path}"}
+            return {"error": f"Path not found: {path}"}
 
-        # Validate it's a file, not a directory
-        if not path.is_file():
-            return {"error": f"Path is not a file: {path}"}
+        # If it's a directory, scan for PDFs and auto-match
+        if path.is_dir():
+            return self._scan_pdf_folder(path, code if code else None)
+
+        # Single file mode - code is required
+        if not code or code not in self.maps:
+            return {"error": f"Code not found: {code}. Available: {list(self.maps.keys())}"}
 
         # Validate it's a PDF
         if path.suffix.lower() != '.pdf':
             return {"error": f"File is not a PDF: {path}"}
 
-        # Version verification: check page count
+        # Version verification: check text markers and page count
         warning = None
+        version_issues = []
+
         if PYMUPDF_AVAILABLE:
             try:
                 doc = fitz.open(str(path))
                 pdf_pages = len(doc)
-                doc.close()
 
-                # Get max page from map
+                # Check 1: Text markers (preferred method)
+                if code in VERSION_MARKERS:
+                    marker_info = VERSION_MARKERS[code]
+                    marker_page = marker_info["page"]
+                    expected_markers = marker_info["markers"]
+
+                    # Extract text from the specified page (usually first page)
+                    if marker_page < len(doc):
+                        page_text = doc[marker_page].get_text()
+
+                        # Check if all markers are present
+                        missing_markers = []
+                        for marker in expected_markers:
+                            if marker not in page_text:
+                                missing_markers.append(marker)
+
+                        if missing_markers:
+                            version_issues.append(
+                                f"Version markers not found: {missing_markers[:2]}. "
+                                f"This may not be the correct version of {code}."
+                            )
+
+                    # Check 2: Expected page count (if specified)
+                    expected_pages = marker_info.get("expected_pages")
+                    if expected_pages:
+                        page_diff = abs(pdf_pages - expected_pages)
+                        if page_diff > 50:  # Allow 50 page tolerance
+                            version_issues.append(
+                                f"Page count mismatch: PDF has {pdf_pages} pages, "
+                                f"expected ~{expected_pages} pages."
+                            )
+
+                # Check 3: Fallback - compare with map's max page
                 sections = self.maps[code].get("sections", [])
                 max_map_page = max((s.get("page", 0) for s in sections), default=0)
 
                 if pdf_pages < max_map_page:
-                    warning = (
-                        f"PDF version mismatch detected! "
-                        f"PDF has {pdf_pages} pages, but map references page {max_map_page}. "
-                        f"Text extraction may return incorrect content. "
-                        f"Please ensure you have the correct PDF version for {code}."
+                    version_issues.append(
+                        f"PDF has {pdf_pages} pages, but map references page {max_map_page}."
                     )
-            except Exception:
-                pass  # If check fails, continue anyway
+
+                doc.close()
+
+                # Combine all issues into warning
+                if version_issues:
+                    warning = (
+                        f"PDF version mismatch detected for {code}:\n" +
+                        "\n".join(f"  • {issue}" for issue in version_issues) +
+                        f"\n\nText extraction may return incorrect content. "
+                        f"Please ensure you have the correct PDF version."
+                    )
+
+            except Exception as e:
+                # If check fails, continue anyway but note the failure
+                warning = f"Could not verify PDF version: {str(e)}"
 
         self.pdf_paths[code] = str(path.absolute())
         self.pdf_verified[code] = warning is None
@@ -566,6 +695,76 @@ class BuildingCodeMCP:
             result["verified"] = True
 
         return result
+
+    def _scan_pdf_folder(self, folder: Path, specific_code: Optional[str] = None) -> Dict:
+        """Scan a folder for PDFs and auto-match to codes."""
+        # Code name patterns to match in filenames (order matters - more specific first)
+        code_patterns = {
+            "OBC_Vol2": ["obc_vol2", "obc volume 2", "volume 2", "vol2", "vol 2"],
+            "OBC_Vol1": ["obc_vol1", "obc volume 1", "volume 1", "vol1", "vol 1", "obc", "ontario building"],
+            "ABC": ["abc", "alberta", "2023nbcae", "nbcae"],
+            "NBC": ["nbc", "national building", "nbc2025", "nbc_2025"],
+            "NFC": ["nfc", "national fire", "nfc2025"],
+            "NPC": ["npc", "national plumbing", "npc2025"],
+            "UGNECB": ["ugnecb", "ugnecb_", "energy guide"],
+            "NECB": ["necb", "energy code", "necb2025"],
+            "OFC": ["ofc", "ontario fire", "o.reg"],
+            "BCBC": ["bcbc", "bc building", "british columbia"],
+            "QCC": ["qcc", "quebec construction"],
+            "QECB": ["qecb", "quebec energy"],
+            "QPC": ["qpc", "quebec plumbing"],
+            "QSC": ["qsc", "quebec safety"],
+            "IUGP9": ["iugp9", "iugp9_", "illustrated guide", "part 9 guide"],
+            "UGP4": ["ugp4", "structural comment", "part 4"],
+        }
+
+        pdf_files = list(folder.glob("*.pdf"))
+        if not pdf_files:
+            return {"error": f"No PDF files found in: {folder}"}
+
+        connected = []
+        not_matched = []
+        errors = []
+
+        for pdf_path in pdf_files:
+            filename_lower = pdf_path.stem.lower()
+            matched_code = None
+
+            # Try to match filename to a code
+            for code, patterns in code_patterns.items():
+                if code not in self.maps:
+                    continue
+                if specific_code and code != specific_code:
+                    continue
+                for pattern in patterns:
+                    if pattern in filename_lower:
+                        matched_code = code
+                        break
+                if matched_code:
+                    break
+
+            if matched_code:
+                # Connect this PDF
+                result = self.set_pdf_path(matched_code, str(pdf_path))
+                if result.get("success"):
+                    connected.append({
+                        "code": matched_code,
+                        "file": pdf_path.name,
+                        "verified": result.get("verified", False)
+                    })
+                else:
+                    errors.append({"file": pdf_path.name, "error": result.get("error")})
+            else:
+                not_matched.append(pdf_path.name)
+
+        return {
+            "success": len(connected) > 0,
+            "folder": str(folder),
+            "connected": connected,
+            "not_matched": not_matched,
+            "errors": errors if errors else None,
+            "summary": f"Connected {len(connected)} PDFs, {len(not_matched)} not matched"
+        }
 
     def verify_section(self, section_id: str, code: str) -> Dict:
         """Verify if a section exists and return its citation."""

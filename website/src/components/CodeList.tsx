@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import { Building, Landmark, BookOpen, ChevronDown } from 'lucide-react';
 
 const codeGroups = [
@@ -49,13 +48,7 @@ export default function CodeList() {
   return (
     <section id="codes" className="py-24 bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <span className="inline-block px-4 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-medium mb-4">
             Supported Codes
           </span>
@@ -66,18 +59,12 @@ export default function CodeList() {
             From National Codes to Provincial Codes and User Guides,
             we support all major Canadian building codes.
           </p>
-        </motion.div>
+        </div>
 
         {/* Desktop Grid */}
         <div className="hidden md:grid md:grid-cols-3 gap-8">
-          {codeGroups.map((group, groupIndex) => (
-            <motion.div
-              key={group.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
-            >
+          {codeGroups.map((group) => (
+            <div key={group.title}>
               <div className="bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden h-full hover:shadow-lg hover:border-cyan-200 hover:-translate-y-1 transition-all duration-300">
                 {/* Header */}
                 <div className={`${group.color} p-4 flex items-center gap-3`}>
@@ -87,13 +74,9 @@ export default function CodeList() {
 
                 {/* Code list */}
                 <div className="p-4 space-y-3">
-                  {group.codes.map((code, index) => (
-                    <motion.div
+                  {group.codes.map((code) => (
+                    <div
                       key={code.name}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.3, delay: groupIndex * 0.1 + index * 0.05 }}
                       className="group p-3 bg-slate-50 rounded-xl hover:bg-slate-100 transition-colors cursor-default"
                     >
                       <div className="flex items-center justify-between mb-1">
@@ -112,25 +95,18 @@ export default function CodeList() {
                       <div className="text-xs text-slate-400">
                         {code.sections} sections
                       </div>
-                    </motion.div>
+                    </div>
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* Mobile Accordion */}
         <div className="md:hidden space-y-3">
           {codeGroups.map((group, groupIndex) => (
-            <motion.div
-              key={group.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: groupIndex * 0.1 }}
-              className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden"
-            >
+            <div key={group.title} className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
               {/* Accordion Header */}
               <button
                 onClick={() => toggleAccordion(groupIndex)}
@@ -148,41 +124,31 @@ export default function CodeList() {
               </button>
 
               {/* Accordion Content */}
-              <AnimatePresence>
-                {openAccordion === groupIndex && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    <div className="p-3 space-y-2">
-                      {group.codes.map((code) => (
-                        <div
-                          key={code.name}
-                          className="p-3 bg-slate-50 rounded-lg"
-                        >
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="font-semibold text-slate-900 text-sm">
-                              {code.name}
-                            </span>
-                            {'province' in code && (
-                              <span className="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">
-                                {code.province}
-                              </span>
-                            )}
-                          </div>
-                          <div className="text-xs text-slate-500">
-                            {code.full} • {code.sections} sections
-                          </div>
-                        </div>
-                      ))}
+              {openAccordion === groupIndex && (
+                <div className="p-3 space-y-2">
+                  {group.codes.map((code) => (
+                    <div
+                      key={code.name}
+                      className="p-3 bg-slate-50 rounded-lg"
+                    >
+                      <div className="flex items-center justify-between mb-1">
+                        <span className="font-semibold text-slate-900 text-sm">
+                          {code.name}
+                        </span>
+                        {'province' in code && (
+                          <span className="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">
+                            {code.province}
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-slate-500">
+                        {code.full} • {code.sections} sections
+                      </div>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </div>
 

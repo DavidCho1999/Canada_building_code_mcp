@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { ArrowRight, Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 
@@ -25,13 +24,7 @@ export default function CTA() {
   return (
     <section id="setup" className="py-20 bg-white border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center"
-        >
+        <div className="text-center">
           <span className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium mb-4">
             Get Started
           </span>
@@ -89,7 +82,7 @@ export default function CTA() {
             </div>
           </div>
 
-        </motion.div>
+        </div>
       </div>
     </section>
   );
