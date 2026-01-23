@@ -122,6 +122,30 @@ Claude will search **22,500+ indexed sections** across 16 Canadian building code
 | UGP4 | 2020 | 490+ | User's Guide - NBC Structural Commentaries |
 | UGNECB | 2020 | 160+ | User's Guide - NECB |
 
+## 💡 Best Practices (Token Efficiency)
+
+**New in v1.1.1:** Reduce token usage by up to 97% with these best practices.
+
+### For Claude Desktop Users
+
+Copy the [optimization rules](docs/CLAUDE_RULES.md) to your `~/.claude/CLAUDE.md` file:
+
+**Key Principles:**
+- **3-Strike Rule:** Maximum 3 searches per topic
+- **Plan before searching:** Know what you're looking for
+- **Use default parameters:** `limit=10`, `verbose=false` (already optimized)
+- **Token budget:** Simple questions: 100-300 tokens, Complex: 500-1000 tokens
+
+### Example Improvement
+
+❌ **Before:** 29 searches, 5,100 tokens → "Balcony dimensions not in OBC"
+
+✅ **After:** 3 searches, 150 tokens → Same conclusion, 97% fewer tokens
+
+**See full guide:** [Token Efficiency Documentation](docs/CLAUDE_RULES.md)
+
+---
+
 ## Usage Examples
 
 Once installed, just ask Claude naturally:

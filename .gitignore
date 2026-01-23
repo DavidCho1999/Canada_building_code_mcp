@@ -92,6 +92,8 @@ CLAUDE.md
 # Documentation (Archive)
 # ========================================
 docs/
+!docs/CLAUDE_RULES.md
+!docs/PDF_DOWNLOAD_LINKS.md
 
 # ========================================
 # Website (Next.js) - handled by website/.gitignore
@@ -134,3 +136,8 @@ scripts/accurate_detection.py
 scripts/extract_unique_keywords.py
 scripts/final_*.py
 scripts/propose_*.py
+
+# ========================================
+# my file
+# ========================================
+_mine/

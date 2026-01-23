@@ -88,6 +88,34 @@ building_code_mcp/
   - Port 충돌: `lsof -i :3000` 또는 `tasklist | grep node` 확인
   - Cache 문제: `rm -rf .next` 후 재시작
 
+### 5. MCP 토큰 효율화 (v1.1.1+)
+
+#### ⚠️ 3-Strike Rule (Critical for Token Efficiency)
+- **같은 주제: 최대 3번 검색**
+- 3번 후 답 없으면 → "규정 없음" 명확히 인정
+- 다른 접근/다른 주제는 별도 카운트
+- 예외: 사용자 명시적 요청
+
+#### 검색 전 계획
+1. 목표 명확화: "정확히 무엇을 찾는가?"
+2. 키워드 선정: 1-2개만
+3. 예상 위치: Part? Division?
+4. 실행 → 평가 → 결정
+
+#### 파라미터 최적화
+- `limit`: 5-10 (기본값, v1.1.1+)
+- `verbose`: false (기본값, 99% 경우)
+- verbose=true: 메타데이터 정말 필요할 때만
+
+#### 토큰 예산
+- 간단: 100-300 tokens (1-3회)
+- 복잡: 500-1000 tokens (3-5회)
+- ⚠️ 1500+: 전략 재검토
+
+#### 실제 사례
+**Bad:** 29회 검색, 5100 tokens → "OBC에 명시 없음"
+**Good:** 3회 검색, 150 tokens → 동일한 결론 (97% 절감)
+
 ---
 
 ## Target Documents (16)
