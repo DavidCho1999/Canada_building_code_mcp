@@ -122,4 +122,15 @@ htmlcov/
 # Internal Documents (Private)
 # ========================================
 product-development/
-test_mcp.py
+
+# ========================================
+# Test & Debug Files (Temporary)
+# ========================================
+test_*.py
+scripts/test_*.py
+scripts/debug_*.py
+scripts/check_*.py
+scripts/accurate_detection.py
+scripts/extract_unique_keywords.py
+scripts/final_*.py
+scripts/propose_*.py

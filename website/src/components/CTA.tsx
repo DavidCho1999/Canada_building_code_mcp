@@ -6,7 +6,9 @@ import { SiAnthropic } from 'react-icons/si';
 
 export default function CTA() {
   const [copied, setCopied] = useState(false);
+  const [copiedPip, setCopiedPip] = useState(false);
 
+  const pipCommand = 'pip install building-code-mcp';
   const configCode = `{
   "mcpServers": {
     "building-code": {
@@ -14,6 +16,12 @@ export default function CTA() {
     }
   }
 }`;
+
+  const copyPipCommand = () => {
+    navigator.clipboard.writeText(pipCommand);
+    setCopiedPip(true);
+    setTimeout(() => setCopiedPip(false), 2000);
+  };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(configCode);
@@ -72,8 +80,16 @@ export default function CTA() {
             {/* Option: pip install */}
             <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
               <h3 className="font-semibold text-slate-900 mb-3">pip install</h3>
-              <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300 mb-4">
-                pip install building-code-mcp
+              <div className="relative mb-4">
+                <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300">
+                  pip install building-code-mcp
+                </div>
+                <button
+                  onClick={copyPipCommand}
+                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
+                >
+                  {copiedPip ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                </button>
               </div>
               <p className="text-xs text-slate-500 mb-2">
                 Add this to your MCP client config file:
