@@ -143,13 +143,13 @@ VERSION_MARKERS = {
         "expected_pages": 350
     },
     "OBC_Vol1": {
-        "page": 0,
-        "markers": ["Ontario", "Building Code", "2024"],
+        "page": 1,  # Page 0 is blank cover
+        "markers": ["Ministry", "Building Code", "2024"],
         "expected_pages": None  # Variable
     },
     "OBC_Vol2": {
-        "page": 0,
-        "markers": ["Ontario", "Building Code", "2024"],
+        "page": 1,  # Page 0 is blank cover
+        "markers": ["Ministry", "Building Code", "2024"],
         "expected_pages": None
     },
     "BCBC": {
@@ -169,7 +169,7 @@ VERSION_MARKERS = {
     },
     "QECB": {
         "page": 0,
-        "markers": ["Energy Conservation Code", "Qu", "bec"],
+        "markers": ["ENERGY", "Quebec", "Energy Efficiency"],
         "expected_pages": None
     },
     "QPC": {
@@ -194,12 +194,12 @@ VERSION_MARKERS = {
     },
     "UGP4": {
         "page": 0,
-        "markers": ["Structural Commentaries", "Part 4"],
+        "markers": ["Structural", "Commentaries", "Part 4"],  # Split due to line break in PDF
         "expected_pages": None
     },
     "UGNECB": {
         "page": 0,
-        "markers": ["User's Guide", "NECB"],
+        "markers": ["User's Guide", "National Energy Code"],
         "expected_pages": None
     },
 }
