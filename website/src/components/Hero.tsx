@@ -88,7 +88,7 @@ export default function Hero() {
           className="text-lg md:text-xl text-slate-600 mb-6 md:mb-12 max-w-2xl mx-auto"
         >
           Get exact answers from 24,201 sections.
-          <br className="hidden md:block" />
+          <br />
           No PDF hunting. No guesswork.
         </motion.p>
 
