@@ -87,9 +87,9 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg md:text-xl text-slate-600 mb-6 md:mb-12 max-w-2xl mx-auto"
         >
-          Search 16 codes and 24,201 sections in plain language.
+          Get exact answers from 24,201 sections.
           <br className="hidden md:block" />
-          No more hunting through PDFs. Just ask.
+          No PDF hunting. No guesswork.
         </motion.p>
 
         {/* Fake Search Bar with Typewriter */}

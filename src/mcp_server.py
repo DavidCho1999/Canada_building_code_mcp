@@ -144,12 +144,12 @@ VERSION_MARKERS = {
     },
     "OBC_Vol1": {
         "page": 1,  # Page 0 is blank cover
-        "markers": ["Ministry", "Building Code", "2024"],
+        "markers": ["Ministry", "Municipal Affairs", "2024"],
         "expected_pages": None  # Variable
     },
     "OBC_Vol2": {
         "page": 1,  # Page 0 is blank cover
-        "markers": ["Ministry", "Building Code", "2024"],
+        "markers": ["Ministry", "Municipal Affairs", "2024"],
         "expected_pages": None
     },
     "BCBC": {
@@ -164,22 +164,22 @@ VERSION_MARKERS = {
     },
     "QCC": {
         "page": 0,
-        "markers": ["Construction Code", "Qu", "bec"],  # Quebec has special chars
+        "markers": ["BUILDING", "Quebec", "Chapter I"],  # More specific
         "expected_pages": None
     },
     "QECB": {
         "page": 0,
-        "markers": ["ENERGY", "Quebec", "Energy Efficiency"],
+        "markers": ["ENERGY", "Quebec", "Chapter I.1"],  # Chapter I.1 is unique to QECB
         "expected_pages": None
     },
     "QPC": {
         "page": 0,
-        "markers": ["Plumbing Code", "Qu", "bec"],
+        "markers": ["PLUMBING", "Quebec", "Chapter III"],  # Chapter III is unique to QPC
         "expected_pages": None
     },
     "QSC": {
         "page": 0,
-        "markers": ["Safety Code", "Qu", "bec"],
+        "markers": ["FIRE", "Quebec", "Safety Code"],  # FIRE + Safety Code
         "expected_pages": None
     },
     "OFC": {
@@ -194,12 +194,12 @@ VERSION_MARKERS = {
     },
     "UGP4": {
         "page": 0,
-        "markers": ["Structural", "Commentaries", "Part 4"],  # Split due to line break in PDF
+        "markers": ["Structural", "Commentaries", "Part 4"],
         "expected_pages": None
     },
     "UGNECB": {
         "page": 0,
-        "markers": ["User's Guide", "National Energy Code"],
+        "markers": ["User's Guide", "National Energy Code", "2020"],  # Add year for specificity
         "expected_pages": None
     },
 }

@@ -8,7 +8,6 @@ import clsx from 'clsx';
 const navLinks = [
   { href: '#how-it-works', label: 'How It Works' },
   { href: '#setup', label: 'Quick Setup' },
-  { href: '#demo', label: 'Demo' },
   { href: '#codes', label: 'Supported Codes' },
 ];
 

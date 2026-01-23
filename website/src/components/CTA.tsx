@@ -10,8 +10,7 @@ export default function CTA() {
   const configCode = `{
   "mcpServers": {
     "building-code": {
-      "command": "uvx",
-      "args": ["building-code-mcp"]
+      "command": "building-code-mcp"
     }
   }
 }`;
@@ -57,15 +56,22 @@ export default function CTA() {
           </div>
 
           {/* Installation Options */}
-          <div className="grid md:grid-cols-2 gap-4 mb-10 text-left">
-            {/* Option 1: pip install */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
-                  1
+          <div className="relative grid md:grid-cols-2 gap-4 md:gap-8 mb-10 text-left">
+            {/* OR divider - Desktop (vertical line with glow) */}
+            <div className="hidden md:flex absolute left-1/2 top-0 bottom-0 -translate-x-1/2 z-10 flex-col items-center justify-center">
+              <div className="flex-1 w-px bg-gradient-to-b from-transparent via-cyan-300 to-cyan-400"></div>
+              <div className="relative my-3">
+                <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-md"></div>
+                <div className="relative w-12 h-12 bg-gradient-to-br from-cyan-50 to-white border-2 border-cyan-200 rounded-full flex items-center justify-center shadow-lg">
+                  <span className="text-xs font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">OR</span>
                 </div>
-                <h3 className="font-semibold text-slate-900">pip install</h3>
               </div>
+              <div className="flex-1 w-px bg-gradient-to-b from-cyan-400 via-cyan-300 to-transparent"></div>
+            </div>
+
+            {/* Option: pip install */}
+            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
+              <h3 className="font-semibold text-slate-900 mb-3">pip install</h3>
               <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300 mb-4">
                 pip install building-code-mcp
               </div>
@@ -85,14 +91,21 @@ export default function CTA() {
               </div>
             </div>
 
-            {/* Option 2: Smithery */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <div className="flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
-                  2
+            {/* Mobile OR divider (horizontal line with glow) */}
+            <div className="flex md:hidden items-center justify-center gap-4 py-2">
+              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-cyan-300 to-cyan-400"></div>
+              <div className="relative">
+                <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-md"></div>
+                <div className="relative w-10 h-10 bg-gradient-to-br from-cyan-50 to-white border-2 border-cyan-200 rounded-full flex items-center justify-center shadow-lg">
+                  <span className="text-xs font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">OR</span>
                 </div>
-                <h3 className="font-semibold text-slate-900">Smithery (One-click)</h3>
               </div>
+              <div className="flex-1 h-px bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
+            </div>
+
+            {/* Option: Smithery */}
+            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
+              <h3 className="font-semibold text-slate-900 mb-3">Smithery (One-click)</h3>
               <a
                 href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
                 target="_blank"

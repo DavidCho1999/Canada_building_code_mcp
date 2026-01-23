@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Building, Landmark, BookOpen, ChevronDown } from 'lucide-react';
 
 const codeGroups = [
@@ -39,10 +40,18 @@ const codeGroups = [
 ];
 
 export default function CodeList() {
-  const [openAccordion, setOpenAccordion] = useState<number | null>(0);
+  const [openAccordions, setOpenAccordions] = useState<Set<number>>(new Set([0]));
 
   const toggleAccordion = (index: number) => {
-    setOpenAccordion(openAccordion === index ? null : index);
+    setOpenAccordions((prev) => {
+      const newSet = new Set(prev);
+      if (newSet.has(index)) {
+        newSet.delete(index);
+      } else {
+        newSet.add(index);
+      }
+      return newSet;
+    });
   };
 
   return (
@@ -121,39 +130,49 @@ export default function CodeList() {
                 </div>
                 <ChevronDown
                   className={`w-5 h-5 text-white transition-transform duration-300 ${
-                    openAccordion === groupIndex ? 'rotate-180' : ''
+                    openAccordions.has(groupIndex) ? 'rotate-180' : ''
                   }`}
                 />
               </button>
 
               {/* Accordion Content */}
-              {openAccordion === groupIndex && (
-                <div className="p-3 space-y-2">
-                  {group.codes.map((code) => (
-                    <a
-                      key={code.name}
-                      href={code.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block p-3 bg-slate-50 rounded-lg hover:bg-cyan-50 hover:border-cyan-200 border border-transparent transition-all"
-                    >
-                      <div className="flex items-center justify-between mb-1">
-                        <span className="font-semibold text-slate-900 text-sm">
-                          {code.name}
-                        </span>
-                        {'province' in code && (
-                          <span className="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">
-                            {code.province}
-                          </span>
-                        )}
-                      </div>
-                      <div className="text-xs text-slate-500">
-                        {code.full} • {code.sections} sections
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              )}
+              <AnimatePresence>
+                {openAccordions.has(groupIndex) && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    className="overflow-hidden"
+                  >
+                    <div className="p-3 space-y-2">
+                      {group.codes.map((code) => (
+                        <a
+                          key={code.name}
+                          href={code.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block p-3 bg-slate-50 rounded-lg hover:bg-cyan-50 hover:border-cyan-200 border border-transparent transition-all"
+                        >
+                          <div className="flex items-center justify-between mb-1">
+                            <span className="font-semibold text-slate-900 text-sm">
+                              {code.name}
+                            </span>
+                            {'province' in code && (
+                              <span className="text-xs bg-slate-200 text-slate-600 px-2 py-0.5 rounded">
+                                {code.province}
+                              </span>
+                            )}
+                          </div>
+                          <div className="text-xs text-slate-500">
+                            {code.full} • {code.sections} sections
+                          </div>
+                        </a>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           ))}
         </div>

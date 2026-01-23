@@ -16,7 +16,7 @@ export default function Comparison() {
           </h2>
           <div className="flex flex-wrap justify-center gap-3 text-xs text-emerald-700 mt-4">
             <span>✓ 25,000+ sections indexed</span>
-            <span>✓ 100% verifiable</span>
+            <span>✓ Direct PDF lookup</span>
             <span>✓ Exact page numbers</span>
           </div>
         </div>

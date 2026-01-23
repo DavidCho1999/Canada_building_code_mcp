@@ -71,6 +71,23 @@ building_code_mcp/
 - Manual mapping ❌
 - meta.json → Table Index ✅
 
+### 4. Dev Server Must Run Externally (CRITICAL!)
+- **Claude Code는 절대 `npm run dev` 실행 금지**
+- User가 별도 터미널에서 직접 실행해야 함
+- Why:
+  - Long-running dev server → Claude Code 프로세스 종료 (exit code 137, SIGKILL)
+  - `run_in_background: true` 사용해도 동일하게 종료됨
+  - Next.js + Turbopack의 복잡한 subprocess tree가 원인
+- Workflow:
+  1. User: 별도 터미널 열어서 `cd website && npm run dev`
+  2. User: 터미널 열어둔 상태 유지 (hot reload 확인용)
+  3. Claude: 파일 수정만 담당
+  4. Claude: 서버 상태 확인 필요시 `curl http://localhost:3000` 사용
+- Troubleshooting:
+  - Server 안뜨면: User에게 직접 실행하도록 안내
+  - Port 충돌: `lsof -i :3000` 또는 `tasklist | grep node` 확인
+  - Cache 문제: `rm -rf .next` 후 재시작
+
 ---
 
 ## Target Documents (16)
