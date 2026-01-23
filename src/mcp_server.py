@@ -397,8 +397,19 @@ class BuildingCodeMCP:
             return best_score / 100.0
         return 0.0
 
-    def search_code(self, query: str, code: Optional[str] = None) -> Dict:
-        """Search for sections matching query with fuzzy matching and synonym support."""
+    def search_code(self, query: str, code: Optional[str] = None,
+                    limit: int = 10, verbose: bool = False) -> Dict:
+        """Search for sections matching query with fuzzy matching and synonym support.
+
+        Args:
+            query: Search keywords
+            code: Optional specific code to search
+            limit: Max results to return (default 10, max 50)
+            verbose: If True, include keywords, match_type, etc. (default False for token efficiency)
+        """
+        # Clamp limit
+        limit = max(1, min(limit, 50))
+
         # Input validation
         if not query or not isinstance(query, str):
             return {"error": "Query is required", "query": "", "results": [], "total": 0}
@@ -478,48 +489,66 @@ class BuildingCodeMCP:
                     if section.get("type") == "table":
                         score += 0.01
 
+                    # Compact result (default) - minimal tokens
                     result_item = {
-                        "code": code_name,
                         "id": section_id,
                         "title": title,
                         "page": section.get("page"),
-                        "score": round(score, 3),
-                        "document_type": doc_type
+                        "score": round(score, 3)
                     }
-                    # Include type and level for tables
-                    if section.get("type"):
-                        result_item["type"] = section.get("type")
-                    if section.get("level"):
-                        result_item["level"] = section.get("level")
-                    # Include page_end for multi-page tables
-                    if section.get("page_end"):
-                        result_item["page_end"] = section.get("page_end")
-                    if match_type:
-                        result_item["match_type"] = match_type
-                    # Add warning for guides
-                    if doc_type == "guide":
-                        result_item["note"] = "Interpretation guide - NOT legally binding"
+
+                    # Add code only if searching multiple codes
+                    if not code:
+                        result_item["code"] = code_name
+
+                    # Verbose mode - include extra metadata
+                    if verbose:
+                        result_item["document_type"] = doc_type
+                        if section.get("type"):
+                            result_item["type"] = section.get("type")
+                        if section.get("level"):
+                            result_item["level"] = section.get("level")
+                        if section.get("page_end"):
+                            result_item["page_end"] = section.get("page_end")
+                        if match_type:
+                            result_item["match_type"] = match_type
+                        if doc_type == "guide":
+                            result_item["note"] = "Guide - NOT legally binding"
+
                     results.append(result_item)
 
         results.sort(key=lambda x: x["score"], reverse=True)
 
-        response = {"query": query, "results": results[:20], "total": len(results)}
-        # Add search enhancement info
-        if FUZZY_AVAILABLE:
-            response["search_features"] = ["synonyms", "fuzzy_matching"]
-        else:
-            response["search_features"] = ["synonyms"]
+        # Apply limit
+        limited_results = results[:limit]
 
-        # Add mode info if searching specific code
-        if code:
-            response = self._add_mode_info(response, code)
+        # Compact response (default)
+        response = {
+            "results": limited_results,
+            "total": len(results)
+        }
+
+        # Add more info only in verbose mode
+        if verbose:
+            response["query"] = query
+            response["search_features"] = ["synonyms", "fuzzy"] if FUZZY_AVAILABLE else ["synonyms"]
+            if code:
+                response = self._add_mode_info(response, code)
+        elif len(results) > limit:
+            response["hint"] = f"Showing {limit}/{len(results)}. Use limit param for more."
 
         return response
 
-    def get_section(self, section_id: str, code: str) -> Optional[Dict]:
-        """Get a specific section by ID."""
+    def get_section(self, section_id: str, code: str, verbose: bool = False) -> Optional[Dict]:
+        """Get a specific section by ID.
+
+        Args:
+            section_id: Section ID to retrieve
+            code: Code name
+            verbose: If True, include all metadata. Default False for token efficiency.
+        """
         if code not in self.maps:
-            return {"error": f"Code not found: {code}", "disclaimer": DISCLAIMER}
+            return {"error": f"Code not found: {code}"}
 
         data = self.maps[code]
         version = data.get("version", "unknown")
@@ -527,67 +556,58 @@ class BuildingCodeMCP:
 
         # Try exact match first, then try with Division prefixes
         search_ids = [section_id]
-        # If no prefix, try adding common Division prefixes
         if not section_id.startswith(('A-', 'B-', 'C-', 'Commentary-', 'Part')):
             search_ids.extend([f'A-{section_id}', f'B-{section_id}', f'C-{section_id}'])
 
         for section in data.get("sections", []):
             if section.get("id") in search_ids:
-                result = dict(section)
                 actual_id = section.get("id")
-                result["code"] = code
-                result["version"] = version
-                result["document_type"] = doc_type
-
-                # Note if we found it with a different prefix
-                if actual_id != section_id:
-                    result["note"] = f"Found as '{actual_id}' (you searched for '{section_id}')"
-
-                # Add formal citation
                 page = section.get("page")
-                result["citation"] = f"{code} {version}, Section {actual_id}" + (f", Page {page}" if page else "")
-                result["citation_short"] = f"{code} {version}, s. {actual_id}"
 
-                # Add warning for guides
-                if doc_type == "guide":
-                    result["warning"] = "This is an interpretation guide - NOT legally binding. Always cite the actual code section."
+                # Compact result (default) - essential fields only
+                result = {
+                    "id": actual_id,
+                    "title": section.get("title", ""),
+                    "page": page,
+                    "citation": f"{code} {version}, s. {actual_id}"
+                }
 
-                # BYOD: Extract text if PDF connected
+                # Add text if PDF connected (always include - it's the main value)
                 if code in self.pdf_paths and self.pdf_verified.get(code):
                     text = self._extract_text(code, section)
                     if text:
                         result["text"] = text
-                        result["text_available"] = True
-                    else:
-                        result["text"] = None
-                        result["text_available"] = False
-                        result["text_error"] = "Could not extract text from PDF"
-                else:
-                    # PDF not connected - provide guidance
-                    result["text"] = None
-                    result["text_available"] = False
-                    if code in self.pdf_paths and not self.pdf_verified.get(code):
-                        result["text_status"] = "PDF connected but version mismatch detected"
-                    else:
+
+                # Verbose mode - include all metadata
+                if verbose:
+                    result["code"] = code
+                    result["version"] = version
+                    result["document_type"] = doc_type
+                    result["citation_full"] = f"{code} {version}, Section {actual_id}" + (f", Page {page}" if page else "")
+
+                    if actual_id != section_id:
+                        result["note"] = f"Found as '{actual_id}'"
+
+                    if section.get("keywords"):
+                        result["keywords"] = section.get("keywords")
+                    if section.get("bbox"):
+                        result["bbox"] = section.get("bbox")
+
+                    if doc_type == "guide":
+                        result["warning"] = "Interpretation guide - NOT legally binding"
+
+                    # PDF status info
+                    if code not in self.pdf_paths:
                         result["text_status"] = "PDF not connected"
+                    elif not self.pdf_verified.get(code):
+                        result["text_status"] = "PDF version mismatch"
 
-                    # Provide download link if available
-                    if code in PDF_DOWNLOAD_LINKS:
-                        link = PDF_DOWNLOAD_LINKS[code]
-                        result["how_to_get_text"] = (
-                            f"1. Download PDF from: {link['url']}\n"
-                            f"2. Use set_pdf_path('{code}', '/path/to/your.pdf') to connect"
-                        )
-                    else:
-                        result["how_to_get_text"] = f"Use set_pdf_path('{code}', '/path/to/your.pdf') to enable text extraction"
+                    result = self._add_mode_info(result, code)
+                    result["disclaimer"] = DISCLAIMER
 
-                result["disclaimer"] = DISCLAIMER
-
-                # Add mode info
-                result = self._add_mode_info(result, code)
                 return result
 
-        return {"error": f"Section not found: {section_id}", "disclaimer": DISCLAIMER}
+        return {"error": f"Section not found: {section_id}"}
 
     def get_hierarchy(self, section_id: str, code: str) -> Dict:
         """Get parent, children, siblings of a section."""
@@ -1202,17 +1222,27 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="search_code",
-            description="Search building code sections by keywords across all codes or a specific code. Returns matching sections with page numbers, section IDs, and relevance scores.",
+            description="Search building code sections by keywords. Returns compact results (id, title, page, score) by default for token efficiency. Use verbose=true for full metadata.",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "query": {
                         "type": "string",
-                        "description": "Keywords to search for (e.g., 'fire separation', 'stair width', 'egress requirements')"
+                        "description": "Keywords to search for (e.g., 'fire separation', 'stair width')"
                     },
                     "code": {
                         "type": "string",
-                        "description": "Optional: Specific code to search (e.g., 'NBC', 'OBC', 'BCBC'). If omitted, searches all codes."
+                        "description": "Specific code to search (e.g., 'NBC', 'OBC'). Omit to search all."
+                    },
+                    "limit": {
+                        "type": "integer",
+                        "description": "Max results (default 10, max 50). Use smaller values for token efficiency.",
+                        "default": 10
+                    },
+                    "verbose": {
+                        "type": "boolean",
+                        "description": "Include extra metadata (match_type, document_type, etc). Default false.",
+                        "default": False
                     }
                 },
                 "required": ["query"],
@@ -1228,17 +1258,22 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="get_section",
-            description="Get detailed information about a specific section by its ID. Returns page number, coordinates, keywords, and hierarchy info. Auto-detects Division prefix (A/B/C) if not provided.",
+            description="Get section details. Returns compact result (id, title, page, citation, text if BYOD) by default. Use verbose=true for keywords, bbox, etc.",
             inputSchema={
                 "type": "object",
                 "properties": {
                     "id": {
                         "type": "string",
-                        "description": "Section ID to retrieve (e.g., '9.10.14.1', '3.2.4.1', 'B-9.10.14.1'). Division prefix is auto-detected if omitted."
+                        "description": "Section ID (e.g., '9.10.14.1'). Division prefix auto-detected."
                     },
                     "code": {
                         "type": "string",
-                        "description": "Code name (e.g., 'NBC', 'OBC', 'BCBC', 'ABC', 'QCC')"
+                        "description": "Code name (e.g., 'NBC2025', 'OBC_Vol1')"
+                    },
+                    "verbose": {
+                        "type": "boolean",
+                        "description": "Include keywords, bbox, mode_info, etc. Default false.",
+                        "default": False
                     }
                 },
                 "required": ["id", "code"],
@@ -1444,9 +1479,18 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
     if name == "list_codes":
         result = mcp.list_codes()
     elif name == "search_code":
-        result = mcp.search_code(arguments.get("query", ""), arguments.get("code"))
+        result = mcp.search_code(
+            arguments.get("query", ""),
+            arguments.get("code"),
+            arguments.get("limit", 10),
+            arguments.get("verbose", False)
+        )
     elif name == "get_section":
-        result = mcp.get_section(arguments.get("id", ""), arguments.get("code", ""))
+        result = mcp.get_section(
+            arguments.get("id", ""),
+            arguments.get("code", ""),
+            arguments.get("verbose", False)
+        )
     elif name == "get_hierarchy":
         result = mcp.get_hierarchy(arguments.get("id", ""), arguments.get("code", ""))
     elif name == "set_pdf_path":
