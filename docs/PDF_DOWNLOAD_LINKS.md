@@ -21,7 +21,7 @@
 ### Ontario
 | Code | Version | Link |
 |------|---------|------|
-| **OBC** (Ontario Building Code) | 2024 | [Ontario.ca](https://www.ontario.ca/form/get-2024-building-code-compendium-non-commercial-use) |
+| **OBC** (Ontario Building Code) | 2024 | [Ontario Publications](https://www.publications.gov.on.ca/browse-catalogues/building-code-and-guides/2024-ontarios-building-code-compendium-updated-to-january-16-2025-two-volume-pdf-set-kit/) |
 
 ### British Columbia
 | Code | Version | Link |
@@ -31,7 +31,7 @@
 ### Alberta
 | Code | Version | Link |
 |------|---------|------|
-| **ABC** (Alberta Building Code) | 2023 | [NRC](https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-2023-alberta-edition) |
+| **ABC** (Alberta Building Code) | 2023 | [NRC Archive](https://nrc-publications.canada.ca/eng/view/object/?id=0316d953-0d55-4311-af69-cad55efec499) |
 
 ### Quebec (French)
 | Code | Version | Link |
@@ -47,9 +47,9 @@
 
 | Guide | Version | Link |
 |-------|---------|------|
-| **NBC Part 9 Illustrated Guide** | 2020 | [NRC](https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/illustrated-users-guide-national-building-code-canada-2020-part-9-division-b-housing-small-buildings) |
-| **NBC Part 4 Structural Commentaries** | 2020 | [NRC Publications](https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications) |
-| **NECB User's Guide** | 2020 | [NRC](https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/users-guide-national-energy-code-canada-buildings-2020) |
+| **NBC Part 9 Illustrated Guide** | 2020 | [NRC Archive](https://nrc-publications.canada.ca/eng/view/object/?id=a7a505fa-519c-436b-a23b-6f418df87e6a) |
+| **NBC Part 4 Structural Commentaries** | 2020 | [NRC Archive](https://nrc-publications.canada.ca/eng/view/object/?id=b9fddc27-86f2-496b-9aa4-b66c45164ba6) |
+| **NECB User's Guide** | 2020 | [NRC Archive](https://nrc-publications.canada.ca/eng/view/object/?id=c6504d98-2da4-43c5-a8f6-360d6e640f88) |
 
 ---
 

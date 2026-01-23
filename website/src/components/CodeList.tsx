@@ -20,9 +20,9 @@ const codeGroups = [
     icon: Building,
     color: 'bg-emerald-500',
     codes: [
-      { name: 'OBC', full: 'Ontario Building Code', sections: '4,400+', province: 'ON', url: 'https://www.ontario.ca/form/get-2024-building-code-compendium-non-commercial-use' },
+      { name: 'OBC', full: 'Ontario Building Code', sections: '4,400+', province: 'ON', url: 'https://www.publications.gov.on.ca/browse-catalogues/building-code-and-guides/2024-ontarios-building-code-compendium-updated-to-january-16-2025-two-volume-pdf-set-kit/' },
       { name: 'BCBC 2024', full: 'BC Building Code', sections: '2,700+', province: 'BC', url: 'https://www2.gov.bc.ca/gov/content/industry/construction-industry/building-codes-standards/bc-codes/2024-bc-codes' },
-      { name: 'ABC', full: 'Alberta Building Code', sections: '3,000+', province: 'AB', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/national-building-code-2023-alberta-edition' },
+      { name: 'ABC', full: 'Alberta Building Code', sections: '3,000+', province: 'AB', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=0316d953-0d55-4311-af69-cad55efec499' },
       { name: 'QCC', full: 'Quebec Construction Code', sections: '2,900+', province: 'QC', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=fbb47c66-fcda-4d5b-a045-882dfa80ab0e' },
     ],
   },
@@ -31,9 +31,9 @@ const codeGroups = [
     icon: BookOpen,
     color: 'bg-amber-500',
     codes: [
-      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,400+', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/illustrated-users-guide-national-building-code-canada-2020-part-9-division-b-housing-small-buildings' },
-      { name: 'Part 4 Guide', full: 'Structural Design', sections: '400+', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications' },
-      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '100+', url: 'https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications/users-guide-national-energy-code-canada-buildings-2020' },
+      { name: 'Part 9 Guide', full: 'Housing & Small Buildings', sections: '1,400+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=a7a505fa-519c-436b-a23b-6f418df87e6a' },
+      { name: 'Part 4 Guide', full: 'Structural Design', sections: '400+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=b9fddc27-86f2-496b-9aa4-b66c45164ba6' },
+      { name: 'NECB Guide', full: 'Energy Code Guide', sections: '100+', url: 'https://nrc-publications.canada.ca/eng/view/object/?id=c6504d98-2da4-43c5-a8f6-360d6e640f88' },
     ],
   },
 ];
