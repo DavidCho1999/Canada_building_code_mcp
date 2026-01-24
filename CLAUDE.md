@@ -72,49 +72,49 @@ building_code_mcp/
 - meta.json → Table Index ✅
 
 ### 4. Dev Server Must Run Externally (CRITICAL!)
-- **Claude Code는 절대 `npm run dev` 실행 금지**
-- User가 별도 터미널에서 직접 실행해야 함
+- **Claude Code must NEVER run `npm run dev`**
+- User must run it manually in a separate terminal
 - Why:
-  - Long-running dev server → Claude Code 프로세스 종료 (exit code 137, SIGKILL)
-  - `run_in_background: true` 사용해도 동일하게 종료됨
-  - Next.js + Turbopack의 복잡한 subprocess tree가 원인
+  - Long-running dev server → Claude Code process killed (exit code 137, SIGKILL)
+  - Same issue even with `run_in_background: true`
+  - Caused by Next.js + Turbopack's complex subprocess tree
 - Workflow:
-  1. User: 별도 터미널 열어서 `cd website && npm run dev`
-  2. User: 터미널 열어둔 상태 유지 (hot reload 확인용)
-  3. Claude: 파일 수정만 담당
-  4. Claude: 서버 상태 확인 필요시 `curl http://localhost:3000` 사용
+  1. User: Open separate terminal and run `cd website && npm run dev`
+  2. User: Keep terminal open (for hot reload verification)
+  3. Claude: Only modify files
+  4. Claude: Use `curl http://localhost:3000` to check server status if needed
 - Troubleshooting:
-  - Server 안뜨면: User에게 직접 실행하도록 안내
-  - Port 충돌: `lsof -i :3000` 또는 `tasklist | grep node` 확인
-  - Cache 문제: `rm -rf .next` 후 재시작
+  - Server not starting: Ask user to run manually
+  - Port conflict: Check with `lsof -i :3000` or `tasklist | grep node`
+  - Cache issue: `rm -rf .next` then restart
 
-### 5. MCP 토큰 효율화 (v1.1.1+)
+### 5. MCP Token Efficiency (v1.1.1+)
 
 #### ⚠️ 3-Strike Rule (Critical for Token Efficiency)
-- **같은 주제: 최대 3번 검색**
-- 3번 후 답 없으면 → "규정 없음" 명확히 인정
-- 다른 접근/다른 주제는 별도 카운트
-- 예외: 사용자 명시적 요청
+- **Same topic: Maximum 3 searches**
+- After 3 tries with no results → clearly state "not specified in code"
+- Different approaches/topics count separately
+- Exception: User explicitly requests more
 
-#### 검색 전 계획
-1. 목표 명확화: "정확히 무엇을 찾는가?"
-2. 키워드 선정: 1-2개만
-3. 예상 위치: Part? Division?
-4. 실행 → 평가 → 결정
+#### Pre-Search Planning
+1. Clarify goal: "What exactly am I looking for?"
+2. Select keywords: 1-2 only
+3. Estimate location: Part? Division?
+4. Execute → Evaluate → Decide
 
-#### 파라미터 최적화
-- `limit`: 5-10 (기본값, v1.1.1+)
-- `verbose`: false (기본값, 99% 경우)
-- verbose=true: 메타데이터 정말 필요할 때만
+#### Parameter Optimization
+- `limit`: 5-10 (default, v1.1.1+)
+- `verbose`: false (default, 99% of cases)
+- verbose=true: Only when metadata truly needed
 
-#### 토큰 예산
-- 간단: 100-300 tokens (1-3회)
-- 복잡: 500-1000 tokens (3-5회)
-- ⚠️ 1500+: 전략 재검토
+#### Token Budget
+- Simple: 100-300 tokens (1-3 calls)
+- Complex: 500-1000 tokens (3-5 calls)
+- ⚠️ 1500+: Review strategy
 
-#### 실제 사례
-**Bad:** 29회 검색, 5100 tokens → "OBC에 명시 없음"
-**Good:** 3회 검색, 150 tokens → 동일한 결론 (97% 절감)
+#### Real Case Study
+**Bad:** 29 searches, 5100 tokens → "not specified in OBC"
+**Good:** 3 searches, 150 tokens → same conclusion (97% reduction)
 
 ---
 
@@ -222,12 +222,12 @@ python src/mcp_server.py
 ## Recent Updates
 
 ### v1.2.0 (2026-01-23)
-- **Token Optimization**: 토큰 사용량 대폭 절감
-  - `list_codes`: verbose 파라미터 추가 (81% 절감, ~1,026 tokens)
-  - `disclaimer`: 리소스화로 참조만 전달 (61% 절감)
-- **"Did you mean?" 제안**: 검색 결과 없을 때 유사 키워드 추천
-- **로깅 시스템**: stderr 출력으로 MCP Inspector에서 디버깅 가능
-- **도구 설명 개선**: 더 명확하고 간결한 description
+- **Token Optimization**: Significant reduction in token usage
+  - `list_codes`: Added verbose parameter (81% reduction, ~1,026 tokens)
+  - `disclaimer`: Converted to resource, reference only (61% reduction)
+- **"Did you mean?" suggestions**: Recommend similar keywords when no results
+- **Logging system**: stderr output for debugging in MCP Inspector
+- **Tool descriptions improved**: Clearer and more concise
 
 ### v1.0.8 (2026-01-22)
 - Added **Welcome Resource** (buildingcode://welcome) with legal notice and PDF sources

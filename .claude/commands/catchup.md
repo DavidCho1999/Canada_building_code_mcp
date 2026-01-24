@@ -1,23 +1,23 @@
-# Catchup - 커밋 안 된 변경사항 요약
+# Catchup - Summarize Uncommitted Changes
 
-현재 git 저장소의 uncommitted 변경사항을 분석하고 요약해주세요.
+Analyze and summarize uncommitted changes in the current git repository.
 
-## 수행할 작업
+## Tasks to Perform
 
-1. `git status`로 변경된 파일 목록 확인
-2. `git diff`로 변경 내용 확인
-3. `git diff --staged`로 staged 변경 내용 확인
+1. Check list of changed files with `git status`
+2. Review changes with `git diff`
+3. Review staged changes with `git diff --staged`
 
-## 출력 형식
+## Output Format
 
-다음 형식으로 요약해주세요:
+Please summarize in the following format:
 
-### 변경된 파일
-- 파일명과 변경 유형 (수정/추가/삭제)
+### Changed Files
+- Filename and change type (modified/added/deleted)
 
-### 주요 변경 내용
-- 각 파일에서 무엇이 바뀌었는지 간단히 설명
+### Key Changes
+- Brief explanation of what changed in each file
 
-### 다음 단계 제안
-- 커밋할 준비가 됐는지
-- 추가 작업이 필요한지
+### Suggested Next Steps
+- Whether ready to commit
+- Whether additional work is needed

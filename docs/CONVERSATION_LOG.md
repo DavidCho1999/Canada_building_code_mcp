@@ -1,42 +1,42 @@
-# MCP 프로젝트 대화 기록
+# MCP Project Conversation Log
 
-> 2026-01-21 기준
+> As of 2026-01-21
 
 ---
 
-## 핵심 결정사항
+## Key Decisions
 
-### 1. "좌표 오버레이" (Map & Territory) 전략 채택
+### 1. "Coordinate Overlay" (Map & Territory) Strategy Adopted
 
-**개념:**
-- 배포: 좌표(page, bbox), Section ID, 구조 타입
-- 배포 안 함: 실제 텍스트, 테이블 데이터
-- 사용자가 자신의 합법적 PDF에서 텍스트 추출
+**Concept:**
+- Distributed: Coordinates (page, bbox), Section ID, structure type
+- NOT Distributed: Actual text, table data
+- User extracts text from their legally obtained PDF
 
-**법적 안전성: 99%**
-- 좌표는 "사실(fact)" → 저작권 보호 대상 아님
-- "지도를 주고, 땅은 사용자가 가져옴"
+**Legal Safety: 99%**
+- Coordinates are "facts" → Not protected by copyright
+- "Give the map, user brings the territory"
 
 ### 2. Fast Mode vs Slow Mode
 
-| Mode | 조건 | 방식 |
-|------|------|------|
-| **Fast Mode** | PDF 해시 일치 | 좌표(bbox) 기반 추출 |
-| **Slow Mode** | PDF 해시 불일치 | 패턴 매칭 추출 |
+| Mode | Condition | Method |
+|------|-----------|--------|
+| **Fast Mode** | PDF hash matches | Coordinate (bbox) based extraction |
+| **Slow Mode** | PDF hash mismatch | Pattern matching extraction |
 
-### 3. 대상 코드 14개 확정
+### 3. Target Codes: 14 Confirmed
 
-**National (4):** NBC, NFC, NPC, NECB (전부 2025)
+**National (4):** NBC, NFC, NPC, NECB (all 2025)
 **Provincial (7):** OBC, BCBC, ABC, QCC×4
 **User's Guides (3):** NBC Part 9, NBC Part 4, NECB Guide
 
 ---
 
-## 주요 발견
+## Key Findings
 
-### Marker polygon 데이터 확인
+### Marker polygon Data Confirmed
 
-`data/marker/chunk_01/301880/301880_meta.json`에서:
+In `data/marker/chunk_01/301880/301880_meta.json`:
 ```json
 {
   "title": "TO: BUILDING CODE USERS",
@@ -50,50 +50,50 @@
 }
 ```
 
-→ PyMuPDF `page.get_text("text", clip=rect)` 로 추출 가능
+→ Extractable with PyMuPDF `page.get_text("text", clip=rect)`
 
-### Marker가 가장 시간 오래 걸림
+### Marker Takes the Longest Time
 
-| 단계 | 시간 |
+| Step | Time |
 |------|------|
-| Marker PDF 파싱 | 30분~1시간+ (CPU) |
-| polygon → structure_map | 몇 초 |
-| DB 생성 | 몇 초 |
-| MCP 서버 설정 | 몇 분 |
+| Marker PDF parsing | 30min~1hr+ (CPU) |
+| polygon → structure_map | seconds |
+| DB creation | seconds |
+| MCP server setup | minutes |
 
 ---
 
-## 법적 분석
+## Legal Analysis
 
-### 캐나다 코드 상태
+### Canadian Code Status
 
-| Code | 상태 | 근거 |
-|------|------|------|
-| OBC | ✅ 명시적 허용 | "non-commercial use" 명시 |
-| NBC/NFC/NPC/NECB | ✅ 좌표만 = 안전 | NRC 무료 PDF 제공 |
-| BCBC | ✅ 좌표만 = 안전 | BC Gov 무료 제공 |
-| ABC | ✅ 좌표만 = 안전 | NRC 무료 PDF 제공 |
-| Quebec | ✅ 좌표만 = 안전 | NRC 무료 PDF 제공 |
+| Code | Status | Basis |
+|------|--------|-------|
+| OBC | ✅ Explicitly permitted | "non-commercial use" stated |
+| NBC/NFC/NPC/NECB | ✅ Coordinates only = safe | NRC provides free PDF |
+| BCBC | ✅ Coordinates only = safe | BC Gov provides free |
+| ABC | ✅ Coordinates only = safe | NRC provides free PDF |
+| Quebec | ✅ Coordinates only = safe | NRC provides free PDF |
 
-### 미국 vs 캐나다
+### US vs Canada
 
-- **미국**: ICC 저작권 분쟁, 소송 진행 중
-- **캐나다**: 법적으로 더 명확, 안전
+- **US**: ICC copyright disputes, ongoing litigation
+- **Canada**: Legally clearer, safer
 
 ---
 
-## 아키텍처 요약
+## Architecture Summary
 
 ```
-[개발자 측]
-PDF → Marker → polygon 추출 → structure_map.json
+[Developer Side]
+PDF → Marker → polygon extraction → structure_map.json
                                     ↓
-                              배포 (GitHub)
+                              Distribution (GitHub)
 
-[사용자 측]
-공식 PDF 다운로드 ← 사용자
+[User Side]
+Official PDF download ← User
         ↓
-structure_map.json + PDF → 텍스트 추출 → SQLite DB
+structure_map.json + PDF → Text extraction → SQLite DB
                                             ↓
                                       MCP Server
                                             ↓
@@ -102,65 +102,65 @@ structure_map.json + PDF → 텍스트 추출 → SQLite DB
 
 ---
 
-## 다음 단계
+## Next Steps
 
-1. **PDF 다운로드** - 14개 코드
-2. **Marker 실행** - 각 PDF 파싱 (30분~1시간 × 14)
-3. **structure_map 생성** - polygon → bbox 변환
-4. **추출 테스트** - PyMuPDF clip 검증
-5. **MCP 서버 구현** - Python MCP SDK
+1. **Download PDFs** - 14 codes
+2. **Run Marker** - Parse each PDF (30min~1hr × 14)
+3. **Generate structure_map** - polygon → bbox conversion
+4. **Extraction test** - PyMuPDF clip validation
+5. **Implement MCP server** - Python MCP SDK
 
 ---
 
-## 연락처 (허가 필요시)
+## Contact (If Permission Needed)
 
-| 기관 | 이메일 |
-|------|--------|
+| Organization | Email |
+|--------------|-------|
 | NRC (National) | Codes@nrc-cnrc.gc.ca |
 | BC (Provincial) | ipp@mail.qp.gov.bc.ca |
 
 ---
 
-## 하이브리드 파이프라인 (추가됨)
+## Hybrid Pipeline (Added)
 
-Marker + pdfplumber 결합 전략:
+Marker + pdfplumber Combined Strategy:
 
 ```
 [PDF] → [1. Marker] → [MD]
               ↓
-        [2. Scanner] - "### Table" 탐지
+        [2. Scanner] - "### Table" detection
               ↓
-        [3. Judge] - 품질 검사
+        [3. Judge] - Quality check
            /    \
-       멀쩡함   깨짐
+       Good    Broken
          │       │
-        유지   [4. Surgery] - pdfplumber
+        Keep  [4. Surgery] - pdfplumber
                  │
-        [5. Injection] - HTML 교체
+        [5. Injection] - HTML replace
               ↓
         [Final MD]
 ```
 
-→ 상세: `06_HYBRID_PIPELINE.md`
+→ Details: `06_HYBRID_PIPELINE.md`
 
 ---
 
-## 파일 구조
+## File Structure
 
 ```
 H:\My Drive\lab\building_code_mcp\
-├── README.md                 # 프로젝트 개요
-├── 01_ARCHITECTURE.md        # 아키텍처 상세
-├── 02_IMPLEMENTATION.md      # 구현 코드
-├── 03_LEGAL.md               # 법적 분석
-├── 04_ROADMAP.md             # 개발 로드맵 (업데이트됨)
-├── 05_USER_GUIDE.md          # 사용자 가이드
-├── 06_HYBRID_PIPELINE.md     # 하이브리드 파이프라인 (NEW)
-├── PDF_DOWNLOAD_LINKS.md     # PDF 링크 목록
-├── CONVERSATION_LOG.md       # 이 파일
+├── README.md                 # Project overview
+├── 01_ARCHITECTURE.md        # Architecture details
+├── 02_IMPLEMENTATION.md      # Implementation code
+├── 03_LEGAL.md               # Legal analysis
+├── 04_ROADMAP.md             # Development roadmap (updated)
+├── 05_USER_GUIDE.md          # User guide
+├── 06_HYBRID_PIPELINE.md     # Hybrid pipeline (NEW)
+├── PDF_DOWNLOAD_LINKS.md     # PDF link list
+├── CONVERSATION_LOG.md       # This file
 ├── marker/
 │   └── obc_part9/
-│       ├── 301880_full.md    # OBC Part 9 Marker 출력
-│       └── 301880_meta.json  # 좌표 정보
-└── sources/                  # PDF 저장 폴더 (12개 다운로드 완료)
+│       ├── 301880_full.md    # OBC Part 9 Marker output
+│       └── 301880_meta.json  # Coordinate info
+└── sources/                  # PDF storage folder (12 downloaded)
 ```

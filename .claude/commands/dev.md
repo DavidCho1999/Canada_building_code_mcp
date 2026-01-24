@@ -1,36 +1,36 @@
-# 개발 서버 시작
+# Start Development Server
 
-Next.js 개발 서버를 안전하게 시작합니다.
+Safely start the Next.js development server.
 
-## 실행 순서
+## Execution Steps
 
-1. **포트 3001 사용 중인 프로세스 확인**
+1. **Check if port 3001 is in use**
    ```bash
    netstat -ano | findstr :3001
    ```
 
-2. **사용 중이면 프로세스 종료** (PID 확인 후)
+2. **If in use, kill the process** (after checking PID)
    ```bash
    taskkill /PID <PID> /F
    ```
 
-3. **.next/dev/lock 파일 삭제** (존재하면)
+3. **Delete .next/dev/lock file** (if exists)
    ```bash
    rm -f codevault/.next/dev/lock
    ```
 
-4. **서버를 백그라운드에서 시작**
+4. **Start server in background**
    ```bash
    cd codevault && npm run dev
    ```
-   - `run_in_background: true` 옵션 사용
-   - 서버 시작 후 3초 대기
+   - Use `run_in_background: true` option
+   - Wait 3 seconds after server starts
 
-5. **서버 상태 확인**
-   - http://localhost:3001 접속 가능한지 확인
+5. **Verify server status**
+   - Check if http://localhost:3001 is accessible
 
-## 주의사항
+## Important Notes
 
-- 서버 명령은 반드시 **백그라운드**에서 실행 (튕김 방지)
-- lock 파일 충돌 시 Claude Code가 종료될 수 있음
-- 포트 충돌 확인 필수
+- Server command must run in **background** (prevents crashes)
+- Lock file conflicts can cause Claude Code to terminate
+- Port conflict check is essential
