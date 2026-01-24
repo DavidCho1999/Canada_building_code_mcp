@@ -145,4 +145,13 @@ combined_map.json
 # ========================================
 # my file
 # ========================================
-_mine/gpt/
+_mine/
+
+# ========================================
+# GPT Folder (Include specific files only)
+# ========================================
+gpt/*
+!gpt/GPT_INSTRUCTIONS_v3.0.md
+!gpt/extractor.py
+!gpt/verifier.py
+!gpt/README.md

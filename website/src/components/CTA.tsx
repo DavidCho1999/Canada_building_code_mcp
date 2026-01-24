@@ -42,7 +42,7 @@ export default function CTA() {
 
           {/* MCP Clients */}
           <div className="mb-8">
-            <p className="text-slate-600 text-sm mb-3">Works with <span className="font-semibold">any MCP-compatible client</span></p>
+            <p className="text-slate-600 text-base mb-3">Works with <span className="font-semibold">any MCP-compatible client</span></p>
             <div className="flex gap-3 text-sm justify-center flex-wrap">
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
                 <SiAnthropic className="w-4 h-4 text-[#D4A27F]" />
@@ -77,34 +77,19 @@ export default function CTA() {
               <div className="flex-1 w-px bg-gradient-to-b from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
 
-            {/* Option: pip install */}
+            {/* Option: Smithery */}
             <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <h3 className="font-semibold text-slate-900 mb-3">pip install</h3>
-              <div className="relative mb-4">
-                <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300">
-                  pip install building-code-mcp
-                </div>
-                <button
-                  onClick={copyPipCommand}
-                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
-                >
-                  {copiedPip ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
-              </div>
-              <p className="text-xs text-slate-500 mb-2">
-                Add this to your MCP client config file:
-              </p>
-              <div className="relative">
-                <pre className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
-                  {configCode}
-                </pre>
-                <button
-                  onClick={copyToClipboard}
-                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
-                >
-                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
-              </div>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">Smithery (One-click)</h3>
+              <a
+                href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-3 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors w-full justify-center mb-3"
+              >
+                Install on Smithery
+                <ArrowRight className="w-4 h-4" />
+              </a>
+              <p className="text-sm text-slate-500">No manual config needed. Just click and install.</p>
             </div>
 
             {/* Mobile OR divider (horizontal line with glow) */}
@@ -119,19 +104,34 @@ export default function CTA() {
               <div className="flex-1 h-px bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
             </div>
 
-            {/* Option: Smithery */}
+            {/* Option: pip install */}
             <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <h3 className="font-semibold text-slate-900 mb-3">Smithery (One-click)</h3>
-              <a
-                href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-3 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors w-full justify-center mb-3"
-              >
-                Install on Smithery
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <p className="text-xs text-slate-500">No manual config needed. Just click and install.</p>
+              <h3 className="text-lg font-bold text-slate-900 mb-3">pip install</h3>
+              <div className="relative mb-4">
+                <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300">
+                  pip install building-code-mcp
+                </div>
+                <button
+                  onClick={copyPipCommand}
+                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
+                >
+                  {copiedPip ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                </button>
+              </div>
+              <p className="text-sm text-slate-500 mb-2">
+                Add this to your MCP client config file:
+              </p>
+              <div className="relative">
+                <pre className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
+                  {configCode}
+                </pre>
+                <button
+                  onClick={copyToClipboard}
+                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                </button>
+              </div>
             </div>
           </div>
 
