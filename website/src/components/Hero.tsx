@@ -75,7 +75,7 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight"
         >
-          Canadian Building Code
+          Canadian<br className="md:hidden" /> Building Code
           <br />
           <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">Navigator</span>
         </motion.h1>
