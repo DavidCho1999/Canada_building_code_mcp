@@ -6,7 +6,7 @@
 - **Purpose**: MCP server enabling Claude to search/reference Canadian Building Codes
 - **Strategy**: "Map & Territory" - Distribute coordinates only, text extracted from user's PDF
 - **Status**: Phase 1-3 Complete (Docling + Map Generation + MCP Server with Prompts/Resources)
-- **Current Version**: 1.0.8 (PyPI + Smithery)
+- **Current Version**: 1.2.0 (PyPI + Smithery)
 
 ---
 
@@ -220,6 +220,14 @@ python src/mcp_server.py
 ---
 
 ## Recent Updates
+
+### v1.2.0 (2026-01-23)
+- **Token Optimization**: 토큰 사용량 대폭 절감
+  - `list_codes`: verbose 파라미터 추가 (81% 절감, ~1,026 tokens)
+  - `disclaimer`: 리소스화로 참조만 전달 (61% 절감)
+- **"Did you mean?" 제안**: 검색 결과 없을 때 유사 키워드 추천
+- **로깅 시스템**: stderr 출력으로 MCP Inspector에서 디버깅 가능
+- **도구 설명 개선**: 더 명확하고 간결한 description
 
 ### v1.0.8 (2026-01-22)
 - Added **Welcome Resource** (buildingcode://welcome) with legal notice and PDF sources

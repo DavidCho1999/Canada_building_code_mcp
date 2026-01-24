@@ -31,6 +31,15 @@ try:
 except ImportError:
     FUZZY_AVAILABLE = False
 
+
+# ============================================
+# LOGGING - stderr output for MCP Inspector
+# ============================================
+def _log(message: str):
+    """Log to stderr (visible in MCP Inspector, doesn't interfere with protocol)."""
+    print(f"[building-code-mcp] {message}", file=sys.stderr)
+
+
 # Building code synonyms for better search
 SYNONYMS = {
     "restroom": ["washroom", "water closet", "toilet", "lavatory", "bathroom"],
@@ -300,40 +309,70 @@ class BuildingCodeMCP:
 
         return result
 
-    def list_codes(self) -> Dict:
-        """List all available codes with download links."""
+    def list_codes(self, verbose: bool = False) -> Dict:
+        """List all available codes with download links.
+
+        Args:
+            verbose: If True, include full details. Default False for token efficiency.
+        """
         # Separate codes from guides based on document_type
         codes_list = []
         guides_list = []
+        codes_compact = []
+        guides_compact = []
 
         for code, data in self.maps.items():
             doc_type = data.get("document_type", "code")
             pdf_connected = code in self.pdf_paths
             can_extract = pdf_connected and PYMUPDF_AVAILABLE
 
-            code_info = {
+            # Compact info (always needed)
+            compact_info = {
                 "code": code,
-                "version": data.get("version", "unknown"),
                 "sections": len(data.get("sections", [])),
-                "document_type": doc_type,
-                "searchable": True,
-                "status": f"{'✓' if pdf_connected else '○'} {'BYOD Active' if pdf_connected else 'Map Only'}",
-                "pdf_connected": pdf_connected,
-                "can_extract_text": can_extract
+                "status": "BYOD" if pdf_connected else "Map"
             }
-            # Add download link if available
-            if code in PDF_DOWNLOAD_LINKS:
-                link_info = PDF_DOWNLOAD_LINKS[code]
-                code_info["download_url"] = link_info["url"]
-                code_info["source"] = link_info["source"]
-                code_info["free"] = link_info.get("free", True)
 
             if doc_type == "guide":
-                code_info["note"] = "Interpretation guide - NOT legally binding"
-                guides_list.append(code_info)
+                guides_compact.append(compact_info)
             else:
-                codes_list.append(code_info)
+                codes_compact.append(compact_info)
 
+            # Full info (only for verbose mode)
+            if verbose:
+                code_info = {
+                    "code": code,
+                    "version": data.get("version", "unknown"),
+                    "sections": len(data.get("sections", [])),
+                    "document_type": doc_type,
+                    "searchable": True,
+                    "status": f"{'✓' if pdf_connected else '○'} {'BYOD Active' if pdf_connected else 'Map Only'}",
+                    "pdf_connected": pdf_connected,
+                    "can_extract_text": can_extract
+                }
+                # Add download link if available
+                if code in PDF_DOWNLOAD_LINKS:
+                    link_info = PDF_DOWNLOAD_LINKS[code]
+                    code_info["download_url"] = link_info["url"]
+                    code_info["source"] = link_info["source"]
+                    code_info["free"] = link_info.get("free", True)
+
+                if doc_type == "guide":
+                    code_info["note"] = "Interpretation guide - NOT legally binding"
+                    guides_list.append(code_info)
+                else:
+                    codes_list.append(code_info)
+
+        # Compact response (default) - token efficient
+        if not verbose:
+            return {
+                "codes": codes_compact,
+                "guides": guides_compact,
+                "total": len(codes_compact) + len(guides_compact),
+                "hint": "Use verbose=true for full details including download links"
+            }
+
+        # Verbose response - full details
         # Web reference codes (no map, AI reads directly)
         web_references = []
         for code, info in WEB_REFERENCE_CODES.items():
@@ -369,7 +408,7 @@ class BuildingCodeMCP:
                 "map_only": "○ Provides page numbers and coordinates (legally safe, no text extraction)",
                 "byod": "✓ Extract actual text from your own PDFs (requires set_pdf_path)"
             },
-            "quick_start": "💡 New user? Connect your PDFs with set_pdf_path to enable text extraction, or use set_pdf_path with a folder to auto-connect multiple PDFs!"
+            "quick_start": "Use set_pdf_path to connect your PDFs for text extraction"
         }
 
     def _expand_query_with_synonyms(self, query_terms: set) -> set:
@@ -397,6 +436,26 @@ class BuildingCodeMCP:
             return best_score / 100.0
         return 0.0
 
+    def _suggest_similar_keywords(self, query: str, code: Optional[str] = None, limit: int = 3) -> List[str]:
+        """Find similar keywords when search returns no results (for 'Did you mean?' suggestions)."""
+        if not FUZZY_AVAILABLE:
+            return []
+
+        # Collect all keywords from relevant codes
+        all_keywords = set()
+        maps_to_search = {code: self.maps[code]} if code and code in self.maps else self.maps
+
+        for code_name, data in maps_to_search.items():
+            for section in data.get("sections", []):
+                all_keywords.update(kw.lower() for kw in section.get('keywords', []))
+
+        if not all_keywords:
+            return []
+
+        # Find best matches using rapidfuzz
+        matches = process.extract(query.lower(), list(all_keywords), limit=limit, score_cutoff=60)
+        return [match[0] for match in matches]
+
     def search_code(self, query: str, code: Optional[str] = None,
                     limit: int = 10, verbose: bool = False) -> Dict:
         """Search for sections matching query with fuzzy matching and synonym support.
@@ -409,6 +468,9 @@ class BuildingCodeMCP:
         """
         # Clamp limit
         limit = max(1, min(limit, 50))
+
+        # Log search request
+        _log(f"search: query='{query}' code={code} limit={limit}")
 
         # Input validation
         if not query or not isinstance(query, str):
@@ -528,6 +590,14 @@ class BuildingCodeMCP:
             "total": len(results)
         }
 
+        # Add "Did you mean?" suggestion when no results
+        if len(results) == 0:
+            similar = self._suggest_similar_keywords(query, code)
+            if similar:
+                response["suggestion"] = f"No results for '{query}'. Did you mean: {', '.join(similar)}?"
+            else:
+                response["suggestion"] = f"No results for '{query}'. Try different keywords or check spelling."
+
         # Add more info only in verbose mode
         if verbose:
             response["query"] = query
@@ -536,6 +606,9 @@ class BuildingCodeMCP:
                 response = self._add_mode_info(response, code)
         elif len(results) > limit:
             response["hint"] = f"Showing {limit}/{len(results)}. Use limit param for more."
+
+        # Log search results
+        _log(f"search: found {len(results)} results, returning {len(limited_results)}")
 
         return response
 
@@ -547,6 +620,8 @@ class BuildingCodeMCP:
             code: Code name
             verbose: If True, include all metadata. Default False for token efficiency.
         """
+        _log(f"get_section: id='{section_id}' code={code}")
+
         if code not in self.maps:
             return {"error": f"Code not found: {code}"}
 
@@ -603,7 +678,7 @@ class BuildingCodeMCP:
                         result["text_status"] = "PDF version mismatch"
 
                     result = self._add_mode_info(result, code)
-                    result["disclaimer"] = DISCLAIMER
+                    result["disclaimer_ref"] = "buildingcode://disclaimer"
 
                 return result
 
@@ -678,6 +753,8 @@ class BuildingCodeMCP:
 
     def set_pdf_path(self, code: str, path: str) -> Dict:
         """Connect user's PDF for text extraction. If path is a folder, auto-scan for PDFs."""
+        _log(f"set_pdf_path: code={code} path='{path}'")
+
         if not path:
             return {"error": "Path is required"}
 
@@ -850,7 +927,7 @@ class BuildingCodeMCP:
             return {
                 "exists": False,
                 "error": "Section ID is required",
-                "disclaimer": DISCLAIMER
+                "disclaimer_ref": "buildingcode://disclaimer"
             }
 
         if not code or code not in self.maps:
@@ -858,7 +935,7 @@ class BuildingCodeMCP:
                 "exists": False,
                 "error": f"Code not found: {code}",
                 "available_codes": list(self.maps.keys()),
-                "disclaimer": DISCLAIMER
+                "disclaimer_ref": "buildingcode://disclaimer"
             }
 
         data = self.maps[code]
@@ -889,7 +966,7 @@ class BuildingCodeMCP:
                     "page": page,
                     "citation": citation,
                     "citation_format": f"{code} {version}, s. {actual_id}" + (f", p. {page}" if page else ""),
-                    "disclaimer": DISCLAIMER
+                    "disclaimer_ref": "buildingcode://disclaimer"
                 }
                 # Note if found with different prefix
                 if actual_id != section_id:
@@ -917,7 +994,7 @@ class BuildingCodeMCP:
             "error": f"Section {section_id} not found in {code}",
             "similar_sections": similar,
             "suggestion": "Check the section number or use search_code to find the correct section",
-            "disclaimer": DISCLAIMER
+            "disclaimer_ref": "buildingcode://disclaimer"
         }
 
     def get_applicable_code(self, location: str) -> Dict:
@@ -926,7 +1003,7 @@ class BuildingCodeMCP:
             return {
                 "error": "Location is required",
                 "example": "get_applicable_code('Toronto')",
-                "disclaimer": DISCLAIMER
+                "disclaimer_ref": "buildingcode://disclaimer"
             }
 
         location_lower = location.lower().strip()
@@ -953,7 +1030,7 @@ class BuildingCodeMCP:
                 "also_check": also_check_info,
                 "notes": info["notes"],
                 "warning": "Always verify with local Authority Having Jurisdiction (AHJ)",
-                "disclaimer": DISCLAIMER
+                "disclaimer_ref": "buildingcode://disclaimer"
             }
 
         # Fuzzy match - check if location contains a known jurisdiction
@@ -966,7 +1043,7 @@ class BuildingCodeMCP:
                     "also_check": info["also_check"],
                     "notes": info["notes"],
                     "warning": "Partial match - verify with local Authority Having Jurisdiction (AHJ)",
-                    "disclaimer": DISCLAIMER
+                    "disclaimer_ref": "buildingcode://disclaimer"
                 }
 
         # Unknown location - default to National codes
@@ -977,7 +1054,7 @@ class BuildingCodeMCP:
             "default_codes": ["NBC", "NFC", "NPC", "NECB"],
             "warning": "Contact local Authority Having Jurisdiction (AHJ) to confirm applicable codes",
             "available_jurisdictions": list(set(JURISDICTION_MAP.keys())),
-            "disclaimer": DISCLAIMER
+            "disclaimer_ref": "buildingcode://disclaimer"
         }
 
     def get_table(self, table_id: str, code: Optional[str] = None) -> Dict:
@@ -1018,7 +1095,7 @@ class BuildingCodeMCP:
                         "markdown": table.get("markdown", ""),
                         "keywords": table.get("keywords", []),
                         "citation": f"{code_name} {version}, {table.get('title', table_id)}",
-                        "disclaimer": DISCLAIMER
+                        "disclaimer_ref": "buildingcode://disclaimer"
                     }
 
         return {
@@ -1073,7 +1150,7 @@ class BuildingCodeMCP:
                 "page": page,
                 "total_pages": total_pages,
                 "text": text,
-                "disclaimer": DISCLAIMER
+                "disclaimer_ref": "buildingcode://disclaimer"
             }
         except Exception as e:
             return {"error": f"Failed to read page: {str(e)}"}
@@ -1180,7 +1257,7 @@ class BuildingCodeMCP:
                 "page_range": f"{start_page}-{end_page}",
                 "total_pages": total_pages,
                 "pages": pages_text,
-                "disclaimer": DISCLAIMER
+                "disclaimer_ref": "buildingcode://disclaimer"
             }
         except Exception as e:
             return {"error": f"Failed to read pages: {str(e)}"}
@@ -1206,10 +1283,16 @@ async def list_tools() -> List[Tool]:
     return [
         Tool(
             name="list_codes",
-            description="List all available Canadian building codes and user guides with section counts, versions, and download links. Returns codes (legally binding) and guides (interpretation only) separately.",
+            description="List all available building codes. Use this FIRST to see what codes exist and check if PDFs are connected.",
             inputSchema={
                 "type": "object",
-                "properties": {},
+                "properties": {
+                    "verbose": {
+                        "type": "boolean",
+                        "description": "If true, include full details (versions, download links, modes). Default false for token efficiency.",
+                        "default": False
+                    }
+                },
                 "additionalProperties": False
             },
             annotations=ToolAnnotations(
@@ -1222,7 +1305,7 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="search_code",
-            description="Search building code sections by keywords. Returns compact results (id, title, page, score) by default for token efficiency. Use verbose=true for full metadata.",
+            description="Search building code sections by keywords. Use this to find relevant sections by topic (e.g., 'fire separation', 'stair width'). Returns compact results by default.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -1258,7 +1341,7 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="get_section",
-            description="Get section details. Returns compact result (id, title, page, citation, text if BYOD) by default. Use verbose=true for keywords, bbox, etc.",
+            description="Get section details by ID. Use this after search_code to get page number, citation, and text (if PDF connected).",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -1315,7 +1398,7 @@ async def list_tools() -> List[Tool]:
         ),
         Tool(
             name="set_pdf_path",
-            description="Connect your legally obtained PDF file for full text extraction (BYOD mode). Once connected, get_section will return actual code text, not just coordinates.",
+            description="Connect your PDF file for text extraction. Use this to enable full text in get_section results. Can also auto-scan a folder.",
             inputSchema={
                 "type": "object",
                 "properties": {
@@ -1477,7 +1560,7 @@ async def call_tool(name: str, arguments: Dict[str, Any]) -> List[TextContent]:
     mcp = get_mcp()
 
     if name == "list_codes":
-        result = mcp.list_codes()
+        result = mcp.list_codes(arguments.get("verbose", False))
     elif name == "search_code":
         result = mcp.search_code(
             arguments.get("query", ""),
@@ -1684,6 +1767,12 @@ async def list_resources() -> List[Resource]:
             name="Server Statistics",
             description="Statistics about indexed building codes and sections",
             mimeType="application/json"
+        ),
+        Resource(
+            uri="buildingcode://disclaimer",
+            name="Legal Disclaimer",
+            description="Important disclaimer about using this tool - reference only, not legal advice",
+            mimeType="text/plain"
         )
     ]
 
@@ -1762,6 +1851,9 @@ async def read_resource(uri) -> str:
         }
         return json.dumps(stats, indent=2, ensure_ascii=False)
 
+    elif uri_str == "buildingcode://disclaimer":
+        return DISCLAIMER
+
     elif uri_str.startswith("buildingcode://code/"):
         code = uri_str.replace("buildingcode://code/", "")
         if code in mcp.maps:
@@ -1792,6 +1884,9 @@ async def _async_main():
 def main():
     """Entry point for the MCP server."""
     import asyncio
+    mcp = get_mcp()
+    total_sections = sum(len(d.get("sections", [])) for d in mcp.maps.values())
+    _log(f"Starting server: {len(mcp.maps)} codes, {total_sections} sections indexed")
     asyncio.run(_async_main())
 
 
