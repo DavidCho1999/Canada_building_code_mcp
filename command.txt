@@ -4,6 +4,8 @@ claude --dangerously-skip-permissions
 
 server 열어줘
 
+cd /c/Users/A/Desktop/lab/building_code_mcp/website && npm run dev
+
 /mcp
 
 튕겼어 계속 진행해줘
@@ -47,3 +49,19 @@ gitignore 추천좀
 지금 보면 
 
 지금하고 있는 docling으로 pdf 다 .md하고 json으로 바꾸고 난 뒤는 뭐해야해?
+
+튕겻어 continue
+
+우리는 이거에 대해 잘 지키고있니? :
+
+ 그러면 new brunswick 시내에서 20층짜리 highrise residential을 짓는다는가정하에 어떤 foundation, colum sizing이 기준이될까
+그리고 column sizing w 360x41 사용가능?
+
+npx claude-code-templates@latest --skill=development/skill-creator --yes 실행해줘
+
+/skill-creator 지금 chatgpt에도 app 만들고있는데, 현재 C:\Users\A\Desktop\lab\building_code_mcp\maps ㄴ여기 map의 json들 input으로 넣었고 C:\Users\A\Desktop\lab\building_code_mcp\gpt 
+여기에 있는 내용들 (v2.6)이 최근, 테스트하고있어, chatgpt에서 사람들이 너무 많은시간을 기다리지않고 원하는 building code에서의 값을 받게끔. 근데 첫번째로 알아야할게 aec관계자들은 정확한 값을
+원한다는 것, 그리고 대부분의 문서들이 엄청나게 페이지가 많다는 점, 그리고 시간에 쫒기는 상황들이 조금 있다는점, 여유롭지는 않음. 그리고 gpt에 물어보면 comprehensive하게 답들이 나오는걸 좋아하고
+예를들어 table의 어떤 특정한 값 + 그 table을 gpt가 읽었다는 증거를 보여주면 좋아함, verify를 절하거나 안해도 되니깐, 보통 다른 gpt 혹은 copilot에 그냥 pdf 던져서 물어보면 hallucination 좀
+있음. 그래서 이걸 app쓰면 hallucination 안하고 똑바른 결과값 준다는거. 그래서 json + python 파일 있는 거임. 이거에 대해서 gpt계속 verify할 수 있는 툴 skill 만들면 좋겠는데, 나한테 최대한
+많은 질문을 해줘. 너가 0.1%라도 햇갈리는 부분이 있으면, 그리고 어떤거 추가하거나 궁금한게 있으면 바로 물어봐 plan mode켜놓을테니까.

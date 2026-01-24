@@ -1,58 +1,103 @@
-# Canadian Building Code MCP Server
+# Canadian Building Code MCP
 
 [![PyPI version](https://badge.fury.io/py/building-code-mcp.svg)](https://pypi.org/project/building-code-mcp/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Smithery](https://smithery.ai/badge/davidcho/ca-building-code-mcp)](https://smithery.ai/server/davidcho/ca-building-code-mcp)
 
-A Model Context Protocol (MCP) server that enables Claude to search and navigate Canadian building codes.
+**AI-powered search for 24,000+ Canadian building code sections.**
 
-## How It Works
+Enable AI assistants to search, navigate, and cite building regulations across NBC, OBC, BCBC, and 13 other Canadian codes.
 
-This MCP server operates in **two modes**:
+> Works with Claude Desktop and any MCP-compatible client (Cursor, Windsurf, etc.)
 
-| Mode | Use Case | PDF Required | Text Extraction |
-|------|----------|--------------|-----------------|
-| **Map-Only** | Hosted API, Quick lookup | No | Page numbers & coordinates only |
-| **BYOD** | Local MCP with full text | Yes (your own) | Full section text |
-
-### Map-Only Mode (Default)
-- Returns page numbers, section IDs, and coordinates
-- Works everywhere (local, Vercel, Render, etc.)
-- **No PDF needed** - just the indexed maps
-
-### BYOD Mode (Bring Your Own Document)
-- Connect YOUR legally obtained PDF using `set_pdf_path`
-- Get full text extraction from sections
-- **Local MCP only** - not available in hosted API
-
-> **Note**: The hosted API at `canada-aec-code-mcp.onrender.com` runs in Map-Only mode. For full text extraction, run the MCP server locally and connect your own PDFs.
+<!-- TODO: Add GIF demo here
+![Demo](docs/demo.gif)
+-->
 
 ---
 
-## Quick Setup
+## Why This Exists
 
-### Option A: Smithery (One-click install)
+Architects and engineers waste hours searching through thousands of pages of building codes. This MCP server lets AI do the heavy lifting:
+
+```
+You: "What are the fire separation requirements for a 3-storey
+     residential building in Saskatchewan?"
+
+Claude: [Searches NBC 2025, finds relevant sections, extracts text]
+
+        "According to NBC 2025 Section 3.2.2.55, Group C buildings
+         up to 3 storeys with sprinklers require:
+         - Maximum area: 1,800 m²
+         - Floor assemblies: 45-min fire-resistance rating
+         - Load-bearing walls: Same rating as supported assembly"
+```
+
+---
+
+## Features
+
+| Feature | Description |
+|---------|-------------|
+| **24,000+ Sections** | NBC, OBC, BCBC, ABC, QCC + 11 more codes indexed |
+| **Smart Search** | Fuzzy matching, synonyms, "Did you mean?" suggestions |
+| **Token Optimized** | 81% reduction vs naive approach (v1.2.0) |
+| **Copyright Safe** | BYOD model - coordinates only, you provide the PDF |
+| **Jurisdiction Aware** | Knows which code applies where (ON→OBC, BC→BCBC) |
+
+---
+
+## Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│            MCP Client (Claude, Cursor, etc.)                 │
+└─────────────────────────┬───────────────────────────────────┘
+                          │ MCP Protocol
+                          ▼
+┌─────────────────────────────────────────────────────────────┐
+│                   Building Code MCP Server                   │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐       │
+│  │ search_code  │  │ get_section  │  │ get_table    │       │
+│  │ (fuzzy+TF-IDF│  │ (BYOD text)  │  │ (markdown)   │       │
+│  └──────┬───────┘  └──────┬───────┘  └──────┬───────┘       │
+│         │                 │                 │               │
+│         ▼                 ▼                 ▼               │
+│  ┌─────────────────────────────────────────────────┐        │
+│  │              maps/*.json (15.9 MB)              │        │
+│  │         Section IDs, pages, keywords, bbox       │        │
+│  └─────────────────────────────────────────────────┘        │
+│                          │                                  │
+│                          ▼ (BYOD mode only)                 │
+│  ┌─────────────────────────────────────────────────┐        │
+│  │              User's PDF (via PyMuPDF)            │        │
+│  │           Text extraction at runtime             │        │
+│  └─────────────────────────────────────────────────┘        │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**Two Modes:**
+- **Map-Only** (default): Returns page numbers & coordinates. No PDF needed.
+- **BYOD**: Connect your PDF via `set_pdf_path` for full text extraction.
+
+---
+
+## Quick Start (1 minute)
+
+### Option 1: Smithery (Recommended)
 
 ```bash
 npx -y @smithery/cli@latest install davidcho/ca-building-code-mcp --client claude
 ```
 
-### Option B: uvx (Auto-updates, recommended)
-
-**Prerequisites:** Install `uv` first (one-time setup):
+### Option 2: uvx
 
 ```bash
-# Windows (PowerShell)
-powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
-
-# macOS/Linux
-curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# Or via pip
+# Install uv (one-time)
 pip install uv
 ```
 
-Then add to Claude Desktop config (`%APPDATA%\Claude\claude_desktop_config.json` on Windows, `~/Library/Application Support/Claude/claude_desktop_config.json` on Mac):
-
+Add to `claude_desktop_config.json`:
 ```json
 {
   "mcpServers": {
@@ -64,9 +109,7 @@ Then add to Claude Desktop config (`%APPDATA%\Claude\claude_desktop_config.json`
 }
 ```
 
-**Benefits:** Automatically checks for updates on each run - always get the latest version!
-
-### Option C: pip install (Manual updates)
+### Option 3: pip
 
 ```bash
 pip install building-code-mcp
@@ -82,94 +125,135 @@ pip install building-code-mcp
 }
 ```
 
-**To update:** Run `pip install --upgrade building-code-mcp`
-
 ---
 
-## What It Does
+## Example Conversations
 
-Ask Claude questions like:
-- "Find fire separation requirements for garages in NBC"
-- "What are the stair width requirements in OBC?"
-- "Show me section 9.10.14 of the Building Code"
+### Finding Requirements
 
-Claude will search **22,500+ indexed sections** across 16 Canadian building codes and guides.
+```
+You: "I'm designing a 6-storey office building in Vancouver.
+     What are the fire separation requirements?"
+
+Claude: Let me search the BC Building Code...
+
+[Uses search_code("fire separation office", code="BCBC")]
+[Uses get_section("3.2.2.57", code="BCBC")]
+
+Based on BCBC 2024 Section 3.2.2.57, a 6-storey Group D
+(business) building requires:
+- Sprinkler system: Required
+- Floor assemblies: 1-hour fire-resistance rating
+- Maximum building area: 7,200 m²
+```
+
+### Checking Specific Sections
+
+```
+You: "What does OBC section 9.10.14.1 say about spatial separation?"
+
+Claude: [Uses get_section("9.10.14.1", code="OBC_Vol1")]
+
+OBC Section 9.10.14.1 - Spatial Separation Between Buildings:
+"Buildings on the same property shall have spatial separation
+between them based on the aggregate area of unprotected openings
+in exposing building faces..."
+```
+
+### Jurisdiction Lookup
+
+```
+You: "Which building code applies in Calgary?"
+
+Claude: [Uses get_applicable_code("Calgary, Alberta")]
+
+Calgary follows the Alberta Building Code (ABC) 2023.
+Primary codes: ABC, AFC (Fire), APC (Plumbing)
+Also check: National codes (NBC, NFC) for reference
+```
+
+---
 
 ## Supported Codes
 
-### Building Codes (13)
+### National Codes (4)
+NBC 2025, NFC 2025, NPC 2025, NECB 2025
 
-| Code | Version | Sections | Description |
-|------|---------|----------|-------------|
-| NBC | 2025 | 2,700+ | National Building Code |
-| NFC | 2025 | 1,000+ | National Fire Code |
-| NPC | 2025 | 400+ | National Plumbing Code |
-| NECB | 2025 | 450+ | National Energy Code for Buildings |
-| OBC | 2024 | 4,100+ | Ontario Building Code (Vol 1 & 2) |
-| OFC | O. Reg. 213/07 | 1,900+ | Ontario Fire Code |
-| BCBC | 2024 | 2,500+ | British Columbia Building Code |
-| ABC | 2023 | 2,800+ | Alberta Building Code |
-| QCC | 2020 | 2,700+ | Quebec Construction Code |
-| QECB | 2020 | 380+ | Quebec Energy Code |
-| QPC | 2020 | 420+ | Quebec Plumbing Code |
-| QSC | 2020 | 1,000+ | Quebec Safety Code |
+### Provincial Codes (9)
+- **Ontario**: OBC 2024 (Vol 1 & 2), OFC
+- **British Columbia**: BCBC 2024
+- **Alberta**: ABC 2023
+- **Quebec**: QCC, QECB, QPC, QSC (2020)
 
 ### User's Guides (3)
+IUGP9 (Part 9 Housing), UGP4 (Structural), UGNECB (Energy)
 
-| Guide | Version | Sections | Description |
-|-------|---------|----------|-------------|
-| IUGP9 | 2020 | 1,000+ | Illustrated Guide - Part 9 Housing |
-| UGP4 | 2020 | 490+ | User's Guide - NBC Structural Commentaries |
-| UGNECB | 2020 | 160+ | User's Guide - NECB |
-
-## 💡 Best Practices (Token Efficiency)
-
-**New in v1.1.1:** Reduce token usage by up to 97% with these best practices.
-
-### For Claude Desktop Users
-
-Copy the [optimization rules](docs/CLAUDE_RULES.md) to your `~/.claude/CLAUDE.md` file:
-
-**Key Principles:**
-- **3-Strike Rule:** Maximum 3 searches per topic
-- **Plan before searching:** Know what you're looking for
-- **Use default parameters:** `limit=10`, `verbose=false` (already optimized)
-- **Token budget:** Simple questions: 100-300 tokens, Complex: 500-1000 tokens
-
-### Example Improvement
-
-❌ **Before:** 29 searches, 5,100 tokens → "Balcony dimensions not in OBC"
-
-✅ **After:** 3 searches, 150 tokens → Same conclusion, 97% fewer tokens
-
-**See full guide:** [Token Efficiency Documentation](docs/CLAUDE_RULES.md)
+**Total: 24,000+ indexed sections**
 
 ---
 
-## Usage Examples
+## Token Efficiency (v1.2.0)
 
-Once installed, just ask Claude naturally:
+Built-in optimizations reduce token usage:
 
-```
-"Search for egress requirements in NBC"
-"What does section 3.2.4.1 say in OBC?"
-"Find fire resistance ratings for walls"
-"Which building code applies in Toronto?"
-"List all available building codes"
-```
+| Optimization | Reduction |
+|--------------|-----------|
+| `list_codes` compact mode | 81% |
+| `disclaimer` as resource | 61% |
+| Default `verbose=false` | ~50% |
+
+**Best practice:** Use `limit=5-10` and only request `verbose=true` when needed.
+
+See [Token Efficiency Guide](docs/CLAUDE_RULES.md) for details.
+
+---
+
+## Tools Available
+
+| Tool | Purpose |
+|------|---------|
+| `list_codes` | Show available codes and connection status |
+| `search_code` | Find sections by keywords |
+| `get_section` | Get section details (page, citation, text) |
+| `get_table` | Get table content as markdown |
+| `get_hierarchy` | Navigate parent/child sections |
+| `verify_section` | Check if section ID exists |
+| `get_applicable_code` | Find codes for a location |
+| `set_pdf_path` | Connect PDF for text extraction |
+
+---
 
 ## API Access
 
-REST API available at: https://canada-aec-code-mcp.onrender.com
+REST API: https://canada-aec-code-mcp.onrender.com
 
-```
-GET /codes              - List all codes
-GET /search/{query}     - Search sections
-GET /section/{id}       - Get section details
+```bash
+curl https://canada-aec-code-mcp.onrender.com/search/fire+separation
 ```
 
-> **Hosted API Limitation**: The hosted API runs in Map-Only mode. `set_pdf_path` is not available - use local MCP for full text extraction.
+> Note: Hosted API runs in Map-Only mode. Use local MCP for full text.
+
+---
+
+## Development
+
+```bash
+git clone https://github.com/DavidCho1999/Canada_building_code_mcp.git
+cd Canada_building_code_mcp
+pip install -e ".[all]"
+python src/mcp_server.py
+```
+
+---
 
 ## License
 
-MIT License - See [LICENSE](LICENSE) file.
+MIT License - See [LICENSE](LICENSE)
+
+---
+
+## Links
+
+- [PyPI](https://pypi.org/project/building-code-mcp/)
+- [Smithery](https://smithery.ai/server/davidcho/ca-building-code-mcp)
+- [Token Efficiency Guide](docs/CLAUDE_RULES.md)

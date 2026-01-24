@@ -6,8 +6,8 @@ import { Menu, X, Github } from 'lucide-react';
 import clsx from 'clsx';
 
 const navLinks = [
-  { href: '#how-it-works', label: 'How It Works' },
-  { href: '#setup', label: 'Quick Setup' },
+  { href: '#chatgpt', label: 'Get Started' },
+  { href: '#how-it-works', label: 'MCP Setup' },
   { href: '#codes', label: 'Supported Codes' },
 ];
 
@@ -42,7 +42,7 @@ export default function Navbar() {
               BuildingCode
             </span>
             <span className="text-lg font-bold bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">
-              MCP
+              Navigator
             </span>
           </a>
 

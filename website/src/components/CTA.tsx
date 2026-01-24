@@ -30,14 +30,14 @@ export default function CTA() {
   };
 
   return (
-    <section id="setup" className="py-20 bg-white border-t border-slate-200">
+    <section id="how-it-works" className="py-20 bg-white border-t border-slate-200">
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center">
-          <span className="inline-block px-4 py-1 bg-cyan-100 text-cyan-700 rounded-full text-sm font-medium mb-4">
-            Get Started
+          <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+            Developer API
           </span>
           <h2 className="text-2xl md:text-3xl font-bold mb-4 pb-1 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent hover:from-blue-600 hover:to-cyan-500 hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300 cursor-default">
-            Quick Setup
+            MCP Setup
           </h2>
 
           {/* MCP Clients */}
