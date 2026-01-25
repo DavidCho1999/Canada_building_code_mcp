@@ -61,7 +61,7 @@ export default function CTA() {
                 VS Code
               </span>
               <a
-                href="https://smithery.ai/server/@anthropic/building-code-mcp"
+                href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center px-3 py-1.5 bg-slate-50 text-slate-500 rounded-full text-sm font-medium hover:bg-cyan-50 hover:text-cyan-600 transition-all duration-300"
