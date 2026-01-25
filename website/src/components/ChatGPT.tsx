@@ -38,7 +38,7 @@ export default function ChatGPT() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200 shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden scroll-mt-4"
+            className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 border border-blue-200 shadow-sm hover:shadow-lg transition-shadow relative overflow-hidden scroll-mt-20"
           >
             <div className="absolute top-4 right-4">
               <span className="px-3 py-1 bg-blue-500 text-white text-xs font-medium rounded-full">
@@ -91,7 +91,7 @@ export default function ChatGPT() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow scroll-mt-4"
+            className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-lg transition-shadow scroll-mt-20"
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center">
@@ -143,23 +143,20 @@ export default function ChatGPT() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="bg-white rounded-2xl border border-slate-200 overflow-hidden"
+          className="bg-white rounded-2xl border border-slate-200 overflow-hidden max-w-3xl mx-auto"
         >
-          <div className="px-6 py-4 bg-slate-50 border-b border-slate-200">
-            <h3 className="text-lg font-semibold text-slate-900">Technical Comparison</h3>
-          </div>
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
                 <tr className="border-b border-slate-200">
-                  <th className="px-6 py-4 text-left text-base font-medium text-slate-500"></th>
-                  <th className="px-6 py-4 text-center text-base font-medium text-emerald-600">
+                  <th className="px-6 py-4 text-left text-base font-medium text-slate-400"></th>
+                  <th className="px-6 py-4 text-center text-base font-semibold text-emerald-600">
                     <div className="flex items-center justify-center gap-2">
                       <MessageSquare className="w-5 h-5" />
                       ChatGPT App
                     </div>
                   </th>
-                  <th className="px-6 py-4 text-center text-base font-medium text-blue-600">
+                  <th className="px-6 py-4 text-center text-base font-semibold text-blue-600">
                     <div className="flex items-center justify-center gap-2">
                       <Cpu className="w-5 h-5" />
                       MCP Server
@@ -168,31 +165,26 @@ export default function ChatGPT() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                <tr className="bg-slate-50/50">
-                  <td className="px-6 py-4 text-base font-medium text-slate-700">Accuracy</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">May hallucinate</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">Verified results</td>
-                </tr>
                 <tr>
-                  <td className="px-6 py-4 text-base font-medium text-slate-700">Speed</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">Slower</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">Faster</td>
-                </tr>
-                <tr className="bg-slate-50/50">
-                  <td className="px-6 py-4 text-base font-medium text-slate-700">Setup</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">None</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">Install required</td>
-                </tr>
-                <tr>
-                  <td className="px-6 py-4 text-base font-medium text-slate-700">PDF Text</td>
+                  <td className="px-6 py-4 text-base text-slate-500">PDF Source</td>
                   <td className="px-6 py-4 text-base text-slate-600 text-center" colSpan={2}>
-                    Both require BYOD
+                    User-provided code PDF
                   </td>
                 </tr>
-                <tr className="bg-slate-50/50">
-                  <td className="px-6 py-4 text-base font-medium text-slate-700">Best For</td>
+                <tr>
+                  <td className="px-6 py-4 text-base text-slate-500">Speed</td>
+                  <td className="px-6 py-4 text-base text-slate-600 text-center">May vary</td>
+                  <td className="px-6 py-4 text-base text-blue-600 text-center font-medium">Fast</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-base text-slate-500">Setup</td>
+                  <td className="px-6 py-4 text-base text-emerald-600 text-center font-medium">None</td>
+                  <td className="px-6 py-4 text-base text-slate-600 text-center">One-time install</td>
+                </tr>
+                <tr>
+                  <td className="px-6 py-4 text-base text-slate-500">Best For</td>
                   <td className="px-6 py-4 text-base text-slate-600 text-center">Casual exploration</td>
-                  <td className="px-6 py-4 text-base text-slate-600 text-center">Production, automation</td>
+                  <td className="px-6 py-4 text-base text-blue-600 text-center font-medium">Production, automation</td>
                 </tr>
               </tbody>
             </table>

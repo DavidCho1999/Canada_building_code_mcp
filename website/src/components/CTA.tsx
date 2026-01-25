@@ -34,7 +34,7 @@ export default function CTA() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center">
           <span className="inline-block px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
-            Developer API
+            One-Time Setup
           </span>
           <h2 className="text-2xl md:text-3xl font-bold mb-4 pb-1 bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent hover:from-blue-600 hover:to-cyan-500 hover:drop-shadow-[0_0_15px_rgba(6,182,212,0.5)] transition-all duration-300 cursor-default">
             MCP Setup
@@ -42,7 +42,7 @@ export default function CTA() {
 
           {/* MCP Clients */}
           <div className="mb-8">
-            <p className="text-slate-600 text-base mb-3">Works with <span className="font-semibold">any MCP-compatible client</span></p>
+            <p className="text-slate-600 text-base mb-3">Works with <span className="font-semibold">Claude, Cursor, and more</span></p>
             <div className="flex gap-3 text-sm justify-center flex-wrap">
               <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
                 <SiAnthropic className="w-4 h-4 text-[#D4A27F]" />
@@ -60,6 +60,14 @@ export default function CTA() {
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="#007ACC"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
                 VS Code
               </span>
+              <a
+                href="https://smithery.ai/server/@anthropic/building-code-mcp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center px-3 py-1.5 bg-slate-50 text-slate-500 rounded-full text-sm font-medium hover:bg-cyan-50 hover:text-cyan-600 transition-all duration-300"
+              >
+                +more
+              </a>
             </div>
           </div>
 
