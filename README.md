@@ -84,13 +84,7 @@ Claude: [Searches NBC 2025, finds relevant sections, extracts text]
 
 ## Quick Start (1 minute)
 
-### Option 1: Smithery (Recommended)
-
-```bash
-npx -y @smithery/cli@latest install davidcho/ca-building-code-mcp --client claude
-```
-
-### Option 2: uvx
+### Option 1: uvx (Recommended)
 
 ```bash
 # Install uv (one-time)
@@ -109,7 +103,7 @@ Add to `claude_desktop_config.json`:
 }
 ```
 
-### Option 3: pip
+### Option 2: pip
 
 ```bash
 pip install building-code-mcp

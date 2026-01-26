@@ -114,7 +114,7 @@ export default function ChatGPT() {
               </li>
               <li className="flex items-start gap-3">
                 <Users className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-600">Perfect for quick questions</span>
+                <span className="text-slate-600">Requires building code PDF for text</span>
               </li>
               <li className="flex items-start gap-3">
                 <Users className="w-5 h-5 text-emerald-600 mt-0.5 flex-shrink-0" />

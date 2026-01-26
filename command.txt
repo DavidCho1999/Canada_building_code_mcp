@@ -65,3 +65,10 @@ npx claude-code-templates@latest --skill=development/skill-creator --yes 실행�
 예를들어 table의 어떤 특정한 값 + 그 table을 gpt가 읽었다는 증거를 보여주면 좋아함, verify를 절하거나 안해도 되니깐, 보통 다른 gpt 혹은 copilot에 그냥 pdf 던져서 물어보면 hallucination 좀
 있음. 그래서 이걸 app쓰면 hallucination 안하고 똑바른 결과값 준다는거. 그래서 json + python 파일 있는 거임. 이거에 대해서 gpt계속 verify할 수 있는 툴 skill 만들면 좋겠는데, 나한테 최대한
 많은 질문을 해줘. 너가 0.1%라도 햇갈리는 부분이 있으면, 그리고 어떤거 추가하거나 궁금한게 있으면 바로 물어봐 plan mode켜놓을테니까.
+
+
+방금 smithery로 cursor mcp로 사용해서 해봤는데 mcp에서 json 파이릉ㄹ 못가져왓다고 하더라고, 한번 체크해봐 smithery로 mcp 설치하면 제약사항이 있는지
+
+
+
+웹사이트에서 smithery mcp setup에서 없애고 pip install만 남겨줘 그 뒤에 commit push

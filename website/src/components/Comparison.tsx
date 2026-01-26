@@ -108,20 +108,14 @@ export default function Comparison() {
           </div>
         </div>
 
-        {/* Copyright Safe */}
-        <div className="mt-10 bg-emerald-50 rounded-2xl p-8 border border-emerald-200">
-          <div className="flex items-center gap-5">
-            <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Shield className="w-7 h-7" />
-            </div>
-            <div>
-              <h4 className="text-lg font-bold text-slate-900 mb-2">Copyright Safe</h4>
-              <p className="text-base text-slate-600">
-                Only coordinates distributed, not actual text.<br className="hidden md:block" />
-                Content read from your own PDF.
-              </p>
-            </div>
-          </div>
+        {/* Copyright Safe - Inline badge */}
+        <div className="mt-6 flex justify-center">
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm border border-emerald-200">
+            <Shield className="w-4 h-4" />
+            <span className="font-medium">Copyright Safe</span>
+            <span className="text-emerald-600">·</span>
+            <span>Coordinates only, text from your PDF</span>
+          </span>
         </div>
       </div>
     </section>

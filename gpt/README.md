@@ -1,62 +1,62 @@
 # GPT App Files
 
-ChatGPT GPTs 앱용 파일들
+Files for the ChatGPT GPTs app
 
-## 파일 구조
+## File Structure
 
 ```
 gpt/
-├── README.md                    # 이 파일
-├── GPT_INSTRUCTIONS_v2.6.md     # 최신! (Thorough + Tables)
-├── GPT_INSTRUCTIONS_v2.5.md     # 이전 버전
-├── GPT_INSTRUCTIONS_v2.4.md     # 이전 버전
-├── GPT_SYSTEM_PROMPT.md         # 상세 문서 (참고용)
-└── extractor.py                 # Python 헬퍼 (v2.6 - table 추출!)
+├── README.md                    # This file
+├── GPT_INSTRUCTIONS_v2.6.md     # Latest! (Thorough + Tables)
+├── GPT_INSTRUCTIONS_v2.5.md     # Previous version
+├── GPT_INSTRUCTIONS_v2.4.md     # Previous version
+├── GPT_SYSTEM_PROMPT.md         # Detailed documentation (reference)
+└── extractor.py                 # Python helper (v2.6 - table extraction!)
 ```
 
-## v2.6 설정 (최신 - Thorough + Tables)
+## v2.6 Setup (Latest - Thorough + Tables)
 
-### 1. Knowledge 업로드 파일
+### 1. Knowledge Upload Files
 ```
-extractor.py          # Python 헬퍼 (필수!)
+extractor.py          # Python helper (required!)
 maps/OBC_Vol1.json
 maps/OBC_Vol2.json
 maps/NBC2025.json
-... (필요한 JSON 파일들)
+... (required JSON files)
 ```
 
-### 2. GPT 설정 순서
+### 2. GPT Configuration Steps
 1. ChatGPT → Explore GPTs → Create
-2. Configure 탭
+2. Configure tab
 3. Name: `Canadian Building Code Navigator`
-4. Knowledge: `extractor.py` + JSON 파일들 업로드 (**v2.6 extractor.py 재업로드 필수!**)
-5. Code Interpreter: ✅ 체크
-6. Instructions: `GPT_INSTRUCTIONS_v2.6.md` 내용 복붙
+4. Knowledge: Upload `extractor.py` + JSON files (**Re-upload v2.6 extractor.py required!**)
+5. Code Interpreter: ✅ Check
+6. Instructions: Copy-paste contents of `GPT_INSTRUCTIONS_v2.6.md`
 7. Save → Anyone with link
 
-## 버전별 차이
+## Version Comparison
 
-| 버전 | Time Budget | Search | Tables | 속도 | 정확도 |
-|------|-------------|--------|--------|------|--------|
-| v2.0-2.1 | 없음 | 제한없음 | ❌ | 느림 | 에러 잦음 |
-| v2.2-2.3 | 없음 | 제한없음 | ❌ | 보통 | 높음 |
-| v2.4 | 없음 | 제한없음 | ❌ | 3분+ | 보통 |
-| v2.5 | 90초 | 1회 | ❌ | 56초 | 높음 (일부 놓침) |
-| **v2.6** | **120초** | **2회** | **✅** | **1-2분** | **매우 높음** |
+| Version | Time Budget | Search | Tables | Speed | Accuracy |
+|---------|-------------|--------|--------|-------|----------|
+| v2.0-2.1 | None | Unlimited | ❌ | Slow | Frequent errors |
+| v2.2-2.3 | None | Unlimited | ❌ | Medium | High |
+| v2.4 | None | Unlimited | ❌ | 3min+ | Medium |
+| v2.5 | 90s | 1x | ❌ | 56s | High (some misses) |
+| **v2.6** | **120s** | **2x** | **✅** | **1-2min** | **Very High** |
 
-## v2.6 핵심 개선 (최신)
+## v2.6 Key Improvements (Latest)
 
-### 1. Time Budget 완화 + 2-Phase Search
+### 1. Relaxed Time Budget + 2-Phase Search
 
-**문제점 (v2.5):**
-- 90초 Time Budget이 너무 촉박 → 정확한 검색 못 함
-- 1회 검색 제한 → 중요한 섹션 놓침 (예: W360x41 steel section)
+**Problem (v2.5):**
+- 90s Time Budget too tight → Unable to search accurately
+- 1x search limit → Missing important sections (e.g., W360x41 steel section)
 
-**해결책:**
-- Time Budget: 90초 → **120초 (2분)**
-- **2-Phase Search 전략**:
-  - Phase 1: 구체적 키워드 검색
-  - Phase 2: 결과 부족하면 broader 키워드로 재검색
+**Solution:**
+- Time Budget: 90s → **120s (2 min)**
+- **2-Phase Search Strategy**:
+  - Phase 1: Specific keyword search
+  - Phase 2: If insufficient results, re-search with broader keywords
   - "Better 2 min + accurate than 1 min + missing info"
 
 ```python
@@ -69,12 +69,12 @@ if len(results) < 3:
     results = results + results2
 ```
 
-### 2. 테이블 데이터 지원
+### 2. Table Data Support
 
-**Why:** AEC 전문가들이 테이블 데이터를 자주 필요로 함
+**Why:** AEC professionals frequently need table data
 - Live load tables, fire ratings, span tables, material properties
 
-**구현:**
+**Implementation:**
 ```python
 # Extract table from JSON (fast!)
 from extractor import extract_table
@@ -87,7 +87,7 @@ from extractor import extract_tables_batch
 tables = extract_tables_batch(data, ["4.1.5.3", "9.10.14.4"])
 ```
 
-**Output 예시:**
+**Output Example:**
 ```
 **NBC Table 4.1.5.3** - Live Loads on Floors (p.452)
 
@@ -98,52 +98,52 @@ tables = extract_tables_batch(data, ["4.1.5.3", "9.10.14.4"])
 Source: JSON (pre-indexed)
 ```
 
-**예상 효과:**
-- 속도: 56초 (v2.5 간단) → 1-2분 (v2.6 복잡)
-- 정확도: 높음 → **매우 높음** (놓치는 섹션 감소)
-- 테이블: ❌ → ✅ (1,200+ 테이블 지원)
+**Expected Results:**
+- Speed: 56s (v2.5 simple) → 1-2min (v2.6 complex)
+- Accuracy: High → **Very High** (fewer missed sections)
+- Tables: ❌ → ✅ (1,200+ tables supported)
 
-## 테스트
+## Testing
 
 ```
-질문 1 (간단 - baseline):
+Question 1 (Simple - baseline):
 "What is the guard height for stairs in OBC?"
-→ 60초 이내, 섹션 ID + 페이지 + PDF 인용
+→ Within 60s, Section ID + page + PDF citation
 
-질문 2 (복잡 - time budget test):
-"New Brunswick 20층 residential foundation, column sizing 기준?"
-→ 120초 이내, 4-6개 섹션 + PDF 인용
-→ 2-phase search 작동 확인
+Question 2 (Complex - time budget test):
+"New Brunswick 20-storey residential foundation, column sizing requirements?"
+→ Within 120s, 4-6 sections + PDF citation
+→ Verify 2-phase search operation
 
-질문 3 (follow-up - context retention):
-"column sizing w 360x41 사용가능?"
-→ 60초 이내
-→ "W360x41 not standard, suggest W360x39/44" 검증 확인
-→ 이전 답변 context 재사용
+Question 3 (Follow-up - context retention):
+"Can I use W360x41 for column sizing?"
+→ Within 60s
+→ Verify "W360x41 not standard, suggest W360x39/44"
+→ Reuse previous answer context
 
-질문 4 (테이블 - new feature):
+Question 4 (Table - new feature):
 "Show me NBC live load table for residential buildings"
-→ 60초 이내
-→ Table 4.1.5.3 markdown 표시
-→ Source: JSON 표시
+→ Within 60s
+→ Display Table 4.1.5.3 in markdown
+→ Show Source: JSON
 
-질문 5 (multi-table - batch test):
+Question 5 (Multi-table - batch test):
 "Compare fire resistance ratings for different construction types"
-→ 90초 이내
-→ 2-3개 테이블 markdown
-→ extract_tables_batch() 사용 확인
+→ Within 90s
+→ 2-3 tables in markdown
+→ Verify extract_tables_batch() usage
 
-확인 사항:
-✅ 2-phase search 작동 (필요시)
-✅ batch 추출 사용 (extract_sections_batch / extract_tables_batch)
-✅ > "..." 형식 인용
-✅ 테이블 markdown 표시
-✅ 마지막 후속 질문 유도
+Checklist:
+✅ 2-phase search working (when needed)
+✅ Batch extraction used (extract_sections_batch / extract_tables_batch)
+✅ > "..." citation format
+✅ Table markdown display
+✅ Follow-up question prompt at the end
 ```
 
-## 참고
+## Reference
 
-- 최신 Instructions: `GPT_INSTRUCTIONS_v2.6.md`
-- 상세 문서: `GPT_SYSTEM_PROMPT.md`
-- 버전 히스토리: v2.0 (bbox) → v2.3 (Section ID) → v2.5 (Batch) → v2.6 (Thorough + Tables)
-- 테이블 인프라: 1,200+ 테이블 indexed (NBC, OBC 등 전체 코드)
+- Latest Instructions: `GPT_INSTRUCTIONS_v2.6.md`
+- Detailed Documentation: `GPT_SYSTEM_PROMPT.md`
+- Version History: v2.0 (bbox) → v2.3 (Section ID) → v2.5 (Batch) → v2.6 (Thorough + Tables)
+- Table Infrastructure: 1,200+ tables indexed (NBC, OBC, and all codes)

@@ -114,8 +114,10 @@ If NOT using Thinking/Reasoning mode:
 ## NO PDF MODE
 
 If PDF not uploaded:
+- **FAST response** - no lengthy reasoning needed
+- Check files ONCE only - don't repeat searches
 - Section + Page from JSON ✅
-- Direct quotes ❌ (unavailable)
+- Direct quotes ❌ (skip Step 3 entirely)
 - Add note: `📄 Source: JSON map (no PDF attached)`
 
 ---

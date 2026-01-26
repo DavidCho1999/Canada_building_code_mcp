@@ -6,8 +6,9 @@ Canadian Building Code MCP Server
 import json
 import hashlib
 import sys
+import time
 from pathlib import Path
-from typing import List, Dict, Optional, Any
+from typing import List, Dict, Optional, Any, Tuple
 
 from mcp.server import Server
 from mcp.types import (
@@ -267,6 +268,9 @@ class BuildingCodeMCP:
         self.maps: Dict[str, Dict] = {}
         self.pdf_paths: Dict[str, str] = {}
         self.pdf_verified: Dict[str, bool] = {}
+        # Search history tracking for token efficiency hints
+        self.search_history: Dict[str, int] = {}  # {"query_fingerprint": count}
+        self.last_search_time: float = 0  # For auto-reset after inactivity
         self._load_maps()
 
     def _load_maps(self):
@@ -281,6 +285,86 @@ class BuildingCodeMCP:
                     self.maps[code] = data
             except Exception:
                 pass
+
+    def _get_query_fingerprint(self, query: str, code: Optional[str] = None) -> str:
+        """Generate a fingerprint for query similarity matching."""
+        # Normalize: lowercase, sort words
+        words = sorted(set(query.lower().split()))
+        base = " ".join(words)
+        if code:
+            base = f"{code}:{base}"
+        return base
+
+    def _find_similar_search(self, query: str, code: Optional[str] = None) -> Tuple[Optional[str], int]:
+        """Find if a similar search was done before. Returns (fingerprint, count) or (None, 0)."""
+        # Auto-reset after 30 minutes of inactivity
+        current_time = time.time()
+        if self.last_search_time > 0 and (current_time - self.last_search_time) > 1800:
+            self.search_history.clear()
+            _log("search_history: auto-reset after 30min inactivity")
+
+        self.last_search_time = current_time
+
+        # Get current query fingerprint
+        current_fp = self._get_query_fingerprint(query, code)
+
+        # Exact fingerprint match
+        if current_fp in self.search_history:
+            return current_fp, self.search_history[current_fp]
+
+        # Check for similar searches
+        current_words = set(query.lower().split())
+
+        for existing_fp, count in self.search_history.items():
+            # Only compare within same code context
+            if code:
+                if not existing_fp.startswith(f"{code}:"):
+                    continue
+                existing_query = existing_fp.split(":", 1)[1]
+            else:
+                if ":" in existing_fp:
+                    continue
+                existing_query = existing_fp
+
+            existing_words = set(existing_query.split())
+
+            # Method 1: Shared keyword check (if 50%+ words overlap, it's similar)
+            common_words = current_words & existing_words
+            if common_words:
+                # At least one significant shared word (not just "the", "a", etc.)
+                significant_common = [w for w in common_words if len(w) >= 4]
+                if significant_common:
+                    return existing_fp, count
+
+            # Method 2: Fuzzy match (60% threshold for building code terms)
+            if FUZZY_AVAILABLE:
+                if fuzz.ratio(existing_query, current_fp.split(":", 1)[-1] if ":" in current_fp else current_fp) >= 60:
+                    return existing_fp, count
+
+        return None, 0
+
+    def _record_search(self, query: str, code: Optional[str] = None) -> int:
+        """Record a search and return the count for this query pattern."""
+        existing_fp, count = self._find_similar_search(query, code)
+
+        if existing_fp:
+            # Increment existing
+            self.search_history[existing_fp] = count + 1
+            _log(f"search_history: similar to '{existing_fp}', count={count + 1}")
+            return count + 1
+        else:
+            # New query
+            fp = self._get_query_fingerprint(query, code)
+            self.search_history[fp] = 1
+            _log(f"search_history: new query '{fp}'")
+            return 1
+
+    def _clear_search_topic(self, query: str, code: Optional[str] = None):
+        """Clear a search topic from history (called when user gets a section)."""
+        existing_fp, _ = self._find_similar_search(query, code)
+        if existing_fp and existing_fp in self.search_history:
+            del self.search_history[existing_fp]
+            _log(f"search_history: cleared '{existing_fp}' (topic resolved)")
 
     def _add_mode_info(self, result: Dict, code: str) -> Dict:
         """Add mode status information to response."""
@@ -590,6 +674,38 @@ class BuildingCodeMCP:
             "total": len(results)
         }
 
+        # Track search history and add progressive hints
+        search_count = self._record_search(query, code)
+
+        if search_count == 2:
+            # 2nd similar search - gentle hint
+            response["search_hint"] = {
+                "count": f"{search_count}/5",
+                "message": "Similar search detected. If you found a relevant section, use get_section to get details."
+            }
+        elif search_count == 3:
+            # 3rd similar search - reminder
+            response["search_hint"] = {
+                "count": f"{search_count}/5",
+                "message": "3rd similar search. Consider using get_section on relevant results found so far."
+            }
+        elif search_count == 4:
+            # 4th similar search - warning
+            response["search_hint"] = {
+                "count": f"{search_count}/5",
+                "message": "4th similar search. If no clear answer yet, topic may not be specified in this code.",
+                "tip": "One more search before results are limited."
+            }
+        elif search_count >= 5:
+            # 5+ similar searches - limit results
+            limited_results = limited_results[:3]
+            response["results"] = limited_results
+            response["search_hint"] = {
+                "count": f"{search_count}/5 (limit reached)",
+                "message": "Search limit reached. Results limited to 3.",
+                "suggestion": "Conclude with findings or state 'not explicitly specified in this code'."
+            }
+
         # Add "Did you mean?" suggestion when no results
         if len(results) == 0:
             similar = self._suggest_similar_keywords(query, code)
@@ -604,11 +720,11 @@ class BuildingCodeMCP:
             response["search_features"] = ["synonyms", "fuzzy"] if FUZZY_AVAILABLE else ["synonyms"]
             if code:
                 response = self._add_mode_info(response, code)
-        elif len(results) > limit:
+        elif len(results) > limit and search_count < 5:
             response["hint"] = f"Showing {limit}/{len(results)}. Use limit param for more."
 
         # Log search results
-        _log(f"search: found {len(results)} results, returning {len(limited_results)}")
+        _log(f"search: found {len(results)} results, returning {len(limited_results)}, search_count={search_count}")
 
         return response
 
@@ -621,6 +737,13 @@ class BuildingCodeMCP:
             verbose: If True, include all metadata. Default False for token efficiency.
         """
         _log(f"get_section: id='{section_id}' code={code}")
+
+        # Clear search history for this code (user found what they were looking for)
+        keys_to_remove = [k for k in self.search_history if k.startswith(f"{code}:") or (code is None and ":" not in k)]
+        for key in keys_to_remove:
+            del self.search_history[key]
+        if keys_to_remove:
+            _log(f"search_history: cleared {len(keys_to_remove)} entries for code={code} (section retrieved)")
 
         if code not in self.maps:
             return {"error": f"Code not found: {code}"}

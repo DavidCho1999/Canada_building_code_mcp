@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "building-code-mcp"
-version = "1.3.0"
+version = "1.3.2"
 description = "MCP server for searching Canadian Building Codes (NBC, OBC, BCBC, etc.)"
 readme = "README.md"
 license = {text = "MIT"}
@@ -22,6 +22,7 @@ classifiers = [
 
 dependencies = [
     "mcp>=0.1.0",
+    "rapidfuzz>=3.0.0",
 ]
 
 [project.optional-dependencies]
