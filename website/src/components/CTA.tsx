@@ -5,28 +5,29 @@ import { useState } from 'react';
 import { SiAnthropic } from 'react-icons/si';
 
 export default function CTA() {
-  const [copied, setCopied] = useState(false);
-  const [copiedPip, setCopiedPip] = useState(false);
+  const [copiedInstall, setCopiedInstall] = useState(false);
+  const [copiedConfig, setCopiedConfig] = useState(false);
 
-  const pipCommand = 'pip install building-code-mcp';
+  const installCommand = 'curl -LsSf https://astral.sh/uv/install.sh | sh';
   const configCode = `{
   "mcpServers": {
     "building-code": {
-      "command": "building-code-mcp"
+      "command": "uvx",
+      "args": ["building-code-mcp"]
     }
   }
 }`;
 
-  const copyPipCommand = () => {
-    navigator.clipboard.writeText(pipCommand);
-    setCopiedPip(true);
-    setTimeout(() => setCopiedPip(false), 2000);
+  const copyInstallCommand = () => {
+    navigator.clipboard.writeText(installCommand);
+    setCopiedInstall(true);
+    setTimeout(() => setCopiedInstall(false), 2000);
   };
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(configCode);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    setCopiedConfig(true);
+    setTimeout(() => setCopiedConfig(false), 2000);
   };
 
   return (
@@ -72,33 +73,45 @@ export default function CTA() {
           </div>
 
           {/* Installation */}
-          <div className="max-w-md mx-auto mb-10 text-left">
+          <div className="max-w-lg mx-auto mb-10 text-left">
             <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-lg font-bold text-slate-900 mb-3">pip install</h3>
-              <div className="relative mb-4">
-                <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300">
-                  pip install building-code-mcp
+              {/* Step 1: Install uv */}
+              <div className="mb-5">
+                <h3 className="text-base font-bold text-slate-900 mb-2">
+                  <span className="inline-flex items-center justify-center w-5 h-5 bg-cyan-100 text-cyan-700 rounded-full text-xs font-bold mr-2">1</span>
+                  Install uv (if not installed)
+                </h3>
+                <div className="relative">
+                  <div className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
+                    curl -LsSf https://astral.sh/uv/install.sh | sh
+                  </div>
+                  <button
+                    onClick={copyInstallCommand}
+                    className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
+                  >
+                    {copiedInstall ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
                 </div>
-                <button
-                  onClick={copyPipCommand}
-                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
-                >
-                  {copiedPip ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
+                <p className="text-xs text-slate-400 mt-1.5">Windows: use PowerShell or Git Bash</p>
               </div>
-              <p className="text-sm text-slate-500 mb-2">
-                Add this to your MCP client config file:
-              </p>
-              <div className="relative">
-                <pre className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
-                  {configCode}
-                </pre>
-                <button
-                  onClick={copyToClipboard}
-                  className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
-                >
-                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
+
+              {/* Step 2: Add config */}
+              <div>
+                <h3 className="text-base font-bold text-slate-900 mb-2">
+                  <span className="inline-flex items-center justify-center w-5 h-5 bg-cyan-100 text-cyan-700 rounded-full text-xs font-bold mr-2">2</span>
+                  Add to MCP config
+                </h3>
+                <div className="relative">
+                  <pre className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
+                    {configCode}
+                  </pre>
+                  <button
+                    onClick={copyToClipboard}
+                    className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
+                  >
+                    {copiedConfig ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
               </div>
             </div>
           </div>
