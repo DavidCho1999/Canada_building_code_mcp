@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, Copy, Check } from 'lucide-react';
+import { Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 import { SiAnthropic } from 'react-icons/si';
 
@@ -71,48 +71,8 @@ export default function CTA() {
             </div>
           </div>
 
-          {/* Installation Options */}
-          <div className="relative grid md:grid-cols-2 gap-4 md:gap-8 mb-10 text-left">
-            {/* OR divider - Desktop (vertical line with glow) */}
-            <div className="hidden md:flex absolute left-1/2 top-0 bottom-0 -translate-x-1/2 z-10 flex-col items-center justify-center">
-              <div className="flex-1 w-px bg-gradient-to-b from-transparent via-cyan-300 to-cyan-400"></div>
-              <div className="relative my-3">
-                <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-md"></div>
-                <div className="relative w-12 h-12 bg-gradient-to-br from-cyan-50 to-white border-2 border-cyan-200 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-xs font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">OR</span>
-                </div>
-              </div>
-              <div className="flex-1 w-px bg-gradient-to-b from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-
-            {/* Option: Smithery */}
-            <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              <h3 className="text-lg font-bold text-slate-900 mb-3">Smithery (One-click)</h3>
-              <a
-                href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-slate-900 text-white px-4 py-3 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors w-full justify-center mb-3"
-              >
-                Install on Smithery
-                <ArrowRight className="w-4 h-4" />
-              </a>
-              <p className="text-sm text-slate-500">No manual config needed. Just click and install.</p>
-            </div>
-
-            {/* Mobile OR divider (horizontal line with glow) */}
-            <div className="flex md:hidden items-center justify-center gap-4 py-2">
-              <div className="flex-1 h-px bg-gradient-to-r from-transparent via-cyan-300 to-cyan-400"></div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-cyan-400/30 rounded-full blur-md"></div>
-                <div className="relative w-10 h-10 bg-gradient-to-br from-cyan-50 to-white border-2 border-cyan-200 rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-xs font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">OR</span>
-                </div>
-              </div>
-              <div className="flex-1 h-px bg-gradient-to-r from-cyan-400 via-cyan-300 to-transparent"></div>
-            </div>
-
-            {/* Option: pip install */}
+          {/* Installation */}
+          <div className="max-w-md mx-auto mb-10 text-left">
             <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
               <h3 className="text-lg font-bold text-slate-900 mb-3">pip install</h3>
               <div className="relative mb-4">
