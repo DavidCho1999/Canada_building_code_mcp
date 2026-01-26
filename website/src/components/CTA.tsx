@@ -5,23 +5,23 @@ import { useState } from 'react';
 import { SiAnthropic } from 'react-icons/si';
 
 export default function CTA() {
-  const [copiedInstall, setCopiedInstall] = useState(false);
+  const [copiedPip, setCopiedPip] = useState(false);
   const [copiedConfig, setCopiedConfig] = useState(false);
 
-  const installCommand = 'curl -LsSf https://astral.sh/uv/install.sh | sh';
+  const pipCommand = 'pip install building-code-mcp';
   const configCode = `{
   "mcpServers": {
     "building-code": {
-      "command": "uvx",
-      "args": ["building-code-mcp"]
+      "command": "python",
+      "args": ["-m", "building_code_mcp"]
     }
   }
 }`;
 
-  const copyInstallCommand = () => {
-    navigator.clipboard.writeText(installCommand);
-    setCopiedInstall(true);
-    setTimeout(() => setCopiedInstall(false), 2000);
+  const copyPipCommand = () => {
+    navigator.clipboard.writeText(pipCommand);
+    setCopiedPip(true);
+    setTimeout(() => setCopiedPip(false), 2000);
   };
 
   const copyToClipboard = () => {
@@ -75,24 +75,23 @@ export default function CTA() {
           {/* Installation */}
           <div className="max-w-lg mx-auto mb-10 text-left">
             <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
-              {/* Step 1: Install uv */}
+              {/* Step 1: pip install */}
               <div className="mb-5">
                 <h3 className="text-base font-bold text-slate-900 mb-2">
                   <span className="inline-flex items-center justify-center w-5 h-5 bg-cyan-100 text-cyan-700 rounded-full text-xs font-bold mr-2">1</span>
-                  Install uv (if not installed)
+                  Install
                 </h3>
                 <div className="relative">
-                  <div className="bg-slate-900 rounded-lg p-3 font-mono text-xs text-slate-300 overflow-x-auto">
-                    curl -LsSf https://astral.sh/uv/install.sh | sh
+                  <div className="bg-slate-900 rounded-lg p-3 font-mono text-sm text-slate-300">
+                    pip install building-code-mcp
                   </div>
                   <button
-                    onClick={copyInstallCommand}
+                    onClick={copyPipCommand}
                     className="absolute top-2 right-2 p-1.5 bg-slate-700 hover:bg-slate-600 rounded text-slate-300 transition-colors"
                   >
-                    {copiedInstall ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                    {copiedPip ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
                   </button>
                 </div>
-                <p className="text-xs text-slate-400 mt-1.5">Windows: use PowerShell or Git Bash</p>
               </div>
 
               {/* Step 2: Add config */}
