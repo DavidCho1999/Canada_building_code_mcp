@@ -1,6 +1,6 @@
 'use client';
 
-import { Copy, Check, FileText, Monitor } from 'lucide-react';
+import { Copy, Check, FileText, Monitor, ShoppingBag, Wrench } from 'lucide-react';
 import { useState } from 'react';
 import { SiAnthropic } from 'react-icons/si';
 
@@ -42,10 +42,13 @@ export default function CTA() {
           </h2>
 
           {/* Two-column: What You Need (left) + Setup Steps (right) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-10 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mt-8 mb-10 text-left">
             {/* ── Left: What You Need ── */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">What You Need</h3>
+              <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider">
+                <ShoppingBag className="w-4 h-4" />
+                What You Need
+              </h3>
 
               {/* Card 1: Building Code PDFs */}
               <div className="rounded-xl border border-slate-200 p-5 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
@@ -109,7 +112,10 @@ export default function CTA() {
 
             {/* ── Right: Setup Steps ── */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-sm font-semibold text-slate-500 uppercase tracking-wider">Setup Steps</h3>
+              <h3 className="flex items-center gap-2 text-sm font-semibold text-slate-500 uppercase tracking-wider">
+                <Wrench className="w-4 h-4" />
+                Setup Steps
+              </h3>
 
               <div className="bg-white rounded-xl p-5 border border-slate-200 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
                 {/* Step 1: pip install */}

@@ -115,7 +115,7 @@ export default function Hero() {
               </span>
             </div>
             <button
-              onClick={() => document.getElementById('mcp-server')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
               className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-3 md:px-4 py-2 rounded-xl text-xs md:text-sm font-medium hover:scale-105 transition-transform"
             >
               Search
@@ -131,10 +131,10 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <button
-            onClick={() => document.getElementById('mcp-server')?.scrollIntoView({ behavior: 'smooth' })}
+            onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-xl font-medium hover:scale-105 hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300"
           >
-            MCP Server
+            MCP Setup
             <ArrowRight className="w-4 h-4" />
           </button>
         </motion.div>
