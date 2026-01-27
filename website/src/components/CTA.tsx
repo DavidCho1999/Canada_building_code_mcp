@@ -1,6 +1,6 @@
 'use client';
 
-import { Copy, Check } from 'lucide-react';
+import { Copy, Check, FileText, Monitor } from 'lucide-react';
 import { useState } from 'react';
 import { SiAnthropic } from 'react-icons/si';
 
@@ -41,34 +41,67 @@ export default function CTA() {
             MCP Setup
           </h2>
 
-          {/* MCP Clients */}
-          <div className="mb-8">
-            <p className="text-slate-600 text-base mb-3">Works with <span className="font-semibold">Claude, Cursor, and more</span></p>
-            <div className="flex gap-3 text-sm justify-center flex-wrap">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
-                <SiAnthropic className="w-4 h-4 text-[#D4A27F]" />
-                Claude Desktop
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" fill="#000"/><path d="M7 8l4 4-4 4" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 16h4" stroke="#fff" strokeWidth="2" strokeLinecap="round"/></svg>
-                Cursor
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
-                <svg className="w-4 h-4" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#00D4AA"/><path d="M7 12l3-3v6l-3-3zm7-3l3 3-3 3v-6z" fill="#fff"/></svg>
-                Windsurf
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 text-slate-600 rounded-full border border-transparent hover:border-cyan-300 hover:bg-cyan-50 hover:text-cyan-700 transition-all duration-300 cursor-default whitespace-nowrap">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="#007ACC"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
-                VS Code
-              </span>
-              <a
-                href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-3 py-1.5 bg-slate-50 text-slate-500 rounded-full text-sm font-medium hover:bg-cyan-50 hover:text-cyan-600 transition-all duration-300"
-              >
-                +more
-              </a>
+          {/* What You Need */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-10 text-left">
+            {/* Card 1: Building Code PDFs */}
+            <div className="rounded-xl border border-slate-200 p-5 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-9 h-9 rounded-lg bg-amber-50 flex items-center justify-center">
+                  <FileText className="w-5 h-5 text-amber-600" />
+                </div>
+                <h3 className="font-bold text-slate-900">Building Code PDFs</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-3">
+                Purchase official PDFs from{' '}
+                <a
+                  href="https://nrc.canada.ca/en/certifications-evaluations-standards/codes-canada/codes-canada-publications"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-cyan-600 hover:underline font-medium"
+                >
+                  NRC Publications
+                </a>
+              </p>
+              <p className="text-xs text-slate-400">
+                We provide coordinates only. Text is extracted from YOUR local PDF (copyright safe).
+              </p>
+            </div>
+
+            {/* Card 2: MCP Client */}
+            <div className="rounded-xl border border-slate-200 p-5 hover:border-cyan-200 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-center gap-2 mb-3">
+                <div className="w-9 h-9 rounded-lg bg-blue-50 flex items-center justify-center">
+                  <Monitor className="w-5 h-5 text-blue-600" />
+                </div>
+                <h3 className="font-bold text-slate-900">MCP Client</h3>
+              </div>
+              <p className="text-sm text-slate-600 mb-3">Any MCP-compatible AI client</p>
+              <div className="flex flex-wrap gap-2 text-xs">
+                <span className="inline-flex items-center gap-1 px-2 py-1 bg-slate-100 text-slate-600 rounded-full">
+                  <SiAnthropic className="w-3 h-3 text-[#D4A27F]" />
+                  Claude Desktop
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 py-1 bg-slate-100 text-slate-600 rounded-full">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="18" height="18" rx="2" fill="#000"/><path d="M7 8l4 4-4 4" stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"/><path d="M13 16h4" stroke="#fff" strokeWidth="2" strokeLinecap="round"/></svg>
+                  Cursor
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 py-1 bg-slate-100 text-slate-600 rounded-full">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#00D4AA"/><path d="M7 12l3-3v6l-3-3zm7-3l3 3-3 3v-6z" fill="#fff"/></svg>
+                  Windsurf
+                </span>
+                <span className="inline-flex items-center gap-1 px-2 py-1 bg-slate-100 text-slate-600 rounded-full">
+                  <svg className="w-3 h-3" viewBox="0 0 24 24" fill="#007ACC"><path d="M23.15 2.587L18.21.21a1.494 1.494 0 0 0-1.705.29l-9.46 8.63-4.12-3.128a.999.999 0 0 0-1.276.057L.327 7.261A1 1 0 0 0 .326 8.74L3.899 12 .326 15.26a1 1 0 0 0 .001 1.479L1.65 17.94a.999.999 0 0 0 1.276.057l4.12-3.128 9.46 8.63a1.492 1.492 0 0 0 1.704.29l4.942-2.377A1.5 1.5 0 0 0 24 20.06V3.939a1.5 1.5 0 0 0-.85-1.352zm-5.146 14.861L10.826 12l7.178-5.448v10.896z"/></svg>
+                  VS Code
+                </span>
+                <a
+                  href="https://smithery.ai/server/davidcho/ca-building-code-mcp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-2 py-1 bg-slate-50 text-slate-400 rounded-full hover:bg-cyan-50 hover:text-cyan-600 transition-all duration-300"
+                >
+                  +more
+                </a>
+              </div>
             </div>
           </div>
 
