@@ -12,8 +12,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <PipelineFlow />
         <Comparison />
+        <PipelineFlow />
         <CTA />
         <CodeList />
       </main>
