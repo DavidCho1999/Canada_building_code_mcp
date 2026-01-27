@@ -6,7 +6,6 @@ import { Menu, X, Github, Workflow } from 'lucide-react';
 import clsx from 'clsx';
 
 const navLinks = [
-  { id: 'chatgpt', label: 'Get Started' },
   { id: 'how-it-works', label: 'MCP Setup' },
   { id: 'codes', label: 'Supported Codes' },
 ];
