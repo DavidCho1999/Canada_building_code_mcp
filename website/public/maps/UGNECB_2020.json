@@ -1,0 +1,4837 @@
+{
+  "code": "UGNECB",
+  "version": "2020",
+  "document_type": "guide",
+  "generated": "2026-01-22T14:55:41.614465",
+  "source_pdf": {
+    "filename": "UGNECB_2020p1.2024-10-29.pdf"
+  },
+  "sections": [
+    {
+      "id": "Part3-Article3.1.1.1.",
+      "title": "Scope (Article 3.1.1.1.)",
+      "page": 10,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 597.977,
+        "r": 222.655,
+        "b": 587.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "envelope",
+        "air",
+        "space",
+        "necb",
+        "transfer",
+        "heat",
+        "through",
+        "components",
+        "separate",
+        "conditioned",
+        "important",
+        "energy",
+        "addresses",
+        "establishes"
+      ]
+    },
+    {
+      "id": "Part3-Article3.1.1.2.",
+      "title": "Application (Article 3.1.1.2.)",
+      "page": 10,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 447.977,
+        "r": 256.565,
+        "b": 437.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "requirements",
+        "apply",
+        "buildings",
+        "systems",
+        "necb",
+        "new",
+        "additions",
+        "equipped",
+        "space-conditioning",
+        "provisions",
+        "future",
+        "installation",
+        "heating",
+        "cooling",
+        "system"
+      ]
+    },
+    {
+      "id": "Part3-Article3.1.1.3.",
+      "title": "Compliance (Article 3.1.1.3.)",
+      "page": 10,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 363.977,
+        "r": 259.233,
+        "b": 353.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "compliance",
+        "necb",
+        "three",
+        "paths",
+        "path",
+        "prescriptive",
+        "performance",
+        "apply",
+        "requirements",
+        "building",
+        "achieved",
+        "one",
+        "trade-off",
+        "allow",
+        "designers"
+      ]
+    },
+    {
+      "id": "Part3-Article3.1.1.5.",
+      "title": "Thermal Characteristics of Building Assemblies (Article 3.1.1.5.)",
+      "page": 10,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 257.957,
+        "r": 494.752,
+        "b": 247.163,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "thermal",
+        "heat",
+        "building",
+        "material",
+        "standard",
+        "envelope",
+        "through",
+        "properties",
+        "characteristics",
+        "materials",
+        "testing",
+        "accordance",
+        "standards",
+        "where",
+        "particular"
+      ]
+    },
+    {
+      "id": "Part3",
+      "title": "Part 3",
+      "page": 10,
+      "level": "part",
+      "bbox": {
+        "l": 294.72,
+        "t": 719.197,
+        "r": 565.969,
+        "b": 655.359,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "thermal",
+        "through",
+        "heat",
+        "assemblies",
+        "envelope",
+        "zone",
+        "necb",
+        "energy",
+        "overall",
+        "transmittance",
+        "hdd",
+        "resistance",
+        "air",
+        "location"
+      ]
+    },
+    {
+      "id": "Part3-Accounting-for-Thermal-Bridging-Elements-Sentence-",
+      "title": "Accounting for Thermal Bridging Elements (Sentence 3.1.1.5.(5) and Article 3.1.1.7.)",
+      "page": 12,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 599.957,
+        "r": 522.767,
+        "b": 575.181,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "thermal",
+        "transmittance",
+        "building",
+        "bridging",
+        "values",
+        "guide",
+        "assembly",
+        "envelope",
+        "assemblies",
+        "details",
+        "betb",
+        "necb",
+        "heat",
+        "linear",
+        "point"
+      ]
+    },
+    {
+      "id": "Part3-Article3.1.1.7.",
+      "title": "Calculation of Overall Thermal Transmittance (Article 3.1.1.7.)",
+      "page": 13,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.7,
+        "t": 461.597,
+        "r": 457.186,
+        "b": 450.803,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "building",
+        "envelope",
+        "u-value",
+        "opaque",
+        "assemblies",
+        "credit",
+        "space",
+        "thermal",
+        "spaces",
+        "thorough",
+        "understanding",
+        "methods",
+        "used",
+        "determining"
+      ]
+    },
+    {
+      "id": "Part3-Example3-1",
+      "title": "Example 3-1 - Maximum Overall Thermal Transmittance of an Exterior Above-Ground Opaque Wall Protected by an Enclosed Unconditioned Space",
+      "page": 14,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 540.226,
+        "b": 696.123,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "assembly",
+        "rsi",
+        "paragraph",
+        "values",
+        "method",
+        "thermal",
+        "u-value",
+        "heat",
+        "value",
+        "assemblies",
+        "wall",
+        "building",
+        "according",
+        "flow"
+      ]
+    },
+    {
+      "id": "Part3-U-value-Calculation-for-Building-Assemblies-with-C",
+      "title": "U-value Calculation for Building Assemblies with Continuous Insulation - Isothermal Planes Method",
+      "page": 15,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.703,
+        "t": 440.525,
+        "r": 510.798,
+        "b": 420.537,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "assembly",
+        "method",
+        "u-value",
+        "isothermal",
+        "planes",
+        "interior",
+        "exterior",
+        "air",
+        "roof",
+        "where",
+        "building",
+        "which",
+        "flat",
+        "thermal",
+        "resistances"
+      ]
+    },
+    {
+      "id": "Part3-Example3-2",
+      "title": "Example 3-2 - Floor: Insulated Concrete Slab-on-Grade",
+      "page": 16,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 91.74,
+        "t": 464.358,
+        "r": 310.193,
+        "b": 455.042,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "interior",
+        "rsi",
+        "direction",
+        "heat",
+        "flow",
+        "concrete",
+        "radiant",
+        "heating",
+        "air",
+        "film",
+        "assembly",
+        "materials",
+        "overall",
+        "thermal",
+        "transmittance"
+      ]
+    },
+    {
+      "id": "Part3-Example3-3",
+      "title": "Example 3-3 - Roof: Flat Roof (4-ply built-up roofing (BUR) and steel deck)",
+      "page": 17,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 361.171,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "insulation",
+        "assembly",
+        "interior",
+        "air",
+        "exterior",
+        "rsi",
+        "roof",
+        "thermal",
+        "direction",
+        "heat",
+        "flow",
+        "ply",
+        "deck",
+        "film",
+        "materials"
+      ]
+    },
+    {
+      "id": "Part3-Example3-5",
+      "title": "Example 3-5 - Roof: Flat Roof (protected membrane and pre-cast concrete deck)",
+      "page": 19,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 384.327,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "assembly",
+        "exterior",
+        "air",
+        "interior",
+        "rsi",
+        "direction",
+        "heat",
+        "flow",
+        "membrane",
+        "pre-cast",
+        "concrete",
+        "deck",
+        "film",
+        "roof",
+        "materials"
+      ]
+    },
+    {
+      "id": "Part3-U-value-Calculation-for-Wood-frame-Construction-Is",
+      "title": "U-value Calculation for Wood-frame Construction - Isothermal Planes and Parallel Path Calculation Method",
+      "page": 20,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 716.497,
+        "r": 548.223,
+        "b": 696.509,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "method",
+        "assembly",
+        "parallel",
+        "path",
+        "portion",
+        "isothermal",
+        "planes",
+        "framing",
+        "thermal",
+        "using",
+        "resistance",
+        "through",
+        "cavity",
+        "rsi",
+        "u-value"
+      ]
+    },
+    {
+      "id": "Part3-Example3-6",
+      "title": "Example 3-6 - Roof: Attic-Type Wood Truss",
+      "page": 21,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 239.937,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "exterior",
+        "air",
+        "interior",
+        "rsi",
+        "wood",
+        "assembly",
+        "insulation",
+        "direction",
+        "heat",
+        "flow",
+        "film",
+        "framing",
+        "overall",
+        "thermal",
+        "transmittance"
+      ]
+    },
+    {
+      "id": "Part3-Example3-8",
+      "title": "Example 3-8 - Wall: Wall in Contact with Ground (concrete wall with wood framing)",
+      "page": 23,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 393.376,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "wood",
+        "framing",
+        "interior",
+        "rsi",
+        "direction",
+        "heat",
+        "flow",
+        "concrete",
+        "wall",
+        "ground",
+        "air",
+        "exterior",
+        "assembly",
+        "overall",
+        "thermal"
+      ]
+    },
+    {
+      "id": "Part3-U-value-Calculation-for-Metal-frame-Construction-V",
+      "title": "U-value Calculation for Metal-frame Construction - Variation on the Isothermal Planes Method",
+      "page": 24,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 716.497,
+        "r": 543.425,
+        "b": 696.509,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "framing",
+        "thermal",
+        "assembly",
+        "rsi",
+        "insulation",
+        "assemblies",
+        "effective",
+        "air",
+        "metal-frame",
+        "used",
+        "portion",
+        "resistance",
+        "tables",
+        "values",
+        "heat"
+      ]
+    },
+    {
+      "id": "Part3-U-value-Calculation-for-Masonry-or-Concrete-Wall-C",
+      "title": "U-value Calculation for Masonry or Concrete Wall Construction",
+      "page": 27,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.706,
+        "t": 482.521,
+        "r": 391.621,
+        "b": 473.571,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "concrete",
+        "units",
+        "assembly",
+        "method",
+        "framing",
+        "use",
+        "cast-in-place",
+        "masonry",
+        "without",
+        "construction",
+        "wood",
+        "u-value",
+        "uses",
+        "isothermal",
+        "planes"
+      ]
+    },
+    {
+      "id": "Part3-Example3-10",
+      "title": "Example 3-10 - Wall: EIFS over Cast-in-Place Concrete Wall",
+      "page": 28,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 327.014,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "eifs",
+        "air",
+        "shows",
+        "direction",
+        "heat",
+        "flow",
+        "concrete",
+        "wall",
+        "interior",
+        "film",
+        "exterior",
+        "rsi",
+        "clear",
+        "field",
+        "assembly"
+      ]
+    },
+    {
+      "id": "Part3-Prescriptive-Path-Method-of-Compliance-Section-32",
+      "title": "Prescriptive Path Method of Compliance (Section 3.2.)",
+      "page": 28,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 277.03700000000003,
+        "r": 428.184,
+        "b": 266.24299999999994,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "thermal",
+        "envelope",
+        "insulation",
+        "requirements",
+        "assemblies",
+        "performance",
+        "materials",
+        "components",
+        "air",
+        "criteria",
+        "resistance",
+        "transfer",
+        "prescriptive",
+        "path"
+      ]
+    },
+    {
+      "id": "Part3-Article3.2.1.3.",
+      "title": "Spaces Heated to Different Temperatures (Article 3.2.1.3.)",
+      "page": 29,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.7,
+        "t": 528.797,
+        "r": 430.375,
+        "b": 518.003,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "design",
+        "temperatures",
+        "temperature",
+        "used",
+        "necb",
+        "heating",
+        "outdoor",
+        "winter",
+        "provides",
+        "equation",
+        "building",
+        "heat",
+        "system",
+        "likely",
+        "january"
+      ]
+    },
+    {
+      "id": "Part3-Example3-11",
+      "title": "Example 3-11 - Maximum Overall Thermal Transmittance of Assemblies Separating Spaces Heated to Different Temperatures (Δ > 10°C)",
+      "page": 29,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 67.74,
+        "t": 319.158,
+        "r": 501.864,
+        "b": 298.863,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "warehouse",
+        "office",
+        "necb",
+        "wall",
+        "maximum",
+        "food",
+        "winnipeg",
+        "space",
+        "maintained",
+        "according",
+        "zone",
+        "overall",
+        "thermal",
+        "transmittance",
+        "u-value"
+      ]
+    },
+    {
+      "id": "Part3-Article3.2.1.4.",
+      "title": "Allowable Fenestration and Door Area (Article 3.2.1.4.)",
+      "page": 30,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 717.976,
+        "r": 431.678,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "fdwr",
+        "hdd",
+        "area",
+        "fenestration",
+        "door",
+        "building",
+        "maximum",
+        "allowable",
+        "vertical",
+        "gross",
+        "wall",
+        "ratio",
+        "based",
+        "location",
+        "locations"
+      ]
+    },
+    {
+      "id": "Part3-Example3-12",
+      "title": "Example 3-12 - Calculating Maximum Allowable FDWR",
+      "page": 30,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 91.74,
+        "t": 304.458,
+        "r": 306.566,
+        "b": 295.142,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "hdd",
+        "necb",
+        "flin",
+        "flon",
+        "manitoba",
+        "fdwr",
+        "value",
+        "particular",
+        "location",
+        "found",
+        "c-1",
+        "calculated",
+        "using",
+        "equation",
+        "maximum"
+      ]
+    },
+    {
+      "id": "Part3-Example3-13",
+      "title": "Example 3-13 - Determining FDWR Compliance with the Prescriptive Requirements",
+      "page": 31,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 393.984,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "fdwr",
+        "prescriptive",
+        "area",
+        "gross",
+        "proposed",
+        "wide",
+        "high",
+        "two",
+        "necb",
+        "requirements",
+        "maximum",
+        "allowable",
+        "wall",
+        "calculated"
+      ]
+    },
+    {
+      "id": "Part3-Thermal-Characteristics-of-Fenestration-and-Doors-",
+      "title": "Thermal Characteristics of Fenestration and Doors (Articles 3.2.2.3. and 3.2.2.4.)",
+      "page": 32,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 717.976,
+        "r": 521.746,
+        "b": 693.141,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "fenestration",
+        "building",
+        "doors",
+        "vertical",
+        "u-value",
+        "requirements",
+        "glass",
+        "shgc",
+        "assemblies",
+        "heat",
+        "zone",
+        "locations",
+        "energy",
+        "performance",
+        "their"
+      ]
+    },
+    {
+      "id": "Part3-Thermal-Requirements-for-Semi-Heated-Buildings-Sub",
+      "title": "Thermal Requirements for Semi-Heated Buildings (Subsections 3.2.2. and 3.2.3.)",
+      "page": 33,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.7,
+        "t": 263.957,
+        "r": 503.905,
+        "b": 239.18100000000004,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "semi-heated",
+        "buildings",
+        "below",
+        "zone",
+        "standard",
+        "hdd",
+        "values",
+        "climate",
+        "envelope",
+        "thermal",
+        "assemblies",
+        "necb",
+        "overall",
+        "transmittance"
+      ]
+    },
+    {
+      "id": "Part3-Air-Leakage-Subsection-324",
+      "title": "Air Leakage (Subsection 3.2.4.)",
+      "page": 35,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.7,
+        "t": 717.976,
+        "r": 254.137,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "leakage",
+        "building",
+        "envelope",
+        "necb",
+        "assemblies",
+        "test",
+        "testing",
+        "barrier",
+        "standard",
+        "doors",
+        "requires",
+        "accordance",
+        "rate",
+        "astm"
+      ]
+    },
+    {
+      "id": "Part3-Simple-Trade-off-Path-Method-Subsection-331",
+      "title": "Simple Trade-off Path Method (Subsection 3.3.1.)",
+      "page": 36,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 71.7,
+        "t": 559.457,
+        "r": 393.046,
+        "b": 548.663,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "path",
+        "above-ground",
+        "assemblies",
+        "trade-off",
+        "proposed",
+        "simple",
+        "u-values",
+        "prescribed",
+        "fdwr",
+        "prescriptive",
+        "assembly",
+        "maximum",
+        "allowable",
+        "method"
+      ]
+    },
+    {
+      "id": "Part3-Example3-15",
+      "title": "Example 3-15 - Simple Trade-off Path Calculation for Community Centre (Continued)",
+      "page": 38,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 422.43,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "fdwr",
+        "winnipeg",
+        "according",
+        "proposed",
+        "necb",
+        "hdd",
+        "zone",
+        "using",
+        "prescriptive",
+        "maximum",
+        "allowable",
+        "requirements",
+        "u-value",
+        "one-storey"
+      ]
+    },
+    {
+      "id": "Part3-Prescriptive-Path-Reference-Building",
+      "title": "Prescriptive Path (Reference Building)",
+      "page": 38,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 242.647,
+        "t": 411.506,
+        "r": 392.765,
+        "b": 402.19,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "vertical",
+        "fenestration",
+        "fdwr",
+        "trade-off",
+        "proposed",
+        "using",
+        "doors",
+        "simple",
+        "path",
+        "u-value",
+        "note",
+        "sum",
+        "area",
+        "ratios"
+      ]
+    },
+    {
+      "id": "Part3-Option-1-Simple-Trade-off-Path-Proposed-Building",
+      "title": "Option 1 - Simple Trade-off Path (Proposed Building)",
+      "page": 39,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 189.48,
+        "t": 697.46,
+        "r": 397.923,
+        "b": 688.144,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "u-values",
+        "vertical",
+        "fenestration",
+        "doors",
+        "designer",
+        "also",
+        "use",
+        "combination",
+        "measures",
+        "lower",
+        "u-value",
+        "proposed",
+        "building",
+        "modifying",
+        "walls"
+      ]
+    },
+    {
+      "id": "Part3-Example3-16",
+      "title": "Example 3-16 - Simple Trade-off Path Calculation for Warehouse",
+      "page": 38,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 91.74,
+        "t": 514.518,
+        "r": 345.245,
+        "b": 505.202,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "fdwr",
+        "vertical",
+        "proposed",
+        "maximum",
+        "trade-off",
+        "fenestration",
+        "doors",
+        "walls",
+        "allowable",
+        "u-value",
+        "winnipeg",
+        "designer",
+        "performing",
+        "using"
+      ]
+    },
+    {
+      "id": "Part3-Performance-Path-Method-of-Compliance-Section-34",
+      "title": "Performance Path Method of Compliance (Section 3.4.)",
+      "page": 39,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.7,
+        "t": 411.017,
+        "r": 409.428,
+        "b": 400.223,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "envelope",
+        "necb",
+        "performance",
+        "path",
+        "option",
+        "described",
+        "using",
+        "air",
+        "leakage",
+        "rate",
+        "pressure",
+        "differential",
+        "hvac",
+        "method"
+      ]
+    },
+    {
+      "id": "Part3-Tables-to-be-used-with-Examples-3-1-to-3-10",
+      "title": "Tables to be used with Examples 3-1 to 3-10",
+      "page": 39,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 47.7,
+        "t": 271.996,
+        "r": 339.974,
+        "b": 261.203,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "values",
+        "materials",
+        "obtained",
+        "thermal",
+        "resistance",
+        "tables",
+        "rsi",
+        "thickness",
+        "material",
+        "manufacturers",
+        "product",
+        "data",
+        "given",
+        "generic",
+        "approximate"
+      ]
+    },
+    {
+      "id": "Part3-Thermal-Resistance-Values-of-Common-Insulation-Mat",
+      "title": "Thermal Resistance Values of Common Insulation Materials: Blanket and Batt Insulation",
+      "page": 40,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 145.024,
+        "t": 293.359,
+        "r": 490.409,
+        "b": 284.043,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part3-Table-3-8-Continued",
+      "title": "Table 3-8 (Continued)",
+      "page": 47,
+      "level": "subsection",
+      "parent_id": "Part3",
+      "bbox": {
+        "l": 251.16,
+        "t": 715.458,
+        "r": 336.251,
+        "b": 706.142,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "thermal",
+        "resistance",
+        "value",
+        "values",
+        "wood",
+        "air",
+        "assembly",
+        "materials",
+        "species",
+        "listed",
+        "thickness",
+        "rsi",
+        "included",
+        "calculation",
+        "installed"
+      ]
+    },
+    {
+      "id": "Part4-Article4.1.1.1.",
+      "title": "Scope (Article 4.1.1.1.)",
+      "page": 50,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 597.977,
+        "r": 222.655,
+        "b": 587.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "requirements",
+        "necb",
+        "interior",
+        "exterior",
+        "systems",
+        "health",
+        "building",
+        "power",
+        "controls",
+        "exempt",
+        "authority",
+        "having",
+        "jurisdiction",
+        "applies"
+      ]
+    },
+    {
+      "id": "Part4-Article4.1.1.3.",
+      "title": "Compliance (Article 4.1.1.3.)",
+      "page": 50,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 422.657,
+        "r": 259.233,
+        "b": 411.863,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "necb",
+        "compliance",
+        "path",
+        "interior",
+        "which",
+        "requirements",
+        "exterior",
+        "building",
+        "paths",
+        "approach",
+        "power",
+        "show",
+        "a-4",
+        "achieved"
+      ]
+    },
+    {
+      "id": "Part4-Prescriptive-Path-Section-42",
+      "title": "Prescriptive Path (Section 4.2.)",
+      "page": 50,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 244.87699999999995,
+        "r": 277.247,
+        "b": 234.08299999999997,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "requirements",
+        "energy",
+        "buildings",
+        "bulbs",
+        "they",
+        "safety",
+        "prescriptive",
+        "path",
+        "adapted",
+        "contained",
+        "ansi",
+        "ashrae",
+        "ies",
+        "standard"
+      ]
+    },
+    {
+      "id": "Part4-Interior-Lighting-Power-Subsection-421",
+      "title": "Interior Lighting Power (Subsection 4.2.1.)",
+      "page": 50,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.706,
+        "t": 93.09799999999996,
+        "r": 304.533,
+        "b": 84.149,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "interior",
+        "power",
+        "building",
+        "allowance",
+        "design",
+        "complies",
+        "necb",
+        "prescriptive",
+        "requirements",
+        "installed",
+        "exceed",
+        "determined",
+        "using",
+        "area"
+      ]
+    },
+    {
+      "id": "Part4",
+      "title": "Part 4",
+      "page": 50,
+      "level": "part",
+      "bbox": {
+        "l": 294.72,
+        "t": 719.197,
+        "r": 565.969,
+        "b": 655.359,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "method",
+        "lighting",
+        "space-by-space",
+        "building",
+        "area",
+        "interior",
+        "power",
+        "how",
+        "provides",
+        "typical",
+        "average",
+        "whereas",
+        "detailed",
+        "approach",
+        "calculating"
+      ]
+    },
+    {
+      "id": "Part4-Example4-1",
+      "title": "Example 4-1 - Interior Lighting Power (Continued)",
+      "page": 53,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 264.657,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "space",
+        "lighting",
+        "washroom",
+        "design",
+        "meeting",
+        "room",
+        "lobby",
+        "open",
+        "office",
+        "interior",
+        "dimensions",
+        "power",
+        "per",
+        "calculation",
+        "uses"
+      ]
+    },
+    {
+      "id": "Part4-Lighting-Power-Design",
+      "title": "Lighting Power Design",
+      "page": 52,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 273.177,
+        "t": 667.463,
+        "r": 362.246,
+        "b": 658.147,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part4-Building-Area-Method-4215",
+      "title": "Building Area Method (4.2.1.5.)",
+      "page": 52,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 99.72,
+        "t": 530.418,
+        "r": 220.68,
+        "b": 521.102,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "area",
+        "office",
+        "building",
+        "lighting",
+        "power",
+        "space",
+        "method",
+        "used",
+        "interior",
+        "allowance",
+        "gross",
+        "lighted",
+        "necb",
+        "entire",
+        "identified"
+      ]
+    },
+    {
+      "id": "Part4-Space-by-Space-Method-4216",
+      "title": "Space-by-Space Method (4.2.1.6.)",
+      "page": 52,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 99.72,
+        "t": 330.078,
+        "r": 230.079,
+        "b": 320.762,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "method",
+        "although",
+        "space",
+        "meets",
+        "criteria",
+        "apply",
+        "building",
+        "area",
+        "space-by-space",
+        "also",
+        "used",
+        "whereby",
+        "lighting",
+        "power",
+        "allowance"
+      ]
+    },
+    {
+      "id": "Part4-Lighting-Power-Allowance-Using-the-Space-by-Space-",
+      "title": "Lighting Power Allowance Using the Space-by-Space Method",
+      "page": 52,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 197.997,
+        "t": 270.08400000000006,
+        "r": 437.418,
+        "b": 260.76800000000003,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "interior",
+        "lighting",
+        "power",
+        "allowance",
+        "using",
+        "space-by-space",
+        "method"
+      ]
+    },
+    {
+      "id": "Part4-Conclusion",
+      "title": "Conclusion",
+      "page": 74,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 99.72,
+        "t": 480.258,
+        "r": 144.159,
+        "b": 470.942,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "power",
+        "method",
+        "interior",
+        "building",
+        "area",
+        "installed",
+        "design",
+        "space-by-space",
+        "allowance",
+        "space",
+        "meeting",
+        "room",
+        "total",
+        "using"
+      ]
+    },
+    {
+      "id": "Part4-Interior-Lighting-Controls-Subsection-422",
+      "title": "Interior Lighting Controls (Subsection 4.2.2.)",
+      "page": 53,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 47.7,
+        "t": 386.978,
+        "r": 292.012,
+        "b": 378.028,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "necb",
+        "requirements",
+        "controls",
+        "interior",
+        "space",
+        "prescriptive",
+        "path",
+        "also",
+        "defines",
+        "reflect",
+        "direction",
+        "current",
+        "technologies",
+        "practices"
+      ]
+    },
+    {
+      "id": "Part4-Example4-2",
+      "title": "Example 4-2 - Interior Lighting Controls (Continued)",
+      "page": 55,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 274.073,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "office",
+        "space",
+        "design",
+        "sidelighted",
+        "area",
+        "installed",
+        "control",
+        "next",
+        "sensors",
+        "turn",
+        "lights",
+        "when",
+        "day",
+        "designer"
+      ]
+    },
+    {
+      "id": "Part4-Compliance-of-Lighting-Power",
+      "title": "Compliance of Lighting Power",
+      "page": 55,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 75.719,
+        "t": 689.48,
+        "r": 194.322,
+        "b": 680.164,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "power",
+        "necb",
+        "interior",
+        "according",
+        "density",
+        "space",
+        "type",
+        "office",
+        "open",
+        "plan",
+        "limited",
+        "maximum",
+        "allowance",
+        "calculated"
+      ]
+    },
+    {
+      "id": "Part4-Compliance-of-Lighting-Controls",
+      "title": "Compliance of Lighting Controls",
+      "page": 55,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 75.721,
+        "t": 597.443,
+        "r": 203.703,
+        "b": 588.127,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "interior",
+        "necb",
+        "proposed",
+        "design",
+        "open",
+        "office",
+        "space",
+        "compares",
+        "control",
+        "requirements",
+        "stated",
+        "shown",
+        "noted",
+        "above"
+      ]
+    },
+    {
+      "id": "Part4-Article4.2.2.2.",
+      "title": "Lighting Controls in Storage Garages (Article 4.2.2.2.)",
+      "page": 56,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 717.976,
+        "r": 424.939,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "zone",
+        "necb",
+        "storage",
+        "requirements",
+        "control",
+        "garages",
+        "stated",
+        "garage",
+        "stair",
+        "zones",
+        "reduce",
+        "aligned",
+        "corresponding",
+        "ansi"
+      ]
+    },
+    {
+      "id": "Part4-Article4.2.2.3.",
+      "title": "Determination of Primary and Secondary Sidelighted Areas (Article 4.2.2.3.)",
+      "page": 56,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 206.957,
+        "r": 563.725,
+        "b": 196.163,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "areas",
+        "primary",
+        "secondary",
+        "sidelighted",
+        "daylighting",
+        "necb",
+        "calculation",
+        "implementing",
+        "strategies",
+        "reduces",
+        "energy",
+        "use",
+        "interior",
+        "lighting",
+        "control"
+      ]
+    },
+    {
+      "id": "Part4-Example4-4",
+      "title": "Example 4-4 - Calculation of primary and secondary sidelighted areas (Continued)",
+      "page": 58,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 415.565,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "sidelighted",
+        "primary",
+        "windows",
+        "width",
+        "space",
+        "since",
+        "secondary",
+        "office",
+        "height",
+        "there",
+        "obstructions",
+        "depth",
+        "area",
+        "areas",
+        "spaces"
+      ]
+    },
+    {
+      "id": "Part4-Article4.2.2.4.",
+      "title": "Determination of Daylighted Area Under Roof Monitors (Article 4.2.2.4.)",
+      "page": 58,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 362.417,
+        "r": 538.929,
+        "b": 351.623,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "criteria",
+        "daylighted",
+        "area",
+        "roof",
+        "monitors",
+        "necb",
+        "how",
+        "calculate",
+        "aligned",
+        "corresponding",
+        "ansi",
+        "ashrae",
+        "ies",
+        "which",
+        "facilitates"
+      ]
+    },
+    {
+      "id": "Part4-Article4.2.2.5.",
+      "title": "Determination of Daylighted Area Under Skylights (Article 4.2.2.5.)",
+      "page": 59,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 47.7,
+        "t": 717.976,
+        "r": 484.482,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part4-Example4-5",
+      "title": "Example 4-5 - Determination of Daylighted Area Under Skylights (Continued)",
+      "page": 60,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 393.777,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "daylighted",
+        "area",
+        "skylights",
+        "skylight",
+        "vertical",
+        "distance",
+        "engine",
+        "room",
+        "ceiling",
+        "obstruction",
+        "which",
+        "apart",
+        "height",
+        "necb",
+        "projection"
+      ]
+    },
+    {
+      "id": "Part4-Article4.2.2.6.",
+      "title": "Special Lighting Applications (Article 4.2.2.6.)",
+      "page": 60,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 562.336,
+        "r": 374.354,
+        "b": 551.483,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "controlled",
+        "requirements",
+        "necb",
+        "requires",
+        "certain",
+        "special",
+        "applications",
+        "separately",
+        "general",
+        "guest",
+        "rooms",
+        "suites",
+        "commercial",
+        "temporary"
+      ]
+    },
+    {
+      "id": "Part4-Exterior-Lighting-Power-and-Exterior-Lighting-Cont",
+      "title": "Exterior Lighting Power and Exterior Lighting Controls (Subsections 4.2.3. and 4.2.4.)",
+      "page": 60,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 467.297,
+        "r": 558.296,
+        "b": 442.521,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "necb",
+        "exterior",
+        "requirements",
+        "power",
+        "based",
+        "use",
+        "led",
+        "bulbs",
+        "energy",
+        "which",
+        "allowances",
+        "listed",
+        "luminaires",
+        "available"
+      ]
+    },
+    {
+      "id": "Part4-Example4-6",
+      "title": "Example 4-6 - Exterior Lighting Power (Continued)",
+      "page": 63,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 267.403,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "luminaires",
+        "parking",
+        "lot",
+        "entrance",
+        "supermarket",
+        "building",
+        "walkway",
+        "main",
+        "designer",
+        "exterior",
+        "two",
+        "facades",
+        "developing",
+        "lighting",
+        "design"
+      ]
+    },
+    {
+      "id": "Part4-Exterior-Lighting-Power-423",
+      "title": "Exterior Lighting Power (4.2.3.)",
+      "page": 61,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 75.719,
+        "t": 271.649,
+        "r": 197.019,
+        "b": 262.3330000000001,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "power",
+        "allowance",
+        "allowances",
+        "exterior",
+        "necb",
+        "general",
+        "building",
+        "used",
+        "applications",
+        "zone",
+        "which",
+        "located",
+        "apply",
+        "basic"
+      ]
+    },
+    {
+      "id": "Part4-Basic-Site-Allowance-for-Exterior-Lighting",
+      "title": "Basic Site Allowance for Exterior Lighting",
+      "page": 62,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 99.719,
+        "t": 689.48,
+        "r": 264.13,
+        "b": 680.164,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "basic",
+        "site",
+        "allowance",
+        "exterior",
+        "lighting",
+        "zone"
+      ]
+    },
+    {
+      "id": "Part4-Lighting-Power-Allowances-for-Specific-Building-Ex",
+      "title": "Lighting Power Allowances for Specific Building Exterior Applications",
+      "page": 62,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 99.719,
+        "t": 641.485,
+        "r": 373.608,
+        "b": 632.169,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "exterior",
+        "lighting",
+        "power",
+        "allowance",
+        "specific",
+        "facade",
+        "application",
+        "connected",
+        "basic",
+        "site",
+        "building",
+        "design",
+        "towards",
+        "applications",
+        "lamp"
+      ]
+    },
+    {
+      "id": "Part4-Lighting-Power-Allowances-for-General-Building-Ext",
+      "title": "Lighting Power Allowances for General Building Exterior Applications",
+      "page": 63,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 75.719,
+        "t": 689.48,
+        "r": 348.735,
+        "b": 680.164,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "exterior",
+        "power",
+        "allowance",
+        "general",
+        "allowances",
+        "connected",
+        "total",
+        "applications",
+        "similar",
+        "application",
+        "applicable",
+        "necb",
+        "greater",
+        "basic"
+      ]
+    },
+    {
+      "id": "Part4-Exterior-Lighting-Controls-424",
+      "title": "Exterior Lighting Controls (4.2.4)",
+      "page": 63,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 75.721,
+        "t": 275.432,
+        "r": 204.141,
+        "b": 266.116,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "exterior",
+        "lighting",
+        "necb",
+        "applications",
+        "meet",
+        "design",
+        "require",
+        "controls",
+        "stated",
+        "since",
+        "they",
+        "exemption",
+        "conditions",
+        "specified",
+        "sentences"
+      ]
+    },
+    {
+      "id": "Part4-Trade-off-Path-Section-43",
+      "title": "Trade-off Path (Section 4.3.)",
+      "page": 64,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 71.7,
+        "t": 717.976,
+        "r": 256.283,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "energy",
+        "path",
+        "necb",
+        "consumption",
+        "design",
+        "control",
+        "factor",
+        "interior",
+        "compliance",
+        "estimated",
+        "iile",
+        "ilea",
+        "trade-off",
+        "power"
+      ]
+    },
+    {
+      "id": "Part4-Note-to-Figure-4-2",
+      "title": "Note to Figure 4-2:",
+      "page": 65,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 61.74,
+        "t": 307.784,
+        "r": 128.684,
+        "b": 299.371,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "trade-off",
+        "path",
+        "owner",
+        "designer",
+        "prescriptive",
+        "requirements",
+        "adapted",
+        "rosemann",
+        "suvagau",
+        "model",
+        "determine",
+        "energy",
+        "savings",
+        "commercial"
+      ]
+    },
+    {
+      "id": "Part4-of-the-calculation-of-estimated-lighting-energy-us",
+      "title": "of the calculation of estimated lighting energy use",
+      "page": 65,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 167.94,
+        "t": 319.458,
+        "r": 364.478,
+        "b": 310.142,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part4-Example4-7",
+      "title": "Example 4-7 - Trade-off Path Calculations (Continued)",
+      "page": 74,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 304.839,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "office",
+        "seminar",
+        "room",
+        "open",
+        "space",
+        "spaces",
+        "per",
+        "year",
+        "deals",
+        "lighting",
+        "design",
+        "windows",
+        "daylighted",
+        "areas",
+        "double-glazed"
+      ]
+    },
+    {
+      "id": "Part4-Figure-A-Layout-of-spaces",
+      "title": "Figure A Layout of spaces",
+      "page": 66,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.74,
+        "t": 337.638,
+        "r": 159.097,
+        "b": 315.363,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "energy",
+        "consumption",
+        "owner",
+        "lpd",
+        "requirements",
+        "controls",
+        "necb",
+        "interior",
+        "building",
+        "room",
+        "office",
+        "space",
+        "spaces",
+        "using"
+      ]
+    },
+    {
+      "id": "Part4-E1proposed-Determination-of-Lighting-Power-Density",
+      "title": "E1,proposed : Determination of Lighting Power Density (4.3.2.2.)",
+      "page": 67,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.735,
+        "t": 582.801,
+        "r": 311.827,
+        "b": 572.588,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "proposed",
+        "design",
+        "uses",
+        "lighting",
+        "power",
+        "density"
+      ]
+    },
+    {
+      "id": "Part4-E1proposed-Determination-of-Daylighted-and-Non-Day",
+      "title": "E1,proposed : Determination of Daylighted and Non-Daylighted Areas (4.3.2.3. and 4.3.2.4.)",
+      "page": 67,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.741,
+        "t": 540.979,
+        "r": 411.581,
+        "b": 530.768,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "area",
+        "seminar",
+        "room",
+        "since",
+        "there",
+        "windows",
+        "daylighted",
+        "adl",
+        "entire",
+        "therefore",
+        "non-daylighted",
+        "andl",
+        "calculated",
+        "follows"
+      ]
+    },
+    {
+      "id": "Part4-E1proposed-Determination-of-Operational-Times-4326",
+      "title": "E1,proposed : Determination of Operational Times (4.3.2.6.)",
+      "page": 67,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.74,
+        "t": 424.098,
+        "r": 295.446,
+        "b": 413.888,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "times",
+        "during",
+        "space",
+        "per",
+        "year",
+        "tday",
+        "tnight",
+        "necb",
+        "based",
+        "start",
+        "end",
+        "which",
+        "use",
+        "monday",
+        "friday"
+      ]
+    },
+    {
+      "id": "Part4-E1proposed-Determination-of-Factor-for-Daylight-Ha",
+      "title": "E1,proposed : Determination of Factor for Daylight Harvesting (4.3.2.7.)",
+      "page": 67,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.744,
+        "t": 289.64,
+        "r": 336.245,
+        "b": 279.428,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "since",
+        "seminar",
+        "room",
+        "window",
+        "factor",
+        "daylight",
+        "harvesting",
+        "fdl",
+        "set",
+        "accordance",
+        "necb"
+      ]
+    },
+    {
+      "id": "Part4-E1proposed-Determination-of-the-Factors-for-Occupa",
+      "title": "E1,proposed : Determination of the Factors for Occupancy Control and Personal Control (4.3.2.10.)",
+      "page": 67,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.743,
+        "t": 236.84000000000003,
+        "r": 435.747,
+        "b": 226.62799999999993,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "factor",
+        "room",
+        "annual",
+        "control",
+        "necb",
+        "space",
+        "type",
+        "seminar",
+        "ctrl",
+        "personal",
+        "fpers",
+        "energy",
+        "operational",
+        "times",
+        "focc"
+      ]
+    },
+    {
+      "id": "Part4-E1proposed-Determination-of-E-1proposed",
+      "title": "E1,proposed : Determination of E 1,proposed",
+      "page": 68,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.74,
+        "t": 509.658,
+        "r": 249.434,
+        "b": 499.448,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "calculated",
+        "determined",
+        "necb",
+        "annual",
+        "energy",
+        "consumption",
+        "interior",
+        "lighting",
+        "prescriptive",
+        "variables",
+        "either",
+        "relevant",
+        "tables",
+        "proposed",
+        "now"
+      ]
+    },
+    {
+      "id": "Part4-E1prescriptive-Determination-of-Lighting-Power-Den",
+      "title": "E1,prescriptive : Determination of Lighting Power Density (LPD 1 ) (4.3.3.2.)",
+      "page": 68,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.739,
+        "t": 301.16,
+        "r": 367.447,
+        "b": 290.948,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lpd1",
+        "space",
+        "type",
+        "classroom",
+        "lecture",
+        "hall",
+        "training",
+        "room",
+        "according",
+        "necb"
+      ]
+    },
+    {
+      "id": "Part4-E1prescriptive-Determination-of-Daylighted-and-Non",
+      "title": "E1,prescriptive : Determination of Daylighted and Non-Daylighted Areas (4.3.3.3. and 4.3.3.4.)",
+      "page": 68,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.742,
+        "t": 246.20100000000002,
+        "r": 440.505,
+        "b": 235.98800000000006,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "values",
+        "adl",
+        "andl",
+        "proposed",
+        "design",
+        "respectively"
+      ]
+    },
+    {
+      "id": "Part4-E1prescriptive-Determination-of-Operational-Times-",
+      "title": "E1,prescriptive : Determination of Operational Times (4.3.3.6.)",
+      "page": 68,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.736,
+        "t": 191.18100000000004,
+        "r": 324.432,
+        "b": 180.96799999999996,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "values",
+        "tday",
+        "tnight",
+        "proposed",
+        "design",
+        "respectively"
+      ]
+    },
+    {
+      "id": "Part4-E1prescriptive-Determination-of-Factor-for-Dayligh",
+      "title": "E1,prescriptive : Determination of Factor for Daylight Harvesting (4.3.3.7.)",
+      "page": 68,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.738,
+        "t": 136.16100000000006,
+        "r": 365.143,
+        "b": 125.94799999999998,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "proposed",
+        "design",
+        "energy",
+        "lighting",
+        "annual",
+        "consumption",
+        "allowance",
+        "interior",
+        "cont",
+        "prescriptive",
+        "occupancy",
+        "control",
+        "full",
+        "value",
+        "fdl"
+      ]
+    },
+    {
+      "id": "Part4-E1prescriptive-Determination-of-Effective-Annual-O",
+      "title": "E1,prescriptive : Determination of Effective Annual Operational Times (4.3.3.5.)",
+      "page": 69,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.738,
+        "t": 545.48,
+        "r": 361.291,
+        "b": 535.268,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "proposed",
+        "annual",
+        "energy",
+        "consumption",
+        "lighting",
+        "space",
+        "teff",
+        "day",
+        "determined",
+        "necb",
+        "prescriptive",
+        "follows",
+        "allowance",
+        "interior",
+        "open"
+      ]
+    },
+    {
+      "id": "Part4-E2proposed-Determination-of-Daylighted-Area-4323",
+      "title": "E2,proposed : Determination of Daylighted Area (4.3.2.3.)",
+      "page": 69,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 91.737,
+        "t": 200.0,
+        "r": 286.697,
+        "b": 189.788,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "area",
+        "daylighted",
+        "energy",
+        "annual",
+        "consumption",
+        "interior",
+        "lighting",
+        "open",
+        "office",
+        "space",
+        "cont",
+        "non-daylighted",
+        "window",
+        "spans",
+        "across"
+      ]
+    },
+    {
+      "id": "Part4-E2proposed-Determination-of-Operational-Times-4326",
+      "title": "E2,proposed : Determination of Operational Times (4.3.2.6.)",
+      "page": 70,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.74,
+        "t": 520.278,
+        "r": 319.445,
+        "b": 510.068,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "open",
+        "office",
+        "space",
+        "seminar",
+        "room",
+        "operational",
+        "times",
+        "values",
+        "day",
+        "tnight",
+        "respectively"
+      ]
+    },
+    {
+      "id": "Part4-E2proposed-Determination-of-Factor-for-Daylight-Ha",
+      "title": "E2,proposed : Determination of Factor for Daylight Harvesting (4.3.2.7.)",
+      "page": 70,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.741,
+        "t": 465.26,
+        "r": 360.245,
+        "b": 455.048,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "factor",
+        "daylight",
+        "cdl",
+        "control",
+        "ctrl",
+        "calculate",
+        "harvesting",
+        "fdl",
+        "office",
+        "supply",
+        "sup",
+        "system",
+        "daylight-dependent",
+        "electric",
+        "lighting"
+      ]
+    },
+    {
+      "id": "Part4-E2proposed-Determination-of-the-Daylight-Supply-Fa",
+      "title": "E2,proposed : Determination of the Daylight Supply Factor for Sidelighting (4.3.2.8.)",
+      "page": 70,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.741,
+        "t": 399.26,
+        "r": 404.3,
+        "b": 389.048,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "factor",
+        "necb",
+        "lighting",
+        "daylight",
+        "annual",
+        "determination",
+        "energy",
+        "office",
+        "control",
+        "open",
+        "space",
+        "cdl",
+        "according",
+        "consumption",
+        "interior"
+      ]
+    },
+    {
+      "id": "Part4-E2prescriptive-Determination-of-Operational-Times-",
+      "title": "E2,prescriptive : Determination of Operational Times (4.3.3.6.)",
+      "page": 72,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.738,
+        "t": 347.001,
+        "r": 324.432,
+        "b": 336.788,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "values",
+        "tday",
+        "tnight",
+        "proposed",
+        "design",
+        "respectively"
+      ]
+    },
+    {
+      "id": "Part4-E2prescriptive-Determination-of-Factor-for-Dayligh",
+      "title": "E2,prescriptive : Determination of Factor for Daylight Harvesting (4.3.3.7.)",
+      "page": 72,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.743,
+        "t": 291.981,
+        "r": 365.143,
+        "b": 281.768,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "value",
+        "fdl",
+        "proposed",
+        "design"
+      ]
+    },
+    {
+      "id": "Part4-E2prescriptive-Determination-of-the-Factors-for-Oc",
+      "title": "E2,prescriptive : Determination of the Factors for Occupancy Control and Personal Control (4.3.3.10.)",
+      "page": 72,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.736,
+        "t": 248.0,
+        "r": 464.608,
+        "b": 237.788,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "controls",
+        "proposed",
+        "design",
+        "full",
+        "occupancy",
+        "lighting",
+        "match",
+        "type",
+        "prescriptive",
+        "path",
+        "automatic",
+        "off",
+        "therefore",
+        "occ",
+        "calculated"
+      ]
+    },
+    {
+      "id": "Part4-E2prescriptive-Determination-of-Effective-Annual-O",
+      "title": "E2,prescriptive : Determination of Effective Annual Operational Times (4.3.3.5.)",
+      "page": 72,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 115.738,
+        "t": 161.0,
+        "r": 385.291,
+        "b": 150.788,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "energy",
+        "teff",
+        "day",
+        "annual",
+        "consumption",
+        "allowance",
+        "interior",
+        "lighting",
+        "cont",
+        "determined",
+        "values",
+        "eff",
+        "ndl",
+        "night",
+        "proposed"
+      ]
+    },
+    {
+      "id": "Part4-Comparing-the-Results",
+      "title": "Comparing the Results",
+      "page": 73,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 75.72,
+        "t": 496.998,
+        "r": 166.255,
+        "b": 487.682,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "lighting",
+        "instead",
+        "necb",
+        "now",
+        "initial",
+        "space",
+        "requirements",
+        "office",
+        "determine",
+        "iile",
+        "ilea",
+        "comply",
+        "automatic",
+        "controls",
+        "daylighted"
+      ]
+    },
+    {
+      "id": "Part4-Comparing-the-Results-cont",
+      "title": "Comparing the Results (cont.)",
+      "page": 74,
+      "level": "subsection",
+      "parent_id": "Part4",
+      "bbox": {
+        "l": 99.719,
+        "t": 689.48,
+        "r": 217.931,
+        "b": 680.164,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "automatic",
+        "controls",
+        "proposed",
+        "value",
+        "open",
+        "office",
+        "space",
+        "daylight",
+        "system",
+        "daylight-dependent",
+        "dimming",
+        "now",
+        "kwh",
+        "reduced",
+        "lighting"
+      ]
+    },
+    {
+      "id": "Part5",
+      "title": "Part 5",
+      "page": 76,
+      "level": "part",
+      "bbox": {
+        "l": 294.72,
+        "t": 719.197,
+        "r": 565.969,
+        "b": 699.4,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part5-Heating-Ventilating-and-Air-conditioning-Systems",
+      "title": "Heating, Ventilating and Air-conditioning Systems",
+      "page": 76,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 76.859,
+        "t": 675.157,
+        "r": 565.978,
+        "b": 631.357,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "systems",
+        "requirements",
+        "compliance",
+        "where",
+        "otherwise",
+        "noted",
+        "equipment",
+        "controls",
+        "installed",
+        "meet",
+        "new",
+        "building",
+        "heating",
+        "ventilating"
+      ]
+    },
+    {
+      "id": "Part5-Air-Distribution-Systems-Subsection-522",
+      "title": "Air Distribution Systems (Subsection 5.2.2.)",
+      "page": 76,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 523.937,
+        "r": 358.826,
+        "b": 513.143,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "requirements",
+        "distribution",
+        "systems",
+        "limit",
+        "loss",
+        "reduce",
+        "energy",
+        "use",
+        "necb",
+        "subsection",
+        "contains",
+        "design",
+        "installation",
+        "ducts"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.2.5.",
+      "title": "Duct and Plenum Insulation (Article 5.2.2.5.)",
+      "page": 76,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.706,
+        "t": 386.509,
+        "r": 315.131,
+        "b": 377.559,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "supply",
+        "return",
+        "ducts",
+        "air",
+        "insulation",
+        "duct",
+        "necb",
+        "attic",
+        "space",
+        "building",
+        "location",
+        "conditioned",
+        "unconditioned",
+        "insulated",
+        "envelope"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.2.6.",
+      "title": "Protection of Duct Insulation (Article 5.2.2.6.)",
+      "page": 78,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 716.497,
+        "r": 322.079,
+        "b": 707.548,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "insulation",
+        "duct",
+        "condensation",
+        "within",
+        "exposure",
+        "moisture",
+        "subject",
+        "mechanical",
+        "weather-related",
+        "damage",
+        "protected",
+        "wrap",
+        "covering",
+        "typically",
+        "made"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.2.8.",
+      "title": "Cooling by Direct Use of Outdoor Air - Air Economizer System (Article 5.2.2.8.)",
+      "page": 78,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.71,
+        "t": 613.488,
+        "r": 500.518,
+        "b": 604.538,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "cooling",
+        "outdoor",
+        "economizer",
+        "damper",
+        "system",
+        "motorized",
+        "when",
+        "supply",
+        "return",
+        "exhaust",
+        "fan",
+        "use",
+        "energy",
+        "economizers"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.2.9.",
+      "title": "Cooling by Indirect Use of Outdoor Air - Water Economizer System (Article 5.2.2.9.)",
+      "page": 78,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.706,
+        "t": 182.50700000000006,
+        "r": 525.895,
+        "b": 173.55700000000002,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "water",
+        "cooling",
+        "air",
+        "condenser",
+        "supply",
+        "chilled",
+        "line",
+        "pump",
+        "fluid",
+        "which",
+        "through",
+        "coil",
+        "valve",
+        "circulated",
+        "tower"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.3.4.",
+      "title": "Demand Control Ventilation Systems (Article 5.2.3.4.)",
+      "page": 80,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 717.976,
+        "r": 422.842,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "dcv",
+        "control",
+        "requirements",
+        "common",
+        "practice",
+        "employ",
+        "demand",
+        "ventilation",
+        "contaminant",
+        "levels",
+        "especially",
+        "carbon",
+        "monoxide",
+        "nitrous",
+        "oxides"
+      ]
+    },
+    {
+      "id": "Part5-Example5-1",
+      "title": "Example 5-1 - Control Sequence for Staging Ventilation Fans",
+      "page": 80,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 91.74,
+        "t": 603.438,
+        "r": 331.757,
+        "b": 594.122,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "ppm",
+        "zone",
+        "off",
+        "mau-a",
+        "ef-a",
+        "mau-b",
+        "ef-b",
+        "control",
+        "two",
+        "ventilation",
+        "fans",
+        "fan",
+        "staging",
+        "levels",
+        "set-point"
+      ]
+    },
+    {
+      "id": "Part5-Example5-2",
+      "title": "Example 5-2 - Control Sequence for Modulating the Outdoor Airflow Rates",
+      "page": 81,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 67.74,
+        "t": 635.478,
+        "r": 360.169,
+        "b": 626.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "mau",
+        "speed",
+        "parking",
+        "garage",
+        "ppm",
+        "high",
+        "air",
+        "off",
+        "dcv",
+        "systems",
+        "kitchen",
+        "outdoor",
+        "control",
+        "levels",
+        "single"
+      ]
+    },
+    {
+      "id": "Part5-Example5-3",
+      "title": "Example 5-3 - DCV for a Commercial Kitchen Facility",
+      "page": 82,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 300.542,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "exhaust",
+        "airflow",
+        "system",
+        "kh-2",
+        "ef-2",
+        "threshold",
+        "rate",
+        "building",
+        "kitchen",
+        "ef-1",
+        "exhausts",
+        "kh-1",
+        "capacity",
+        "kh-3",
+        "zone"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.4.1.",
+      "title": "Required Dampers (Article 5.2.4.1.)",
+      "page": 82,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 542.777,
+        "r": 302.671,
+        "b": 531.983,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "they",
+        "system",
+        "motorized",
+        "dampers",
+        "help",
+        "mitigate",
+        "heat",
+        "loss",
+        "gain",
+        "due",
+        "unintended",
+        "air",
+        "exfiltration",
+        "infiltration",
+        "maintained"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.5.1.",
+      "title": "Design and Installation of Piping (Article 5.2.5.1.)",
+      "page": 82,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 461.777,
+        "r": 395.428,
+        "b": 450.983,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "minimize",
+        "hvac",
+        "piping",
+        "designed",
+        "pressure",
+        "losses",
+        "effort",
+        "pumping",
+        "energy"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.5.3.",
+      "title": "Piping Insulation (Article 5.2.5.3.)",
+      "page": 82,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 402.737,
+        "r": 292.309,
+        "b": 391.943,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "insulation",
+        "piping",
+        "thermal",
+        "necb",
+        "thickness",
+        "properties",
+        "insulated",
+        "water",
+        "resulting",
+        "condensation",
+        "migrate",
+        "manufactured",
+        "provide",
+        "level",
+        "alteration"
+      ]
+    },
+    {
+      "id": "Part5-Example5-4",
+      "title": "Example 5-4 - Pipe Insulation",
+      "page": 82,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 91.74,
+        "t": 226.75800000000004,
+        "r": 209.212,
+        "b": 217.442,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "temperature",
+        "return",
+        "water",
+        "chilled",
+        "insulation",
+        "piping",
+        "part-load",
+        "system",
+        "designed",
+        "supply",
+        "rise",
+        "designer",
+        "determine",
+        "whether",
+        "exempt"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.6.2.",
+      "title": "Variable-Flow Pumping Systems (Article 5.2.6.2.)",
+      "page": 82,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 113.95600000000002,
+        "r": 392.168,
+        "b": 103.16300000000001,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "secondary",
+        "flow",
+        "pump",
+        "primary",
+        "load",
+        "pumps",
+        "supply",
+        "plant",
+        "pipe",
+        "return",
+        "two-way",
+        "valve",
+        "coil",
+        "chiller",
+        "zone"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.6.3.",
+      "title": "Pumping Power Demand (Article 5.2.6.3.)",
+      "page": 83,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 47.7,
+        "t": 107.95600000000002,
+        "r": 317.829,
+        "b": 97.16300000000001,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "pumping",
+        "power",
+        "demand",
+        "pumps",
+        "allowable",
+        "function",
+        "thermal",
+        "energy",
+        "common",
+        "practice",
+        "install",
+        "larger",
+        "actually",
+        "efficient",
+        "distribution"
+      ]
+    },
+    {
+      "id": "Part5-Example5-5",
+      "title": "Example 5-5 - Hydronic Pump Sizing",
+      "page": 84,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 91.74,
+        "t": 678.438,
+        "r": 237.962,
+        "b": 669.122,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "design",
+        "power",
+        "pumping",
+        "demand",
+        "flow",
+        "bp1",
+        "bp2",
+        "load",
+        "heating",
+        "therefore",
+        "pumps",
+        "considered",
+        "calculation",
+        "necb",
+        "calculated"
+      ]
+    },
+    {
+      "id": "Part5-Temperature-Controls-Subsection-528",
+      "title": "Temperature Controls (Subsection 5.2.8.)",
+      "page": 84,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 183.67599999999993,
+        "r": 341.543,
+        "b": 172.82299999999998,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "exhaust",
+        "supply",
+        "spaces",
+        "space",
+        "radiant",
+        "out",
+        "grouped",
+        "outdoors",
+        "necb",
+        "zones",
+        "windows",
+        "direction",
+        "heating",
+        "temperature"
+      ]
+    },
+    {
+      "id": "Part5-Example5-6",
+      "title": "Example 5-6 - Exhaust Air System in Edmonton, Alberta",
+      "page": 87,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 67.74,
+        "t": 678.438,
+        "r": 290.067,
+        "b": 669.122,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "system",
+        "air",
+        "building",
+        "rate",
+        "exhaust",
+        "supply",
+        "fan",
+        "airflow",
+        "energy",
+        "recovery",
+        "which",
+        "operates",
+        "hours",
+        "per",
+        "year"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.10.2.",
+      "title": "Heat Recovery from Dehumidification in Swimming Pools (Article 5.2.10.2.)",
+      "page": 87,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 47.7,
+        "t": 539.177,
+        "r": 539.179,
+        "b": 528.383,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "desiccant",
+        "dehumidification",
+        "reactivation",
+        "process",
+        "typical",
+        "dried",
+        "wheel",
+        "mechanical",
+        "two",
+        "common",
+        "methods",
+        "pool",
+        "unit",
+        "shown"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.10.3.",
+      "title": "Heat Recovery from Ice-making Machines in Arenas and Curling Rinks (Article 5.2.10.3.)",
+      "page": 87,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 47.7,
+        "t": 157.27700000000004,
+        "r": 511.019,
+        "b": 132.44100000000003,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "heat",
+        "condenser",
+        "ice",
+        "heat-recovery",
+        "system",
+        "applications",
+        "recovered",
+        "heating",
+        "chiller",
+        "ice-making",
+        "systems",
+        "arenas",
+        "generate",
+        "significant",
+        "amount"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.11.2.",
+      "title": "Airflow Control Areas (Article 5.2.11.2.)",
+      "page": 88,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 71.7,
+        "t": 192.856,
+        "r": 330.979,
+        "b": 182.063,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "vav",
+        "airflow",
+        "control",
+        "air",
+        "system",
+        "supply",
+        "fan",
+        "areas",
+        "order",
+        "compartmentalize",
+        "distribution",
+        "systems",
+        "serve",
+        "multiple",
+        "temperature-control"
+      ]
+    },
+    {
+      "id": "Part5-Equipment-Efficiency-Subsection-5212",
+      "title": "Equipment Efficiency (Subsection 5.2.12.)",
+      "page": 89,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 47.7,
+        "t": 273.85699999999997,
+        "r": 322.396,
+        "b": 263.063,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "requirements",
+        "necb",
+        "note",
+        "federal",
+        "provincial",
+        "territorial",
+        "regulations",
+        "municipal",
+        "bylaws",
+        "stated",
+        "subsection",
+        "performance",
+        "apply",
+        "non-decorative",
+        "fireplaces"
+      ]
+    },
+    {
+      "id": "Part5-Article5.2.12.2.",
+      "title": "Heat Rejection Equipment (Article 5.2.12.2.)",
+      "page": 89,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 47.7,
+        "t": 124.87699999999995,
+        "r": 338.287,
+        "b": 114.08299999999997,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "requirements",
+        "performance",
+        "heat",
+        "rejection",
+        "equipment",
+        "aligned",
+        "corresponding",
+        "stated",
+        "ansi",
+        "ashrae",
+        "ies",
+        "which",
+        "facilitates",
+        "design"
+      ]
+    },
+    {
+      "id": "Part5-Example5-7",
+      "title": "Example 5-7 - Calculating Cooling Tower Performance",
+      "page": 90,
+      "level": "subsection",
+      "parent_id": "Part5",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 305.565,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "cooling",
+        "tower",
+        "flow",
+        "water",
+        "when",
+        "fluid",
+        "necb",
+        "direct-contact",
+        "equipped",
+        "two",
+        "centrifugal",
+        "fans",
+        "design",
+        "rated",
+        "conditions"
+      ]
+    },
+    {
+      "id": "Part6",
+      "title": "Part 6",
+      "page": 92,
+      "level": "part",
+      "bbox": {
+        "l": 286.376,
+        "t": 719.197,
+        "r": 565.969,
+        "b": 655.359,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "requirements",
+        "systems",
+        "service",
+        "water",
+        "where",
+        "noted",
+        "otherwise",
+        "mechanical",
+        "equipment",
+        "controls",
+        "installed",
+        "meet",
+        "new",
+        "building"
+      ]
+    },
+    {
+      "id": "Part6-Article6.2.2.4.",
+      "title": "Combination Service Water Heating and Space-Heating Equipment (Article 6.2.2.4.)",
+      "page": 92,
+      "level": "subsection",
+      "parent_id": "Part6",
+      "bbox": {
+        "l": 71.7,
+        "t": 502.936,
+        "r": 507.447,
+        "b": 478.161,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "water",
+        "heating",
+        "boiler",
+        "typical",
+        "service",
+        "space",
+        "zone",
+        "temperature",
+        "control",
+        "shows",
+        "configuration",
+        "system",
+        "provides",
+        "circulating",
+        "pump"
+      ]
+    },
+    {
+      "id": "Part6-Article6.2.3.1.",
+      "title": "Piping Insulation (Article 6.2.3.1.)",
+      "page": 93,
+      "level": "subsection",
+      "parent_id": "Part6",
+      "bbox": {
+        "l": 47.7,
+        "t": 717.976,
+        "r": 268.309,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "piping",
+        "insulation",
+        "insulated",
+        "water",
+        "necb",
+        "tank",
+        "circulation",
+        "pump",
+        "system",
+        "thermal",
+        "locations",
+        "properties",
+        "shows",
+        "hot",
+        "service"
+      ]
+    },
+    {
+      "id": "Part6-Article6.2.5.1.",
+      "title": "Remote or Booster Heaters (Article 6.2.5.1.)",
+      "page": 93,
+      "level": "subsection",
+      "parent_id": "Part6",
+      "bbox": {
+        "l": 47.7,
+        "t": 243.97699999999998,
+        "r": 338.069,
+        "b": 233.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "water",
+        "heater",
+        "booster",
+        "service",
+        "hot",
+        "out",
+        "temperature",
+        "reduce",
+        "heat",
+        "loss",
+        "applications",
+        "where",
+        "delivered",
+        "higher-such",
+        "dishwashers"
+      ]
+    },
+    {
+      "id": "Part6-Maximum-Water-Flow-Rates-for-Showers-and-Lavatorie",
+      "title": "Maximum Water Flow Rates for Showers and Lavatories (Articles 6.2.6.1. and 6.2.6.2.)",
+      "page": 94,
+      "level": "subsection",
+      "parent_id": "Part6",
+      "bbox": {
+        "l": 71.7,
+        "t": 391.757,
+        "r": 552.258,
+        "b": 366.981,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "flow",
+        "rates",
+        "water",
+        "buildings",
+        "maximum",
+        "canada",
+        "plumbing",
+        "installing",
+        "fixtures",
+        "low",
+        "easy",
+        "inexpensive",
+        "measure",
+        "reducing",
+        "energy"
+      ]
+    },
+    {
+      "id": "Part6-Pressure-Booster-Systems-Subsection-628",
+      "title": "Pressure Booster Systems (Subsection 6.2.8.)",
+      "page": 94,
+      "level": "subsection",
+      "parent_id": "Part6",
+      "bbox": {
+        "l": 71.7,
+        "t": 218.77700000000004,
+        "r": 372.447,
+        "b": 207.98299999999995,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "pressure",
+        "booster",
+        "tank",
+        "pump",
+        "expansion",
+        "systems",
+        "variable-speed",
+        "requirements",
+        "which",
+        "demand",
+        "system",
+        "basement",
+        "penthouse",
+        "mechanical",
+        "room"
+      ]
+    },
+    {
+      "id": "Part7",
+      "title": "Part 7",
+      "page": 96,
+      "level": "part",
+      "bbox": {
+        "l": 294.72,
+        "t": 719.197,
+        "r": 565.969,
+        "b": 699.4,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part7-Electrical-Power-Systems-and-Motors",
+      "title": "Electrical Power Systems and Motors",
+      "page": 96,
+      "level": "subsection",
+      "parent_id": "Part7",
+      "bbox": {
+        "l": 114.549,
+        "t": 675.157,
+        "r": 565.971,
+        "b": 655.359,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part7-Article7.1.1.1.",
+      "title": "Scope (Article 7.1.1.1.)",
+      "page": 96,
+      "level": "subsection",
+      "parent_id": "Part7",
+      "bbox": {
+        "l": 71.7,
+        "t": 597.977,
+        "r": 222.655,
+        "b": 587.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "electrical",
+        "systems",
+        "necb",
+        "applies",
+        "power",
+        "transformers",
+        "motors",
+        "connected",
+        "building",
+        "service",
+        "addresses",
+        "means",
+        "monitoring",
+        "distribution",
+        "larger"
+      ]
+    },
+    {
+      "id": "Part7-Article7.1.1.3.",
+      "title": "Compliance (Article 7.1.1.3.)",
+      "page": 96,
+      "level": "subsection",
+      "parent_id": "Part7",
+      "bbox": {
+        "l": 71.7,
+        "t": 524.957,
+        "r": 259.233,
+        "b": 514.163,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "flow",
+        "chart",
+        "necb",
+        "a-7",
+        "two",
+        "compliance",
+        "paths",
+        "applicable",
+        "electrical",
+        "power",
+        "systems",
+        "motors"
+      ]
+    },
+    {
+      "id": "Part7-Article7.2.1.1.",
+      "title": "Monitoring (Article 7.2.1.1.)",
+      "page": 96,
+      "level": "subsection",
+      "parent_id": "Part7",
+      "bbox": {
+        "l": 71.7,
+        "t": 462.977,
+        "r": 251.845,
+        "b": 452.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "kva",
+        "meter",
+        "panel",
+        "distribution",
+        "future",
+        "lighting",
+        "monitoring",
+        "electrical",
+        "energy",
+        "sockets",
+        "interior",
+        "hvac",
+        "socket",
+        "main",
+        "consumption"
+      ]
+    },
+    {
+      "id": "Part7-Voltage-Drop-Subsection-722",
+      "title": "Voltage Drop (Subsection 7.2.2.)",
+      "page": 97,
+      "level": "subsection",
+      "parent_id": "Part7",
+      "bbox": {
+        "l": 47.7,
+        "t": 717.976,
+        "r": 259.984,
+        "b": 707.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "circuit",
+        "branch",
+        "voltage",
+        "feeder",
+        "conductors",
+        "maximum",
+        "drop",
+        "breaker",
+        "conductor",
+        "run",
+        "equipment",
+        "allowed",
+        "service",
+        "entrance",
+        "where"
+      ]
+    },
+    {
+      "id": "Part7-Example7-1",
+      "title": "Example 7-1 - Example of Voltage Drop Calculation",
+      "page": 98,
+      "level": "subsection",
+      "parent_id": "Part7",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 293.995,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "voltage",
+        "circuit",
+        "drop",
+        "load",
+        "impedance",
+        "calculated",
+        "follows",
+        "single-phase",
+        "one-way",
+        "length",
+        "conductors",
+        "power",
+        "factor",
+        "conductor",
+        "designer"
+      ]
+    },
+    {
+      "id": "Part8",
+      "title": "Part 8",
+      "page": 100,
+      "level": "part",
+      "bbox": {
+        "l": 294.72,
+        "t": 719.197,
+        "r": 565.969,
+        "b": 699.4,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part8-Article8.1.1.1.",
+      "title": "Scope (Article 8.1.1.1.)",
+      "page": 100,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 71.7,
+        "t": 597.977,
+        "r": 222.655,
+        "b": 587.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "energy",
+        "necb",
+        "requirements",
+        "prescriptive",
+        "performance",
+        "proposed",
+        "path",
+        "using",
+        "buildings",
+        "modeled",
+        "usage",
+        "stated",
+        "consumption",
+        "variations"
+      ]
+    },
+    {
+      "id": "Part8-Performance-Path-Section-84",
+      "title": "Performance Path (Section 8.4.)",
+      "page": 100,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 71.7,
+        "t": 144.856,
+        "r": 282.609,
+        "b": 134.063,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "energy",
+        "proposed",
+        "data",
+        "heating",
+        "consumption",
+        "cooling",
+        "compliance",
+        "design",
+        "annual",
+        "software",
+        "used",
+        "necb",
+        "modeled",
+        "one"
+      ]
+    },
+    {
+      "id": "Part8-Compliance-Calculations-Subsection-842",
+      "title": "Compliance Calculations (Subsection 8.4.2.)",
+      "page": 101,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 342.737,
+        "r": 338.508,
+        "b": 331.943,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "energy",
+        "proposed",
+        "calculations",
+        "software",
+        "doe-2",
+        "calculation",
+        "ies-ve",
+        "where",
+        "take",
+        "account",
+        "characteristics",
+        "many",
+        "analysis",
+        "programs"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.2.9.",
+      "title": "Air Leakage (Article 8.4.2.9.) (See also Sentences 8.4.3.3.(3) and 8.4.4.3.(6))",
+      "page": 101,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 152.89699999999993,
+        "r": 454.345,
+        "b": 128.12099999999998,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "rate",
+        "air",
+        "leakage",
+        "building",
+        "pressure",
+        "differential",
+        "energy",
+        "envelope",
+        "necb",
+        "model",
+        "proposed",
+        "calculated",
+        "using",
+        "which",
+        "adjusted"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.2.10.",
+      "title": "HVAC Systems Calculations (Article 8.4.2.10.)",
+      "page": 103,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 385.097,
+        "r": 349.522,
+        "b": 374.303,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "systems",
+        "proposed",
+        "energy",
+        "model",
+        "hvac",
+        "rating",
+        "conditions",
+        "heating",
+        "equipment",
+        "calculations",
+        "listed",
+        "necb",
+        "design",
+        "entered"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.4.1.",
+      "title": "General (Article 8.4.4.1.)",
+      "page": 104,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 71.7,
+        "t": 665.957,
+        "r": 233.16,
+        "b": 655.163,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "location",
+        "elements",
+        "schedules",
+        "process",
+        "defining",
+        "one",
+        "basic",
+        "assumption",
+        "input",
+        "data",
+        "proposed",
+        "floor",
+        "area",
+        "shape"
+      ]
+    },
+    {
+      "id": "Part8-Operating-Schedules-Sentences-84321-and-84421",
+      "title": "Operating Schedules (Sentences 8.4.3.2.(1) and 8.4.4.2.(1))",
+      "page": 104,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 71.7,
+        "t": 515.957,
+        "r": 458.401,
+        "b": 505.163,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "used",
+        "necb",
+        "schedules",
+        "energy",
+        "values",
+        "intent",
+        "sentences",
+        "ensure",
+        "equal",
+        "basis",
+        "comparison",
+        "two",
+        "models",
+        "since"
+      ]
+    },
+    {
+      "id": "Part8-Example8-2",
+      "title": "Example 8-2 - Component Design for Shell-and-Core Office Building",
+      "page": 105,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 336.637,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "office",
+        "building",
+        "being",
+        "tenant",
+        "they",
+        "assumptions",
+        "proposed",
+        "storey",
+        "located",
+        "toronto",
+        "ontario",
+        "designed",
+        "shell",
+        "core",
+        "spaces"
+      ]
+    },
+    {
+      "id": "Part8-Building-Component-Assumptions-Used-to-Model-the-S",
+      "title": "Building Component Assumptions Used to Model the Semi-Heated Warehouse",
+      "page": 107,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 140.096,
+        "t": 524.489,
+        "r": 447.248,
+        "b": 515.173,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "component",
+        "assumptions",
+        "used",
+        "model",
+        "shell-and-core",
+        "office",
+        "cont"
+      ]
+    },
+    {
+      "id": "Part8-Example8-3",
+      "title": "Example 8-3 - Component Design for a Semi-Heated Warehouse (Continued)",
+      "page": 109,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 368.394,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "proposed",
+        "areas",
+        "energy",
+        "door",
+        "fdwr",
+        "necb",
+        "fenestration",
+        "steel",
+        "design",
+        "wall",
+        "performance",
+        "compliance",
+        "permitted",
+        "envelope"
+      ]
+    },
+    {
+      "id": "Part8-Example8-4",
+      "title": "Example 8-4 - HVAC Design for Hospital Addition (Continued)",
+      "page": 111,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 67.74,
+        "t": 716.478,
+        "r": 310.484,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "addition",
+        "space",
+        "types",
+        "hvac",
+        "systems",
+        "above-grade",
+        "below",
+        "proposed",
+        "five-storey-high",
+        "penthouse",
+        "control",
+        "room",
+        "two-storey-high",
+        "planned",
+        "hospital"
+      ]
+    },
+    {
+      "id": "Part8-HVAC-System-Design-Assumptions-for-Hospital-Additi",
+      "title": "HVAC System Design Assumptions for Hospital Addition (cont.)",
+      "page": 111,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 168.958,
+        "t": 697.46,
+        "r": 418.473,
+        "b": 688.144,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "unit",
+        "conditioner",
+        "ahu",
+        "air-handling",
+        "mua",
+        "make-up",
+        "rtu",
+        "rooftop",
+        "single",
+        "zone",
+        "vav",
+        "variable",
+        "volume"
+      ]
+    },
+    {
+      "id": "Part8-Building-Envelope-Components-Sentence-84433",
+      "title": "Building Envelope Components (Sentence 8.4.4.3.(3))",
+      "page": 111,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 263.717,
+        "r": 396.617,
+        "b": 252.923,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "building",
+        "design",
+        "overall",
+        "thermal",
+        "transmittance",
+        "wall",
+        "assemblies",
+        "proposed",
+        "determined",
+        "using",
+        "methodology",
+        "noted",
+        "necb",
+        "illustrates",
+        "envelope"
+      ]
+    },
+    {
+      "id": "Part8-Interior-Partitions-Sentence-84437",
+      "title": "Interior Partitions (Sentence 8.4.4.3.(7))",
+      "page": 111,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 180.73699999999997,
+        "r": 310.153,
+        "b": 169.94299999999998,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "partitions",
+        "u-value",
+        "interior",
+        "building",
+        "where",
+        "model",
+        "determined",
+        "accordance",
+        "necb",
+        "applicable",
+        "temperature",
+        "set-points",
+        "side",
+        "differ",
+        "otherwise"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.4.7.",
+      "title": "HVAC System Selection (Article 8.4.4.7.)",
+      "page": 111,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 96.73599999999999,
+        "r": 314.213,
+        "b": 85.94299999999998,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "fan",
+        "necb",
+        "thermal",
+        "block",
+        "components",
+        "hatched",
+        "area",
+        "return",
+        "exhaust",
+        "supply",
+        "hvac",
+        "systems",
+        "described",
+        "shown"
+      ]
+    },
+    {
+      "id": "Part8-System-1-Unitary-air-conditioner-with-baseboard-he",
+      "title": "System 1: Unitary air conditioner with baseboard heating Notes to Figure 8-1:",
+      "page": 112,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 85.74,
+        "t": 441.439,
+        "r": 310.809,
+        "b": 421.351,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "air",
+        "supply",
+        "thermal",
+        "fan",
+        "heating",
+        "block",
+        "system",
+        "outdoor",
+        "ventilation",
+        "rate",
+        "according",
+        "accordance",
+        "energy",
+        "match"
+      ]
+    },
+    {
+      "id": "Part8-System-2-Four-pipe-fan-coil-Notes-to-Figure-8-2",
+      "title": "System 2: Four-pipe fan-coil Notes to Figure 8-2:",
+      "page": 113,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 61.74,
+        "t": 449.479,
+        "r": 174.128,
+        "b": 429.331,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "air",
+        "supply",
+        "fan",
+        "thermal",
+        "system",
+        "heating",
+        "block",
+        "outdoor",
+        "ventilation",
+        "rate",
+        "coil",
+        "accordance",
+        "according",
+        "energy"
+      ]
+    },
+    {
+      "id": "Part8-System-3-Single-zone-packaged-rooftop-unit-with-ba",
+      "title": "System 3: Single-zone packaged rooftop unit with baseboard heating Notes to Figure 8-3:",
+      "page": 114,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 85.74,
+        "t": 458.479,
+        "r": 357.021,
+        "b": 438.331,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "heating",
+        "rate",
+        "match",
+        "building",
+        "according",
+        "energy",
+        "proposed",
+        "thermal",
+        "block",
+        "supply",
+        "accordance",
+        "type",
+        "outdoor",
+        "air"
+      ]
+    },
+    {
+      "id": "Part8-10System-3-is-modeled-as-follows",
+      "title": "(10)System 3 is modeled as follows:",
+      "page": 114,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 85.74,
+        "t": 270.778,
+        "r": 206.109,
+        "b": 262.33799999999997,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "supply",
+        "necb",
+        "thermal",
+        "fan",
+        "block",
+        "heating",
+        "outdoor",
+        "system",
+        "during",
+        "scheduled",
+        "hours",
+        "temperature",
+        "accordance",
+        "coil"
+      ]
+    },
+    {
+      "id": "Part8-System-6-Multi-zone-built-up-system-with-baseboard",
+      "title": "System 6: Multi-zone built-up system with baseboard heating Notes to Figure 8-6:",
+      "page": 117,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 61.74,
+        "t": 440.479,
+        "r": 302.337,
+        "b": 420.331,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "air",
+        "supply",
+        "thermal",
+        "heating",
+        "system",
+        "block",
+        "rate",
+        "building",
+        "energy",
+        "accordance",
+        "outdoor",
+        "match",
+        "fan",
+        "hydronic"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.4.13.",
+      "title": "Heat Pumps (Article 8.4.4.13.)",
+      "page": 118,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 71.7,
+        "t": 676.937,
+        "r": 269.745,
+        "b": 666.143,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "air",
+        "system",
+        "described",
+        "heat",
+        "pump",
+        "return",
+        "fan",
+        "heating",
+        "supply",
+        "hvac",
+        "necb",
+        "including",
+        "shown",
+        "schematically",
+        "briefly"
+      ]
+    },
+    {
+      "id": "Part8-Notes-to-Figure-8-7",
+      "title": "Notes to Figure 8-7:",
+      "page": 118,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 85.74,
+        "t": 335.984,
+        "r": 156.828,
+        "b": 327.571,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "heating",
+        "necb",
+        "air",
+        "supply",
+        "outdoor",
+        "building",
+        "thermal",
+        "rate",
+        "block",
+        "match",
+        "proposed",
+        "fan",
+        "accordance",
+        "cooling",
+        "heat"
+      ]
+    },
+    {
+      "id": "Part8-Example8-5",
+      "title": "Example 8-5 - HVAC System of the Reference Building for a Proposed Multi-Unit Residential Building",
+      "page": 119,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 67.74,
+        "t": 678.858,
+        "r": 462.695,
+        "b": 669.542,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "building",
+        "heat",
+        "according",
+        "system",
+        "proposed",
+        "water-loop",
+        "pumps",
+        "hvac",
+        "determined",
+        "since",
+        "dwelling",
+        "efficiency",
+        "heating",
+        "energy"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.4.8.",
+      "title": "Equipment Oversizing (Article 8.4.4.8.)",
+      "page": 119,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 358.097,
+        "r": 300.765,
+        "b": 347.303,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "equipment",
+        "systems",
+        "heating",
+        "cooling",
+        "load",
+        "software",
+        "long",
+        "oversizing",
+        "design",
+        "calculations",
+        "either",
+        "performed",
+        "using",
+        "energy",
+        "analysis"
+      ]
+    },
+    {
+      "id": "Part8-Article8.4.4.15.",
+      "title": "Outdoor Air (Article 8.4.4.15.)",
+      "page": 119,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 232.337,
+        "r": 241.712,
+        "b": 221.543,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "outdoor",
+        "airflow",
+        "supplied",
+        "building",
+        "ahus",
+        "necb",
+        "requires",
+        "total",
+        "rates",
+        "air-handling",
+        "units",
+        "identical",
+        "proposed",
+        "requirement",
+        "applies"
+      ]
+    },
+    {
+      "id": "Part8-Fans-Sentence-844171",
+      "title": "Fans (Sentence 8.4.4.17.(1))",
+      "page": 119,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 47.7,
+        "t": 138.13599999999997,
+        "r": 232.353,
+        "b": 127.34299999999996,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "exhaust",
+        "system",
+        "necb",
+        "specialized",
+        "building",
+        "fan",
+        "power",
+        "refers",
+        "fans",
+        "systems",
+        "described",
+        "proposed",
+        "considered",
+        "equipped",
+        "energy"
+      ]
+    },
+    {
+      "id": "Part8-Figure-A",
+      "title": "Figure A",
+      "page": 120,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 91.74,
+        "t": 100.87800000000004,
+        "r": 126.044,
+        "b": 91.56200000000001,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "thermal",
+        "blocks",
+        "single-storey",
+        "museum"
+      ]
+    },
+    {
+      "id": "Part8-Thermal-block-1",
+      "title": "Thermal block 1",
+      "page": 120,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 126.754,
+        "t": 265.05600000000004,
+        "r": 194.891,
+        "b": 257.072,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "rate",
+        "airflow",
+        "heating",
+        "cooling",
+        "outdoor",
+        "air",
+        "ventilation"
+      ]
+    },
+    {
+      "id": "Part8-Example8-6",
+      "title": "Example 8-6 - HVAC System of the Reference Building for a Proposed Laboratory",
+      "page": 120,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 91.74,
+        "t": 716.478,
+        "r": 411.485,
+        "b": 707.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "necb",
+        "exhaust",
+        "ventilation",
+        "system",
+        "fan",
+        "rate",
+        "building",
+        "laboratory",
+        "proposed",
+        "air",
+        "airflow",
+        "being",
+        "designed",
+        "performance",
+        "demonstrate"
+      ]
+    },
+    {
+      "id": "Part8-Thermal-block-2",
+      "title": "Thermal block 2",
+      "page": 120,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 340.466,
+        "t": 311.37,
+        "r": 408.602,
+        "b": 303.386,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "rate",
+        "airflow",
+        "heating",
+        "cooling",
+        "outdoor",
+        "air",
+        "ventilation"
+      ]
+    },
+    {
+      "id": "Part8-Thermal-block-3",
+      "title": "Thermal block 3",
+      "page": 120,
+      "level": "subsection",
+      "parent_id": "Part8",
+      "bbox": {
+        "l": 340.466,
+        "t": 207.16599999999994,
+        "r": 408.602,
+        "b": 199.18200000000002,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "thermal",
+        "block",
+        "rate",
+        "airflow",
+        "air",
+        "energy",
+        "recovery",
+        "system",
+        "according",
+        "since",
+        "heating",
+        "cooling",
+        "outdoor",
+        "ventilation",
+        "building"
+      ]
+    },
+    {
+      "id": "Part10",
+      "title": "Part 10",
+      "page": 122,
+      "level": "part",
+      "bbox": {
+        "l": 280.14,
+        "t": 719.197,
+        "r": 565.942,
+        "b": 699.4,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    },
+    {
+      "id": "Part10-Article10.1.2.1.",
+      "title": "Compliance (Article 10.1.2.1.)",
+      "page": 122,
+      "level": "subsection",
+      "parent_id": "Part10",
+      "bbox": {
+        "l": 71.7,
+        "t": 597.977,
+        "r": 267.191,
+        "b": 587.183,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": [
+        "energy",
+        "building",
+        "performance",
+        "tier",
+        "compliance",
+        "consumption",
+        "project",
+        "tiered",
+        "new",
+        "necb",
+        "projects",
+        "proposed",
+        "path",
+        "ahj",
+        "annual"
+      ]
+    },
+    {
+      "id": "Part10-Conversions",
+      "title": "Conversions",
+      "page": 123,
+      "level": "subsection",
+      "parent_id": "Part10",
+      "bbox": {
+        "l": 270.3,
+        "t": 692.478,
+        "r": 319.392,
+        "b": 683.162,
+        "coord_origin": "BOTTOMLEFT"
+      },
+      "keywords": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Github } from 'lucide-react';
+import { Menu, X, Github, Workflow } from 'lucide-react';
 import clsx from 'clsx';
 
 const navLinks = [
@@ -67,6 +67,13 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
+            <button
+              onClick={() => scrollToSection('pipeline')}
+              className="inline-flex items-center gap-2 text-slate-600 hover:text-cyan-600 transition-colors text-sm font-medium"
+            >
+              <Workflow className="w-4 h-4" />
+              How It Works
+            </button>
             <a
               href="https://github.com/DavidCho1999/Canada-AEC-Code-MCP"
               target="_blank"
@@ -106,6 +113,16 @@ export default function Navbar() {
                 {link.label}
               </button>
             ))}
+            <button
+              onClick={() => {
+                scrollToSection('pipeline');
+                setIsMobileMenuOpen(false);
+              }}
+              className="flex items-center gap-2 w-full text-left px-4 py-3 text-slate-600 hover:text-cyan-700 hover:bg-cyan-50 transition-colors font-medium"
+            >
+              <Workflow className="w-4 h-4" />
+              How It Works
+            </button>
             <a
               href="https://github.com/DavidCho1999/Canada-AEC-Code-MCP"
               target="_blank"
